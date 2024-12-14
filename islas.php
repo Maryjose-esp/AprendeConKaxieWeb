@@ -98,6 +98,6 @@
     } );
     splide1.mount();  
     </script>
-<!-- prueba -->
+<!--funciona?-->
 </body>
 </html>
