@@ -586,9 +586,11 @@ body::-webkit-scrollbar-button:vertical:decrement{
     right: 34%;
     display: flex;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    min-width: 300px;
 }
 .bibli{
     width: 70%;
+    min-width: 300px;
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 20px;
@@ -599,6 +601,16 @@ body::-webkit-scrollbar-button:vertical:decrement{
     -webkit-backdrop-filter:blur(2px);
     box-shadow: 0 0 25px rgba(0, 0, 0, .3);
     border: 15px double #ffffff;
+}
+.textbibli{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.LinkBibli{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 
