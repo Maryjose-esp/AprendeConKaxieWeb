@@ -71,17 +71,7 @@
         <br>
 </div>
 
-        <div class="container3">
-        <div class="auto" style="background-color: rgb(33, 46, 131); border: 10px dashed #140f4e;">
-            <img src="./images/CCNatalia.png" HEIGHT=500px>
-            <div class="info" style="color: rgb(177, 177, 252);">
-                Una de las creadoras y programadoras de "Aprende con Kaxie" es Natalia, quien mostró
-                agilidad al momemnto de realizar las progresiones que le correspondian, programando 
-                un drag and drop para hacer más dinamicas las actividades, dando grandes aportes al 
-                momento de tener un ojo critico en el diseño de esta página.
-            </div>
-        </div>
-        </div>
+
 
         <div class="container3" style="margin-left: 10%;">
         <div class="auto2" style="background-color: #45f3f3; ">
@@ -90,8 +80,8 @@
                 de las creadoras de "Aprende con Kaxie", realizando no solo la conexión con la BD, 
                 sino que también realizó las plantillas para el sitio a su vez ejerciendo un trabajo
                 de lider al momento de trabajar, revisando las progresiones y dando detalles a corregir.
-            </div>
-            <img class="mena" src="./images/CCMena.png" HEIGHT=400px>
+            
+            <img class="mena" src="./images/CCMena.png"></div>
         </div>
         </div>
 

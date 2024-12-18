@@ -29,7 +29,7 @@
                 <li>Í</li>
                 <li>A</li>
             </ul>
-        </div>
+    </div>
         <br><br><br><br>
         <div class="bibli">
             <div  class="textbibli">
@@ -90,7 +90,7 @@
                    </div>
 
                     Geometriamagicomundodelorigami. (Año). Plano cartesiano [png]. WordPress. 
-                    <div class="LinkBibli"><a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fgeometriamagicomundodelorigami.wordpress.com%2Fplano-cartesiano%2F&psig=AOvVaw06GwYbaFkwWCC0pMt3GcFZ&ust=1702449923719000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCKCU_7OmiYMDFQAAAAAdAAAAABAD"> https://www.google.com/url?sa=i&url=https%3A%2F%2Fgeometriamagicomundodelorigami.wordpress.com%2Fplano-cartesiano%2F&psig=AOvVaw06GwYba<br>FkwWCC0pMt3GcFZ&ust=1702449923719000&source=images&cd=vfe&op<br>i=89978449&ved=0CBEQjRxqFwoTCKCU_7OmiYMDFQAAAAAdAAAAABAD </a><br><br>
+                    <div class="LinkBibli"><a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fgeometriamagicomundodelorigami.wordpress.com%2Fplano-cartesiano%2F&psig=AOvVaw06GwYbaFkwWCC0pMt3GcFZ&ust=1702449923719000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCKCU_7OmiYMDFQAAAAAdAAAAABAD"> https://www.google.com/url?sa=i&url=https%3A%2F%2Fgeometriamagicomundodelorigami.wordpress.com%2Fplano-cartesiano%2F&psig=AOvVaw06GwYbaFkwWCC0pMt3GcFZ&ust=1702449923719000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCKCU_7OmiYMDFQAAAAAdAAAAABAD </a><br><br>
                    </div>
                     
                     Freire N. (01 de diciembre de 2023). El Teorema de Napoleón, o cómo el emperador francés influyó en las matemáticas. National Geographic España. 

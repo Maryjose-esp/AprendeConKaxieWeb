@@ -501,8 +501,8 @@ body::-webkit-scrollbar-button:vertical:decrement{
     height: auto; 
     margin: 40px;
     margin-bottom: 5px;
-    /*margin-right: auto;
-    margin-left: auto;*/
+    margin-right: auto;
+    margin-left: auto;
     padding: 50px;
     display: flex;
 }
@@ -517,16 +517,21 @@ body::-webkit-scrollbar-button:vertical:decrement{
 }
 
 .mena{
-    position: absolute;
+    display: flex;
+    position: static;
+    float: left;
     right: 10%;
+    height: 400px;
 }
 
 .info{
     margin-top: auto;
     margin-bottom: auto;
+    float: left;
+    display: flex;
     padding: 10px;
     font-size: 35px;
-    width: 60%;
+    width: 100%;
 }
 
 .text1{
@@ -582,11 +587,11 @@ body::-webkit-scrollbar-button:vertical:decrement{
 
 /*style bibliografia*/
 .bibliografia{
-    position: absolute;
+    position: absolute;  
     right: 34%;
     display: flex;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    min-width: 300px;
+    
 }
 .bibli{
     width: 70%;
