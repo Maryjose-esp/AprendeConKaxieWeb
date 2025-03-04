@@ -15,9 +15,10 @@
 <body>
 <?php
     require ('ifSession.php');
+    
     ?>
-   
-    <aside class="aside" id="asidex13"> 
+   <script src="js/script11.js"></script>
+    <aside class="aside" id="aside13"> 
     <section id="s1">
         Pro
         gre
@@ -173,7 +174,7 @@
         <P>Es una igualdad donde por lo menos hay un número desconocido llamado incógnita. Estas ecuaciones las conforman los siguientes elementos:</P>
         <br>
         <center>
-            <img  class ="kaxi13_1" src="images/Progresion13img/terminos.png"> 
+            <img  class ="kaxi13_1" src="images/Progresion13img/terminos.png" WIDTH=100%> 
         </center>
         <br>
         <p>Un sistema de ecuaciones lineales es un conjunto de dos o más ecuaciones lineales con dos o más incógnitas.
@@ -278,7 +279,7 @@
         <br>
         p = <INPUT TYPE ="TEXT" size=6 maxlength="11" NAME="p13e1txt5" id="p13e1txt5"><br>  <br> 
         <div>
-        <button type="submit" value="" class="botonesrevisar" name="P13E1REV" id="P13E1REV"></button>
+        <input type="submit" value="" class="botonesrevisar" name="P13E1REV" id="P13E1REV">
         <input type="reset" value="" class="botonesreintentar" onclick="eliminartodo()">
         </div>
         </form>
@@ -485,7 +486,7 @@
         <br>
         <br>
         <div>
-        <button type="submit" value="" class="botonesrevisar" name="P13E2REV" id="P13E2REV"></button>
+        <input type="submit" value="" class="botonesrevisar" name="P13E2REV" id="P13E2REV">
         <input type="reset" value="" class="botonesreintentar" onclick="eliminartodo()">
         </div>
         </form>
@@ -578,7 +579,7 @@
     ¿Cuánto vale y?  <INPUT TYPE ="TEXT" size=6 maxlength="4" NAME="p13e3txt2" id="p13e3txt2"><BR><br>
     <br><br>
     <div>
-        <button type="submit" value="" class="botonesrevisar" name="P13E3REV" id="P13E3REV"></button>
+        <input type="submit" value="" class="botonesrevisar" name="P13E3REV" id="P13E3REV">
         <input type="reset" value="" class="botonesreintentar" onclick="eliminartodo()">
         </div>
         </form>
@@ -661,7 +662,7 @@
         &nbsp; &nbsp; &nbsp; &nbsp;
         <INPUT TYPE ="TEXT" size=6 maxlength="4" NAME="p13e4txt4" id="p13e4txt4"><BR><br>
         <div>
-        <button type="submit" value="" class="botonesrevisar" name="P13E4REV" id="P13E4REV"></button>
+        <input type="submit" value="" class="botonesrevisar" name="P13E4REV" id="P13E4REV">
         <input type="reset" value="" class="botonesreintentar" onclick="eliminartodo()">
         </div>
         </form>
@@ -869,7 +870,7 @@
         <br>
         <br>
         <div>
-        <button type="submit" value="" class="botonesrevisar" name="P13E5REV" id="P13E5REV"></button>
+        <input type="submit" value="" class="botonesrevisar" name="P13E5REV" id="P13E5REV">
         <input type="reset" value="" class="botonesreintentar" onclick="eliminartodo()">
         </div>
         </form>
@@ -1206,7 +1207,7 @@
         <br>
         <br>
         <div>
-        <button type="submit" value="" class="botonesrevisar" name="P13E6REV" id="P13E6REV"></button>
+        <input type="submit" value="" class="botonesrevisar" name="P13E6REV" id="P13E6REV">
         <input type="reset" value="" class="botonesreintentar" onclick="eliminartodo()">
         </div>
         </form>
@@ -1277,7 +1278,7 @@
             <br><INPUT TYPE ="TEXT" size=6 maxlength="4" NAME="p13e7txt7" id="p13e7txt7">&nbsp;páginas
             </p>
             <div>
-        <button type="submit" value="" class="botonesrevisar" name="P13E7REV" id="P13E7REV"></button>
+        <input type="submit" value="" class="botonesrevisar" name="P13E7REV" id="P13E7REV">
         <input type="reset" value="" class="botonesreintentar" onclick="eliminartodo()">
         </div>
         </form>
@@ -1315,7 +1316,7 @@
         <center>
         <br>
         <h1 id="Res">  Resumen de la progresión</h1>
-        <img src="./images/Progresion13img/M13.png">  
+        <img src="./images/Progresion13img/M13.png" WIDTH=100%>  
         </center>
 
 

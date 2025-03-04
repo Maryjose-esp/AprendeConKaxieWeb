@@ -16,8 +16,8 @@
 <?php
     require ('ifSession.php');
     ?>
-   
-    <aside class="aside" id="asidex5"> 
+   <script src="js/script11.js"></script>
+    <aside class="aside" id="aside5"> 
     <section id="s1">
         Pro
         gre
@@ -138,9 +138,9 @@
             </P>
         <br>
         <form method="post">
-        <div class="columnen51">
-        <img class="kaxi5p" src="./images/Progresion5img/MCD.png">
-            <div>
+        <div class="P5Cont">
+        <div class="P5Colum1"><img class="kaxi5p" src="./images/Progresion5img/MCD.png"></div>
+            <div class="P5Colum2">
                 <label for="p5e1txt1">¿Cuál es el MCD de 18 y 24? <br><b>MCD:</b></label> <input  type="text" size="5" maxlength="4" name="p5e1txt1" id="p5e1txt1"><br><br>
                 <label for="p5e1txt2">¿Cuál es el MCD de 36 y 48? <br><b>MCD:</b></label> <input  type="text" size="5" maxlength="4" name="p5e1txt2" id="p5e1txt2"><br><br>
                 <label for="p5e1txt3">¿Cuál es el MCD de 25 y 75? <br><b>MCD:</b></label> <input  type="text" size="5" maxlength="4" name="p5e1txt3" id="p5e1txt3"><br><br>
@@ -149,7 +149,7 @@
             </div>
         </div>
         <div>
-        <button type="submit" value="" class="botonesrevisar" name="P5E1REV" id="P5E1REV"></button>
+        <input type="submit" value="" class="botonesrevisar" name="P5E1REV" id="P5E1REV">
         <input type="reset" value="" class="botonesreintentar" onclick="eliminartodo()">
         </div>
         </form>
@@ -182,23 +182,24 @@
         <h3><center>Conociendo lo anterior ahora si podemos resolver los siguientes problemas:<center></h3>
         <br>
         <form method="post">
-        <div class="columnen5">
+        <div class="P5Cont">
+        <div class="P5Colum1">
         <label for="p5e2txt1">1.- Maria tiene 36 caramelos y quiere repartirlos entre sus 4 amigos de manera equitativa. ¿Cuántos caramelos recibirá cada amigo? <br>Respuesta: </label><INPUT TYPE ="TEXT" size=6 maxlength="4" NAME="p5e2txt1" id="p5e2txt1"><BR><br>
         <label for="p5e2txt2">2.- Mauricio tiene una cuerda de 65 cm y otra de 35 cm. Quiere repartirlas en trozos iguales a sus amigos. ¿Cuántos trozos de cuerda tendrá cada amigo?<br>Respuesta: </label><INPUT TYPE ="TEXT" size=6  maxlength="4" NAME="p5e2txt2" id="p5e2txt2"><BR><br>
         <label for="p5e2txt3">3.- Ernesto quiere salvar a las 10 personas del incendio con sus 5 amigos. ¿Cuántas personas va a salvar cada amigo?<br>Respuesta: </label><INPUT TYPE ="TEXT" size=6  maxlength="4" NAME="p5e2txt3" id="p5e2txt3"><BR><br>
         <label for="p5e2txt4">4.- Juan tiene 24 libros y quiere dividirlos en montones. ¿Cuántos libros habrá en cada pila si quiere hacer la mayor cantidad de pilas posibles?<br>Respuesta: </label><INPUT TYPE ="TEXT" size=6 maxlength="4" NAME="p5e2txt4" id="p5e2txt4"><BR><br>
         <label for="p5e2txt5">5.- Andrea tiene 36 galletas y quiere compartirlas entre sus 6 amigos. ¿Cuántas galletas recibirá cada amigo?<br>Respuesta: </label><INPUT TYPE ="TEXT" size=6 NAME="p5e2txt5" id="p5e2txt5"><BR><br>
         <label for="p5e2txt6">6.- Pedro tiene 48 bolígrafos y Juan tiene los bolígrafos triples de Pedro. Si María tiene los mismos que Pedro ¿Cuántos lápices son en total?<br>Respuesta: </label><INPUT TYPE ="TEXT" size=6 maxlength="4" NAME="p5e2txt6" id="p5e2txt6"><BR><br>
-        <br><br><br><br><br><br><br><br><br>
+        </div><div class="P5Colum2">
         <label for="p5e2txt7">7.- Pedro, Juan y María están ahorrando dinero para comprar un regalo. Pedro ahorró $20, Juan ahorró el doble que Pedro y María ahorró la mitad del dinero que ahorró Juan. ¿Cuánto dinero tienen en total?<br>Respuesta: </label><INPUT TYPE ="TEXT" size=6 maxlength="4" NAME="p5e2txt7" id="p5e2txt7"><BR><br>
         <label for="p5e2txt8">8.- Jimena, Natalia y MaryJose están ahorrando dinero para comprar un regalo. Jimena ahorró $20, Natalia ahorró el doble que Jimena y MaryJose ahorró la mitad del dinero que ahorró Natalia. ¿Cuánto dinero tienen en total?<br>Respuesta: </label><INPUT TYPE ="TEXT" size=6 maxlength="4" NAME="p5e2txt8" id="p5e2txt8"><BR><br>
         <label for="p5e2txt9">9.- Rodrigo tiene 108 globos y quiere repartir equitativamente entre Jose y Yurem. Quieren recibir la misma cantidad de globos, ¿Cuántos globos recibirá cada uno?<br>Respuesta: </label><INPUT TYPE ="TEXT" size=6 maxlength="4" NAME="p5e2txt9" id="p5e2txt9"><BR><br>
         <label for="p5e2txt10">10.- Javier tiene 96 chocolates y quiere que se los entreguen en cajas con la misma cantidad de chocolates. Cada caja tiene 12 chocolates. ¿Cuántas cajas hizo Roberto?<br>Respuesta: </label><INPUT TYPE ="TEXT" size=6 maxlength="4" NAME="p5e2txt10" id="p5e2txt10"><BR><br>
         <label for="p5e2txt11">11.- Luis tiene 144 canicas y quiere compartir equitativamente entre sus 8 amigos. ¿Cuántas canicas recibirá cada amigo?<br>Respuesta: </label><INPUT TYPE ="TEXT" size=6 maxlength="4" NAME="p5e2txt11" id="p5e2txt11"><BR><br>
         <label for="p5e2txt12">12.- Marcela tiene 108 pelotas y quiere ponerlos en bolsas con la misma cantidad de pelotas. Si tienes una bolsa con 9 pelotas. ¿Cuántas bolsas necesita Marcela?<br>Respuesta: </label><INPUT TYPE ="TEXT" size=6 maxlength="4" NAME="p5e2txt12" id="p5e2txt12"><BR><br>
-        </div>
+        </div></div>
         <div>
-        <button type="submit" value="" class="botonesrevisar" name="P5E2REV" id="P5E2REV"></button>
+        <input type="submit" value="" class="botonesrevisar" name="P5E2REV" id="P5E2REV">
         <input type="reset" value="" class="botonesreintentar" onclick="eliminartodo()">
         </div>
         </form>
@@ -262,9 +263,9 @@
         </P>
         <br>
         <form method="post">
-        <div class="columnen51">
-            <img id="ejerc51"  class ="kaxi5p_2" src="./images/Progresion5img/mcd (2).png"> 
-            <div>
+        <div class="P5Cont">
+        <div class="P5Colum1"><img id="ejerc51"  class ="kaxi5p_2" src="./images/Progresion5img/mcd (2).png"> </div>
+            <div class="P5Colum2">
             <label for="p5e3txt1">¿Cuál es el mcm de 6 y 8?<br>           <b>mcm:</b></label> <input  type="text" size="5" maxlength="4" name="p5e3txt1" id="p5e3txt1"><br><br>
             <label for="p5e3txt2">¿Cuál es el mcm de 11 y 13?<br>         <b>mcm:</b></label> <input  type="text" size="5" maxlength="4" name="p5e3txt2" id="p5e3txt2"><br><br>
             <label for="p5e3txt3">¿Cuál es el mcm de 20, 25 y 30?<br>     <b>mcm:</b></label> <input  type="text" size="5" maxlength="4" name="p5e3txt3" id="p5e3txt3"><br><br>
@@ -274,7 +275,7 @@
         </div>
 
         <div>
-        <button type="submit" value="" class="botonesrevisar" name="P5E3REV" id="P5E3REV"></button>
+        <input type="submit" value="" class="botonesrevisar" name="P5E3REV" id="P5E3REV">
         <input type="reset" value="" class="botonesreintentar" onclick="eliminartodo()">
         </div>
         </form>
@@ -308,14 +309,16 @@
         <h3><center>Responde los siguientes problemas:<center></h3>
         <br>
         <form method="post">
-        <div class="columnen5">
+        <div class="P5Cont">
+        <div class="P5Colum1">
         <label for="p5e4txt1">1.- José, María y Carmela quieren comprar camisetas. José quería comprar 4 camisetas, María quería comprar 6 camisetas y Carmela quería comprar 8 camisetas. ¿Cuál es la cantidad mínima de camisas que pueden comprar? <br>Respuesta: </label><INPUT TYPE ="TEXT" size=6 maxlength="4" NAME="p5e4txt1" id="p5e4txt1"><BR><br>
         <label for="p5e4txt2">2.- Rodrigo, Mauricio y Carlos están organizando una fiesta. Rodrigo preparó 9 sándwiches, Mauricio preparó 12 sándwiches y Carlos preparó 15 sándwiches. ¿Cuántos sándwiches deben prepararse en total para que cada uno tenga la misma cantidad?<br>Respuesta: </label><INPUT TYPE ="TEXT" size=6 maxlength="4" NAME="p5e4txt2" id="p5e4txt2"><BR><br>
         <label for="p5e4txt3">3.- Juan, Mimi y Carla están ahorrando para una comida. Juan tiene $10, Mimi tiene $25 y Carla tiene $30. ¿Cuánto dinero deben ahorrar en total para que cada uno tenga la misma cantidad? <br>Respuesta: </label><INPUT TYPE ="TEXT" size=6 maxlength="4" NAME="p5e4txt3" id="p5e4txt3"><BR><br>
         <label for="p5e4txt4">4.- A Jimena, Maryjose y Natalia les dieron boletos para un concierto, Jimena quería comprar 16 pulseras, Maryjose quería comprar 24 y Natalia quería comprar 32. ¿Cuántas pulseras deben comprar en total paraque todas tengan la misma cantidad?<br>Respuesta: </label><INPUT TYPE ="TEXT" size=6 maxlength="4" NAME="p5e4txt4" id="p5e4txt4"><BR><br>
         <label for="p5e4txt5">5.- Bruno, Valeria y Cristian estudiaron para un examen. Bruno estudió 11 horas, Valeria estudió 22 y Cristian estudió 33 horas. ¿Cuántas horas deben estudiar en total para que cada uno tenga la misma cantidad?<br>Respuesta: </label><INPUT TYPE ="TEXT" size=6 maxlength="4" NAME="p5e4txt5" id="p5e4txt5"><BR><br>
         <label for="p5e4txt6">6.- José, María y Carmela organizaron una reunión. José quería invitar a 36 personas, María quería invitar a 48 personas y Carmela quería invitar a 72 personas. ¿Cuántas personas deben invitar en total para que cada uno invite a la misma cantidad?<br>Respuesta: </label><INPUT TYPE ="TEXT" size=6 maxlength="4" NAME="p5e4txt6" id="p5e4txt6"><BR><br>
-        
+        </div>
+        <div class="P5Colum2">
         <label for="p5e4txt7">7.- Un grupo de amigos que prepararon 4 paquetes de dulces, 6 paquetes de galletas y 8 paquetes de chocolates de manera equitativa. ¿Cuál es el tamaño mínimo del paquete que hay en total?<br>Respuesta: </label><INPUT TYPE ="TEXT" size=6 maxlength="4" NAME="p5e4txt7" id="p5e4txt7"><BR><br>
         <label for="p5e4txt8">8.- En una competición deportiva, los participantes completan un circuito que incluye carreras de 10 km, 25 km y 30 km. Si todos los competidores registran la distancia, ¿cuál es la distancia mínima del circuito?<br>Respuesta: </label><INPUT TYPE ="TEXT" size=6 maxlength="4" NAME="p5e4txt8" id="p5e4txt8"><BR><br>
         <label for="p5e4txt9">9.- En una fiesta infantil, se van a partir de bolsitas con juguetes. Tienes bolsas con 16 juguetes, bolsas con 24 juguetes y bolsas con 32 juguetes, necesitas juguetes en total para hacer las bolsitas equitativas?<br>Respuesta: </label><INPUT TYPE ="TEXT" size=6 maxlength="4" NAME="p5e4txt9" id="p5e4txt9"><BR><br>
@@ -323,9 +326,10 @@
         <label for="p5e4txt11">11.- En una excursión escolar, los estudiantes tienen la oportunidad de ganar dinero. Si tienes estudiantes que valen $72 dólares, $90 dólares y $108 dólares, ¿cuál es la cantidad mínima de dinero en total?<br>Respuesta: </label><INPUT TYPE ="TEXT" size=6 maxlength="4" NAME="p5e4txt11" id="p5e4txt11"><BR><br>
         <label for="p5e4txt12">12.- Un proyecto de jardinería, con flores plantares en macetas. Si tienes macetas con capacidad para 10 flores, macetas con capacidad para 15 flores y macetas con capacidad para 20 flores. ¿Las flores deberían ser necesarias en total para las macetas equitativamente?<br>Respuesta: </label><INPUT TYPE ="TEXT" size=6 maxlength="4" NAME="p5e4txt12" id="p5e4txt12"><BR><br>
         </div>
+    </div>
     
         <div>
-        <button type="submit" value="" class="botonesrevisar" name="P5E4REV" id="P5E4REV"></button>
+        <input type="submit" value="" class="botonesrevisar" name="P5E4REV" id="P5E4REV">
         <input type="reset" value="" class="botonesreintentar" onclick="eliminartodo()">
         </div>
         </form>
@@ -373,7 +377,7 @@
         <center>
        
         <h1 id="Res">Resumen de la progresión</h1>
-        <img src="./images/Progresion5img/M5.png" >  
+        <img src="./images/Progresion5img/M5.png" WIDTH=100%>  
         </center>
 
         

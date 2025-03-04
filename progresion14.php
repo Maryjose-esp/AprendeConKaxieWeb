@@ -186,7 +186,7 @@ despeje con cada valor de x:<br><br>
 Dichos valores serán los puntos en un plano cartesiano, y después 
 los uniremos con una línea recta:<br><br>
 <div>
-<img src="./images/progresion14img/plano.png">
+<img src="./images/progresion14img/plano.jpeg" WIDTH=100%>
 </div>
 Para comprobar que lado del plano cartesiano es la solución tendremos que confirmar 
 por medio de seleccionar un punto ya sea de la parte inferior (la cual es la parte 
@@ -436,7 +436,7 @@ a “x”, veremos cómo afecta a “y” y qué valor tendrá en base a “x”
             <INPUT TYPE="radio" name="p14e1r4" id="p14e1r4a2" value="1"> <label for="p14e1r4a2">Inferior</label> <BR><br>
 
             <input type="submit" value="" class="botonesrevisar" name="p14e1Rev">
-            <input type="reset" value="" class="botonesreintentar">
+            <input type="reset" value="" class="botonesreintentar" onclick="eliminartodo()">
             </FORM>
             <?php
                 if (isset($_POST['p14e1Rev'])) {
@@ -639,7 +639,7 @@ Comprobamos que el resultado es correcto.<br><br>
             x <input type="text" name="p14e2txt15" id="p14e2txt15"><br>
             y <input type="text" name="p14e2txt16" id="p14e2txt16"><br><br><br>
 
-            <button type="submit" value="" class="botonesrevisar" name="P14E2REV" id="P14E2REV"></button>
+            <input type="submit" value="" class="botonesrevisar" name="P14e2Rev" id="P14e2Rev">
             <input type="reset" value="" class="botonesreintentar" onclick="eliminartodo()">
             </FORM>
             
@@ -861,7 +861,7 @@ Al obtener ambos valores los confirmaremos al resolver ambas ecuaciones:<br>
             <p><b>8.- -9x-6y=-36 <br> -4x+24y=24 </b></p><br>
             x <input type="text" name="p14e3txt15" id="p14e3txt15"><br>
             y <input type="text" name="p14e3txt16" id="p14e3txt16"><br><br>
-            <button type="submit" value="" class="botonesrevisar" name="P14E3REV" id="P14E3REV"></button>
+            <input type="submit" value="" class="botonesrevisar" name="P14E3REV" id="P14E3REV">
             <input type="reset" value="" class="botonesreintentar" onclick="eliminartodo()">
             </FORM>
             
@@ -1081,7 +1081,7 @@ Los resultados son correctos.<br>
             x <input type="text" name="p14e4txt15" id="p14e4txt15"><br>
             y <input type="text" name="p14e4txt16" id="p14e4txt16"><br><br>
 
-            <button type="submit" value="" class="botonesrevisar" name="P14E4REV" id="P14E4REV"></button>
+            <input type="submit" value="" class="botonesrevisar" name="P14E4REV" id="P14E4REV">
             <input type="reset" value="" class="botonesreintentar" onclick="eliminartodo()">
             </FORM>
 

@@ -16,8 +16,8 @@
 <?php
     require ('ifSession.php');
 ?>
-   
-    <aside class="aside" id="asidex4"> 
+   <script src="js/script11.js"></script>
+    <aside class="aside" id="aside4"> 
     <section id="s1">
         Pro
         gre
@@ -31,7 +31,7 @@
                     adecuado del lenguaje algebraico.
                 </p>
                 <div class="div1">
-                <img  class ="kaxi4" src=."images/P4.png"  id="KaxieP4" WIDTH=100%> 
+                <img  class ="kaxi4" src="images/P4.png"  id="KaxieP4" WIDTH=100%> 
                 </div>
                 <b><h3> Metas </h3></b><br>
                 <H3>M2</H3>
@@ -83,7 +83,7 @@
     </center></div> 
             <div class="conceptosclave">
                 <div>
-                   <img src=."images/KCClave.png" width=180px heigth=auto style="margin-right: 20px;"> 
+                   <img src="images/KCClave.png" width=180px heigth=auto style="margin-right: 20px;"> 
                 </div>
             <div class= "ceonceptoscla">
                 <h1 id="cc4">Conceptos clave</h1>

@@ -2,10 +2,11 @@
 body{
     width: 100%;
     text-decoration:none;
-    background-image: url('./../images/aguaindex.gif');
+    /*background-image: url('./../images/aguaindex.gif');*/
     /*backdrop-filter: blur(2px);*/
-    background-size: cover;
-    background-attachment: fixed;
+    /*background-size: cover;
+    background-attachment: fixed;*/
+    background-color: #C1F1F5;
     font-size: 20px;
     font-family: 'Trebuchet MS';
     color: white;
@@ -43,17 +44,18 @@ body::-webkit-scrollbar-button:vertical:decrement{
 }
 
 .formulario{
+    background-color: #3374ff;
     margin: auto auto;
     margin-bottom: 300px;
     padding: 30px;
     padding-top: 5px;
-    border: 2px solid rgba(0, 0, 0, 0.205);
+    /*border: 2px solid rgba(0, 0, 0, 0.205);*/
     width: 50%;
     height:400px;
-    -webkit-backdrop-filter:blur(2px);
-    backdrop-filter: blur(2px);
+    /*-webkit-backdrop-filter:blur(2px);
+    backdrop-filter: blur(2px);*/
     box-shadow: 0 0 25px rgba(0, 0, 0, .3);
-    /*border-radius: 50%;*/
+    border-radius: 1rem;
     overflow: hidden;
     display:block;
     z-index:50;
@@ -61,17 +63,17 @@ body::-webkit-scrollbar-button:vertical:decrement{
 
 
  .formulario2{
+    background-color: #3374ff;
     margin: auto auto;
-    margin-bottom: 300px;
     padding: 30px;
     padding-top: 5px;
-    border: 2px solid rgba(0, 0, 0, 0.205);
+    /*border: 2px solid rgba(0, 0, 0, 0.205);*/
     width: 50%;
     height:auto;
-    -webkit-backdrop-filter:blur(2px);
-    backdrop-filter: blur(2px);
+    /*-webkit-backdrop-filter:blur(2px);
+    backdrop-filter: blur(2px);*/
     box-shadow: 0 0 25px rgba(0, 0, 0, .3);
-    /*border-radius: 50%;*/
+    border-radius: 1rem;
     overflow: hidden;
     display:block;
     z-index:50;
@@ -80,41 +82,81 @@ body::-webkit-scrollbar-button:vertical:decrement{
 
 .imgKax{
     background-image: url('./../images/UsrKaxieBscr.png');
-    background-size: cover;
-    height: 290px;
-    width: 230px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 80%;
+    width: 40%;
     float:left;
     margin: 0;
 }
 
 .imgKaxr{
-    background-image: url('./../images/KaxieCreausr.png');
-    background-size: cover;
-    height: 330px;
-    width: 260px;
+    height: min-content;
+    width: 35%;
     float:left;
-    margin: 0;
 }
 #contin{
-    width: 300px;
+    width: 60%;
     height: 230px; 
     display: inline-block;
 }
+
+/*1200px responsive*/
+
+@media (max-width:800px){
+    #contin{
+        display: block;
+        height: auto;
+        width: 100%;
+    }
+
+    .formulario{
+        display: block;
+        height: auto;
+    }
+    .imgKax{
+        float: none;
+        width: 70%;
+        height: 40vh;  
+    }
+
+    .formulario .recuerdame{
+        width: 100%;
+        display: block;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .formulario .new{
+        width: 100%;
+       
+        
+        margin: 0;
+    }
+}
+
+@media (max-width:600px){
+    .imgKax{
+        float: none;
+        width: 60%;
+        height: 20vh;  
+    }
+}
 #contin2{
-    width: 300px;
-    height: 383px; 
+    width: 60%;
+    height: auto; 
     display: inline-block;
     margin-bottom: 0;
 }
 .formulario .inputcamp{
-    width: 300px;
+    width: 100%;
     height: 50px;
     color:white;
     margin:30px 0px;
 }
 
 .formulario2 .inputcamp{
-    width: 300px;
+    width: 100%;
     height: 50px;
     color:white;
     margin:30px 0px;
@@ -143,20 +185,42 @@ body::-webkit-scrollbar-button:vertical:decrement{
 }
 
 .formulario .recuerdame{
-    display: flex;
+    display: block;
     /*justify-content: space-between;*/
     font-size: 14px;
     padding-left: 10px;
     margin: -55px 0 55px;
 }
 
+/*25 diciembre de 2024 acomodar en el registro el h3 para que no ocupe espacio vertical y descomponga la imagen y los input*/
+.adaptar_noblock{
+    height: auto;
+    
+    text-align: center;
+}
+
+#contin #label_for_sesionman{
+    font-size: 14px;
+}
+
+#contin p{
+    font-size: 14px;  
+
+}
+
+#contin p a{
+    color: white;
+    text-decoration: none;
+    font-weight: 600px;
+}
+
 .formulario2 .recuerdame{
     
-    display: block;
-    justify-content: space-between;
+    /*display: block;
+    justify-content: space-between;*/
+    height: auto;
     font-size: 14px;
     padding-left: 10px;
-    margin: -55px 0 55px;
 }
 .recuerdame label input{
     accent-color: white;
@@ -167,13 +231,14 @@ body::-webkit-scrollbar-button:vertical:decrement{
 .formulario .new{
     font-size: 14px;  
     margin: 20px 0px 15px 240px ;
-
+    display: inline-block;
 }
 
 .formulario2 .new{
     font-size: 14px;  
-    margin: 20px 0px 15px 240px ;
-
+    text-decoration: none;
+    /*margin: 20px 0px 15px 240px ;*/
+    display: inline-block;
 }
 .new p a {
     color: white;
@@ -181,9 +246,15 @@ body::-webkit-scrollbar-button:vertical:decrement{
     font-weight: 600px;
 }
 
+.new a {
+    color: #004386;
+    text-decoration: none;
+    font-weight: 600px;
+}
+/*
 .new p a:hover {
     text-decoration: underline;
-}
+}  */
  .btn{
     width: 40%;
     height: 45px;
@@ -198,7 +269,7 @@ body::-webkit-scrollbar-button:vertical:decrement{
     font-weight: 600px;
 }
 .formulario2 .btn{
-    width: 100px;
+    width: 40%;
     height: 45px;
     background-color: transparent;
     border: 2px solid;
@@ -209,9 +280,6 @@ body::-webkit-scrollbar-button:vertical:decrement{
     font-size: 15px;
     color: white;
     font-weight: 600px;
-    display: block;
-    margin-left: 265px;
-    margin-top: -38px;
 }
 
 .sectionEval{
@@ -272,8 +340,8 @@ body::-webkit-scrollbar-button:vertical:decrement{
     margin-top: 5px;
     border-radius: 60px 20px;
     border:none;
-    width: 70%;
-    height: 600px;
+    width: 85%;
+    height: auto;
     margin-left:auto;
     margin-right: auto;
     padding: 15px;
@@ -298,7 +366,10 @@ body::-webkit-scrollbar-button:vertical:decrement{
     box-shadow: 0 0 10px rgba(0, 0, 0, .1);
 }
 
-
+.preview img {
+    width: 100px;
+    height: 100px;
+}
 
 /*.acomodarimg input[type="submit"]{
     background: linear-gradient(to bottom right, #011931, #004386, #004EF5);
@@ -389,7 +460,7 @@ body::-webkit-scrollbar-button:vertical:decrement{
     align-items: center;
     justify-content: center;
     margin: 0 5px 0;
-
+    width: auto;
 }
 
 
@@ -403,6 +474,7 @@ body::-webkit-scrollbar-button:vertical:decrement{
 .califandtitle{
     display: flex;
     align-items: center;
+    background-color: #3374ff;
 }
 .califcircles{
     margin-left:auto;
@@ -448,6 +520,12 @@ body::-webkit-scrollbar-button:vertical:decrement{
   .califcircles label:hover svg path {
     stroke-dashoffset: 0;
   }
+
+   /*MENA LINK DE LAS EVALUACIONES */
+.link_evaluaciones{
+    text-decoration: none;
+    color: white;
+}
 
   /*ELIMINAR CUENTA*/
   .deleteaccount{
@@ -589,6 +667,8 @@ body::-webkit-scrollbar-button:vertical:decrement{
 .bibliografia{
     position: absolute;  
     right: 34%;
+    margin-right: auto;
+    margin-left: auto;
     display: flex;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     
@@ -601,7 +681,7 @@ body::-webkit-scrollbar-button:vertical:decrement{
     margin-bottom: 20px;
     padding: 3%;
     text-align: justify;
-    border-radius: 15%;
+    border-radius: 15%; 
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter:blur(2px);
     box-shadow: 0 0 25px rgba(0, 0, 0, .3);
@@ -675,8 +755,15 @@ body::-webkit-scrollbar-button:vertical:decrement{
     font-size: 30px;  
 }
 .formulario4{
+    color: white;
     font-size: 30px;  
 }
+
+/*30 de diciembre de 2024*/
+.formulario4 input{
+    color: white;
+}
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -704,10 +791,58 @@ body::-webkit-scrollbar-button:vertical:decrement{
 
 
 .columne{
-    column-count: 2;
-    column-gap: 10px;
+    
+    justify-content: center;
+    display: flex;
     font-size:20px;
+    padding: 15px;
   }
+
+  .columne img{
+    width: 40%;
+    margin-right: 10px;
+  }
+
+  /*29 de diciembre de 2024*/
+  @media (max-width: 1050px){
+
+    .columne img{
+        height: 450px;
+        width: 40%;
+    }
+  }
+
+  @media (max-width: 1050px){
+
+    .columne img{
+        height: 450px;
+        width: 40%;
+    }
+  }
+  @media (max-width: 800px){
+
+    .columne img{
+        height: 350px;
+        width: 40%;
+    }
+  }
+
+  @media (max-width: 600px){
+
+    .columne {
+        display: block;
+  
+
+    }
+
+    .columne img{
+
+        width: 75%;
+        height: auto;
+    }
+  }
+
+  /*fin 29 de diciembre - 30 dic 12:00*/
 .anima-lista {
     color: black;
     background: #71c2f5;
@@ -719,22 +854,20 @@ body::-webkit-scrollbar-button:vertical:decrement{
     list-style: none;
 }
 .new-link {
-    color: white;
+    color: gray;
     padding: 2%;
-    -webkit-backdrop-filter:blur(5px);
-    backdrop-filter: blur(5px);
-    box-shadow: 0 0 25px rgba(0, 0, 0, .3);
+    
     text-shadow: 0 0 25px rgba(0, 0, 0, .3);
 }
 
 
 
-
-.colort {
+/*cambiado el 30 de diciembre de 2024*/
+/*.colort {
     color: rgb(252, 255, 255);
     margin: 10px; 
     padding: 10px;
-}
+}  */
 
 .styled-textarea {
     width: 80%;
@@ -891,16 +1024,16 @@ dialog::backdrop {
 
 .actualizar{
     margin: 20px auto 40px auto ;
-    width: 30%;
+    width: 50%;
     height: 40%;
-    backdrop-filter: blur(4px);
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-
+    background-color: #004ef5;
+    border-radius: 10px;
   }
 
   .actualizar .inputcamp{
-    width: 300px;
+    width: 90%;
     height: 40px;
     font-size: 50px;
   }
@@ -911,13 +1044,12 @@ dialog::backdrop {
   
   .container2{
     max-width: 600px;
+    width: 50%;
     margin: auto;
     padding: 20px;
-    background: rgba(255,255,255,0.1);
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: #004ef5;
     border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 10px;
     line-height: 1.0;
   }
 
@@ -926,3 +1058,180 @@ dialog::backdrop {
     margin-bottom: 0;
   }
 /* fin */
+
+/*EVALUACIONES RESPONSIVE 21 DE DICIEMBRE DE 2024*/
+
+
+@media (max-width: 670px){
+    .sectionEval{
+        display: block;
+    }
+    
+    .sectionEval div{
+        font-size: 20px;
+        
+        overflow: hidden;
+    }
+
+    .sectionEval img{
+        width: 190px;
+       
+    }
+}
+
+@media (max-width: 572px){
+    .sectionEval{
+        width: 95%;
+        margin: 10px;
+    }
+    
+    .sectionEval img{
+        width: 110px;
+    }
+}
+
+/*RESPONSIVE PAGINA DE REGISTRAR 26 de diciembre de 2024*/
+
+@media (max-width: 800px){
+    #contin2{
+        width: 100%;
+    }
+
+    .imgKaxr{
+        width: 85%;
+        float: none;
+    }
+
+    .formulario2{
+        width: 50%;
+        height:auto;
+     
+    }
+}
+
+/*responsive pagina de que es la nem 29 de diciembre de 2024*/
+.fondosinaguaniblur{
+    color: #011931;
+}
+
+.fondosinaguaniblur h1, .fondosinaguaniblur h2{
+    color: #106D54;
+}
+
+@media (max-width: 574px){
+    .anima-text{
+        font-size: 25px;
+    }
+
+    .colort{
+        font-size: 21.5px;
+    }
+}
+/*30 de diciembre de 2024*/
+@media (max-width: 960px){
+    .avatarPer{
+        width: 120px;
+        height: 120px;
+    }
+    
+    .avatarPer input[type="radio"]{
+        
+        width: 122px;
+        height: 122px;
+        
+    }
+
+    #FotoPerfilMena{
+        background-size:122px 122px;
+        width: 120px;
+        height: 120px;
+    }
+    #FotoPerfilMajo{
+        background-size:122px 122px;
+        width: 120px;
+        height: 120px;
+    }
+    .FotoPerfilNata{
+        background-size:122px 122px;
+        width: 120px;
+        height: 120px;
+    }
+
+    .preview{
+        width: 70px;
+        height: 70px;
+    
+    }
+
+    .preview img{
+        width:70px; 
+        height:70px;
+    }
+
+    .acomodarimg label, button {
+
+        font-size: 15px;
+ 
+    }
+
+}
+
+@media (max-width: 800px){
+    .avatarPer{
+        width: 90px;
+        height: 90px;
+    }
+    
+    .avatarPer input[type="radio"]{
+        
+        width: 92px;
+        height: 92px;
+        
+    }
+
+    #FotoPerfilMena{
+        background-size:92px 92px;
+        width: 90px;
+        height: 90px;
+    }
+    #FotoPerfilMajo{
+        background-size:92px 92px;
+        width: 90px;
+        height: 90px;
+    }
+    .FotoPerfilNata{
+        background-size:92px 92px;
+        width: 90px;
+        height: 90px;
+    }
+
+    .preview{
+        width: 55px;
+        height: 55px;
+    
+    }
+
+    .preview img{
+        width:55px; 
+        height:55px;
+    }
+
+    .acomodarimg label, button {
+
+        font-size: 12.5px;
+ 
+    }
+
+}
+
+@media (max-width: 711px){
+    .acomodarimg{
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    .acomodarimg .btn{
+        width: 100%;
+    }
+}
