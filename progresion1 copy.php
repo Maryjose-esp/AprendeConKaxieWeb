@@ -81,9 +81,9 @@
         </section>
 
         <footer class="anteriorsig">
-            <div class="panterior"><a href="index.php"> <img src="images/Anterior.png" width=47px
+            <div class="panterior"><a href="index.php"> <img src="images/Anterior.png"
                         style="margin-bottom: -18px;"> Principal</a></div>
-            <div class="psiguiente"><a href="progresion2.php"> Siguiente <img src="images/Siguiente.png" width=47px
+            <div class="psiguiente"><a href="progresion2.php"> Siguiente <img src="images/Siguiente.png" 
                         style="margin-bottom: -18px;"> </a></div>
         </footer>
     </aside>

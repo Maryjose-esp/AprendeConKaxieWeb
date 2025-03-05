@@ -213,7 +213,7 @@
         <label for="p8e1txt1"><h3>Ejercicio 1</h3><p>Monto del préstamo: $12,500</p><p>Plazo en meses: 18</p></label><p>Mensualidad: <INPUT TYPE ="TEXT" size=5 maxlength="6" NAME="p8e1txt1" id="p8e1txt1"><BR><br></p>
         <label for="p8e1txt2"><h3>Ejercicio 2</h3><p>Monto del préstamo: $30,000</p><p>Plazo en meses: 24</p></label><p>Mensualidad: <INPUT TYPE ="TEXT" size=5 maxlength="6" NAME="p8e1txt2" id="p8e1txt2"><BR><br></p>
         <label for="p8e1txt3"><h3>Ejercicio 3</h3><p>Monto del préstamo: $18,750</p><p>Plazo en meses: 36</p></label><p>Mensualidad: <INPUT TYPE ="TEXT" size=5 maxlength="6" NAME="p8e1txt3" id="p8e1txt3"><BR><br></p>
-        <div>
+        <div style = "display: flex;">
         <button type="submit" value="" class="botonesrevisar" name="P8E1REV" id="P8E1REV"></button>
         <input type="reset" value="" class="botonesreintentar" onclick="eliminartodo()">
         </div>
@@ -342,7 +342,7 @@
         <br>
         <label for="p8e3txt3"><h3>Ejercicio 3:</h3><p>Pedro invierte $3000 en una cuenta de inversión que ofrece un interés compuesto del 8% anual. </p><p>Si decide reinvertir los intereses ganados al final de cada año, </p><p>¿cuánto dinero tendrá al final de 8 años?</p></label><INPUT TYPE ="TEXT" size=5 maxlength="8" NAME="p8e2txt3" id="p8e2txt3"><BR><br></p>
         <br>
-            <div>
+            <div style = "display: flex;">
             <button type="submit" value="" class="botonesrevisar" name="P8E2REV" id="P8E2REV"></button>
         <input type="reset" value="" class="botonesreintentar" onclick="eliminartodo()">
         </div>
@@ -351,7 +351,7 @@
         <script>
                 let respuestas2 = [2433.30,
                  8954.25,
-                 6007.29,];
+                 5552.79,];
                 colores(respuestas2, 8, 2);
             </script>
         <?php
@@ -360,7 +360,7 @@
                 $RespuestasE2 = array(
                  2433.30,
                  8954.25,
-                 6007.29,
+                 5552.79,
                 );
                 require ('funcionrevtxt.php');
                 Caso2txt($RespuestasE2, 2, 8, 'decimal');
@@ -415,7 +415,7 @@
             
             <label for="p8e3txt3"><h3>Ejercicio 3:</h3><p>Si inviertes $3000 en un certificado de depósito que ofrece un interés simple del 2.5% anual,</p><p> ¿cuál será el interés ganado después de 5 años?</p></label><INPUT TYPE ="TEXT" size=5 maxlength="8" NAME="p8e3txt3" id="p8e3txt3"><BR><br></p>
             
-            <div>
+            <div style = "display: flex;">
             <button type="submit" value="" class="botonesrevisar" name="P8E3REV" id="P8E3REV"></button>
         <input type="reset" value="" class="botonesreintentar" onclick="eliminartodo()">
         </div>
@@ -459,7 +459,7 @@
         <label for="p8e4txt10">Ana tiene una deuda de $20,000 con interés del 3% mensual y quiere saldarla en 2 años. ¿Cuál debe ser su pago mensual?</label><INPUT size=5 TYPE ="TEXT" NAME="p8e4txt10" id="p8e4txt10"><BR><br>
         <br>
         
-        <div>
+        <div style = "display: flex;">
             <button type="submit" value="" class="botonesrevisar" name="P8E4REV" id="P8E4REV"></button>
         <input type="reset" value="" class="botonesreintentar" onclick="eliminartodo()">
         </div>
@@ -516,7 +516,7 @@
         <center>
         <br>
         <h1 id="Res">  Resumen de la progresión</h1>
-        <img src="images/Progresion8img/M8.png">  
+        <img src="images/Progresion8img/M8.png" width = 100%>  
         </center>
 
 

@@ -17,7 +17,7 @@
     <h1 class="h1title"> Evaluaciones</h1>
     <Section class="sectionEval">
 
-        <div class="califandtitle"><img src="images/P1.png" align="center"><label>Evaluación - Progresión 1</label>
+        <div class="califandtitle"><img src="images/P1.png" align="center"><label><a class="link_evaluaciones" href="evaluacion1.php">Evaluación - Progresión 1</a></label>
             <article class="califcircles">
                 <script>
                     const length = document.querySelector("li:nth-child(1) path").getTotalLength();
@@ -32,7 +32,7 @@
             </article>
         </div><br>
 
-        <div class="califandtitle"><img src="images/P2.png" align="center"><label>Evaluación - Progresión 2</label>
+        <div class="califandtitle"><img src="images/P2.png" align="center"><label><a class="link_evaluaciones" href="evaluacion2.php">Evaluación - Progresión 2</a></label>
             <article class="califcircles">
                 <script>
                     const length = document.querySelector("li:nth-child(1) path").getTotalLength();
@@ -47,7 +47,7 @@
             </article>
         </div><br>
 
-        <div class="califandtitle"><img src="images/P3.png" align="center"><label>Evaluación - Progresión 3</label>
+        <div class="califandtitle"><img src="images/P3.png" align="center"><label><a class="link_evaluaciones" href="evaluacion3.php">Evaluación - Progresión 3</a></label>
             <article class="califcircles">
                 <script>
                     const length = document.querySelector("li:nth-child(1) path").getTotalLength();
@@ -62,7 +62,7 @@
             </article>
         </div><br>
 
-        <div class="califandtitle"><img src="images/P4.png" align="center"><label>Evaluación - Progresión 4 </label>
+        <div class="califandtitle"><img src="images/P4.png" align="center"><label><a class="link_evaluaciones" href="evaluacion4.php">Evaluación - Progresión 4 </a></label>
             <article class="califcircles">
                 <script>
                     const length = document.querySelector("li:nth-child(1) path").getTotalLength();
@@ -77,7 +77,7 @@
             </article>
         </div><br>
 
-        <div class="califandtitle"><img src="images/P5.png" align="center"><label>Evaluación - Progresión 5</label>
+        <div class="califandtitle"><img src="images/P5.png" align="center"><label><a class="link_evaluaciones" href="evaluacion5.php">Evaluación - Progresión 5</a></label>
             <article class="califcircles">
                 <script>
                     const length = document.querySelector("li:nth-child(1) path").getTotalLength();
@@ -91,7 +91,7 @@
                 </label>
             </article>
         </div><br>
-        <div class="califandtitle"><img src="images/P6.png" align="center"><label>Evaluación - Progresión 6 </label>
+        <div class="califandtitle"><img src="images/P6.png" align="center"><label><a class="link_evaluaciones" href="evaluacion6.php">Evaluación - Progresión 6 </a></label>
             <article class="califcircles">
                 <script>
                     const length = document.querySelector("li:nth-child(1) path").getTotalLength();
@@ -105,7 +105,7 @@
                 </label>
             </article>
         </div><br>
-        <div class="califandtitle"><img src="images/P7.png" align="center"><label>Evaluación - Progresión 7 </label>
+        <div class="califandtitle"><img src="images/P7.png" align="center"><label><a class="link_evaluaciones" href="evaluacion7.php">Evaluación - Progresión 7 </a></label>
             <article class="califcircles">
                 <script>
                     const length = document.querySelector("li:nth-child(1) path").getTotalLength();
@@ -119,7 +119,7 @@
                 </label>
             </article>
         </div><br>
-        <div class="califandtitle"><img src="images/P8.png" align="center"><label>Evaluación - Progresión 8 </label>
+        <div class="califandtitle"><img src="images/P8.png" align="center"><label><a class="link_evaluaciones" href="evaluacion8.php">Evaluación - Progresión 8 </a></label>
             <article class="califcircles">
                 <script>
                     const length = document.querySelector("li:nth-child(1) path").getTotalLength();
@@ -133,7 +133,7 @@
                 </label>
             </article>
         </div><br>
-        <div class="califandtitle"><img src="images/P9.png" align="center"><label>Evaluación - Progresión 9</label>
+        <div class="califandtitle"><img src="images/P9.png" align="center"><label><a class="link_evaluaciones" href="evaluacion9.php">Evaluación - Progresión 9</a></label>
             <article class="califcircles">
                 <script>
                     const length = document.querySelector("li:nth-child(1) path").getTotalLength();
@@ -147,7 +147,7 @@
                 </label>
             </article>
         </div><br>
-        <div class="califandtitle"><img src="images/P10.png" align="center"><label>Evaluación - Progresión 10</label>
+        <div class="califandtitle"><img src="images/P10.png" align="center"><label><a class="link_evaluaciones" href="evaluacion10.php">Evaluación - Progresión 10</a></label>
             <article class="califcircles">
                 <script>
                     const length = document.querySelector("li:nth-child(1) path").getTotalLength();
@@ -161,7 +161,7 @@
                 </label>
             </article>
         </div><br>
-        <div class="califandtitle"><img src="images/P11.png" align="center"><label>Evaluación - Progresión 11</label>
+        <div class="califandtitle"><img src="images/P11.png" align="center"><label><a class="link_evaluaciones" href="evaluacion11.php">Evaluación - Progresión 11</a></label>
             <article class="califcircles">
                 <script>
                     const length = document.querySelector("li:nth-child(1) path").getTotalLength();
@@ -175,7 +175,7 @@
                 </label>
             </article>
         </div><br>
-        <div class="califandtitle"><img src="images/P12.png" align="center"><label>Evaluación - Progresión 12</label>
+        <div class="califandtitle"><img src="images/P12.png" align="center"><label><a class="link_evaluaciones" href="evaluacion12.php">Evaluación - Progresión 12</a></label>
             <article class="califcircles">
                 <script>
                     const length = document.querySelector("li:nth-child(1) path").getTotalLength();
@@ -189,7 +189,7 @@
                 </label>
             </article>
         </div><br>
-        <div class="califandtitle"><img src="images/P13.png" align="center"><label>Evaluación - Progresión 13</label>
+        <div class="califandtitle"><img src="images/P13.png" align="center"><label><a class="link_evaluaciones" href="evaluacion13.php">Evaluación - Progresión 13</a></label>
             <article class="califcircles">
                 <script>
                     const length = document.querySelector("li:nth-child(1) path").getTotalLength();
@@ -203,7 +203,7 @@
                 </label>
             </article>
         </div><br>
-        <div class="califandtitle"><img src="images/P14.png" align="center"><label>Evaluación - Progresión 14 </label>
+        <div class="califandtitle"><img src="images/P14.png" align="center"><label><a class="link_evaluaciones" href="evaluacion14.php">Evaluación - Progresión 14 </a></label>
             <article class="califcircles">
                 <script>
                     const length = document.querySelector("li:nth-child(1) path").getTotalLength();

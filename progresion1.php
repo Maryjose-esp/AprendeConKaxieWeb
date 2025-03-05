@@ -31,7 +31,7 @@
             <P>Compara, considerando sus aprendizajes de trayectoría, el lenguaje natural con el lenguaje
                 matemático para observar que este último requiere de precisión y rigurosidad.
             </p>
-            <img src="images/P1.png" id="KaxieP1">
+            <img src="images/P1.png" id="KaxieP1"><br>
             <b>
                 <h3> Metas </h3>
             </b><br>
@@ -80,11 +80,16 @@
             </center>-->
         </section>
 
-        <footer class="anteriorsig">
+        <!-- <footer class="anteriorsig">
             <div class="panterior"><a href="index.php"> <img src="images/Anterior.png" width=47px
                         style="margin-bottom: -18px;"> Principal</a></div>
             <div class="psiguiente"><a href="progresion2.php"> Siguiente <img src="images/Siguiente.png" width=47px
                         style="margin-bottom: -18px;"> </a></div>
+        </footer> -->
+
+        <footer class="anteriorsig">
+            <div class="panterior"><a href="index.php"> <img src="images/Anterior.png"> Principal</a></div>
+            <div class="psiguiente"><a href="progresion2.php"> Siguiente <img src="images/Siguiente.png"> </a></div>
         </footer>
     </aside>
 
@@ -149,7 +154,7 @@
         <p>Dentro del lenguaje algebraico ya no se emplean tanto las palabras de suma, resta, división o multiplicación,
             en su lugar tenemos
             sinónimos para referirnos a tales operaciones. Véase la siguiente tabla:</p>
-        <TABLE>
+        <TABLE id = "p1_tabla1">
             <TR>
                 <TH>Suma</TH>
                 <TH>Resta</TH>
@@ -181,7 +186,7 @@
             <TR>
                 <TD>Más grande que</TD>
                 <TD>Perder o pérdida</TD>
-                <TD>Doble/triple/cuádruple/etc</TD>
+                <TD>Doble/triple/<br>cuádruple/etc.</TD>
                 <TD>Razón</TD>
             <TR>
 
@@ -189,7 +194,7 @@
                 <TD></TD>
                 <TD></TD>
                 <TD></TD>
-                <TD>Mitad/tercera/cuarta/etc</TD>
+                <TD>Mitad/tercera/<br>cuarta/etc</TD>
             <TR>
         </TABLE>
         <br>
@@ -217,7 +222,7 @@
         A continuación veremos algunos ejemplos comúnes de expresiones verbales
         y su traducción al lenguaje algebraico.
         </p>
-        <TABLE BORDER="2PX">
+        <TABLE BORDER="2PX" id = "p1_tabla2">
 
 
             <TR>

@@ -35,16 +35,18 @@
 
 
                     </div>
+                    <!-- <div class="recuerdame"> -->
+                    <Input  type="checkbox" name="Mantener" id="SesionMan"><label for="SesionMan" id="label_for_sesionman">Mantener inicio de sesion</label><br>
+                <!-- </div> -->
+                    <!-- <div class="new"> -->
+                    <p>No tinenes una cuenta? <a href="registro.php">Da click aqui para crear una</a><br><br>
+</p>
+                <!-- </div> -->
                 </div>
-                <div class="recuerdame">
-                    <Input type="checkbox" name="Mantener" id="SesionMan"><label for="SesionMan">Mantener inicio de sesion</label><br>
-                </div>
+                
 
                 <input type="submit" name="iniciaS" value="Iniciar Sesion" class="btn">
-                <div class="new">
-                    <p>No tinenes una cuenta? <a href="registro.php">Da click aqui para crear una</a>
-                    <p>
-                </div>
+                
 
             </form>
             <div>

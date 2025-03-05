@@ -17,7 +17,7 @@
 
 <body>
     <?php
-    require ('ifSession.php');
+    require('ifSession.php');
     ?>
     <script src="js/script11.js"></script>
 
@@ -344,104 +344,266 @@
             </mfrac>
         </math>
         <br><br><br><br><br><br><br><br><br><br>
+        <h2 id="trapecio">Circulo</h2>
+        <p>Para deducir la fórmula del círculo, hay que recordar la fórmula
+            para calcular el área de un polígono. </p><br>
+        <math class="p6ejercicio3fracciones" xmlns:mml="http://www.w3.org/1998/Math/MathML"
+            xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math">
+            <mi>a</mi>
+            <mo>=</mo>
+            <mi> </mi>
+            <mfrac>
+                <mrow>
+                    <mi>p</mi>
+                    <mi>a</mi>
+                </mrow>
+                <mrow>
+                    <mn>2</mn>
+                </mrow>
+            </mfrac>
+        </math>
+        <br>
+        <div>
+            <img src="./images/Progresion9img/img27.png" width=245px align=left><Br>
+            <p>Como se puede ver en la imagen,
+                al sobreponer un polígono sobre el círculo, se puede ver que el área
+                de ambas figuras es muy similar, sólo que la del círculo es un poco más
+                grande.</p><br>
+
+            <p>En el polígono tenemos a la apotema, es decir, la distancia que hay del centro
+                de la figura hasta uno de sus lados (línea completa), la cual es
+                muy similar al radio, el cual se define como la distancia entre el centro
+                de la circunferencia y cualquier punto de su perímetro.</p>
+            <br>
+        </div>
+
+        <p>Tomando esto en cuenta, podemos sustituir en la fórmula de área para polígonos
+            regulares:
+            <math class="p6ejercicio3fracciones" xmlns:mml="http://www.w3.org/1998/Math/MathML"
+                xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math">
+                <mi>a</mi>
+                <mo>=</mo>
+                <mi> </mi>
+                <mfrac>
+                    <mrow>
+                        <mi>p</mi>
+                        <mi>r</mi>
+                    </mrow>
+                    <mrow>
+                        <mn>2</mn>
+                    </mrow>
+                </mfrac>
+            </math>
+        </p>
+        <br>
+        <img src="./images/Progresion9img/img27.png" width=245px align=left><Br>
+        <p>Otro punto a observar, es que el perímetro del polígono es similar al del círculo, esto por ejemplo
+            se ve en polígonos con más lados como en la ilustración de al lado.</p>
+        <br>
+        <p>En el polígono regular, su perímetros corresponde a la suma de la medida de sus
+            lados, en cuanto al círculo, su perímetro se calcula con la sigueinte fórmula:
+            <math class="p6ejercicio3fracciones" xmlns:mml="http://www.w3.org/1998/Math/MathML"
+                xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math">
+                <mi>p</mi>
+                <mo>=</mo>
+                <mi> </mi>
+                <mi>π</mi>
+                <mi>d</mi>
+            </math>
+        </p>
+
+        <p>Donde:<br>
+            π = 3.1416...<br>
+            d = diámetro, el cual es el doble del radio, es decir 2r =
+            <math class="p6ejercicio3fracciones" xmlns:mml="http://www.w3.org/1998/Math/MathML"
+                xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math">
+                <mi>p</mi>
+                <mo>=</mo>
+                <mi> </mi>
+                <mi>π</mi>
+                <mn>2</mn>
+                <mi>r</mi>
+            </math>
+        </p><br>
+        <br>
+        <p>Teniendo la fórmula del perímetro, la sustituímos en la fórmual del
+            área de un polígono regular:</p>
+        <math class="p6ejercicio3fracciones" xmlns:mml="http://www.w3.org/1998/Math/MathML"
+            xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math">
+            <mi>a</mi>
+            <mo>=</mo>
+            <mi> </mi>
+            <mfrac>
+                <mrow>
+                    <mi>π</mi>
+                    <mn>2</mn>
+                    <mi>r</mi>
+                    <mi>r</mi>
+                </mrow>
+                <mrow>
+                    <mn>2</mn>
+                </mrow>
+            </mfrac>
+        </math>
+        <br>
+        <p>El número 2 lo podemos cancelar y efectuamos la multiplicación de radios, teniendo
+            así la fórmula final para el área del círculo.
+            <math class="figformulas" xmlns:mml="http://www.w3.org/1998/Math/MathML"
+                xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math">
+                <mi>á</mi>
+                <mi>r</mi>
+                <mi>e</mi>
+                <mi>a</mi>
+                <mo>=</mo>
+                <mi> </mi>
+                <mi>π</mi>
+                <msup>
+                    <mrow>
+                        <mi>r</mi>
+                    </mrow>
+                    <mrow>
+                        <mn>2</mn>
+                    </mrow>
+                </msup>
+            </math>
+        </p>
+        <br>
+
+
+
+
         <div class="imgejercicios">
             <div>
                 <img id="ejercicios" src="images/Ejercicios.png" width=180px height=auto style="margin-right: 20px;">
             </div>
             <div id="ejercicios">
-            <h1 >Ejercicios</h1><br>
+                <h1>Ejercicios</h1><br>
             </div>
         </div>
 
-        
+
         <P>1. Calcular el area de las siguientes figuras geometricas </p> <br>
-        <div>
-            <form method="post">
+
+        <form method="post" class="ejercicio1_progresion9">
 
 
-
-                <img src="images/Progresion9img/img13.png" width=250px>
+            <div>
+                <img src="images/Progresion9img/img13.png">
                 <label for="p9e1txt1">Área </label><input type="Text" size=4 maxlength="8" name="p9e1txt1"
                     id="p9e1txt1">
-                <img src="images/Progresion9img/img14.png" width=250px>
+            </div>
+
+            <div>
+                <img src="images/Progresion9img/img14.png">
                 <label for="p9e1txt2">Área </label><input type="Text" size=4 maxlength="8" name="p9e1txt2"
                     id="p9e1txt2"><br><br>
-                <img src="images/Progresion9img/img15.png" width=180px>
+            </div>
+
+
+            <div>
+                <img src="images/Progresion9img/img15.png">
                 <label for="p9e1txt3">Área </label><input type="Text" size=4 maxlength="8" name="p9e1txt3"
                     id="p9e1txt3">
-                <img src="images/Progresion9img/img16.png" width=250px>
+            </div>
+
+            <div>
+                <img src="images/Progresion9img/img16.png">
                 <label for="p9e1txt4">Área </label><input type="Text" size=4 maxlength="8" name="p9e1txt4"
                     id="p9e1txt4"><br><br>
-                <img src="images/Progresion9img/img17.png" width=320px height="210px">
+            </div>
+
+            <div>
+                <img src="images/Progresion9img/img17.png">
                 <label for="p9e1txt5">Área </label><input type="Text" size=4 maxlength="8" name="p9e1txt5"
                     id="p9e1txt5">
-                <img src="images/Progresion9img/img18.png" width=250px>
+            </div>
+
+            <div>
+                <img src="images/Progresion9img/img18.png">
                 <label for="p9e1txt6">Área </label><input type="Text" size=4 maxlength="8" name="p9e1txt6"
                     id="p9e1txt6"><br><br>
-                <img src="images/Progresion9img/img19.png" width=200px>
+            </div>
+
+
+            <div>
+                <img src="images/Progresion9img/img19.png">
                 <label for="p9e1txt7">Área </label><input type="Text" size=4 maxlength="8" name="p9e1txt7"
                     id="p9e1txt7">
-                <img src="images/Progresion9img/img20.png" width=250px>
+            </div>
+
+            <div>
+                <img src="images/Progresion9img/img20.png">
                 <label for="p9e1txt8">Área </label><input type="Text" size=4 maxlength="8" name="p9e1txt8"
                     id="p9e1txt8"><br><br>
-                <img src="images/Progresion9img/img21.png" width=250px>
+            </div>
+
+            <div>
+                <img src="images/Progresion9img/img21.png">
                 <label for="p9e1txt9">Área </label><input type="Text" size=4 maxlength="8" name="p9e1txt9"
                     id="p9e1txt9">
-                <img src="images/Progresion9img/img22.png" width=280px height=170px>
+            </div>
+
+            <div>
+                <img src="images/Progresion9img/img22.png">
                 <label for="p9e1txt10">Área </label><input type="Text" size=4 maxlength="8" name="p9e1txt10"
                     id="p9e1txt10"><br><br>
-                <img src="images/Progresion9img/img23.png" width=250px>
+            </div>
+
+            <div>
+                <img src="images/Progresion9img/img23.png">
                 <label for="p9e1txt11">Área </label><input type="Text" size=4 maxlength="8" name="p9e1txt11"
                     id="p9e1txt11">
-                <div style="display:flex;">
-                    <button type="submit" value="" class="botonesrevisar" name="P9E1REV" id="P9E1REV"></button>
-                    <input type="reset" value="" class="botonesreintentar" onclick="eliminartodo()">
-                </div>
-            </form>
-            
+            </div>
 
-            <script>
-                let respuestas = [999.4,
-                    456.3,
-                    812.5,
-                    419.7,
-                    2268,
-                    88.2,
-                    2300.1,
-                    704.4,
-                    5225.8,
-                    522.5,
-                    336.72];
-                colores(respuestas, 9, 1);
-            </script>
-            
-            <?php
-            if (isset($_POST['P9E1REV'])) {
-
-                $RespuestasE1 = array(
-                    999.4,
-                    456.3,
-                    812.5,
-                    419.7,
-                    2268,
-                    88.2,
-                    2300.1,
-                    704.4,
-                    5225.8,
-                    522.5,
-                    336.72
-                );
-                require ('funcionrevtxt.php');
-                Caso2txt($RespuestasE1, 1, 9, 'decimal');
+            <div style="display:flex;">
+                <button type="submit" value="" class="botonesrevisar" name="P9E1REV" id="P9E1REV"></button>
+                <input type="reset" value="" class="botonesreintentar" onclick="eliminartodo()">
+            </div>
+        </form>
 
 
-            }
-            ?>
+        <script>
+            let respuestas = [999.4,
+                456.3,
+                812.5,
+                419.7,
+                2268,
+                88.2,
+                2300.1,
+                704.4,
+                5225.8,
+                522.5,
+                336.72];
+            colores(respuestas, 9, 1);
+        </script>
+
+        <?php
+        if (isset($_POST['P9E1REV'])) {
+
+            $RespuestasE1 = array(
+                999.4,
+                456.3,
+                812.5,
+                419.7,
+                2268,
+                88.2,
+                2300.1,
+                704.4,
+                5225.8,
+                522.5,
+                336.72
+            );
+            require('funcionrevtxt.php');
+            Caso2txt($RespuestasE1, 1, 9, 'decimal');
+
+
+        }
+        ?>
 
 
 
-            <br><br><br><br>
-        </div>
+        <br><br><br><br>
+
         <p>2. Seleccione la opcion correcta.</p><br>
         <form method="post">
             a. Se tiene un cudrado cuyo lado mide 7 cm ¿Cuál es su área?<br>
@@ -573,7 +735,7 @@
                 </div>
                 <?php
                 if (isset($_POST['P9E2REV'])) {
-                    require ('funcionrevradio.php');
+                    require('funcionrevradio.php');
                     RevisarRadios(10, 2, 9);
                 }
                 ?>
@@ -583,7 +745,7 @@
         <h1 id="resumen">Resumen</h1><br>
         <center><img src="./images/Progresion9img/resumenp9.png" width="90%"></center><br>
         Finalmente, dejamos un formulario que recolecta las fórmulas que dedujimos.<br>
-        <table class="table1p9" >
+        <table class="table1p9">
             <tr>
                 <th>Figura</th>
                 <th>Fórmula</th>
@@ -591,95 +753,96 @@
 
             <tr>
                 <td>Cuadrado</td>
-                <td><math >
-                <mn> área=</mn>
-                <msup>
+                <td><math>
+                        <mn> área=</mn>
+                        <msup>
 
-                    <mi>l</mi>
-                    <mn>2</mn>
-                </msup>
-            </math></td>
+                            <mi>l</mi>
+                            <mn>2</mn>
+                        </msup>
+                    </math></td>
             </tr>
 
             <tr>
                 <td>Rectángulo</td>
-                <td><math >
-                <mn>área</mn>
-                <mn>=</mn>
-                <mn>a</mn>
-                <mn>b</mn>
-            </math></td>
+                <td><math>
+                        <mn>área</mn>
+                        <mn>=</mn>
+                        <mn>a</mn>
+                        <mn>b</mn>
+                    </math></td>
             </tr>
 
             <tr>
                 <td>Triángulo</td>
-                <td><math >
-                <mn>área</mn>
-                <mn>=</mn>
-                <mfrac>
-                    <mn>bh</mn>
-                    <mn>2</mn>
-                </mfrac>
-            </math></td>
+                <td><math>
+                        <mn>área</mn>
+                        <mn>=</mn>
+                        <mfrac>
+                            <mn>bh</mn>
+                            <mn>2</mn>
+                        </mfrac>
+                    </math></td>
             </tr>
 
             <tr>
                 <td>Romboide</td>
-                <td><math >
-            <mn>área</mn>
-            <mn>=</mn>
-            <mn>a</mn>
-            <mn>b</mn>
-        </math></td>
+                <td><math>
+                        <mn>área</mn>
+                        <mn>=</mn>
+                        <mn>a</mn>
+                        <mn>b</mn>
+                    </math></td>
             </tr>
 
             <tr>
                 <td>Rombo</td>
-                <td><math >
-            <mn>área</mn>
-            <mn>=</mn>
-            <mfrac>
-                <mn>dD</mn>
-                <mn>2</mn>
-            </mfrac>
-        </math></td>
+                <td><math>
+                        <mn>área</mn>
+                        <mn>=</mn>
+                        <mfrac>
+                            <mn>dD</mn>
+                            <mn>2</mn>
+                        </mfrac>
+                    </math></td>
             </tr>
 
             <tr>
                 <td>Trapecio</td>
                 <td><math>
-                <mn>área</mn>
-                <mn>=</mn>
-                <mfrac>
-                    <mn>(a+c)h</mn>
-                    <mn>2</mn>
-                </mfrac>
-            </math></td>
+                        <mn>área</mn>
+                        <mn>=</mn>
+                        <mfrac>
+                            <mn>(a+c)h</mn>
+                            <mn>2</mn>
+                        </mfrac>
+                    </math></td>
             </tr>
 
             <tr>
                 <td>Polígono regular</td>
                 <td><math>
-            <mn>área</mn>
-            <mn>=</mn>
-            <mfrac>
-                <mn>(n)(b)(a)</mn>
-                <mn>2</mn>
-            </mfrac>
-        </math></td>
+                        <mn>área</mn>
+                        <mn>=</mn>
+                        <mfrac>
+                            <mn>(n)(b)(a)</mn>
+                            <mn>2</mn>
+                        </mfrac>
+                    </math></td>
             </tr>
 
 
         </table>
 
-        ¿Quieres descargarlo para imprmirlo? <a href="download/p9formulario.pdf" download="p9formulario.pdf">Da click aquí</a>.
+        ¿Quieres descargarlo para imprmirlo? <a href="download/p9formulario.pdf" download="p9formulario.pdf">Da click
+            aquí</a>.
 
 
 
     </section>
 
     <div id="fot">
-        <?php include ('footer.php'); ?>
+        <?php include('footer.php'); ?>
     </div>
 
 </body>

@@ -16,149 +16,141 @@
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/close.css' rel='stylesheet'>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function(){
+        document.addEventListener('DOMContentLoaded', function () {
             var splide = new Splide('#main_splide', {
-            arrows: 'false',
-            type: 'loop',
-            autoplay: 'true',
-            interval: '3300',
-            pauseOnHover: 'true'
+                arrows: 'false',
+                type: 'loop',
+                autoplay: 'true',
+                interval: '3300',
+                pauseOnHover: 'true'
             }).mount();
         });
 
-        document.addEventListener('DOMContentLoaded', function(){
+        document.addEventListener('DOMContentLoaded', function () {
             var splide = new Splide('#sup_splide', {
-            arrows: 'false',
-            type: 'loop',
-            autoplay: 'true',
-            interval: '2500',
-            perPage: 3,
-            focus: 'center',
-            pauseOnHover: 'true'
+                arrows: 'false',
+                type: 'loop',
+                autoplay: 'true',
+                interval: '2500',
+                perPage: 3,
+                focus: 'center',
+                pauseOnHover: 'true'
             }).mount();
         });
-        
+
     </script>
 
     <title>Aprende Con Kaxie</title>
 </head>
 
 <body>
-   
-    <?php require ('ifSession.php'); 
-        if(isset($_GET['param'])){
-            echo '<dialog class="dialog1" open>';
-            echo '<button onClick="this.parentElement.close()"><a href="index.php"><i class="gg-close" style="font-size: 100px;" ></a></i></button>';
-            echo '<center><img src="./images/fotoactualizada.png">';
-            echo '<p>La nueva imagen de perfil ha sido cargada con éxito.<br> Puedes continuar navegando.';
-            echo '</p></center></dialog>';
-        }
+
+    <?php require('ifSession.php');
+    if (isset($_GET['param'])) {
+        echo '<dialog class="dialog1" open>';
+        echo '<button onClick="this.parentElement.close()"><a href="index.php"><i class="gg-close" style="font-size: 100px;" ></a></i></button>';
+        echo '<center><img src="./images/fotoactualizada.png">';
+        echo '<p>La nueva imagen de perfil ha sido cargada con éxito.<br> Puedes continuar navegando.';
+        echo '</p></center></dialog>';
+    }
     ?>
-  
-    <div class="DIV1">
-        <section id="main_splide" class="splide" aria-label="Basic Structure Example" style="width=100%;">
-            <div class="splide__track">
-                <ul class="splide__list">
-                    <li class="splide__slide">
-                        <div>
-                            <div class="div2">
-                                <img class="kax2" src="images/79 sin título_20231014200257.png">
-                            </div>
-                            <div>
-                                <p class="log">Aprende con Kaxie es una ayuda didáctica sobre Pensamiento Matemático II,
-                                    materia que se
-                                    rige bajo la nueva reforma educativa en México.<br><br>
-                                    Pruébalo y aventurate con Kaxie, tu pequeño profesor que te acompañará a lo largo de
-                                    las
-                                    progresiones.</p>
-                            </div>
+
+    <!-- <div class="DIV1"> -->
+    <section id="main_splide" class="splide" aria-label="Basic Structure Example" style="width=100%;">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide">
+                    <div class="espacio_img_text_slide">
+                        <div class="div2">
+                            <img class="kax2" src="images/79 sin título_20231014200257.png">
                         </div>
 
-                    <li class="splide__slide">
-                        <div>
-                            <div class="div2">
-                                <img class="kax2" src="images/richard.png">
-                            </div>
-                            <div>
-                                <p class="log">"Para aquellos que no conocen las matemáticas, es difícil sentir la
-                                    belleza de la naturaleza. Si quieres apreciarla, es necesario
-                                    aprender el lenguaje en el que habla". <br>-Richard Feynman</p>
-                            </div>
+                        <p class="log">Aprende con Kaxie es una ayuda didáctica sobre Pensamiento Matemático II,
+                            materia que se
+                            rige bajo la nueva reforma educativa en México.<br><br>
+                            Pruébalo y aventurate con Kaxie, tu pequeño profesor que te acompañará a lo largo de
+                            las
+                            progresiones.</p>
+
+                    </div>
+                </li>
+                <li class="splide__slide">
+                    <div class="espacio_img_text_slide">
+                        <div class="div2">
+                            <img class="kax2" src="images/richard.png">
                         </div>
 
-                    </li>
+                        <p class="log">"Para aquellos que no conocen las matemáticas, es difícil sentir la
+                            belleza de la naturaleza. Si quieres apreciarla, es necesario
+                            aprender el lenguaje en el que habla". <br>-Richard Feynman</p>
 
-                    <li class="splide__slide">
-                        <div>
-                            <div class="div2">
-                                <img class="kax2" src="images/chesterton.png">
-                            </div>
-                            <div>
-                                <p class="log">"La diferencia entre el poeta y el matemática es que el poeta intenta
-                                    meter su cabeza en los cielos, mientras que el matemático intenta
-                                    meter los cielos en su cabeza" <br>-G.K. Chesterton</p>
-                            </div>
-                        </div>
-                    </li>
+                    </div>
 
-                    <li class="splide__slide">
+                </li>
 
-                        <div>
-                            <div class="div2">
-                                <img class="kax2" src="images/gudder.png">
-                            </div>
-                            <div>
-                                <p class="log">"La esencia de las matemáticas no es hacer las cosas simples complicadas,
-                                    sino hacer las cosas
-                                    complicadas simples"<br>-S. Gudder.</p>
-                            </div>
+                <li class="splide__slide">
+                    <div class="espacio_img_text_slide">
+                        <div class="div2">
+                            <img class="kax2" src="images/chesterton.png">
                         </div>
 
+                        <p class="log">"La diferencia entre el poeta y el matemática es que el poeta intenta
+                            meter su cabeza en los cielos, mientras que el matemático intenta
+                            meter los cielos en su cabeza" <br>-G.K. Chesterton</p>
+                    </div>
 
-                    </li>
+                </li>
 
-                    <li class="splide__slide">
-                        <div>
-                            <div class="div2">
-                                <img class="kax2" src="images/einstein.png">
-                            </div>
-                            <div>
-                                <p class="log">"No tengo ningún talento especial, sólo soy
-                                    apasionadamente curioso." <br>- Albert Einstein</p>
-                            </div>
+                <li class="splide__slide">
+
+                    <div class="espacio_img_text_slide">
+                        <div class="div2">
+                            <img class="kax2" src="images/gudder.png">
                         </div>
 
+                        <p class="log">"La esencia de las matemáticas no es hacer las cosas simples complicadas,
+                            sino hacer las cosas
+                            complicadas simples"<br>-S. Gudder.</p>
 
-                    </li>
-                </ul>
-            </div>
-        </section>
+                    </div>
 
-    </div>
-    
 
-    <br>
-    <div style="margin-top: 10px;">
-        <div id="tres">Qué es </div>
-        <div id="cuatro">Objetivo </div>
-        <div id="cinco">Beneficios</div>
-    </div>
-    <br>
+                </li>
+
+                <li class="splide__slide">
+                    <div class="espacio_img_text_slide">
+                        <div class="div2">
+                            <img class="kax2" src="images/einstein.png">
+                        </div>
+
+                        <p class="log">"No tengo ningún talento especial, sólo soy
+                            apasionadamente curioso." <br>- Albert Einstein</p>
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- </div> -->
+
 
 
     <div class="cards-grid">
         <div class="flip-card">
+            <p class="espaciar_titulos">Qué es </p>
             <div class="flip-card-inner">
                 <div class="flip-card-front" style="background-image: url('./images/queesindex.jpg');"></div>
                 <div class="flip-card-back">
-                    <p>Aprende con Kaxie es una página que engloba las 14 progresiones marcadas en
-                        el marco curricular de Pensamiento Matemático II, una de las nuevas materias
-                        que trajó la Nueva Escuela Mexicana a partir del ciclo escolar 2023-2024.</p>
+                    Aprende con Kaxie es una página que engloba las 14 progresiones marcadas en
+                    el marco curricular de Pensamiento Matemático II, una de las nuevas materias
+                    que trajó la Nueva Escuela Mexicana a partir del ciclo escolar 2023-2024.
                 </div>
             </div>
         </div>
 
         <div class="flip-card" id="flip2">
+            <p class="espaciar_titulos">Objetivo</p>
             <div class="flip-card-inner">
                 <div class="flip-card-front" style="background-image: url('./images/objetivosindex.jpg');"></div>
                 <div class="flip-card-back">
@@ -169,6 +161,7 @@
         </div>
 
         <div class="flip-card" id="flip3">
+            <p class="espaciar_titulos">Beneficios</p>
             <div class="flip-card-inner">
                 <div class="flip-card-front" style="background-image: url('./images/beneficiosindex.jpg');"></div>
                 <div class="flip-card-back">
@@ -180,7 +173,7 @@
             </div>
         </div>
     </div>
-<br><br>
+    <br><br><br><br><br><br>
     <div class="img_splide_islas">
         <div id="sup_splide" class="splide">
             <div class="splide__track">
@@ -260,89 +253,79 @@
         </div>
     </div>
 
-
+    <br><br>
     <center>
         <p class="ramasprinc"> Ramas principales</p>
     </center>
     <br><br>
     <div class="ramascontainer">
+        <section class="centrar_apartados">
+            <div CLASS="RAMAINDI">
+                <CENTER>
+                    <h2>Álgebra</h2>
+                </CENTER><br>
+                <div class="ramas">
+                    <img src="images/algeindex.jpg" width="300px" height="220px">
+                </div>
+                <div class="textramas">
+                    <p>
+                        Estudia las estructuras y reglas generales que rigen a las operaciones aritméticas.
+                        Aquí ya no se trabaja únicamente con números, se emplean símbolos y letras en representación de
+                        valores desconocidos (incógnitas).
+                        Su propósito es resolver ecuaciones y expresar relaciones matemáticas, a fin de que puedan ser
+                        solucionadas.
+                    </p>
+                </div>
+            </div>
 
-        <div CLASS="RAMAINDI">
-            <CENTER>
-                <h2>Álgebra</h2>
-            </CENTER><br>
-            <div class="ramas">
-                <img src="images/algeindex.jpg" width="300px" height="220px">
-            </div>
-            <div class="textramas">
-                <p>
-                    Estudia las estructuras y reglas generales que rigen a las operaciones aritméticas.
-                    Aquí ya no se trabaja únicamente con números, se emplean símbolos y letras en representación de
-                    valores desconocidos (incógnitas).
-                    Su propósito es resolver ecuaciones y expresar relaciones matemáticas, a fin de que puedan ser
-                    solucionadas.
-                </p>
-            </div>
-        </div>
+            <div CLASS="RAMAINDI">
+                <CENTER>
+                    <h2>Geometría analítica</h2>
+                </CENTER><br>
+                <div class="ramas">
+                    <img src="images/trigonometryindex.jpg" width="220px">
+                </div>
+                <div class="textramas">
+                    <p>
+                        Comprende un estudio profundo de las figuras geométricas, así como de sus datos (áreas,
+                        perímetros,
+                        ángulos, distancias
+                        vértices, etc), todo esto sobre el plano cartesiano, valiéndose del álgebra para encontrar
+                        soluciones a distintas situaciones.
 
-        <div CLASS="RAMAINDI">
-            <CENTER>
-                <h2>Geometría analítica</h2>
-            </CENTER><br>
-            <div class="ramas">
-                <img src="images/trigonometryindex.jpg" width="220px">
+                    </p>
+                </div>
             </div>
-            <div class="textramas">
-                <p>
-                    Comprende un estudio profundo de las figuras geométricas, así como de sus datos (áreas, perímetros,
-                    ángulos, distancias
-                    vértices, etc), todo esto sobre el plano cartesiano, valiéndose del álgebra para encontrar
-                    soluciones a distintas situaciones.
 
-                </p>
-            </div>
-        </div>
+            <div CLASS="RAMAINDI">
+                <CENTER>
+                    <h2>Geometría</h2>
+                </CENTER><br>
+                <div class="ramas">
 
-        <div CLASS="RAMAINDI">
-            <CENTER>
-                <h2>Geometría</h2>
-            </CENTER><br>
-            <div class="ramas">
+                    <img src="images/geometryindex.jpg" width="265px" height="220px">
+                </div>
+                <div class="textramas">
+                    <p>
+                        Está dedicada al estudio de las propiedades y medidas de las figuras sobre un plano o en el
+                        espacio,
+                        abarcando diversos conceptos
+                        como recta, punto, curvas, etc.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-                <img src="images/geometryindex.jpg" width="265px" height="220px">
-            </div>
-            <div class="textramas">
-                <p>
-                    Está dedicada al estudio de las propiedades y medidas de las figuras sobre un plano o en el espacio,
-                    abarcando diversos conceptos
-                    como recta, punto, curvas, etc.
-                </p>
-            </div>
-        </div>
 
-        <div CLASS="RAMAINDI">
-            <CENTER>
-                <h2>Trigonometría</h2>
-            </CENTER><br>
-            <div class="ramas">
-                <img src="images/fintriindex.jpg" width="220px" height="220px">
-            </div>
-            <div class="textramas">
-                <p>
-                    Su estudio se basa en los triángulos, las relaciones que surgen entre sus lados y ángulosn y las
-                    funciones
-                    trigonométricas(seno, coseno tangente, coseno, secante, cotangente, etc).
 
-                </p>
-            </div>
-        </div>
+
     </div>
 
     <BR><BR>
     <!--FOOTER-->
 
     <div id="fot">
-        <?php include ('footer.php'); ?>
+        <?php include('footer.php'); ?>
     </div>
 
 </body>

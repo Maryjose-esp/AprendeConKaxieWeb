@@ -12,19 +12,19 @@
 
 <body>
     <?php
-    include ('ifSession.php');
+    include('ifSession.php');
     ?>
 
     <section style=" margin-top:30px;">
         <div class="formulario2">
-            <CENTER>
-                <H3>Registrarse</h3>
-            </CENTER>
-            <div class="imgKaxr">
 
-            </div>
+            <h3 class="adaptar_noblock">Registrarse</h3><br>
+
+            <img src="./images/KaxieCreausr.png" class="imgKaxr">
             <form action="registrouser.php" method="get">
+
                 <div id="contin2">
+
                     <div class="inputcamp">
                         <Input type="text" name="Nombre" placeholder="Nombre" required><br>
                     </div>
@@ -40,24 +40,28 @@
                     <div class="inputcamp">
                         <Input type="password" name="Passw" placeholder="Contrasena" required> <br>
                     </div>
+                    <div class="recuerdame">
+                        <Input class="recuerdame" type="checkbox" name="Mantener" id="SesionM"><label
+                            for="SesionM">Mantener inicio de sesion</label>
+                    </div>
+
+                    <p class="new">Ya tinenes una cuenta? <a href="sesion.php">Da click aqui para iniciar sesion</a>
+                    </p><br><br>
+                    <input type="submit" name="iniciaS" value="Registrarse" class="btn">
                 </div>
 
-                <div class="recuerdame">
-                    <Input type="checkbox" name="Mantener" id="SesionM"><label for="SesionM">Mantener inicio de sesion</label><br>
-                </div>
 
-                <input type="submit" name="iniciaS" value="Registrarse" class="btn">
-                <div class="new">
-                    <p>Ya tinenes una cuenta? <a href="sesion.php">Da click aqui para iniciar sesion</a>
-                    <p>
-                </div>
+
+
+
+
             </form>
             <div>
 
     </section>
-        <?php
-        include ('footer.php');
-        ?>
+    <?php
+    include('footer.php');
+    ?>
 </body>
 
 </html>

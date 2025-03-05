@@ -80,7 +80,7 @@
                 <br><br>
                 <div class="acomodarimg">
                     <div class="preview">
-                            <img src="./images/fotoperdefa.png" width="100px" height="100px" id="verimg">;
+                            <img src="./images/fotoperdefa.png"  id="verimg">;
                     </div>
                     <div>
                         <input type="file" name="subirimagen" value="subir imagen" accept="image/*" id="subirImagen"></input>
