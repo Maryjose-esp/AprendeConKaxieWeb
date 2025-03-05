@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style3.css">
+    <link rel="stylesheet" href="css/style5.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
@@ -609,6 +610,7 @@
         Estas tienen 2 casos de ecuaciones fraccionarias cuando en el denominador se tiene un monomio y cuando se tiene un binomio
         En el primer caso esta cuando se presenta un monomio:
         <br><br>
+        <div class=ajustar>
         <math class="tamfrac"><mfrac><mn>2</mn><mn>3</mn></mfrac><mi>x</mi><mo>+</mo><mfrac><mn>3</mn><mn>5</mn></mfrac><mi>x</mi><mo>=</mo><mn>7</mn><mi>x</mi></math>
         <br><br>
         <math class="tamfrac"><mn>15</mn><mi>x</mi><mo>(</mo><mfrac><mn>2</mn><mn>3</mn></mfrac><mi>x</mi><mo>)</mo><mo>+</mo><mn>15</mn><mi>x</mi><mo>(</mo><mfrac><mn>3</mn><mn>5</mn></mfrac><mi>x</mi><mo>)</mo><mo>=</mo><mn>15</mn><mi>x</mi><mo>(</mo><mn>7</mn><mo>)</mo></math>
@@ -622,6 +624,7 @@
         <math class="tamfrac"><mn>105</mn><mi>x</mi><mo>=</mo><mn>19</mn></math>
         <br><br>
         <math class="tamfrac"><mi>x</mi><mo>=</mo><mfrac><mn>19</mn><mn>105</mn></mfrac></math>
+        </div>
 </center>
     </div> 
     <br><br>
@@ -629,6 +632,7 @@
         <center>
         En el segundo caso esta cuando se presenta un binomio:
         <br><br>
+        <div class=ajustar>
         <math class="tamfrac"><mfrac><mn>11</mn><mrow><mn>6</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow></mfrac><mo>=</mo><mfrac><mn>2</mn><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></mfrac></math>
         <br><br>El mcm en este caso es (6x+1)(x+1)<br><br>
         <math class="tamfrac"><mo>(</mo><mi>6</mi><mi>x</mi><mo>+</mo><mn>1</mn><mo>)</mo><mo>(</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo>)</mo><mfrac><mrow><mo>(</mo><mi>11</mi><mo>)</mo></mrow><mrow><mi>6x</mi><mo>+</mo><mn>1</mn></mrow></mfrac><mo>=</mo><mo>(</mo><mi>6</mi><mi>x</mi><mo>+</mo><mn>1</mn><mo>)</mo><mo>(</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo>)</mo><mo>(</mo><mfrac><mrow><mi>2</mi></mrow><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></mfrac><mo>)</mo></math>
@@ -644,6 +648,7 @@
         <math class="tamfrac"><mn>1</mn><mn>1</mn><mo>-</mo><mn>2</mn><mi></mi><mo>=</mo><mn>1</mn><mn>2</mn><mi>x</mi><mo>-</mo><mn>1</mn><mn>1</mn></math>
         <br><br>
         <math class="tamfrac"><mn>9</mn><mo>=</mo><mi>x</mi></math>
+        </div>
 </center>
 </div> 
         <br><br>

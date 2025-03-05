@@ -9,7 +9,7 @@ body{
     background-color: #C1F1F5;
     font-size: 20px;
     font-family: 'Trebuchet MS';
-    color: white;
+    color: rgb(17, 9, 42);
     cursor: url('./../images/Cursor.png'), auto;/*cursor elegido, cursor por defecto*/
     justify-content: center;
     align-items: center;
@@ -664,7 +664,8 @@ body::-webkit-scrollbar-button:vertical:decrement{
 }
 
 /*style bibliografia*/
-.bibliografia{
+
+/* .bibliografia{
     position: absolute;  
     right: 34%;
     margin-right: auto;
@@ -672,7 +673,7 @@ body::-webkit-scrollbar-button:vertical:decrement{
     display: flex;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     
-}
+} */
 .bibli{
     width: 70%;
     min-width: 300px;
@@ -685,7 +686,7 @@ body::-webkit-scrollbar-button:vertical:decrement{
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter:blur(2px);
     box-shadow: 0 0 25px rgba(0, 0, 0, .3);
-    border: 15px double #ffffff;
+    border: 15px double #0c0e7e;
 }
 .textbibli{
     width: 90%;
@@ -718,7 +719,7 @@ body::-webkit-scrollbar-button:vertical:decrement{
     width: 50%;
     border-radius: 5px;
     margin-bottom: 100;
-    margin-left: 400px;
+    margin-left: 43%;
     box-shadow: 5px -10px 12px 3px rgba(0, 0, 0, .3) inset;
     padding: 8px;
 }
@@ -748,6 +749,61 @@ body::-webkit-scrollbar-button:vertical:decrement{
     margin-left: 60px;
     font-size: 55px;
 }
+@media (max-width: 1050px) {
+    .avance{
+        display: inline;
+        position: absolute;
+        font-size: 50px;
+        margin-top: 2%;
+        margin-left: 5%;
+    }
+}
+@media (max-width: 950px) {
+    .avance{
+        display: inline;
+        position: absolute;
+        font-size: 50px;
+        margin-top: 2%;
+        margin-left: 5%;
+    }
+}
+@media (max-width: 900px) {
+    .avance{
+        display: inline;
+        position: absolute;
+        font-size: 50px;
+        margin-top: 2%;
+        margin-left: 5%;
+    }
+}
+@media (max-width: 600px) {
+    .avance{
+        display: inline;
+        position: absolute;
+        font-size: 35px;
+        margin-top: 2%;
+        margin-left: 5%;
+    }
+}
+@media (max-width: 450px){
+    .avance{
+        display: inline;
+        position: absolute;
+        font-size: 25px;
+        margin-top: 0;
+        margin-left: 5%;
+    }
+}
+@media (max-width: 400px){
+    .avance{
+        display: inline;
+        position: absolute;
+        font-size: 25px;
+        margin-top: 0;
+        margin-left: 5%;
+    }
+}
+
 
 /* natalia */
 

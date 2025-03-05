@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/style5.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="./images/logo.ico" type= "image/x-icon">
     <title>Bibliografía - Aprende Con Kaxie</title>
@@ -13,8 +14,8 @@
 <?php require ('ifSession.php'); ?>
 <script src="js/script11.js"></script>
     <section style="margin-top: 30px;">
-    <div class="todo"> 
-    <div class="bibliografia">
+    
+    <!--div class="bibliografia">
             <ul>
                 <li>B</li>
                 <li>I</li>
@@ -29,8 +30,9 @@
                 <li>Í</li>
                 <li>A</li>
             </ul>
-    </div>
-        <br><br><br><br>
+    </div-->
+    <div class="tituBibli">Bibliografía</div>
+        <br>
         <div class="bibli">
             <div  class="textbibli">
             GCFGlobal. (s.f.). ¿Cómo simplificar expresiones algebraicas?, GCFGlobal.
@@ -89,7 +91,7 @@
                     <div class="LinkBibli"><a href="https://www.youtube.com/watch?v=lEh14svjac8&ab_channel=SusiProfe"> https://www.youtube.com/watch?v=lEh14svjac8&ab_channel=SusiProfe  </a><br><br>
                    </div>
 
-                    Geometriamagicomundodelorigami. (Año). Plano cartesiano [png]. WordPress. 
+                    Geometria magico mundo del origami. (Año). Plano cartesiano [png]. WordPress. 
                     <div class="LinkBibli"><a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fgeometriamagicomundodelorigami.wordpress.com%2Fplano-cartesiano%2F&psig=AOvVaw06GwYbaFkwWCC0pMt3GcFZ&ust=1702449923719000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCKCU_7OmiYMDFQAAAAAdAAAAABAD"> https://www.google.com/url?sa=i&url=https%3A%2F%2Fgeometriamagicomundodelorigami.wordpress.com%2Fplano-cartesiano%2F&psig=AOvVaw06GwYbaFkwWCC0pMt3GcFZ&ust=1702449923719000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCKCU_7OmiYMDFQAAAAAdAAAAABAD </a><br><br>
                    </div>
                     
@@ -111,7 +113,7 @@
 
                    </div>
         </div>
-</div>
+
     </section>
 <?php include('footer.php');?>
 </body>
