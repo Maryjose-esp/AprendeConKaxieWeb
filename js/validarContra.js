@@ -44,7 +44,7 @@ function validarPassword(password, btnRegistro){
         alert("La contraseña es permitida.");
         btnRegistro.disabled=false;
     } else {
-        alert(password.value);
+        alert("La contraseña no es valida, requiere de una mayuscula, 8 caracteres, uno especial y números.");
         btnRegistro.disabled=true;
     }
 };
