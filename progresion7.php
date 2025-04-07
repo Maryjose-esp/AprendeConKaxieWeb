@@ -20,7 +20,7 @@
     require ('ifSession.php');
     ?>
 
-    <script src="js/script11.js"></script>
+     
     <aside class="aside" id="aside7">
         <section id="s1">
             Pro

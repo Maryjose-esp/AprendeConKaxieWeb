@@ -12,7 +12,7 @@
 </head>
 <body>
 <?php require ('ifSession.php'); ?>
-<script src="js/script11.js"></script>
+ 
     <section style="margin-top: 30px;">
 
         <div class="tituBibli">Estudiantes de técnico en programación</div>

@@ -11,7 +11,7 @@
     <?php include ('header.php') ?>
 
     <?php
-
+    
     require ('conexionbd.php');
     $conexion = mysqli_connect($db_host, $db_usuario, $db_contra, $db_nombre);
     mysqli_select_db($conexion, $db_nombre) or die('NO SE ENCUENTRA LA BD');

@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style3.css">
+    <link rel="stylesheet" href="css/style5.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +16,7 @@
 </head>
 <body>
 <?php require ('ifSession.php'); ?>
-<script src="js/script11.js"></script>
+ 
 <aside class="aside" id="aside3"> 
         <section id="s1">
         Pro
@@ -105,6 +106,15 @@ Expresiones simbólico del álgebra. Combinación de números u operaciones y va
             </p>
             </div>
             </div>
+            
+<!--ESPACIO PARA EL VIDEO-->
+
+            <div class="videoProgre">
+            <div class="videoEsti"><video src="videos/videoprueba.mp4" controls width="100%"></video></div>
+            </div>
+            
+
+<!--FIN ESPACIO PARA EL VIDEO-->
             <h1 id="quees">Lenguaje algebraico y natural</h1>
             <P>El lenguaje natural es el cómo nos expresamos día a día como por 
                 ejemplo decir el doble de un número, de forma que en el lenguaje 

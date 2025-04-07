@@ -16,7 +16,7 @@
 </head>
 <body>
 <?php require ('ifSession.php'); ?>
-<script src="js/script11.js"></script>
+ 
 
 <aside class="aside" id="aside14"> 
         <section id="s1">
@@ -702,6 +702,8 @@ Comprobamos que el resultado es correcto.<br><br>
                  <p id="ER1">Primero debemos de tener las ecuaciones organizadas:</p>
 5x - 2y = 38<br>
 20x +4y = 44<br>
+
+
 Como se puede observar no hay dos números iguales con signo diferente, 
 asi que buscaremos un número que multiplicado por alguno de la ecuación 
 1, de un número de la ecuación 2 con diferente signo:<br><br>

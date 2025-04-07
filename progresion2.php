@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style3.css">
+    <link rel="stylesheet" href="css/style5.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +16,7 @@
 </head>
 <body>
 <?php require ('ifSession.php'); ?>
-<script src="js/script11.js"></script>
+ 
     <aside class="aside" id="aside2"> 
     <section id="s1">
         Pro
@@ -120,7 +121,15 @@
             <br>
             </div>
             </div>
-            <br><br><br>
+
+<!--ESPACIO PARA EL VIDEO-->
+
+            <div class="videoProgre">
+            <div class="videoEsti"><video src="" controls width="100%"></video></div>
+            </div>
+            
+
+<!--FIN ESPACIO PARA EL VIDEO-->
             <p>La sintaxis, dentro del área de matemáticas, es un conjunto de reglas para obtener 
                 una correcta formación de números siendo fundamental para la comprensión de los 
                 problemas presentados, buscando a la vez, la expresión que nos será de utilidad.</p><br>

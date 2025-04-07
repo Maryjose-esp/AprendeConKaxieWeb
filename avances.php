@@ -11,7 +11,7 @@
 </head>
 <body>
 <?php require ('ifSession.php'); ?>
-<script src="js/script11.js"></script>
+ 
     <section style="margin-top: 30px;">
     <center><h1>Mi avance - Progresiones</h1></center>
     <BR>

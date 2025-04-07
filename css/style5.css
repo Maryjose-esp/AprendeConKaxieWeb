@@ -78,3 +78,28 @@
         font-size: 13px;
     }
 }
+
+/*VIDEO*/
+
+.videoProgre{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 7%;
+    margin-top: 7%;
+    background-image: url("./../images/KPvideo.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    align-items: center;
+    padding: 65px 65px;
+}
+.videoEsti{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.VerNoVer{
+    background-color: brown;
+    width: 5px;
+    height: 10px;
+}

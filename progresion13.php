@@ -18,7 +18,7 @@
     require ('ifSession.php');
     
     ?>
-   <script src="js/script11.js"></script>
+    
     <aside class="aside" id="aside13"> 
     <section id="s1">
         Pro
@@ -285,10 +285,10 @@
         </div>
         </form>
             <script>
-                let respuestas1 = [ '1213',
-                '3u2u2',
-                '1026',
-                '8z3',
+                let respuestas1 = [ '12u-13',
+                '3u^2+7u+2',
+                '10u+26',
+                '8z-3',
                 '124t3'
 
                 ];
@@ -302,7 +302,7 @@
                 '3u2u2',
                 '1026',
                 '8z3',
-                '124t3'
+                '12s+4t+3'
                 );
                 require ('funcionrevtxt.php');
                 Caso2txt($RespuestasE1, 1, 13, 'varchar');
@@ -453,9 +453,6 @@
             Aquí te presento 10 ejercicios de ecuaciones lineales, en las cuales tienes que 
             encontrar la incógnita x
         </p>
-        <p>
-            Si la respuesta es negativa, solo agrega el número
-        </p>
         <br>
         <form method="post">
         <p>3x + 5 =17  &nbsp; &nbsp; &nbsp;&nbsp;<b>x=</b> <INPUT TYPE ="TEXT" size=7 maxlength="13" NAME="p13e2txt1" id="p13e2txt1"><BR><br>
@@ -474,7 +471,7 @@
         <br>
         <p>3x + 6 = 33   &nbsp;&nbsp; &nbsp; &nbsp;<b>x=</b><INPUT TYPE ="TEXT" size=7 maxlength="13" NAME="p13e2txt8" id="p13e2txt8"><BR><br>
         <br>
-        <p>-9x - 4 = 40  &nbsp;&nbsp;&nbsp;&nbsp; <b> x=</b><INPUT TYPE ="TEXT" size=7 maxlength="13" NAME="p13e2txt9" id="p13e2txt9"><BR><br>
+        <p>-9x - 5 = 40  &nbsp;&nbsp;&nbsp;&nbsp; <b> x=</b><INPUT TYPE ="TEXT" size=7 maxlength="13" NAME="p13e2txt9" id="p13e2txt9"><BR><br>
         <br>
                 
         <math class="tamfrac">
@@ -494,14 +491,14 @@
 
         <script>
                 let respuestas2 = [ 4,
-                    7,
+                    -7,
                     5,
-                    8,
+                    -8,
                     6,
                     5,
-                    24,
+                    -24,
                     9,
-                    4,
+                    -5,
                     8
                 ];
                 colores(respuestas2, 13, 2);
@@ -510,17 +507,16 @@
             if (isset($_POST['P13E2REV'])) {
 
                 $RespuestasE2 = array(
-                   4,
-                    7,
+                    4,
+                    -7,
                     5,
-                    8,
+                    -8,
                     6,
                     5,
-                    24,
+                    -24,
                     9,
-                    4,
+                    -5,
                     8
-
                 );
                 require ('funcionrevtxt.php');
                 Caso2txt($RespuestasE2, 2, 13, 'decimal');
@@ -566,7 +562,7 @@
         </center>
     </div>
     <br>
-    <h3>Ahora te pondre 2 ejercicios sencillos de ecuaciones con coeficiente fraccionario, tu puedes:</h3>
+    <h3>Ahora te pondre 2 ejercicios sencillos de ecuaciones con coeficiente fraccionario, tú puedes:</h3>
     <br>
     <form method="post">
        <p>Las respuestas ponlas en decimal</p> <br>
@@ -652,7 +648,7 @@
 </center>
 </div> 
         <br><br>
-        <h3>Te pondre 2 ejercicios de cada caso. Si la respuesta es negativa solo deja el número</h3>
+        <h3>Te pondre 2 ejercicios de cada caso.</h3>
         <form method="post">
         <math class="tamfrac"><mrow><mfrac><mn>1</mn><mrow><mn>2</mn><mi>x</mi></mrow></mfrac><mo>+</mo><mn>3</mn><mo>=</mo><mn>5</mn></mrow></math>
         &nbsp;
@@ -675,7 +671,7 @@
         <script>
                 let respuestas4 = [ 0.25,
                     1.3,
-                    0.5,
+                    -0.5,
                     7
                 ];
                 colores(respuestas4, 13, 4);
@@ -686,7 +682,7 @@
                 $RespuestasE4 = array(
                     0.25,
                     1.3,
-                    0.5,
+                    -0.5,
                     7
 
                 );
@@ -853,21 +849,21 @@
         <br><br>
         2x + 3y = 10 
         <br>
-        x - y = 2
+        x - y = 0
         <br>
         &nbsp;x=<INPUT TYPE ="TEXT" size=6 maxlength="4" NAME="p13e5txt15" id="p13e5txt15"><BR><br>
         &nbsp; y=<INPUT TYPE ="TEXT" size=6 maxlength="4" NAME="p13e5txt16" id="p13e5txt16"><BR><br>
         <br><br>
-        5x + y = 13  
+        5x + y = 16  
         <br>
-        2x - 3y = 4
+        2x - 3y = 3
         <br>
         &nbsp; x=<INPUT TYPE ="TEXT" size=6 maxlength="4" NAME="p13e5txt17" id="p13e5txt17"><BR><br>
         &nbsp; y=<INPUT TYPE ="TEXT" size=6 maxlength="4" NAME="p13e5txt18" id="p13e5txt18"><BR><br>
         <br><br>
-        3x - 4y = 5
+        3x - 4y = 2
         <br>
-        x + 2y = 7
+        x + 2y = 4
         <br>
         &nbsp;x=<INPUT TYPE ="TEXT" size=6 maxlength="4" NAME="p13e5txt19" id="p13e5txt19"><BR><br>
         &nbsp;y=<INPUT TYPE ="TEXT" size=6 maxlength="4" NAME="p13e5txt20" id="p13e5txt20"><BR><br>
@@ -893,8 +889,8 @@
                 2,
                 3,
                 1,
-                3,
-                1,
+                5,
+                6,
                 2,
                 2,
                 3,
@@ -1261,17 +1257,17 @@
         <br>
         <form method="post">
             <p>
-            1. La edad de Juan es 3 años más que el doble de la edad de Pedro. Si la suma de sus edades es 35 años, ¿cuántos años tienen Juan y Pedro?
+            1. La edad de Juan es 2 años más que el doble de la edad de Pedro. Si la suma de sus edades es 35 años, ¿cuántos años tienen Juan y Pedro?
             <br>
             <br>Juan tiene &nbsp;<INPUT TYPE ="TEXT" size=6 maxlength="4" NAME="p13e7txt1" id="p13e7txt1">&nbsp; y Pedro&nbsp;<INPUT TYPE ="TEXT" size=6 maxlength="4" NAME="p13e7txt2" id="p13e7txt2">&nbsp;años
 
             <br><br>
-            2. Ana compró algunas manzanas y algunas naranjas. Si pagó $6 por 3 manzanas y $4 por 2 naranjas, y en total gastó $22, ¿cuántas manzanas y cuántas naranjas compró?
+            2. Ana compró algunas manzanas y algunas naranjas. Si pagó $6 por 3 manzanas y $4 por 2 naranjas, y en total gastó $22, teniendo en cuenta que terminó comprando más manzanas que naranjas, siendo un número par la cantidad de manzanas y cantidades casi similares, ¿cuántas manzanas y cuántas naranjas compró? 
             <br>
             <br>Manzanas &nbsp;<INPUT TYPE ="TEXT" size=6 maxlength="4" NAME="p13e7txt3" id="p13e7txt3">&nbsp; y naranjas&nbsp;<INPUT TYPE ="TEXT" size=6 maxlength="4" NAME="p13e7txt4" id="p13e7txt4">
 
             <br><br>
-            3. Un jardinero mezcló (3/5) de un fertilizante con agua. Si en total preparó 25 litros de la mezcla, ¿cuántos litros de fertilizante utilizó?
+            3. Un jardinero mezcló (3/5) de un fertilizante con agua por litro en la mezcla. Si en total preparó 25 litros de la mezcla, ¿cuántos litros de fertilizante utilizó?
             <br>
             <br>Utilizó&nbsp;<INPUT TYPE ="TEXT" size=6 maxlength="4" NAME="p13e7txt5" id="p13e7txt5">&nbsp;litros
 
@@ -1289,8 +1285,8 @@
         </form>
 
         <script>
-                let respuestas7 = [23,
-                12,
+                let respuestas7 = [24,
+                11,
                 6,
                 5,
                 15,
