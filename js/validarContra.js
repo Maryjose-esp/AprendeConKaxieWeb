@@ -1,31 +1,31 @@
-const passwordInput = document.querySelector("#Passw");
-const eyeIcon = document.querySelector(".VerNoVer i");
-const log = document.querySelectorById("ver");
-const btnRegistro = document.querySelectorById("registra");
+// const passwordInput = document.querySelector("#Passw");
+// const eyeIcon = document.querySelector(".VerNoVer i");
+// const log = document.querySelectorById("ver");
+// const btnRegistro = document.querySelectorById("registra");
 
-const requirements = [
-    { regex: /.{8}/, index: 0}, //mínimo 8 carácteres
-    { regex: /.[0-9]/, index: 1},
-    { regex: /.[a-z]/, index: 2},
-    { regex: /.[^A-Za-z0-9]/, index: 3},
-    { regex: /.[A-Z]/, index: 4}
-]
+// const requirements = [
+//     { regex: /.{8}/, index: 0}, //mínimo 8 carácteres
+//     { regex: /.[0-9]/, index: 1},
+//     { regex: /.[a-z]/, index: 2},
+//     { regex: /.[^A-Za-z0-9]/, index: 3},
+//     { regex: /.[A-Z]/, index: 4}
+// ]
 
-passwordInput.addEventListener("keyup", (e) => {
-    requirements.forEach(item => {
-    const isValid= item.regex.test(e.target.value);
-    const requirementItem = requirementList[item.index];
+// passwordInput.addEventListener("keyup", (e) => {
+//     requirements.forEach(item => {
+//     const isValid= item.regex.test(e.target.value);
+//     const requirementItem = requirementList[item.index];
 
-    if(isValid) {
-        requirementItem.classList.add("valid");
+//     if(isValid) {
+//         requirementItem.classList.add("valid");
 
-        log.textContent = e.srcElement.value;
-    } else {
-        requirementItem.classList.add("valid");
-        btnRegistro.disabled = false;
-    }
-    })
-});
+//         log.textContent = e.srcElement.value;
+//     } else {
+//         requirementItem.classList.add("valid");
+//         btnRegistro.disabled = false;
+//     }
+//     })
+// });
 
 // eyeIcon.addEventListener("click", () => {
 //     //cambiar entre password y text
@@ -36,13 +36,16 @@ passwordInput.addEventListener("keyup", (e) => {
 // });
 
 
-// function validarPassword(password){
-//     const decimal = /^(?=-*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!-*\s).{8,150}$/;
+function validarPassword(password, btnRegistro){
+    const decimal = /^(?=-*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
 
-//     if(password.value.match(decimal)){
-//         alert("La contraseña es permitida.")
-//     } else {
-//         alert("La contraseña debe ser de 8 carácteres al menos, contener una mayúscula, número y un carácter especial.");
 
-//     }
-// };
+    if(password.value.match(decimal)){
+        alert("La contraseña es permitida.");
+        btnRegistro.disabled=false;
+    } else {
+        alert(password.value);
+        btnRegistro.disabled=true;
+    }
+};
+//91{}+dAa

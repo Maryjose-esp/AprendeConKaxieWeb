@@ -98,8 +98,15 @@
     margin-right: auto;
 }
 
-.VerNoVer{
-    background-color: brown;
-    width: 5px;
-    height: 10px;
+
+#Passw {
+    width: 80%;
+}
+
+#ValCon{
+    font-size: 16px;
+}
+
+.inputcamp img{
+    width: 10%;
 }

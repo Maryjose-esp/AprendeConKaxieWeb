@@ -1,22 +1,23 @@
-$(document.registro).ready(function() {
-    $('#Passw').keyup(function() {
-        //const decimal = /^(?=-*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!-*\s).{8,150}$/;
+// const eyeicon = document.getElementById("eyeicon");
+// const password = document.getElementById("Passw");
 
-        var pass = $('#Passw').val();
+// eyeicon.onclick = function(){
+    
+//     if(password.type == "password"){
+//         password.type = "text";
+//         eyeicon.src= ".././images/open.png";
+//     } else {
+//         password.type = "password";
+//         eyeicon.src= ".././images/close.png";
+//     }
+// }
 
-        if (pass=="hi"){
-            $('#error').text("Contraseña valida");
-
-        } else {
-            $('#error').text("Incorrecto");
-        }
-        // if(pass.value.match(decimal)){
-        //     $('#error').text("Contraseña valida.");
-
-        // } else {
-        //     $('#error').text("La contraseña debe contener mínimo 8 valores, una letra mayúscula, una minúscula, un número y un carácter especial.");
-
-        // }
-
-    });
-});
+function cambioOjoK (eyeicon, password){
+    if(password.type == "password"){
+        password.type = "text";
+        eyeicon.src= ".././images/open.png";
+    } else {
+        password.type = "password";
+        eyeicon.src= ".././images/close.png";
+    }
+}

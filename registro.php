@@ -17,7 +17,8 @@
     include('ifSession.php');
     ?>
 
-    
+<script src="js/validarContra.js"></script>
+<script src="js/osalesosales.js"></script>
 
     <section style=" margin-top:30px;">
         <div class="formulario2">
@@ -42,18 +43,19 @@
                     </div>
 
                     <div class="inputcamp">
-                        <Input type="password" name="Passw" id="Passw" placeholder="Contrasena" minlength=8 required> <br>
-                        <span id="error">hi</span>
+                        <Input type="password" name="Passw" id="Passw" placeholder="Contrasena" minlength=8 required>
+                        <img src=".././images/close.png" id="eyeicon" onclick="cambioOjoK(document.registro.eyeicon, document.registro.Passw)"> <br>
+                        <label id="ValCon">Validar contraseña.</label><button type=button id="comprobar" onclick="validarPassword(document.registro.Passw, document.registro.registra)"></button>
                         
                     </div>
                     <div class="recuerdame">
                         <Input class="recuerdame" type="checkbox" name="Mantener" id="SesionM"><label
                             for="SesionM">Mantener inicio de sesion</label>
                     </div>
-                    <script src="js/osalesosales.js"></script>
+                    
                     <p class="new">¿Ya tienes una cuenta? <a href="sesion.php">Da click aqui para iniciar sesion</a>
                     </p><br><br>
-                    <input type="submit" id="registra" name="iniciaS" value="Registrarse" class="btn"> <!--onclick="validarPassword(document.registro.Passw)"-->
+                    <input type="submit" id="registra" name="iniciaS" value="Registrarse" class="btn" disabled=true> <!--onclick="validarPassword(document.registro.Passw)"-->
                 </div>
 
 
