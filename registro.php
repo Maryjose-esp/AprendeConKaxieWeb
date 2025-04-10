@@ -17,8 +17,6 @@
     include('ifSession.php');
     ?>
 
-<script src="js/validarContra.js"></script>
-<script src="js/osalesosales.js"></script>
 
     <section style=" margin-top:30px;">
         <div class="formulario2">
@@ -31,11 +29,13 @@
                 <div id="contin2">
 
                     <div class="inputcamp">
-                        <Input type="text" name="Nombre" placeholder="Nombre" required><br>
+                        <Input type="text" id="Nombre" name="Nombre" placeholder="Nombre" required><br>
+                        <label id="ValNom"></label>
                     </div>
 
                     <div class="inputcamp">
-                        <Input type="text" name="Apellido" placeholder="Apellido" required> <br>
+                        <Input type="text" id="Apellido" name="Apellido" placeholder="Apellido" required> <br>
+                        <label id="ValApe"></label>
                     </div>
 
                     <div class="inputcamp">
@@ -45,9 +45,10 @@
                     <div class="inputcamp">
                         <Input type="password" name="Passw" id="Passw" placeholder="Contrasena" minlength=8 required>
                         <img src=".././images/close.png" id="eyeicon" onclick="cambioOjoK(document.registro.eyeicon, document.registro.Passw)"> <br>
-                        <label id="ValCon">Validar contraseña.</label><button type=button id="comprobar" onclick="validarPassword(document.registro.Passw, document.registro.registra)"></button>
+                        <label id="ValCon"></label>
                         
-                    </div>
+                    </div><br><br>
+                    
                     <div class="recuerdame">
                         <Input class="recuerdame" type="checkbox" name="Mantener" id="SesionM"><label
                             for="SesionM">Mantener inicio de sesion</label>
@@ -55,7 +56,8 @@
                     
                     <p class="new">¿Ya tienes una cuenta? <a href="sesion.php">Da click aqui para iniciar sesion</a>
                     </p><br><br>
-                    <input type="submit" id="registra" name="iniciaS" value="Registrarse" class="btn" disabled=true> <!--onclick="validarPassword(document.registro.Passw)"-->
+                    <input type="submit" id="registra" name="iniciaS" value="Registrarse" class="btn" disabled=true>
+                    <script src="js/ValidarUsrC.js"></script>
                 </div>
 
 
