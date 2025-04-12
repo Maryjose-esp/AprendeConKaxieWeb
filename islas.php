@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,9 @@
     <script src="splide-4.1.3\splide-4.1.3/dist/js/splide.min.js"></script>
     <title>Document</title>
 </head>
+
 <body>
-<div class="carruIsla">
+    <div class="carruIsla">
         <div class="splide">
             <div class="splide__track">
                 <ul class="splide__list">
@@ -89,15 +91,16 @@
     </div>
 
     <script>
-      var splide1 = new Splide( '.splide', {
-        type   : 'loop',
-        autoplay: 'true',
-        interval: '2000',
-        perPage: 3,
-        focus  : 'center',
-    } );
-    splide1.mount();  
+        var splide1 = new Splide('.splide', {
+            type: 'loop',
+            autoplay: 'true',
+            interval: '2000',
+            perPage: 3,
+            focus: 'center',
+        });
+        splide1.mount();  
     </script>
 
 </body>
+
 </html>

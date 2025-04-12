@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style3.css">
+    <link rel="stylesheet" href="css/style4.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
@@ -18,6 +19,9 @@
 <body>
     <?php
     require('ifSession.php');
+    if ($indicador_bd) {
+        dialog_abrir('9');
+    }
     ?>
     <script src="js/script11.js"></script>
 
@@ -113,6 +117,12 @@
                     <a href="#introduccion">Introducción</a><br>
                     <a href="#postulados">Postulados</a><br>
                     <a href="#interposicion">Interposición</a><br>
+                    <a href="#poligonos_clasif">Polígonos</a><br>
+                </p>
+                <p class="sangriindice"><a href="#poligonos_regulares"> Regulares</a></p>
+                <p class="sangriindice"><a href="#poligonos_irregulares"> Irregulares</a></p>
+                <p class="sangriindice"><a href="#circulo_no_poligono">Círculo</a></p>
+                <p>
                     <a href="#formulas">Deducción de fórmulas <br>para calcular el área de <br>figuras geométricas
                         <br>planas</a><br>
                 </p>
@@ -203,6 +213,82 @@
             <li>-Si A-B-C, entonces A, B y C son tres puntos distintos en una recta.</li>
         </ul>
         </p><br>
+
+        <h1 id="poligonos_clasif">Polígonos</h1><br>
+        <p>
+            Un polígono propiamente es una porción del plano delimitada por una serie de rectas.
+            La etimología de la palabra "polígono" se deriva a los vocablos griegos "poly" y "gonos", es decir, el
+            polígono es una figura con varios ángulos. </p>
+        <br>
+        <p>Estas figuras son bidimensionales puesto que únicamente tienen don dimensiones: largo y ancho.</p>
+        <br>
+        <p>Para el estudio de la progresión, se verá la clasificación de polígonos regulares e irregulares, de los
+            cuales se verán las fórmulas para calcular su área. Empero, antes
+            de, veremos las características o elementos de un polígono, independientemente de si es regular o no.
+        </p><br>
+        <img src="./images/Progresion9img/img32.png" width="70%"><br>
+
+        <p>
+        <ul>
+            <li>Lado. Cada una de las líneas que limitan un ángulo o un polígono. </li><br>
+            <li>Apotema. Perpendicular pasado desde el centro de un polígono irregular a uno de sus lados. </li><br>
+            <li>Ángulo interno. Se trata de un ángulo comprendido dentro de un polígono formado por 2 lados que tienen
+                un vértice en común.</li><br>
+            <li>Diámetro. Segmento de recta que, pasando por el centro de una circunferencia tiene sus extremos en 2
+                puntos de la misma; además, divide al círculo en 2 partes iguales.</li><br>
+            <li>Vértice. Punto en que concurran los 2 lados de un ángulo.</li><br>
+        </ul>
+        </p><br>
+        <h2 id="poligonos_regulares">Regulares</h2>
+        <p>
+            Estos polígonos tienen todos sus lados y ángulos iguales, además que de que se encuentran dentro de una
+            circunferencia.
+            A continuación se muestran los distintos polígonos regulares que existen:
+        </p><br>
+        <center><img src="./images/Progresion9img/img29.png" width="70%"></center><br>
+
+
+        <p>
+            Los polígonos de 3 a 20 lados se denominan con el prefijo según la cantidad de lados que tengan. Cuando la
+            figura sobrepasa los 20 lados únicamente se llama "polígono de n lados".
+        </p><br>
+        <h2 id="poligonos_irregulares">Irregulares</h2>
+        <p>
+            Caso contrario a los anteriores, estos polígonos no tienen lados o ángulos iguales, de ahí que se llamen
+            "irregulares". Generalmente suelen tener formas un poco raras o "chuecas", aunque es importante distinguir
+            que figuras conocidas como los rombos, romboides o trapecios son polígonos irregulares, puesto que
+            únicamente dos de sus lados son iguales mas no todos.
+        </p><br>
+        <p>
+            Para el caso de la progresión actual, únicamente se tomarán en cuenta los polígonos irregulares
+            cuadriláteros.<br>
+            ¿Y qué es un cuadrilatero?<br>
+            Un cuadrilátero es aquel polígono de 4 lados.
+        </p><br>
+        <center><img src="./images/Progresion9img/img30.png" width="70%"></center><br>
+
+        <h2 id="circulo_no_poligono">Círculo</h2>
+
+        <p>Asimismo, en las figuras que se trabajarán para calcular el área
+            también se incluirá el círculo, el cual no es un polígono
+            sino la superficie delimitada por una circunferencia; esto
+            quiere decir que la circunferencia
+            y el círculo no son sinónimos, o sea, no son lo mismo.</p><br>
+        <p>A continuación, se describen los elementos de un círculo</p><br>
+        <center><img src="./images/Progresion9img/img31.png" width="70%"> </center><br>
+        <p>
+        <ul>
+            <li>Circunferencia. Curva cerrada y plana cuyos puntos equidistan (se sitúan a igual distancia)de otro punto
+                interior llamado centro.</li><br>
+            <li>Arco. Porción de la circunferencia comprendida entre 2 puntos.</li><br>
+            <li>Radio. Recta que une un punto de una circunferencia con su centro.</li><br>
+            <li>Diámetro. Segmento de recta que, pasando por el centro de una circunferencia tiene sus extremos en 2
+                puntos de la misma; además, divide al círculo en 2 partes iguales.</li><br>
+            <li>Cuerda. Segmento que une 2 puntos de una circunferencia sin que estos pasen por el centro de la misma.
+                La cuerda siempre es menor al diámetro.</li><br>
+        </ul>
+        </p><br><br>
+
 
         <h1 id="formulas">Deducción de fórmulas para calcular el área de figuras geométricas planas</h1>
         <h2 id="rectangulo">Rectángulo</h2>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -12,13 +12,17 @@
     <link rel="icon" href="images/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style3.css">
+    <link rel="stylesheet" href="css/style4.css">
     <script src="js/script7.js"></script>
     <title>Progresion 11</title>
 </head>
 
 <body>
     <?php
-    require ('ifSession.php');
+    require('ifSession.php');
+    if ($indicador_bd) {
+        dialog_abrir('11');
+    }
     ?>
     <script src="js/script11.js"></script>
     <aside class="aside" id="aside11">
@@ -296,7 +300,7 @@
                 0,
                 6
             );
-            require ('funcionrevtxt.php');
+            require('funcionrevtxt.php');
             Caso2txt($RespuestasE1, 1, 11, 'varchar');
         }
 
@@ -5219,7 +5223,7 @@
         </form>
         <?php
         if (isset($_POST['P11E2REV'])) {
-            require ('funcionrevradio.php');
+            require('funcionrevradio.php');
             RevisarRadios(17, 2, 11);
         }
         ?>
@@ -5517,59 +5521,59 @@
                 </div>
                 <form method="post">
                     1.Calcular los ángulos de inclinación y las pendientes de las siguientes rectas.<br><br>
-                Encuentra el ángulo formado por la recta que tiene los puntos A(0,0) y B(4, 3)<br>
-                Pendiente <input type="text" size=4 maxlength=10 name="p11e3txt1" id="p11e3txt1"> Ángulo de
-                inclinación <input type="text" size=4 maxlength=10 name="p11e3txt2" id="p11e3txt2"><br> <br>
-                Encuentra el ángulo formado por la recta que tiene los puntos A(-2,-2) y B(3, 1)<br>
-                Pendiente <input type="text" size=4 maxlength=10 name="p11e3txt3" id="p11e3txt3"> Ángulo de
-                inclinación <input type="text" size=4 maxlength=10 name="p11e3txt4" id="p11e3txt4"><br> <br>
-                Encuentra el ángulo formado por la recta que tiene los puntos A(-1, 4) y B(4, -2)<br>
-                Pendiente <input type="text" size=4 maxlength=10 name="p11e3txt5" id="p11e3txt5"> Ángulo de
-                inclinación <input type="text" size=4 maxlength=10 name="p11e3txt6" id="p11e3txt6"><br> <br>
-                Encuentra el ángulo formado por la recta que tiene los puntos A(-7, -5) y B(5, -3)<br>
-                Pendiente <input type="text" size=4 maxlength=10 name="p11e3txt7" id="p11e3txt7"> Ángulo de
-                inclinación <input type="text" size=4 maxlength=10 name="p11e3txt8" id="p11e3txt8"><br> <br>
-                Encuentra el ángulo formado por la recta que tiene los puntos A(5,-4) y B(-6, 7)<br>
-                Pendiente <input type="text" size=4 maxlength=10 name="p11e3txt9" id="p11e3txt9"> Ángulo de
-                inclinación <input type="text" size=4 maxlength=10 name="p11e3txt10" id="p11e3txt10"><br> <br>
-                Encuentra el ángulo formado por la recta que tiene los puntos A(7,-2) y B(3, 5)<br>
-                Pendiente <input type="text" size=4 maxlength=10 name="p11e3txt11" id="p11e3txt11"> Ángulo de
-                inclinación <input type="text" size=4 maxlength=10 name="p11e3txt12" id="p11e3txt12"><br> <br>
-                Encuentra el ángulo formado por la recta que tiene los puntos A(6,7) y B(12, 7)<br>
-                Pendiente <input type="text" size=4 maxlength=10 name="p11e3txt13" id="p11e3txt13"> Ángulo de
-                inclinación <input type="text" size=4 maxlength=10 name="p11e3txt14" id="p11e3txt14"><br> <br>
-                Encuentra el ángulo formado por la recta que tiene los puntos A(3, 7) y B(-6, 11)<br>
-                Pendiente <input type="text" size=4 maxlength=10 name="p11e3txt15" id="p11e3txt15"> Ángulo de
-                inclinación <input type="text" size=4 maxlength=10 name="p11e3txt16" id="p11e3txt16"><br> <br>
-                Encuentra el ángulo formado por la recta que tiene los puntos A(5, 2) y B(7, 10)<br>
-                Pendiente <input type="text" size=4 maxlength=10 name="p11e3txt17" id="p11e3txt17"> Ángulo de
-                inclinación <input type="text" size=4 maxlength=10 name="p11e3txt18" id="p11e3txt18"><br> <br>
-                Encuentra el ángulo formado por la recta que tiene los puntos A(-3,-2) y B(4, 8)<br>
-                Pendiente <input type="text" size=4 maxlength=10 name="p11e3txt19" id="p11e3txt19"> Ángulo de
-                inclinación <input type="text" size=4 maxlength=10 name="p11e3txt20" id="p11e3txt20"><br> <br>
-                Encuentra el ángulo formado por la recta que tiene los puntos A(10,6) y B(9, -3)<br>
-                Pendiente <input type="text" size=4 maxlength=10 name="p11e3txt21" id="p11e3txt21"> Ángulo de
-                inclinación <input type="text" size=4 maxlength=10 name="p11e3txt22" id="p11e3txt22"><br> <br>
-                Encuentra el ángulo formado por la recta que tiene los puntos A(1,4) y B(-3, -1)<br>
-                Pendiente <input type="text" size=4 maxlength=10 name="p11e3txt23" id="p11e3txt23"> Ángulo de
-                inclinación <input type="text" size=4 maxlength=10 name="p11e3txt24" id="p11e3txt24"><br> <br>
-                Encuentra el ángulo formado por la recta que tiene los puntos A(2, 9) y B(-7, 8)<br>
-                Pendiente <input type="text" size=4 maxlength=10 name="p11e3txt25" id="p11e3txt25"> Ángulo de
-                inclinación <input type="text" size=4 maxlength=10 name="p11e3txt26" id="p11e3txt26"><br> <br>
-                Encuentra el ángulo formado por la recta que tiene los puntos A(11, 9) y B(5, 11)<br>
-                Pendiente <input type="text" size=4 maxlength=10 name="p11e3txt27" id="p11e3txt27"> Ángulo de
-                inclinación <input type="text" size=4 maxlength=10 name="p11e3txt28" id="p11e3txt28"><br> <br>
-                Encuentra el ángulo formado por la recta que tiene los puntos A(1,-6) y B(4, 5)<br>
-                Pendiente <input type="text" size=4 maxlength=10 name="p11e3txt29" id="p11e3txt29"> Ángulo de
-                inclinación <input type="text" size=4 maxlength=10 name="p11e3txt30" id="p11e3txt30"><br> <br>
-                <div class="pdcontainer">
-                <button name="P11E3REV" id="P11E3REV" type="submit" value="" class="botonesrevisar"></button>
-                <input type="reset" value="" class="botonesreintentar">
-                </div>
+                    Encuentra el ángulo formado por la recta que tiene los puntos A(0,0) y B(4, 3)<br>
+                    Pendiente <input type="text" size=4 maxlength=10 name="p11e3txt1" id="p11e3txt1"> Ángulo de
+                    inclinación <input type="text" size=4 maxlength=10 name="p11e3txt2" id="p11e3txt2"><br> <br>
+                    Encuentra el ángulo formado por la recta que tiene los puntos A(-2,-2) y B(3, 1)<br>
+                    Pendiente <input type="text" size=4 maxlength=10 name="p11e3txt3" id="p11e3txt3"> Ángulo de
+                    inclinación <input type="text" size=4 maxlength=10 name="p11e3txt4" id="p11e3txt4"><br> <br>
+                    Encuentra el ángulo formado por la recta que tiene los puntos A(-1, 4) y B(4, -2)<br>
+                    Pendiente <input type="text" size=4 maxlength=10 name="p11e3txt5" id="p11e3txt5"> Ángulo de
+                    inclinación <input type="text" size=4 maxlength=10 name="p11e3txt6" id="p11e3txt6"><br> <br>
+                    Encuentra el ángulo formado por la recta que tiene los puntos A(-7, -5) y B(5, -3)<br>
+                    Pendiente <input type="text" size=4 maxlength=10 name="p11e3txt7" id="p11e3txt7"> Ángulo de
+                    inclinación <input type="text" size=4 maxlength=10 name="p11e3txt8" id="p11e3txt8"><br> <br>
+                    Encuentra el ángulo formado por la recta que tiene los puntos A(5,-4) y B(-6, 7)<br>
+                    Pendiente <input type="text" size=4 maxlength=10 name="p11e3txt9" id="p11e3txt9"> Ángulo de
+                    inclinación <input type="text" size=4 maxlength=10 name="p11e3txt10" id="p11e3txt10"><br> <br>
+                    Encuentra el ángulo formado por la recta que tiene los puntos A(7,-2) y B(3, 5)<br>
+                    Pendiente <input type="text" size=4 maxlength=10 name="p11e3txt11" id="p11e3txt11"> Ángulo de
+                    inclinación <input type="text" size=4 maxlength=10 name="p11e3txt12" id="p11e3txt12"><br> <br>
+                    Encuentra el ángulo formado por la recta que tiene los puntos A(6,7) y B(12, 7)<br>
+                    Pendiente <input type="text" size=4 maxlength=10 name="p11e3txt13" id="p11e3txt13"> Ángulo de
+                    inclinación <input type="text" size=4 maxlength=10 name="p11e3txt14" id="p11e3txt14"><br> <br>
+                    Encuentra el ángulo formado por la recta que tiene los puntos A(3, 7) y B(-6, 11)<br>
+                    Pendiente <input type="text" size=4 maxlength=10 name="p11e3txt15" id="p11e3txt15"> Ángulo de
+                    inclinación <input type="text" size=4 maxlength=10 name="p11e3txt16" id="p11e3txt16"><br> <br>
+                    Encuentra el ángulo formado por la recta que tiene los puntos A(5, 2) y B(7, 10)<br>
+                    Pendiente <input type="text" size=4 maxlength=10 name="p11e3txt17" id="p11e3txt17"> Ángulo de
+                    inclinación <input type="text" size=4 maxlength=10 name="p11e3txt18" id="p11e3txt18"><br> <br>
+                    Encuentra el ángulo formado por la recta que tiene los puntos A(-3,-2) y B(4, 8)<br>
+                    Pendiente <input type="text" size=4 maxlength=10 name="p11e3txt19" id="p11e3txt19"> Ángulo de
+                    inclinación <input type="text" size=4 maxlength=10 name="p11e3txt20" id="p11e3txt20"><br> <br>
+                    Encuentra el ángulo formado por la recta que tiene los puntos A(10,6) y B(9, -3)<br>
+                    Pendiente <input type="text" size=4 maxlength=10 name="p11e3txt21" id="p11e3txt21"> Ángulo de
+                    inclinación <input type="text" size=4 maxlength=10 name="p11e3txt22" id="p11e3txt22"><br> <br>
+                    Encuentra el ángulo formado por la recta que tiene los puntos A(1,4) y B(-3, -1)<br>
+                    Pendiente <input type="text" size=4 maxlength=10 name="p11e3txt23" id="p11e3txt23"> Ángulo de
+                    inclinación <input type="text" size=4 maxlength=10 name="p11e3txt24" id="p11e3txt24"><br> <br>
+                    Encuentra el ángulo formado por la recta que tiene los puntos A(2, 9) y B(-7, 8)<br>
+                    Pendiente <input type="text" size=4 maxlength=10 name="p11e3txt25" id="p11e3txt25"> Ángulo de
+                    inclinación <input type="text" size=4 maxlength=10 name="p11e3txt26" id="p11e3txt26"><br> <br>
+                    Encuentra el ángulo formado por la recta que tiene los puntos A(11, 9) y B(5, 11)<br>
+                    Pendiente <input type="text" size=4 maxlength=10 name="p11e3txt27" id="p11e3txt27"> Ángulo de
+                    inclinación <input type="text" size=4 maxlength=10 name="p11e3txt28" id="p11e3txt28"><br> <br>
+                    Encuentra el ángulo formado por la recta que tiene los puntos A(1,-6) y B(4, 5)<br>
+                    Pendiente <input type="text" size=4 maxlength=10 name="p11e3txt29" id="p11e3txt29"> Ángulo de
+                    inclinación <input type="text" size=4 maxlength=10 name="p11e3txt30" id="p11e3txt30"><br> <br>
+                    <div class="pdcontainer">
+                        <button name="P11E3REV" id="P11E3REV" type="submit" value="" class="botonesrevisar"></button>
+                        <input type="reset" value="" class="botonesreintentar">
+                    </div>
                 </form>
 
-                
-                
+
+
                 <script>
                     let respuestas2 = [936.86, '3/4',
                         30.96, '3/5',
@@ -5623,7 +5627,7 @@
                         65.55
 
                     );
-                    require ('funcionrevtxt.php');
+                    require('funcionrevtxt.php');
                     Caso2txt($RespuestasE1, 3, 11, 'varchar');
                 }
                 ?>
@@ -5917,8 +5921,7 @@
                     b<input type="text" size=4 maxlength=10 name="p11e4txt20" id="p11e4txt20">
                     <br><br>
                     <div class="pdcontainer">
-                        <button type="submit" name="P11E4REV" id="P11E4REV" value=""
-                            class="botonesrevisar"></button>
+                        <button type="submit" name="P11E4REV" id="P11E4REV" value="" class="botonesrevisar"></button>
                         <input type="reset" value="" class="botonesreintentar">
                     </div>
                 </form>
@@ -5971,7 +5974,7 @@
                         -4
 
                     );
-                    require ('funcionrevtxt.php');
+                    require('funcionrevtxt.php');
                     Caso2txt($RespuestasE1, 4, 11, 'varchar');
                 }
                 ?>
@@ -6376,7 +6379,7 @@
 
                     <tr>
                         <td>Ángulo</td>
-                        <td><math  xmlns:mml="http://www.w3.org/1998/Math/MathML"
+                        <td><math xmlns:mml="http://www.w3.org/1998/Math/MathML"
                                 xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math">
                                 <mi>m</mi>
                                 <mo>=</mo>
@@ -6394,7 +6397,7 @@
 
                     <tr>
                         <td>Ecuación de la recta</td>
-                        <td><math  xmlns:mml="http://www.w3.org/1998/Math/MathML"
+                        <td><math xmlns:mml="http://www.w3.org/1998/Math/MathML"
                                 xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math">
                                 <mi>y</mi>
                                 <mo>=</mo>
@@ -6414,7 +6417,7 @@
     </section>
 
     <div id="fot">
-        <?php include ('footer.php'); ?>
+        <?php include('footer.php'); ?>
     </div>
 
 </body>

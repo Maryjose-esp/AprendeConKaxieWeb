@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -19,18 +19,18 @@
     </div>
     <div class="wrapper">
         <nav>
-        <a class="fotoper"></a>
-        <input type="checkbox" id="show-menu">
-        <label id="-labelshow" for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+            <a class="fotoper"></a>
+            <input type="checkbox" id="show-menu">
+            <label id="-labelshow" for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
             <div class="content">
-                
-                
+
+
                 <ul class="links">
                     <li><a href="sesion.php">Iniciar sesión</a></li>
                     <li><a href="registro.php">Registrarse</a></li>
                     <li><a href="index.php">Aprende con Kaxie</a></li>
                     <li>
-                        <a href=""class="desktop-link">Progresiones</a>
+                        <a href="" class="desktop-link">Progresiones</a>
                         <input type="checkbox" id="show-features">
                         <label id="-labelshow" for="show-features">Progresiones</label>
                         <ul>

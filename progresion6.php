@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style3.css">
+    <link rel="stylesheet" href="css/style4.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script>
     <link rel="icon" href="images/logo.ico" type="image/x-icon">
     <script src="js/script7.js"></script>
     <title> Progresion 6 </title>
@@ -17,7 +20,19 @@
 <body>
     <?php
     require('ifSession.php');
+    if ($indicador_bd) {
+        dialog_abrir('6');
+    }
     ?>
+    <script src='js/jquery-3.7.1.js'></script>
+    <script>
+        var DatosFinalesPDF = "<?php DatosPDF()
+        ;
+        ?>";
+        //definir matriz con arreglos de las respuestas correctas a cada ejercicio
+        var arrayp6e1 = [[2347, 832, 28380, 232, 1028, -107, -4.245, 75.33, 2.68, 0.361], [1, 2, 3]];
+
+    </script>
 
     <aside class="aside" id="asidex6">
         <section id="s1">
@@ -622,6 +637,8 @@
         A continuación, se presentan ejercicios de suma, resta, multiplicación y división con el conjunto de números
         descritos anteriormente.<br>
         <br>
+
+
         1. Números racionales - Enteros y naturales<br>
         <form method="post">
 
@@ -643,35 +660,42 @@
             (123 + 7 * 81 - 1) / (1829 - 371 / 371 + 78) = <input type="text" required name="p6e1txt10" id="p6e1txt10"
                 maxlength="10" size="5"><br>
             <br><br>
-            <input type="submit" value="" class="botonesrevisar" id="P6E1REV" name="P6E1REV">
+            <!-- <input type="submit" value="" class="botonesrevisar" id="P6E1REV" name="P6E1REV"> -->
+            <button type="button" onclick="colores(arrayp6e1, 6, 1);" id="P6E1REV" name="P6E1REV">prueba</button>
+            <button type="button" onclick="GenerarPDF(6, 1, arrayp6e1, DatosFinalesPDF)">PDF</button>
             <input type="reset" value="" class="botonesreintentar">
+
         </form>
+        <div class="Calificacion" id="p6e1img">
+
+        </div>
 
         <script>
-            let respuestas = [2347, 832, 28380, 232, 1028, -107, -4.245, 75.33, 2.68, 0.361];
-            colores(respuestas, 6, 1);
+            TraerDatos(6, arrayp6e1, 1);
+            // let respuestasp6_1 = [2347, 832, 28380, 232, 1028, -107, -4.245, 75.33, 2.68, 0.361];
+            // colores(respuestasp6_1, 6, 1);
         </script>
 
         <?php
-        if (isset($_POST['P6E1REV'])) {
+        // if (isset($_POST['P6E1REV'])) {
+        
+        //     $RespuestasE1_P6 = array(
+        //         2347,
+        //         832,
+        //         28380,
+        //         232,
+        //         1028,
+        //         -107,
+        //         -4.245,
+        //         75.33,
+        //         2.68,
+        //         0.361
+        //     );
+        //     require('funcionrevtxt.php');
+        //     Caso2txt($RespuestasE1_P6, 1, 6, 'decimal');
+        
 
-            $RespuestasE1_P6 = array(
-                2347,
-                832,
-                28380,
-                232,
-                1028,
-                -107,
-                -4.245,
-                75.33,
-                2.68,
-                0.361
-            );
-            require('funcionrevtxt.php');
-            Caso2txt($RespuestasE1_P6, 1, 6, 'decimal');
-
-
-        }
+        // }
         ?>
 
 
@@ -700,8 +724,34 @@
             <input type="submit" value="" class="botonesrevisar" id="P6E2REV" name="P6E2REV">
             <input type="reset" value="" class="botonesreintentar">
         </form>
-
         <br><br>
+        <script>
+            let respuestasp6_2 = [12.6, 10893.0644, -26, 1, 0.8, 1.5, -7.875, -0.0327, 2.158, 12.065];
+            colores(respuestasp6_2, 6, 2);
+        </script>
+
+        <?php
+        if (isset($_POST['P6E2REV'])) {
+
+            $RespuestasE2_P6 = array(
+                12.6,
+                10893.0644,
+                -26,
+                1,
+                0.8,
+                1.5,
+                -7.875,
+                -0.0327,
+                2.158,
+                12.065
+            );
+            require('funcionrevtxt.php');
+            Caso2txt($RespuestasE2_P6, 2, 6, 'decimal');
+
+
+        }
+        ?>
+
 
         <br><br>
 
@@ -1326,6 +1376,40 @@
         </form>
 
         <br><br>
+        <script>
+            let respuestasp6_3 = ['-8/3', '5/2', '49/2', '152/81', '374/225', '-9/49', '-1.64', '-11/29', '29/18', '1/18', '-1/18', '-29/18', '15/14', '', '-15/14', '27/10', '-27/10', '489/132', '269/60'];
+            colores(respuestasp6_3, 6, 3);
+        </script>
+        <?php
+        if (isset($_POST['P6E3REV'])) {
+
+            $RespuestasE3_P6 = array(
+                '-8/3',
+                '5/2',
+                '49/2',
+                '152/81',
+                '374/225',
+                '-9/49',
+                '-1.64',
+                '-11/29',
+                '29/18',
+                '1/18',
+                '-1/18',
+                '-29/18',
+                '15/14',
+                '',
+                '-15/14',
+                '27/10',
+                '-27/10',
+                '489/132',
+                '269/60'
+            );
+            require('funcionrevtxt.php');
+            Caso2txt($RespuestasE3_P6, 3, 6, 'decimal');
+
+
+        }
+        ?>
 
 
 
@@ -1333,16 +1417,46 @@
 
 
         4. Números irracionales<br>
-        <form method="post">
+        <form method="post" id="p6e4">
             2e + 6π = <input type="text" required name="p6e4txt1" id="p6e4txt1" maxlength="10" size="5"><br>
             (8e) / √2 = <input type="text" required name="p6e4txt2" id="p6e4txt2" maxlength="10" size="5"><br>
             Ln(7) * 3(√5) = <input type="text" required name="p6e4txt3" id="p6e4txt3" maxlength="10" size="5"><br>
             Log(5) + 5e - π = <input type="text" required name="p6e4txt4" id="p6e4txt4" maxlength="10" size="5"><br>
             √10 / e = <input type="text" required name="p6e4txt5" id="p6e4txt5" maxlength="10" size="5"><br>
             √93 - ln(12) * -5e = <input type="text" required name="p6e4txt6" id="p6e4txt6" maxlength="10" size="5"><br>
-            <input type="submit" value="" class="botonesrevisar" id="P6E4REV" name="P6E4REV">
+            <button type="submit" class="botonesrevisar" id="P6E4REV" name="P6E4REV"></button>
             <input type="reset" value="" class="botonesreintentar">
         </form>
+        <script>
+            let respuestasp6_4 = [24.288, 15.376, 13.058, 11.147, 1.164, 10.424];
+
+            var obj_p6e4 = [
+                {
+                    reactivo: 'default1',
+                    respuesta: 1,
+                    estado: 'false'
+                }
+            ];
+            colores(respuestasp6_4, 6, 4, obj_p6e4);
+        </script>
+
+        <?php
+        if (isset($_POST['P6E4REV'])) {
+
+            $RespuestasE4_P6 = array(
+                24.288,
+                15.376,
+                13.058,
+                11.147,
+                1.164,
+                10.424
+            );
+            require('funcionrevtxt.php');
+            Caso2txt($RespuestasE4_P6, 4, 6, 'p6e4');
+
+
+        }
+        ?>
 
 
         <br><br>
@@ -1506,10 +1620,10 @@
 
                                 e * 2 <<select name="p6e5txt18" id="p6e5txt18">
                                     <option value=0 selected disabled>Respuesta</option>
-                                    <option value=required> > </option>
-                                    <option value=required>
+                                    <option value=">"> > </option>
+                                    <option value="<">
                                         < </option>
-                                    <option value=required> = </option>
+                                    <option value="="> = </option>
 
                                     </select> ln(300)<br>
 
@@ -1519,8 +1633,41 @@
         </form>
 
 
-        <input type="submit" value="" class="botonesrevisar" name="p1e2Rev">
-        <input type="reset" value="" class="botonesreintentar">
+        <script>
+            let respuestase5p6 = ['>', '<', '>', '>', '>', '=', '=', '=', '>', '<', '=', '=', '<', '>', '<', '=', '<', '<'];
+            colores(respuestase5p6, 6, 5);
+        </script>
+
+        <?php
+        if (isset($_POST['P6E5REV'])) {
+
+            $RespuestasE5_P6 = array(
+                '>',
+                '<',
+                '>',
+                '>',
+                '>',
+                '=',
+                '=',
+                '=',
+                '>',
+                '<',
+                '=',
+                '=',
+                '<',
+                '>',
+                '<',
+                '=',
+                '<',
+                '<'
+            );
+            require('funcionrevtxt.php');
+            Caso2txt($RespuestasE5_P6, 5, 6);
+
+
+        }
+        ?>
+
 
         <div>
             6. Arrastra y suelta las etiquetas en el lugar correcto:<br>

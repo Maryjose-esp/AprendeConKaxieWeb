@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style3.css">
+    <link rel="stylesheet" href="css/style4.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
@@ -16,8 +17,14 @@
 
 <body>
     <?php
-    require ('ifSession.php');
+    require('ifSession.php');
+
+    if ($indicador_bd) {
+        dialog_abrir('1');
+    }
+
     ?>
+
     <script src="js/script11.js"></script>
     <aside class="aside" id="aside1">
         <section id="s1">
@@ -154,7 +161,7 @@
         <p>Dentro del lenguaje algebraico ya no se emplean tanto las palabras de suma, resta, división o multiplicación,
             en su lugar tenemos
             sinónimos para referirnos a tales operaciones. Véase la siguiente tabla:</p>
-        <TABLE id = "p1_tabla1">
+        <TABLE id="p1_tabla1">
             <TR>
                 <TH>Suma</TH>
                 <TH>Resta</TH>
@@ -222,7 +229,7 @@
         A continuación veremos algunos ejemplos comúnes de expresiones verbales
         y su traducción al lenguaje algebraico.
         </p>
-        <TABLE BORDER="2PX" id = "p1_tabla2">
+        <TABLE BORDER="2PX" id="p1_tabla2">
 
 
             <TR>
@@ -443,7 +450,7 @@
         </form>
         <?php
         if (isset($_POST['p1e1Rev'])) {
-            require ('funcionrevradio.php');
+            require('funcionrevradio.php');
             RevisarRadios(6, 1, 1);
 
         }
@@ -584,7 +591,7 @@
 
             <?php
             if (isset($_POST['p1e2Rev'])) {
-                require ('funcionrevradio.php');
+                require('funcionrevradio.php');
                 RevisarRadios(6, 2, 1);
             }
             ?>
@@ -597,7 +604,7 @@
     </section>
 
     <div id="fot">
-        <?php include ('footer.php'); ?>
+        <?php include('footer.php'); ?>
     </div>
 </body>
 

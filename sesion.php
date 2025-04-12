@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -12,7 +12,7 @@
 
 <body>
     <?php
-    require ('ifSession.php');
+    require('ifSession.php');
     ?>
     <section style="margin-top: 30px;">
 
@@ -36,24 +36,25 @@
 
                     </div>
                     <!-- <div class="recuerdame"> -->
-                    <Input  type="checkbox" name="Mantener" id="SesionMan"><label for="SesionMan" id="label_for_sesionman">Mantener inicio de sesion</label><br>
-                <!-- </div> -->
+                    <Input type="checkbox" name="Mantener" id="SesionMan"><label for="SesionMan"
+                        id="label_for_sesionman">Mantener inicio de sesion</label><br>
+                    <!-- </div> -->
                     <!-- <div class="new"> -->
                     <p>No tinenes una cuenta? <a href="registro.php">Da click aqui para crear una</a><br><br>
-</p>
-                <!-- </div> -->
+                    </p>
+                    <!-- </div> -->
                 </div>
-                
+
 
                 <input type="submit" name="iniciaS" value="Iniciar Sesion" class="btn">
-                
+
 
             </form>
             <div>
 
     </section>
     <?php
-    include ('footer.php');
+    include('footer.php');
 
     ?>
 </body>

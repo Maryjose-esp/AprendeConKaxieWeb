@@ -235,3 +235,104 @@
 #tamanos_eval{
     width: 100%;
 }
+
+/*16/03/25 MEJORAS ESTETICAS EN LA PROGRESION 12*/
+.funciones_modelo_interactivo{
+    font-size: 40px;
+    background: linear-gradient(#71f5d2, #71c2f5);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(7, 21, 104, 0.5);
+}
+
+.element_funcion_interactivo:hover{
+    transform: scale(1.4);
+    color: #106d54;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8);
+}
+
+.descripcion_funcion_interactiva{
+    display: none;
+    padding: 10px;
+    background-color: #71c2f5;
+    border-color: #004EF5;
+    border-width: 2px;
+    border-style: solid;
+    width:fit-content;
+}
+
+.contenedor_funcion_intro{
+    width: '95%'; 
+    display: flex; 
+    justify-content: space-between;
+}
+
+.contenedor_funcion_intro div{
+    width: 48%;
+    /* background-color: red; */
+}
+
+.progresion12_AcomodarRespuestas{
+    display: flex;
+    justify-content:space-evenly;
+}
+
+.progresion12_AcomodarRespuestas div{
+    width: max-content;
+}
+
+/*3 de abril de 2025 DIALOG*/
+
+
+.dialog_aviso_Eval{
+    padding: 10px;
+    font-family: 'Quicksand';
+    background-color: #011931;
+    color: white;
+    margin: auto;
+    font-size: 20px;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    border-style: none;
+    border-radius: 5px;
+    position: fixed;
+    
+}
+
+
+.dialog_aviso_Eval[open]::backdrop {
+  background: #00000050;
+  backdrop-filter: blur(1px)
+}
+
+.dialog_aviso_Eval #espera_Aviso_dialog{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+.ir_a_evaluacion_dialog{
+    border-radius: 8px;
+    border-style: none;
+    background-color: #71c2f5;
+    color:#011931;
+    padding: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+}
+
+.ir_a_evaluacion_dialog a{
+    color: #011931;
+    font-style: normal;
+}
+
+.ir_a_evaluacion_dialog:hover{
+    transform: scale(1.15);
+    cursor: pointer;
+
+}
+
+
+/*responsive 1140px*/
+

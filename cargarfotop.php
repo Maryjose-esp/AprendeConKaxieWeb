@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -26,7 +26,7 @@
             echo "formato o peso invalido";
         }
 
-        require ('conexionbd.php');
+        require('conexionbd.php');
         session_start();
         $usuarioK = $_SESSION['Usuario'];
 
@@ -36,26 +36,26 @@
 
         header('location:index.php?param=true');
 
-    }else{
+    } else {
         $radiofoto = $_POST['fotoPerfil'];
-        if($radiofoto == "mena"){
-            require ('conexionbd.php');
+        if ($radiofoto == "mena") {
+            require('conexionbd.php');
             session_start();
             $usuarioK = $_SESSION['Usuario'];
             $SQL = "UPDATE usuario SET FOTOPER ='perfilMena.png' WHERE NUSUARIO='$usuarioK'";
             $resultado = mysqli_query($conexion, $SQL);
             header('location:index.php');
-    
-        }else if($radiofoto == "majo"){
-            require ('conexionbd.php');
+
+        } else if ($radiofoto == "majo") {
+            require('conexionbd.php');
             session_start();
             $usuarioK = $_SESSION['Usuario'];
             $SQL = "UPDATE usuario SET FOTOPER ='perfilMajo.png' WHERE NUSUARIO='$usuarioK'";
             $resultado = mysqli_query($conexion, $SQL);
             header('location:index.php');
 
-        }else if($radiofoto == "natalia"){
-            require ('conexionbd.php');
+        } else if ($radiofoto == "natalia") {
+            require('conexionbd.php');
             session_start();
             $usuarioK = $_SESSION['Usuario'];
             $SQL = "UPDATE usuario SET FOTOPER ='perfilNata.png' WHERE NUSUARIO='$usuarioK'";

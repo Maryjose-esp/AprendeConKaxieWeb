@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -31,14 +31,14 @@
             <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
 
             <div class="content">
-                <a class="fotoper"><img src="/uploads/<?php echo $rutaimg ?>" width="60px" height="60px"></a>
+                <a class="fotoper"><img width="60px" height="60px"></a>
 
                 <ul class="links">
-                    <li >
+                    <li>
                         <a href="#" class="desktop-link">Perfil</a>
                         <input type="checkbox" id="show-services">
                         <label for="show-services">Perfil</label>
-                        <ul >
+                        <ul>
                             <li><a href="PersonalizarPerfil.php">Personalizar perfil</a></li>
                             <li><a href="editinfo.php">Editar informacion</a></li>
                             <li><a href="avances.php">Ver mis avances</a></li>

@@ -541,7 +541,7 @@ body::-webkit-scrollbar-button:vertical:decrement{
     margin: 20px auto 40px auto ;
     width: 30%;
     height: 40%;
-    backdrop-filter: blur(4px);
+    background-color: #004ef5;
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .5);
 

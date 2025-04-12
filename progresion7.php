@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style3.css">
+    <link rel="stylesheet" href="css/style4.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
@@ -18,6 +19,9 @@
 <body>
     <?php
     require('ifSession.php');
+    if ($indicador_bd) {
+        dialog_abrir('7');
+    }
     ?>
 
     <script src="js/script11.js"></script>
@@ -674,8 +678,8 @@
         <br><br>
         <p>Calcula la constante de proporcionalidad para saber si son proporcionales o no. </p><br>
         <div class="columne2">
-            <form method="post"> 
-            <!-- acomodar luego -->
+            <form method="post">
+                <!-- acomodar luego -->
                 <math>
                     <mfrac>
                         <mn>8</mn>
@@ -1395,7 +1399,7 @@
         <div class="pdcontainer">
             <div>
                 a) Se tiene que
-                <span >
+                <span>
                     <math xmlns:mml="http://www.w3.org/1998/Math/MathML"
                         xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math">
                         <mfrac>
@@ -1478,7 +1482,7 @@
 
             <div>
                 b) Se tiene que
-                <span >
+                <span>
                     <math xmlns:mml="http://www.w3.org/1998/Math/MathML"
                         xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math">
                         <mfrac>
@@ -1560,7 +1564,7 @@
 
             <div>
                 c) Se tiene que
-                <span >
+                <span>
                     <math xmlns:mml="http://www.w3.org/1998/Math/MathML"
                         xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math">
                         <mfrac>
@@ -1642,7 +1646,7 @@
 
             <div>
                 d) Se tiene que
-                <span >
+                <span>
                     <math xmlns:mml="http://www.w3.org/1998/Math/MathML"
                         xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math">
                         <mfrac>
@@ -1881,7 +1885,7 @@
                 </math><br>x=<input type="text" size="8" maxlength="10" name="p7e6txt12" id="p7e6txt12"><br>
                 <br>
 
-                
+
                 <math>
                     <mfrac>
                         <mn>91</mn>

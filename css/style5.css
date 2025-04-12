@@ -1,0 +1,112 @@
+/*nuevo Majo*/
+
+/*Bibliografia*/
+.tituBibli{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 50px;
+}
+
+/*AUTORES*/
+@media (max-width: 560px){
+    .container3{
+        display: flex;
+    }
+    .auto{
+        display: block;
+    }
+    .auto2{
+        display: block;
+    }
+    .mena{
+        display: block;
+    }
+    .mena img{
+        width: 100%;
+    }
+    .majo{
+        display: block;
+    }
+    .majo img{
+        width: 100%;
+    }
+    .info{
+        margin-top: auto;
+        margin-bottom: auto;
+        float: left;
+        display: flex;
+        padding: 10px;
+        font-size: 35px;
+        width: 100%;
+    }
+
+}
+@media (max-width: 770px){
+    .info{
+        font-size: 30px;
+    }
+}
+@media (max-width: 380px){
+    .info{
+        font-size: 25px;
+    }
+    .tituBibli{
+        font-size: 40px;
+    }
+}
+
+/*PROGRE 13 FRACC*/
+@media (max-width: 860px){
+    .tamfrac{
+        font-size: 20px;
+    }
+}
+@media (max-width: 770px){
+    .tamfrac{
+        font-size: 20px;
+    }
+}
+@media (max-width: 450px){
+    .tamfrac{
+        font-size: 15px;
+    }
+}
+@media (max-width: 390px){
+    .tamfrac{
+        font-size: 13px;
+    }
+}
+
+/*VIDEO*/
+
+.videoProgre{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 7%;
+    margin-top: 7%;
+    background-image: url("./../images/KPvideo.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    align-items: center;
+    padding: 65px 65px;
+}
+.videoEsti{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#Passw {
+    width: 80%;
+}
+
+#ValCon{
+    font-size: 16px;
+}
+
+.inputcamp img{
+    width: 10%;
+}
