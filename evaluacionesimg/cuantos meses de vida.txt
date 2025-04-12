@@ -1,8 +1,1 @@
-cuantos meses de vida
-si ambas fechas son pares son compatibles
-si son impares on compatibles
-si uno es par y otro s impar no somos compatibles
-imprimir ombrwes somos compatibles o no
-COMMPATIBLE COLUMNA
-BASE DE DATOS 
-REGISTRAR Y HACER EL CALCULO
+
