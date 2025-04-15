@@ -43,6 +43,12 @@
         </div>
         <div class="tituBibli">CBTis No. 171</div>
         
+        <div class="TextProfe">Agradecimiento y reconocimiento:</div>
+        <div class="Profe">
+            <div class="Gabino"><img></div>
+            <div class="ParraProf"></div>
+        </div>
+        
         <br><br><br><br><br></div>
     </section>
 <?php include('footer.php');?>
