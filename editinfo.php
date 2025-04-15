@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style2.css">
     <link rel="stylesheet" type="text/css" href="css/style4.css">
+
+    <link rel="stylesheet" href="css/style5.css">
+
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="images/logo.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -218,7 +221,7 @@ if (!isset($_SESSION['Usuario'])) {
         <center>
             <h1>Editar información</h1>
             <h4>Confirma tu contraseña para poder editar tu cuenta.</h4>
-            <form action="" method="POST">
+            <form name="editinfo" action="" method="POST">
                 <div class="inputcamp"><input type="text" id="NUSUARIO" name="NUSUARIO" value=<?php echo $useractual; ?>
                         required></div><br>
                 <div class="inputcamp"><input type="text" id="NOMBRE" name="NOMBRE" value=<?php echo $nombreAct; ?>
@@ -226,8 +229,10 @@ if (!isset($_SESSION['Usuario'])) {
                 <div class="inputcamp"><input type="text" id="APELLIDO" name="APELLIDO" value=<?php echo $apellidoAct; ?>
                         required></div><br>
                 <div class="inputcamp"><input type="password" id="CONTRASENA" name="CONTRASENA"
-                        placeholder="Confirma tu contraseña" required></div><br>
+                        placeholder="Confirma tu contraseña" required>
+                        <img src="/images/close.png" id="eyeicon" onclick="cambioOjoK(document.editinfo.eyeicon, document.editinfo.CONTRASENA)"></div><br><br><br>
                 <input type="submit" value="Guardar Cambios" name="guardae" class="btn"><br>
+                <script src="js/ValidarUsrC.js"></script>
             </form>
         </center>
     </section>

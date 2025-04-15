@@ -57,6 +57,8 @@
     }
 }
 
+
+
 /*PROGRE 13 FRACC*/
 @media (max-width: 860px){
     .tamfrac{
@@ -99,14 +101,39 @@
 }
 
 
+/*CONTRASEÑA*/
+
 #Passw {
     width: 80%;
 }
 
 #ValCon{
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .inputcamp img{
     width: 10%;
+}
+
+#ValNom{
+    font-size: 14px;
+}
+
+#ValApe{
+    font-size: 14px;
+}
+
+#contraSe{
+    width: 80%;
+}
+
+#CONTRASENA{
+    width: 85%;
+}
+
+#elimiContra1{
+    width: 84%;
+}
+#elimiContra2{
+    width: 84%;
 }

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/style5.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="images/logo.ico" type="image/x-icon">
     <title>Inicio de Sesion - Aprende Con Kaxie</title>
@@ -23,7 +24,7 @@
             <div class="imgKax">
 
             </div>
-            <form action="abrirsesion.php" method="GET" enctype="text/plain">
+            <form name="sesion" action="abrirsesion.php" method="GET" enctype="text/plain">
                 <div id="contin">
                     <div class="inputcamp">
                         <Input type="text" name="NomUsrIS" placeholder="Nombre de usuario" required><br>
@@ -31,7 +32,8 @@
 
                     </div>
                     <div class="inputcamp">
-                        <Input type="password" name="passwIS" placeholder="Contrasena" required> <br>
+                        <Input type="password" id="contraSe" name="passwIS" placeholder="Contrasena" required>
+                        <img src="/images/close.png" id="eyeicon" onclick="cambioOjoK(document.sesion.eyeicon, document.sesion.contraSe)"> <br>
 
 
                     </div>
@@ -47,7 +49,7 @@
 
 
                 <input type="submit" name="iniciaS" value="Iniciar Sesion" class="btn">
-
+                <script src="js/ValidarUsrC.js"></script>
 
             </form>
             <div>

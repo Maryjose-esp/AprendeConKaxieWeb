@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style2.css">
     <link rel="stylesheet" href="css/style4.css">
+    <link rel="stylesheet" href="css/style5.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="images/logo.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,13 +31,16 @@
             <h1>Eliminar cuenta</h1>
             <h4>Confirma tu contraseña para poder eliminar tu cuenta.</h4>
             <h6>Una vez presionado el botón la cuenta será eliminada, así que piensa muy bien en ejecutar esta acción pues es irreversible.</h6>
-            <form method="post">
+            <form name="eliminarcuenta" method="post">
                 <div class="inputcamp"><input type="text" name="usuario" value=<?php echo $_SESSION['Usuario']?> readonly></div><br>
-                <div class="inputcamp"><input type="password" name="confirmar1" placeholder="Contraseña" required></div>
+                <div class="inputcamp"><input type="password" id="elimiContra1" name="confirmar1" placeholder="Contraseña" required>
+                <img src="/images/close.png" id="eyeicon1" onclick="cambioOjoK(document.eliminarcuenta.eyeicon1, document.eliminarcuenta.elimiContra1)"></div>
                 <br>
-                <div class="inputcamp"><input type="password" name="confirmar2" placeholder="Confirmar contraseña"
-                        required></div><br><br><br>
+                <div class="inputcamp"><input type="password" id="elimiContra2" name="confirmar2" placeholder="Confirmar contraseña"
+                        required>
+                <img src="/images/close.png" id="eyeicon2" onclick="cambioOjoK(document.eliminarcuenta.eyeicon2, document.eliminarcuenta.elimiContra2)"></div><br><br><br>
                 <input type="submit" value="Eliminar cuenta" name="EliminarC" class="btn"><br>
+                <script src="js/ValidarUsrC.js"></script>
             </form>
             <?php
             if (isset($_POST['EliminarC'])) {
