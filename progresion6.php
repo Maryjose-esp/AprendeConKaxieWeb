@@ -13,7 +13,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script>
     <link rel="icon" href="images/logo.ico" type="image/x-icon">
-    <script src="js/script7.js"></script>
+    <script src='js/jquery-3.7.1.js'></script>
     <title> Progresion 6 </title>
 </head>
 
@@ -22,17 +22,35 @@
     require('ifSession.php');
     if ($indicador_bd) {
         dialog_abrir('6');
+        echo "";
+    }else{//cuando no hay una sesión abierta no habilita la opción de descargar el pdf con las respuestas
+        echo "<script>
+        document.addEventListener('DOMContentLoaded', () => {
+    let btnPdf = document.getElementById('btnPDF');
+        btnPdf.style.display ='none';
+  });
+       
+    </script>";
     }
     ?>
-    <script src='js/jquery-3.7.1.js'></script>
     <script>
-        var DatosFinalesPDF = "<?php DatosPDF()
-        ;
-        ?>";
-        //definir matriz con arreglos de las respuestas correctas a cada ejercicio
+        var IndicadorBDJS = '<?php echo $indicador_bd;?>';
         var arrayp6e1 = [[2347, 832, 28380, 232, 1028, -107, -4.245, 75.33, 2.68, 0.361], [1, 2, 3]];
+    </script>
+    
+
+    <script src="js/script7.js"></script>
+    
+    <script>
+        var DatosFinalesPDF = "<?php DatosPDF();?>";
+        
+        //definir matriz con arreglos de las respuestas correctas a cada ejercicio
+        
 
     </script>
+    
+    
+    
 
     <aside class="aside" id="asidex6">
         <section id="s1">
@@ -659,13 +677,21 @@
                 size="5"><br>
             (123 + 7 * 81 - 1) / (1829 - 371 / 371 + 78) = <input type="text" required name="p6e1txt10" id="p6e1txt10"
                 maxlength="10" size="5"><br>
-            <br><br>
+            <br>
             <!-- <input type="submit" value="" class="botonesrevisar" id="P6E1REV" name="P6E1REV"> -->
-            <button type="button" onclick="colores(arrayp6e1, 6, 1);" id="P6E1REV" name="P6E1REV">prueba</button>
-            <button type="button" onclick="GenerarPDF(6, 1, arrayp6e1, DatosFinalesPDF)">PDF</button>
-            <input type="reset" value="" class="botonesreintentar">
+            <button type="button" onclick="colores(arrayp6e1, 6, 1);" id="P6E1REV" name="P6E1REV" class="buttonsResRev"><img id = "btnSubmit" src="images/Revisar.png" width="140px" alt="" onmouseover="this.src = 'images/RevisarSobre.png'" onmouseout="this.src = 'images/Revisar.png'"></button>
+            <button type = "button" onclick="eliminartodo(6, 1, 10)" id = "btnReset" name = "" class="buttonsResRev"><img src = "images/VolverIntentar.png" width="140px" onmouseover="this.src = 'images/VolverIntentarSobre.png'" onmouseout="this.src = 'images/VolverIntentar.png'"></button>
 
-        </form>
+            <button type="button" class="buttonsResRev" id = "btnPDF" onclick="GenerarPDF(6, 1, arrayp6e1, DatosFinalesPDF)"><img src="images/pdfKaxie.png"  id = "btnPDF" width="90px" alt="" onmouseover="this.style.setProperty('-webkit-filter', 'drop-shadow(2px 2px 5px rgba(0, 38, 81, 0.7))'); this.style.setProperty('transform', 'scale(1.08)');" onmouseout="this.style.removeProperty('-webkit-filter'); this.style.removeProperty('transform');"></button>
+            <!-- <input type="reset" value="" class="botonesreintentar"></input> -->
+
+        </for>
+
+        <script>
+
+        </script>
+
+
         <div class="Calificacion" id="p6e1img">
 
         </div>
@@ -725,10 +751,10 @@
             <input type="reset" value="" class="botonesreintentar">
         </form>
         <br><br>
-        <script>
+        <!-- <script>
             let respuestasp6_2 = [12.6, 10893.0644, -26, 1, 0.8, 1.5, -7.875, -0.0327, 2.158, 12.065];
             colores(respuestasp6_2, 6, 2);
-        </script>
+        </script> -->
 
         <?php
         if (isset($_POST['P6E2REV'])) {
@@ -1376,10 +1402,10 @@
         </form>
 
         <br><br>
-        <script>
+        <!-- <script>
             let respuestasp6_3 = ['-8/3', '5/2', '49/2', '152/81', '374/225', '-9/49', '-1.64', '-11/29', '29/18', '1/18', '-1/18', '-29/18', '15/14', '', '-15/14', '27/10', '-27/10', '489/132', '269/60'];
             colores(respuestasp6_3, 6, 3);
-        </script>
+        </script> -->
         <?php
         if (isset($_POST['P6E3REV'])) {
 
@@ -1427,7 +1453,7 @@
             <button type="submit" class="botonesrevisar" id="P6E4REV" name="P6E4REV"></button>
             <input type="reset" value="" class="botonesreintentar">
         </form>
-        <script>
+        <!-- <script>
             let respuestasp6_4 = [24.288, 15.376, 13.058, 11.147, 1.164, 10.424];
 
             var obj_p6e4 = [
@@ -1438,7 +1464,7 @@
                 }
             ];
             colores(respuestasp6_4, 6, 4, obj_p6e4);
-        </script>
+        </script> -->
 
         <?php
         if (isset($_POST['P6E4REV'])) {
@@ -1633,10 +1659,10 @@
         </form>
 
 
-        <script>
+        <!-- <script>
             let respuestase5p6 = ['>', '<', '>', '>', '>', '=', '=', '=', '>', '<', '=', '=', '<', '>', '<', '=', '<', '<'];
             colores(respuestase5p6, 6, 5);
-        </script>
+        </script> -->
 
         <?php
         if (isset($_POST['P6E5REV'])) {

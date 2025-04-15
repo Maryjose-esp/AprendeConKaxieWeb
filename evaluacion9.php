@@ -15,6 +15,10 @@
     include('evaluacionplantilla.php');
 
     ?>
+    <script>
+        const ProgresionActual = document.getElementById("encabezadoEval");
+        ProgresionActual.innerHTML = "Evaluación progresión 9";
+    </script>
 </body>
 
 </html>

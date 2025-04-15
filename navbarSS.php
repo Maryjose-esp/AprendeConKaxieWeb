@@ -16,12 +16,22 @@
     <?php
     require('conexionbd.php');
     $useractual = $_SESSION['Usuario'];
-    $subirfoto = "SELECT FOTOPER FROM usuario WHERE NUSUARIO = '$useractual' ";
-    $resultado = mysqli_query($conexion, $subirfoto);
+    $subirfoto = "SELECT FOTOPER FROM usuario WHERE NUSUARIO = ?";
 
-    while ($fila = mysqli_fetch_array($resultado)) {
-        $rutaimg = $fila['FOTOPER'];
-    }
+    // $subirfoto = "SELECT FOTOPER FROM usuario WHERE NUSUARIO = '$useractual' ";
+    $resultado = mysqli_prepare($conexion, $subirfoto);
+    $ejecutar = mysqli_stmt_bind_param($resultado, "s", $useractual);
+    $ejecutar = mysqli_stmt_execute($resultado);
+
+    // if ($ejecutar == false) {
+
+    // } else {
+    $ejecutar = mysqli_stmt_bind_result($resultado, $rutaimg);
+        
+    // }
+    // $resultado = mysqli_query($conexion, $subirfoto);
+    
+    
     ?>
 
     <div class="wrapper">
@@ -31,9 +41,14 @@
             <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
 
             <div class="content">
-                <a class="fotoper"><img width="60px" height="60px"></a>
+                <a class="fotoper"><img width="60px" height="60px" src = "../../uploads/<?php 
+                while(mysqli_stmt_fetch($resultado)){
+                    echo $rutaimg;
+                }
+                mysqli_stmt_close($resultado);
+                ?> "></a>
 
-                <ul class="links">
+                <ul class=" links">
                     <li>
                         <a href="#" class="desktop-link">Perfil</a>
                         <input type="checkbox" id="show-services">
@@ -51,6 +66,7 @@
                                     <?php
                                     if (isset($_POST['sesionfuera'])) {
                                         session_start();
+                                        
                                         session_destroy();
                                         header('location:index.php');
                                     }
@@ -89,58 +105,13 @@
                     </li>
 
                     <li><a href="Evaluaciones.php">Evaluaciones</a></li>
-                </ul>
+                    </ul>
             </div>
 
         </nav>
     </div>
 
-    <!-- <header>
-      <a class="fotoper"><img src="/uploads/<?php echo $rutaimg ?>" width="60px" height="60px"></a>
-            <ul>
-            
-                <li><a href="">Perfil</a>
-                    <ul>
-                        <li><a href="PersonalizarPerfil.php">Personalizar perfil</a></li>
-                        <li><a href="editinfo.php">Editar informacion</a></li>
-                        <li><a href="avances.php">Ver mis avances</a></li>
-                        <li><a href="eliminarcuenta.php">Eliminar cuenta</a></li>
-                        <li><a href=""><form method="post">
-                            <input type="submit" value="Cerrar sesion" name="sesionfuera" class="sinformatobtn">
-                        </form>
-                            <?php
-                            if (isset($_POST['sesionfuera'])) {
-                                session_start();
-                                session_destroy();
-                                header('location:index.php');
-                            }
-                            ?></a></li>
-                    </ul>
-                </li>
-                <li><a href=""><?php echo $_SESSION['Usuario']; ?></a></li>
-                <li><a href="index.php">Aprende con Kaxie</a></li> 
-                <li><a href="">Progresiones</a>
-                   <ul>
-                        <li><a href="progresion1.php" >Progresión 1</a></li>
-                        <li><a href="progresion2.php" >Progresión 2</a></li>
-                        <li><a href="progresion3.php" >Progresión 3</a></li>
-                        <li><a href="progresion4.php" >Progresión 4</a></li>
-                        <li><a href="progresion5.php" >Progresión 5</a></li>
-                        <li><a href="progresion6.php" >Progresión 6</a></li>
-                        <li><a href="progresion7.php" >Progresión 7</a></li>
-                        <li><a href="progresion8.php" >Progresión 8</a></li>
-                        <li><a href="progresion9.php" >Progresión 9</a></li>
-                        <li><a href="progresion10.php">Progresión 10</a></li>
-                        <li><a href="progresion11.php" >Progresión 11</a></li>
-                        <li><a href="progresion12.php">Progresión 12</a></li>
-                        <li><a href="progresion13.php" >Progresión 13</a></li>
-                        <li><a href="progresion14.php" >Progresión 14</a></li>
-                    </ul>
-                </li>
-                <li><a href="Evaluaciones.php">Evaluaciones</a></li>
-
-            </ul>
-    </header> -->
+   
 
 
 </body>

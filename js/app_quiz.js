@@ -156,7 +156,9 @@ function next() {
   if (questionCounter === quiz.length - 5) {
     quizOver();
   } else {
-    if (questionCounter == 9) {
+    if (questionCounter === quiz.length - 6) {
+        const buttonNext = document.getElementById("btn_evaluacion_iniciar");
+        buttonNext.innerHTML = "Finalizar";
     }
     getNewQuestion();
   }
@@ -196,9 +198,9 @@ function quizResult() {
   resultBox.querySelector(".total-correct").innerHTML = correctAnswers;
   resultBox.querySelector(".total-wrong").innerHTML =
     atendidas - correctAnswers;
-  percentage = correctAnswers / 10; //le movi a const
+  percentage = correctAnswers; //le movi a const
   resultBox.querySelector(".total-porcentage").innerHTML =
-    percentage.toFixed(2) + "%";
+    percentage;
   resultBox.querySelector(".total-score").innerHTML = correctAnswers + " / 10";
   pasaraphp(percentage, numberOfProgresion);
 }
@@ -213,8 +215,10 @@ function tryAgainQuiz() {
   resultBox.classList.add("hide");
   //mostrar quizbox
   quizBox.classList.remove("hide");
+  location.reload();
   resetQuiz();
   startQuiz();
+  
 }
 
 function retroalimentacion() {

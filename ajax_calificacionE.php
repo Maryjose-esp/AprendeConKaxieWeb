@@ -1,8 +1,8 @@
 <?php
-session_start();
+
 $ProgresionActual = $_POST['NumberProgresion'];
 $NumeroEjercicio = $_POST['NumberExercise'];
-
+$epsilon = 0.1;
 // CONVERSION STRING TO ARRAY 
 $matriz = $_POST['Matriz'];
 $nuevo_matriz = trim($matriz, '[ ]');
@@ -18,29 +18,49 @@ $contador = 0;
 
 $j = $_POST['Reactivos'];
 for ($i = 0; $i < $j; $i++) {
-    if ($arreglo_misrespuestas[$i] == $arreglo_matriz[$i]) {
-        $contador++;
-    }
+    // echo "yo: $arreglo_misrespuestas[$i] la matriz: $arreglo_matriz[$i]";
+    //echo $arreglo_misrespuestas[$i];
+    //if(!(($arreglo_misrespuestas[$i]===null))){
+       if (abs($arreglo_misrespuestas[$i] - $arreglo_matriz[$i]) < $epsilon) {
+            $contador++;
+        }
+    //}else{
+        
+       //  $arreglo_misrespuestas[$i] = 0;
+    //}
+
+    
+    
 }
 $contador;
 $promedio = $contador / ($j / 10);
 $kaxieimg = "";
-if ($promedio <= 6) {
+if ($promedio < 6) {
     $kaxieimg = "reprobo.png";
-} else if ($promedio > 6 && $promedio <= 8) {
+} else if ($promedio >= 6 && $promedio <= 8) {
     $kaxieimg = "aceptable.png";
 } else if ($promedio > 8 && $promedio <= 10) {
     $kaxieimg = "buenacalif.png";
 }
 // echo '<div class="Calificacion">';
+session_start();
 
-if ($_SESSION['Usuario']) {
+if (array_key_exists('Usuario',$_SESSION)) {
     require('conexionbd.php');
+    
     $usuario = $_SESSION['Usuario'];
 
     $auxcampocalif = 'CalifE' . $NumeroEjercicio;
-    $actualizar = "UPDATE progresion$ProgresionActual SET $auxcampocalif = $promedio WHERE nusuario = '$usuario'";
-    $consulta = mysqli_query($conexion, $actualizar);
+    $sql = "UPDATE progresion$ProgresionActual SET $auxcampocalif = ? WHERE nusuario = ?";
+    $resultado = mysqli_prepare($conexion, $sql);
+    $ejecutar = mysqli_stmt_bind_param($resultado, 'ds', $promedio, $usuario);
+    $ejecutar = mysqli_stmt_execute($resultado);
+    if($ejecutar){
+        mysqli_stmt_close($resultado);
+    }
+
+    // $actualizar = "UPDATE progresion$ProgresionActual SET $auxcampocalif = $promedio WHERE nusuario = '$usuario'";
+    // $consulta = mysqli_query($conexion, $actualizar);
     // if ($consulta) {
     //     echo "sipi >:)";
     // } else {

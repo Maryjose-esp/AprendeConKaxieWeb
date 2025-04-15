@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    
 
     <?php
     echo '<script src="js/question1.js"></script>'; //ACCEDE AL JS CON LAS PREGUNTAS
@@ -21,6 +22,10 @@
 
 
     ?>
+    <script>
+        const ProgresionActual = document.getElementById("encabezadoEval");
+        ProgresionActual.innerHTML = "Evaluación progresión 1";
+    </script>
 </body>
 
 </html>

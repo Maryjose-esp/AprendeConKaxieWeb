@@ -10,6 +10,7 @@ if (!isset($_SESSION['Usuario'])) {
 } else {
     include('navbarSS.php');
     $indicador_bd = true;
+    
 }
 
 
@@ -21,16 +22,30 @@ function DatosPDF()
 
     require('conexionbd.php');
     $UserActual_Bool = $_SESSION['Usuario'];
-    $consulta_estado_Eval = "SELECT * FROM usuario WHERE NUSUARIO = '$UserActual_Bool'";
-    $resultado_consulta_bool = mysqli_query($conexion, $consulta_estado_Eval) or die('nels');
 
-    while ($fila = mysqli_fetch_assoc($resultado_consulta_bool)) { //guarda el estado de contestacion de la evaluacion
-        $Nombre = $fila['NOMBRE']; //guarda el estado
-        $Apellido = $fila['APELLIDO'];
+    $sql = "SELECT NOMBRE, APELLIDO FROM usuario WHERE NUSUARIO = ?";
+    $resultado = mysqli_prepare($conexion, $sql);
+    $ejecutar = mysqli_stmt_bind_param($resultado, "s", $useractual);
+    $ejecutar = mysqli_stmt_execute($resultado);
 
+    if($ejecutar){
+        $ejecutar = mysqli_stmt_bind_result($resultado, $nomACT, $apellidoACT);
+            while (mysqli_stmt_fetch($resultado)) {
+                $Nombre = $nomACT;
+                $Apellido = $apellidoACT;
+            }
+            mysqli_stmt_close($resultado);
     }
+    // $consulta_estado_Eval = "SELECT * FROM usuario WHERE NUSUARIO = '$UserActual_Bool'";
+    // $resultado_consulta_bool = mysqli_query($conexion, $consulta_estado_Eval) or die('nels');
 
-    $DatosFinales = "$Nombre $Apellido; $UserActual_Bool";
+    // while ($fila = mysqli_fetch_assoc($resultado_consulta_bool)) { //guarda el estado de contestacion de la evaluacion
+    //     $Nombre = $fila['NOMBRE']; //guarda el estado
+    //     $Apellido = $fila['APELLIDO'];
+
+    // }
+
+    $DatosFinales = "$Nombre $Apellido;   $UserActual_Bool";
     echo $DatosFinales;
 }
 
@@ -38,15 +53,20 @@ function dialog_abrir($NumeroProgresion)
 {
     require('conexionbd.php');
     $UserActual_Bool = $_SESSION['Usuario'];
-    $consulta_estado_Eval = "SELECT * FROM progresion$NumeroProgresion WHERE nusuario = '$UserActual_Bool'";
-    $resultado_consulta_bool = mysqli_query($conexion, $consulta_estado_Eval) or die('nels');
 
+    $sql = "SELECT evaluacion_Estado FROM progresion$NumeroProgresion WHERE nusuario = ?";
+    $resultado = mysqli_prepare($conexion, $sql);
+    $ejecutar = mysqli_stmt_bind_param($resultado, "s", $UserActual_Bool);
+    $ejecutar = mysqli_stmt_execute($resultado);
 
+    if($ejecutar){
+        $ejecutar = mysqli_stmt_bind_result($resultado, $boolEstadoA);
+            while (mysqli_stmt_fetch($resultado)) {
+                $auxiliar_Estado = $boolEstadoA;
+            }
+            mysqli_stmt_close($resultado);
 
-    while ($fila = mysqli_fetch_assoc($resultado_consulta_bool)) { //guarda el estado de contestacion de la evaluacion
-        $auxiliar_Estado = $fila['evaluacion_Estado']; //guarda el estado
-    }
-    if ($auxiliar_Estado == 0) {
+if ($auxiliar_Estado == 0) {
         $dialogo = '<dialog class="dialog_aviso_Eval" id = "dialogp' . $NumeroProgresion . '">
         <img src="images/KaxieJusLap.png" width="40%">
         <div>
@@ -72,6 +92,19 @@ function dialog_abrir($NumeroProgresion)
             </script>";
 
     }
+
+    }
+
+
+    // $consulta_estado_Eval = "SELECT * FROM progresion$NumeroProgresion WHERE nusuario = '$UserActual_Bool'";
+    // $resultado_consulta_bool = mysqli_query($conexion, $consulta_estado_Eval) or die('nels');
+
+
+
+    // while ($fila = mysqli_fetch_assoc($resultado_consulta_bool)) { //guarda el estado de contestacion de la evaluacion
+    //     $auxiliar_Estado = $fila['evaluacion_Estado']; //guarda el estado
+    // }
+    
 
 }
 

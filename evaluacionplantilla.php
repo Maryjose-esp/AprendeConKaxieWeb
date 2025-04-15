@@ -14,7 +14,7 @@
     <title>Evaluacion</title>
 </head>
 
-<body>
+<body id = "evaluacionContainer">
 
     <?php
     require('ifSession.php');
@@ -39,6 +39,8 @@
             </aside>
         </section>
         <section class="section_evaluacion">
+            <br>
+           <center> <h1 id = "encabezadoEval"></h1></center>
             <div class="home-box custom-box">
                 <h3>Instrucciones</h3>
                 <p>Total de preguntas: <span class="total-question"></span></p>
@@ -69,7 +71,7 @@
                 </div>
 
                 <div class="next-question-btn">
-                    <button type="button" class="btn_evaluacion_iniciar" onclick="next()">Siguiente</button>
+                    <button type="button" id = "btn_evaluacion_iniciar" class="btn_evaluacion_iniciar" onclick="next()">Siguiente</button>
                 </div>
 
                 <div id="answers-indicator" class="answers-indicator">
@@ -125,6 +127,7 @@
 
     <!-- <div class = "mandar_abajo_evaluac">
      -->
+    <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
     <div id="footer_anadido"> <?php
     include('footer.php');
     ?></div>

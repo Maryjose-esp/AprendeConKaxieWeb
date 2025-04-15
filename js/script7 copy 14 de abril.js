@@ -140,38 +140,22 @@ function colores(respuestas, numprogresion, numejercicio) {
   //   );
   for (var i = 0; i < total; i++) {
     inputres[i] = document.getElementById("p" +numprogresion.toString() +"e" +numejercicio.toString()+"txt" +(i + 1).toString());
-  
   }
 
   //ver si el elemento que se va a subir existe
   for (var i = 0; i < total; i++) {
     if ($("#" +"p" +numprogresion.toString() +"e" +numejercicio.toString() +"txt" +(i + 1).toString()).length) {
-      const auxiliarInput = inputres[i].value;
-     // if(auxiliarInput.length == 0 || /^\s+$/.test(auxiliarInput)){
-        /*localStorage.setItem( "p" +numprogresion.toString() +"e" +numejercicio.toString() +"txt" +(i + 1).toString(), 0); //valor arbitrario cuando está vacío CHECAR
-        auxcontadorreac++;*/
-     // }else{
         localStorage.setItem( "p" +numprogresion.toString() +"e" +numejercicio.toString() +"txt" +(i + 1).toString(),inputres[i].value);
       
-       auxcontadorreac++;
-     // }
-        
+      auxcontadorreac++;
     }
   }
 
   for (var i = 0; i < total; i++) {
     let aux ="p" +numprogresion.toString() +"e" +numejercicio.toString() +"txt" +(i + 1).toString();
-    let auxiliarInput = document.getElementById(aux).value;
-    
     let savedServer1 = localStorage.getItem(aux);
-    /*aqui le movi */
-    if(auxiliarInput.length == 0 || /^\s+$/.test(auxiliarInput)){
-      array_auxMisRes[i] = 0;
-    }else{
-      array_auxMisRes[i] = parseFloat(savedServer1);
-    }
-    /*fin mi movedera */
-    // array_auxMisRes[i] = parseFloat(savedServer1);
+    
+    array_auxMisRes[i] = parseFloat(savedServer1);
     //console.log(array_auxMisRes[i]);
     // console.log(array_auxMisRes[i]); //BORRAR
     if (savedServer1) {

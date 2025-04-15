@@ -1,7 +1,7 @@
 <?php
 
 try {
-    $base = new PDO("mysql:host=localhost; dbname=aprendeconkaxiew", "root", "");
+    $base = new PDO("mysql:host=localhost; dbname=aprendeconkaxiew", "root", ""); //corregir esto para cuando este en internet
     $base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $sql = "SELECT * FROM usuario WHERE NUSUARIO= :login AND CONTRASENA= :password";
     $resultado = $base->prepare($sql);

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/style4.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <!-- <dialog id="dialogp" class="dialogos_check">
+        <img src="images/iconoCorrecto.png" id="checkingd" width="100px" height="100px" />
+        <center>
+            Los datos han sido actualizados de manera correcta. <br /><br />
+        </center>
+        <button id="irPagini" class="ir_a_evaluacion_dialog" onclick="window.location.href = 'index.php';">
+            De acuerdo
+        </button>
+    </dialog>
+    <script>
+        var dialogo_Actual = document.querySelector("#dialogp");
+        dialogo_Actual.showModal();
+    </script> -->
+
+    <!-- <dialog id="dialogno" class="dialogos_check">
+        <img src="images/iconoIncorrecto.png" id="incheck" width="100px" height="100px" />
+        <center>
+            La contraseña escrita no coincide con la asociada a esta cuenta. Por favor, verifica y vuelve a intentarlo.<br /><br />
+        </center>
+        <button id="irPagini" class="ir_a_evaluacion_dialog" onclick= "cerrarVent();">
+            De acuerdo
+        </button>
+    </dialog>
+    <script>
+        var dialogo_Actual = document.querySelector("#dialogno");
+        dialogo_Actual.showModal();
+
+        function cerrarVent(){
+            dialogo_Actual.close();
+        }
+    </script> -->
+
+    <!-- <dialog id="dialogno" class="dialogos_check">
+        <!-- <img src="images/iconoIncorrecto.png" id="incheck" width="100px" height="100px" /> -->
+        <!-- <center>
+            ¿Estás seguro de querer eliminar la cuenta? Esta acción es irreversible, todos tus progresos serán eliminados de forma permanenente.<br /><br />
+        </center>
+        <button id="ConfirmarSub" class="ir_a_evaluacion_dialog" onclick= "cerrarVent();">
+            Sí, estoy seguro.
+        </button>
+
+        <button id="NoConfirmar" class="ir_a_evaluacion_dialog" onclick= "cerrarVent();">
+            Cancelar y regresar.
+        </button>
+
+    </dialog>
+    <script>
+        var dialogo_Actual = document.querySelector("#dialogno");
+        dialogo_Actual.showModal();
+
+        function cerrarVent(){
+            dialogo_Actual.close();
+        } -->
+
+    <!-- </script> --> 
+
+    <script>
+        if(confirm("¿Estás seguro? Esta acción es irreversible, al eliminar la cuenta todos los registros almacenados serán borrados de forma permanente.")){
+            console.log('hola');
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>

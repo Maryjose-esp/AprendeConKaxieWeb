@@ -1,4 +1,13 @@
 /*PLANTILLA EVALUACIONES ESTILOS*/
+
+/*13 de abril de 2025 acomodar footer*/
+#evaluacionContainer{
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+}
+
+
 .custom-box{
     max-width: 700px;
     background-color: white;
@@ -336,3 +345,73 @@
 
 /*responsive 1140px*/
 
+/* 980px responsive imagen check/
+/*12 de abril de 2025*/
+/* #checkingd{
+    width: 2px;
+}
+
+@media(max-width){
+    #checkingd{
+        width:50px; 
+    height:50px;
+    }
+} */
+
+.dialogos_check{
+    font-family: 'Quicksand';
+    background-color: #011931;
+    color: white;
+    margin: auto;
+    font-size: 20px;
+    width: 30%;
+    place-items: center;
+    border-style: none;
+    border-radius: 5px;
+}
+
+.dialogos_check[open]::backdrop {
+    background: #00306350;
+    backdrop-filter: blur(1px)
+  }
+
+.dialogos_check .ir_a_evaluacion_dialog{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*13 de abril de 2025*/
+
+/*Título para las evaluaciones*/
+#encabezadoEval{
+    animation: slideInLeft .8s ease-in-out;
+    color: rgb(16, 109, 84);
+    text-shadow: 2px 2px 5px rgba(7, 22, 104, 0.3);
+    font-size: 32px;
+}
+
+/*estilo botón descargar pdf*/
+
+
+/*14 de abril de 2025*/
+
+/*botones de revisar y resetear*/
+.buttonsResRev{
+    border: none;
+    background-color: transparent;
+    /* cursor: pointer; */
+    
+}
+
+#btnSubmit:hover{
+
+}
+
+#btnReset:hover{
+
+}
+
+#btnPDF:hover{
+
+}

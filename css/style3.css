@@ -548,6 +548,7 @@ th{
     background-size: 430px 390px;
     background-repeat: no-repeat;
     padding: 78px 35px;
+    
 }
 
 #indice14{
@@ -927,6 +928,8 @@ center .indice a:hover{
     
 }
 
+/*botones - borrar*/
+
 .botonesrevisar{
     width: 170px;
     height: 100px;
@@ -947,13 +950,14 @@ button:hover[type="submit"]{
 
 .botonesreintentar{
     width: 170px;
-    height: 100px;
+    height: 110px;
     background-color: transparent;
     background-image: url("./../images/VolverIntentar.png");
     border: 0px;
     background-repeat: no-repeat;
     background-size: contain;
     cursor: pointer;
+    padding: 0;
 }
 
 input:hover[type="reset"]{
@@ -962,6 +966,8 @@ input:hover[type="reset"]{
     background-size: contain;
     cursor: pointer;
 }
+
+/*fin botones - borrar*/
 
 .imgejercicios{
     display:flex;
