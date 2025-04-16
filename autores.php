@@ -43,13 +43,20 @@
         </div>
         <div class="tituBibli">CBTis No. 171</div>
         
-        <div class="TextProfe">Agradecimiento y reconocimiento:</div>
-        <div class="Profe">
-            <div class="Gabino"><img></div>
-            <div class="ParraProf"></div>
+        <div class="TextProfe"><center>Agradecimiento y reconocimiento:</center></div><br>
+        <div class="ContProfe">
+            <div class="Profe"><img src="images/Gabino.png" WIDTH=100%></div>
+            <div class="ParraProf">Fís. Gabino Castillo Martínez.<br> 
+            Profesor encargado de supervisar los temarios dentro de "Aprende con Kaxie", 
+            además, probando dicho software en su clase.<div class="ApartadoFirm"></div></div>
         </div>
         
-        <br><br><br><br><br></div>
+        <div class="ContProfe">
+            <div class="Profe"><img src="images/Lupi.png" WIDTH=100%></div>
+            <div class="ParraProf">Ing. José Guadalupe Hernández Vargas.<br> 
+            Profesor encargado del funcionamiento técnico en el proyecto "Aprende con Kaxie".<div class="ApartadoFirm"></div></div>
+        </div>
+        </div>
     </section>
 <?php include('footer.php');?>
 </body>

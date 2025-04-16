@@ -46,7 +46,7 @@
                         <Input type="password" name="Passw" id="Passw" placeholder="Contrasena" minlength=8 required>
                         <img src="/images/close.png" id="eyeicon" onclick="cambioOjoK(document.registro.eyeicon, document.registro.Passw)"> <br>
                         <label id="ValCon"></label>
-                        
+                         
                     </div><br><br>
                     
                     <div class="recuerdame">
