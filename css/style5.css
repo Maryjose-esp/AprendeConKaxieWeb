@@ -9,6 +9,29 @@
     font-size: 50px;
 }
 
+/*AVANCE*/
+.avance{
+    font-size: 50px;
+}
+.progre{
+    background-color: rgb(113, 194, 245);
+}
+@media (max-width: 600px){
+    .avance{
+        font-size: 30px;
+    }
+    .progre h1{
+        font-size: 40px;
+    }
+}
+@media (max-width: 530px){
+    .avance{
+        font-size: 20px;
+    }
+    .progre h1{
+        font-size: 20px;
+    }
+}
 /*AUTORES*/
 @media (max-width: 560px){
     .container3{
@@ -38,7 +61,7 @@
         float: left;
         display: flex;
         padding: 10px;
-        font-size: 35px;
+        font-size: 30px;
         width: 100%;
     }
 
@@ -169,3 +192,4 @@
 #ValApe{
     font-size: 14px;
 }
+
