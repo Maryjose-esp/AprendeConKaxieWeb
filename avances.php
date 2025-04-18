@@ -14,7 +14,7 @@
 <?php require ('ifSession.php'); ?>
  
     <section style="margin-top: 30px;">
-    <center><h1>Mi avance - Progresiones</h1></center>
+    <center><h1 class="AvanceTitle" >Mi avance - Progresiones</h1></center>
     <BR>
     <div class="progre">
         <CENTER><h1>Progresión 1 &emsp; <a href="progresion1.php">Ir a la progresión</a></h1></CENTER>

@@ -13,6 +13,9 @@
 .avance{
     font-size: 50px;
 }
+.AvanceTitle{
+    font-size: 50px;
+}
 .progre{
     background-color: rgb(113, 194, 245);
 }
@@ -23,6 +26,9 @@
     .progre h1{
         font-size: 40px;
     }
+    .AvanceTitle{
+        font-size: 35px;
+    }
 }
 @media (max-width: 530px){
     .avance{
@@ -30,6 +36,9 @@
     }
     .progre h1{
         font-size: 20px;
+    }
+    .AvanceTitle{
+        font-size: 30px;
     }
 }
 /*AUTORES*/
