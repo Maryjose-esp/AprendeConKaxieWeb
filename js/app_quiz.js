@@ -40,11 +40,30 @@ function getNewQuestion() {
   aux_ind = questionIndex.id_im;
   // console.log(aux_ind);
 
-  if (aux_ind >= 8 && aux_ind <= 15) {
+  if ((aux_ind >= 8 && aux_ind <= 15) && numberOfProgresion == "9") {
     const eval_img = document.createElement("img");
     eval_img.src = "./evaluacionesimg/p9/" + questionIndex.img_name;
     eval_img.id = "tamanos_eval";
     questionText.appendChild(eval_img);
+  }else if((numberOfProgresion == "12") && (aux_ind >= 10 && aux_ind <= 13)){
+    const eval_img = document.createElement("img");
+    eval_img.src = "./evaluacionesimg/p12/" + questionIndex.img_name;
+    eval_img.id = "tamanos_eval2";
+    questionText.appendChild(eval_img);
+
+  }else if((numberOfProgresion == "11") && ((aux_ind >= 3 && aux_ind <= 12))){
+    const eval_img = document.createElement("img");
+    if(aux_ind == 3){
+      eval_img.src = "./evaluacionesimg/p11/" + questionIndex.img_name;
+      eval_img.id = "tamanos_eval";
+      questionText.appendChild(eval_img);
+    }else if(aux_ind >= 6 && aux_ind <= 12){
+      eval_img.src = "./evaluacionesimg/p11/" + questionIndex.img_name;
+      eval_img.id = "tamanos_eval";
+      questionText.appendChild(eval_img);
+    }
+    
+    
   }
   // if ((numerorand >= 7) && (numerorand <= 13)){
   //     const eval_img = document.createElement('img');
@@ -171,7 +190,9 @@ function quizOver() {
   resultBox.classList.remove("hide");
 
   quizResult();
+  
 }
+
 function pasaraphp(porcentaje, numberP) {
   var parametros = {
     calife: porcentaje,
@@ -192,6 +213,7 @@ function pasaraphp(porcentaje, numberP) {
     async: true,
   });
 }
+
 function quizResult() {
   resultBox.querySelector(".total-question").innerHTML = quiz.length - 5;
   resultBox.querySelector(".total-attempt").innerHTML = atendidas;
@@ -212,12 +234,12 @@ function resetQuiz() {
 }
 function tryAgainQuiz() {
   //ocultar resultados
-  resultBox.classList.add("hide");
+  //resultBox.classList.add("hide");
   //mostrar quizbox
-  quizBox.classList.remove("hide");
+  //quizBox.classList.remove("hide");
   location.reload();
-  resetQuiz();
-  startQuiz();
+  // resetQuiz();
+  // startQuiz();
   
 }
 
@@ -246,3 +268,26 @@ function startQuiz() {
 window.onload = function () {
   homeBox.querySelector(".total-question").innerHTML = quiz.length - 5;
 };
+
+//función para desactivar el botón de retroalimentación en el primer intento
+function DisplayR(NP){
+  var parametros = {
+    numP : NP,
+  }
+
+  $.ajax({
+    data: parametros,
+    url: "FuncionesFueraIS.php",
+    type: "POST",
+    dataType: "text",
+    success: On_success,
+    async: true,
+  });
+
+  function On_success(response) {
+    if(response == 0){
+      const btnRETRO = document.getElementById(btnRetroAlem);
+      btnRETRO.style.display = 'none';
+    }
+  }
+}

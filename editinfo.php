@@ -220,6 +220,7 @@ if (!isset($_SESSION['Usuario'])) {
     <section class="actualizar">
         <center>
             <h1>Editar información</h1>
+            <img src="images/KaxieLap.png" width="140px"
             <h4>Confirma tu contraseña para poder editar tu cuenta.</h4>
             <form name="editinfo" action="" method="POST">
                 <div class="inputcamp"><input type="text" id="NUSUARIO" name="NUSUARIO" value=<?php echo $useractual; ?>
@@ -230,7 +231,7 @@ if (!isset($_SESSION['Usuario'])) {
                         required></div><br>
                 <div class="inputcamp"><input type="password" id="CONTRASENA" name="CONTRASENA"
                         placeholder="Confirma tu contraseña" required>
-                        <img src="/images/close.png" id="eyeicon" onclick="cambioOjoK(document.editinfo.eyeicon, document.editinfo.CONTRASENA)"></div><br><br><br>
+                        <img src="images/close.png" id="eyeicon" onclick="cambioOjoK(document.editinfo.eyeicon, document.editinfo.CONTRASENA)"></div><br><br><br>
                 <input type="submit" value="Guardar Cambios" name="guardae" class="btn"><br>
                 <script src="js/ValidarUsrC.js"></script>
             </form>

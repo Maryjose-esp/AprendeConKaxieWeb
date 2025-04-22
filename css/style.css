@@ -958,7 +958,7 @@ a, button{
 
     background-color: #7198F5;
     font-family: 'Quicksand', sans-serif;
-    width: 15%;
+    width: 20%;
     height: 90%;
     overflow: hidden;
     border-radius: 20px;
@@ -969,14 +969,24 @@ a, button{
     flex-direction: column;
     min-height: 100vh;
     line-height: normal;
-
+   
 }
 
-.aside_evaluaciones a{
-    text-align: center;
+
+
+
+.aside_evaluaciones .options a{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:5px;
     text-decoration: none;
     color: black;
     font-size: 1.5rem;
+    display: block;
+   border-bottom: 2px solid #004386;
+   width:fit-content;
+   
+   
 }
 
 .aside_evaluaciones a:hover{
@@ -1008,5 +1018,81 @@ a, button{
   flex-direction: column;
 } 
 
+/*770px RESPONSIVE ASIDE EVALUACIONES*/
+/*15 de abril de 2025*/
+#ocultarMostrarSB{
+    display: none;
+    visibility: hidden;
+    -webkit-appearance: none;
+}
 
+.options{
+    /* background-color: red; */
+    padding: 15px;
+}
+.options a i{
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.options i{
+    display: none;
+}
+
+.headAsi{
+    display: flex;
+    align-items: center;
+}
+
+.headAsi i{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+ 
+
+
+
+
+
+@media (max-width: 810px){
+.activar{
+    width: 95px;
+    transition: all .4s ease;
+}
+
+  .activar .logotipo {
+    display: none;
+}
+
+.spanE{
+    display: none;
+}
+
+.options{
+    width: 100%;
+    padding: 0;
+}
+
+.options a .fa-solid{
+    display: inline;
+    width: 100%;
+    font-size: 20px;
+}
+
+.headAsi i{
+    margin: auto;
+}
+
+
+
+
+
+}
+@media (max-width: 770px){
+    body{
+   
+    padding: 0;
+    }
+  }
 

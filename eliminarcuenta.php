@@ -34,11 +34,11 @@
             <form name="eliminarcuenta" method="post">
                 <div class="inputcamp"><input type="text" name="usuario" value=<?php echo $_SESSION['Usuario']?> readonly></div><br>
                 <div class="inputcamp"><input type="password" id="elimiContra1" name="confirmar1" placeholder="Contraseña" required>
-                <img src="/images/close.png" id="eyeicon1" onclick="cambioOjoK(document.eliminarcuenta.eyeicon1, document.eliminarcuenta.elimiContra1)"></div>
+                <img src="images/close.png" id="eyeicon1" onclick="cambioOjoK(document.eliminarcuenta.eyeicon1, document.eliminarcuenta.elimiContra1)"></div>
                 <br>
                 <div class="inputcamp"><input type="password" id="elimiContra2" name="confirmar2" placeholder="Confirmar contraseña"
                         required>
-                <img src="/images/close.png" id="eyeicon2" onclick="cambioOjoK(document.eliminarcuenta.eyeicon2, document.eliminarcuenta.elimiContra2)"></div><br><br><br>
+                <img src="images/close.png" id="eyeicon2" onclick="cambioOjoK(document.eliminarcuenta.eyeicon2, document.eliminarcuenta.elimiContra2)"></div><br><br><br>
                 <input type="submit" value="Eliminar cuenta" name="EliminarC" class="btn"><br>
                 <script src="js/ValidarUsrC.js"></script>
             </form>

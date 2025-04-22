@@ -403,15 +403,86 @@ min-height: 100vh;
     /* cursor: pointer; */
     
 }
+ /*15 de abril de 2025*/
+ /*dialog de bienvenida*/
 
-#btnSubmit:hover{
+ .welcomeDialog{
+    background: linear-gradient(to left top, rgb(113, 236, 245), rgb(113, 194, 245), rgb(101, 167, 235));
+    font-family: 'Quicksand', sans-serif;
+    color:#011931;
+    font-weight: 600;
+    width: 50%;
+    margin: auto;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 15px;
+ }
 
+ .WelcomeBtn{
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    width: 40px;
+    
+ }
+
+ .WelcomeBtn .fa-play, .fa-file-pdf{
+    color: black;
+    font-size: 25px;
+    
+ }
+
+ .WelcomeBtn:hover{
+    background-color: black;
+    
+ }
+
+.fa-play:hover{
+    color: white; 
 }
 
-#btnReset:hover{
-
+.fa-file-pdf:hover{
+ color: white;
 }
 
-#btnPDF:hover{
+.welcomeDialog[open]::backdrop {
+    background: #00306380;
+    backdrop-filter: blur(2px)
+  }
 
+  @media (max-width: 770px){
+    #evaluacionContainer{
+   
+    padding: 0;
+    }
+  }
+  
+
+  /*Revisar radio buttons*/
+
+  .rdbCorrecto{
+    background-color: green;
+    border-radius: 3px;
+    color: lightgreen;
+    padding: 2px;
+  }
+
+
+
+  .rdbIncorrecto{
+    background-color: red;
+    border-radius: 3px;
+    color:lightpink;
+    padding: 2px;
+
+  }
+
+  /*21/04/25*/
+
+  #tamanos_eval2{
+    width: 30%;
 }

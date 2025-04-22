@@ -5,11 +5,16 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="css/style4.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://kit.fontawesome.com/f498a2b379.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 
 <body>
-    
+
     <!-- <dialog id="dialogp" class="dialogos_check">
         <img src="images/iconoCorrecto.png" id="checkingd" width="100px" height="100px" />
         <center>
@@ -44,7 +49,7 @@
 
     <!-- <dialog id="dialogno" class="dialogos_check">
         <!-- <img src="images/iconoIncorrecto.png" id="incheck" width="100px" height="100px" /> -->
-        <!-- <center>
+    <!-- <center>
             ¿Estás seguro de querer eliminar la cuenta? Esta acción es irreversible, todos tus progresos serán eliminados de forma permanenente.<br /><br />
         </center>
         <button id="ConfirmarSub" class="ir_a_evaluacion_dialog" onclick= "cerrarVent();">
@@ -64,15 +69,44 @@
             dialogo_Actual.close();
         } -->
 
-    <!-- </script> --> 
+    <!-- </script> -->
 
-    <script>
+    <!-- <script>
         if(confirm("¿Estás seguro? Esta acción es irreversible, al eliminar la cuenta todos los registros almacenados serán borrados de forma permanente.")){
             console.log('hola');
         }
+    </script> -->
+
+    <dialog id="dialogno" class="welcomeDialog">
+        <center><img src="images/bienvenidoK.png" width="200px"></center><br>
+        ¡Hola! ____ Bienvenid@ a Aprende con Kaxie. Esperamos que tu recorrido y aprendizaje por el sitio sea
+        grato.<br>
+        Te dejamos el manual de usuario para que aprendas sobre el funcionamiento del sitio en general o bien,
+        puedes continuar y explorar por tu propia cuenta.
+
+        ¡Te deseamos que obtengas buenos resultados a lo largo de las progresiones!<br><br>
+        <center>
+
+
+            <button id="manualUsuario" class="WelcomeBtn">
+                <a href="index.php"><i class="fa-solid fa-file-pdf"></i></a>
+            </button>
+
+            <button id="GoToIndex" class="WelcomeBtn">
+                <a href="index.php"><i class="fa-solid fa-play"></i></a>
+
+
+            </button>
+        </center>
+
+    </dialog>
+
+    <script>
+        var dialogo_Actual = document.querySelector("#dialogno");
+        dialogo_Actual.showModal();
+
+      
     </script>
-
-
 
 
 </body>

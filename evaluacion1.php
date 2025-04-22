@@ -16,16 +16,16 @@
     echo '<script src="js/question1.js"></script>'; //ACCEDE AL JS CON LAS PREGUNTAS
     
 
-    include('evaluacionplantilla.php'); //INCLUYE LA PLANTILLA DEL DISENO DE LAS EVALUACIONES
+    require('evaluacionplantilla.php'); //INCLUYE LA PLANTILLA DEL DISENO DE LAS EVALUACIONES
     
 
-
-
     ?>
-    <script>
+
+<script>
         const ProgresionActual = document.getElementById("encabezadoEval");
         ProgresionActual.innerHTML = "Evaluación progresión 1";
     </script>
+    
 </body>
 
 </html>

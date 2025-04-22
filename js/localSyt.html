@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="radio" name="m1" id="m1r1" value="3">
+    <input type="radio" name = "m1" id = "m1r2" value="4">
+<br>
+    <input type="radio" name="m2" id="m2r1">
+    <input type="radio" name = "m2" id = "m2r2">
+
+    <button onclick="prueba()">hola</button>
+
+    <script>
+        function prueba (){
+            const seleccionado = document.querySelector("input[name=m1]:checked");
+            
+            
+            if(seleccionado === null){
+                localStorage.setItem("m1", "");
+                console.log("no eligió")
+            }else{
+                localStorage.setItem("m1", seleccionado.value);
+                console.log(seleccionado)
+            }
+        
+        }
+        
+        
+    </script>
+</body>
+</html>

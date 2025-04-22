@@ -18,55 +18,34 @@
 
     <?php
     require('ifSession.php');
-    if($indicador_bd){
-
-    }
     ?>
     <main id="main_container_evaluac">
 
         <section>
+            
+            <div class="toggle">
+            <input type="checkbox" id="ocultarMostrarSB">
+            <i class="fa-solid fa-bars"></i>
+            </div>
+            <aside class="aside_evaluaciones">
 
-
-            <aside class="aside_evaluaciones activar" id="aside_evaluaciones">
-
-                <div class="headAsi">
-                    <div class="logotipo">
-                        <center><img src="images/Kevaluacion.png" width="70%"></center>
-                    </div>
-                </div>
-
-
-
-                <div class="options">
-                    <a href="evaluacion1.php"><i class="fa-solid fa-1"></i><span class = "spanE">Evaluación 1</span></a>
-                    <a href="evaluacion2.php"><i class="fa-solid fa-2"></i><span class = "spanE">Evaluación 2</span></a>
-                    <a href="evaluacion3.php"><i class="fa-solid fa-3"></i><span class = "spanE">Evaluación 3</span></a>
-                    <a href="evaluacion4.php"><i class="fa-solid fa-4"></i><span class = "spanE">Evaluación 4</span></a>
-                    <a href="evaluacion5.php"><i class="fa-solid fa-5"></i><span class = "spanE">Evaluación 5</span></a>
-                    <a href="evaluacion6.php"><i class="fa-solid fa-6"></i><span class = "spanE">Evaluación 6</span></a>
-                    <a href="evaluacion7.php"><i class="fa-solid fa-7"></i><span class = "spanE">Evaluación 7</span></a>
-                    <a href="evaluacion8.php"><i class="fa-solid fa-8"></i><span class = "spanE">Evaluación 8</span></a>
-                    <a href="evaluacion9.php"><i class="fa-solid fa-9"></i><span class = "spanE">Evaluación 9</span></a>
-                    <a href="evaluacion10.php"><i class="fa-solid fa-1"></i><i class="fa-solid fa-0"></i><span class = "spanE">Evaluación
-                        10</span></a>
-                    <a href="evaluacion11.php"><i class="fa-solid fa-1"></i><i class="fa-solid fa-1"></i><span class = "spanE">Evaluación
-                        11</span></a>
-                    <a href="evaluacion12.php"><i class="fa-solid fa-1"></i><i class="fa-solid fa-2"></i><span class = "spanE">Evaluación
-                        12</span></a>
-                    <a href="evaluacion13.php"><i class="fa-solid fa-1"></i><i class="fa-solid fa-3"></i><span class = "spanE">Evaluación
-                        13</span></a>
-                    <a href="evaluacion14.php"><i class="fa-solid fa-1"></i><i class="fa-solid fa-4"></i><span class = "spanE">Evaluación
-                        14</span></a>
-                </div>
-
-
+                <center><img src="images/Kevaluacion.png" width="70%"></center>
+                <a href="evaluacion1.php">Evaluación 1</a><br>
+                <a href="evaluacion2.php">Evaluación 2</a><br>
+                <a href="evaluacion3.php">Evaluación 3</a><br>
+                <a href="evaluacion4.php">Evaluación 4</a><br>
+                <a href="evaluacion5.php">Evaluación 5</a><br>
+                <a href="evaluacion6.php">Evaluación 6</a><br>
+                <a href="evaluacion7.php">Evaluación 7</a><br>
+                <a href="evaluacion8.php">Evaluación 8</a><br>
+                <a href="evaluacion9.php">Evaluación 9</a><br>
+                <a href="evaluacion10.php">Evaluación 10</a><br>
+                <a href="evaluacion11.php">Evaluación 11</a><br>
+                <a href="evaluacion12.php">Evaluación 12</a><br>
+                <a href="evaluacion13.php">Evaluación 13</a><br>
+                <a href="evaluacion14.php">Evaluación 14</a><br>
             </aside>
         </section>
-
-       
-
-
-
         <section class="section_evaluacion">
             <br>
             <center>
@@ -145,7 +124,8 @@
                     </tr>
                 </table>
                 <button type="button" class="btn_evaluacion_iniciar" onclick="tryAgainQuiz()">Intentar de nuevo</button>
-                <button type="button" class="btn_evaluacion_iniciar" id = "btnRetroAlem" onclick="retroalimentacion()">Retroalimentación</button>
+                <button type="button" class="btn_evaluacion_iniciar"
+                    onclick="retroalimentacion()">Retroalimentación</button>
             </div>
 
         </section>
@@ -153,9 +133,6 @@
         <!-- <script src="js/question.js"></script> -->
         <script src="js/app_quiz.js"></script>
     </main>
-    
-
-    
 
 
 

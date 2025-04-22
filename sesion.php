@@ -33,7 +33,7 @@
                     </div>
                     <div class="inputcamp">
                         <Input type="password" id="contraSe" name="passwIS" placeholder="Contrasena" required>
-                        <img src="/images/close.png" id="eyeicon" onclick="cambioOjoK(document.sesion.eyeicon, document.sesion.contraSe)"> <br>
+                        <img src="images/close.png" id="eyeicon" onclick="cambioOjoK(document.sesion.eyeicon, document.sesion.contraSe)"> <br>
 
 
                     </div>

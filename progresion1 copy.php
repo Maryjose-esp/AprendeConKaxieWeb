@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style3.css">
+    <link rel="stylesheet" href="css/style4.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
@@ -16,8 +17,14 @@
 
 <body>
     <?php
-    require ('ifSession.php');
+    require('ifSession.php');
+
+    if ($indicador_bd) {
+        dialog_abrir('1');
+    }
+
     ?>
+
     <script src="js/script11.js"></script>
     <aside class="aside" id="aside1">
         <section id="s1">
@@ -31,7 +38,7 @@
             <P>Compara, considerando sus aprendizajes de trayectoría, el lenguaje natural con el lenguaje
                 matemático para observar que este último requiere de precisión y rigurosidad.
             </p>
-            <img src="images/P1.png" id="KaxieP1">
+            <img src="images/P1.png" id="KaxieP1"><br>
             <b>
                 <h3> Metas </h3>
             </b><br>
@@ -80,18 +87,22 @@
             </center>-->
         </section>
 
-        <footer class="anteriorsig">
-            <div class="panterior"><a href="index.php"> <img src="images/Anterior.png"
+        <!-- <footer class="anteriorsig">
+            <div class="panterior"><a href="index.php"> <img src="images/Anterior.png" width=47px
                         style="margin-bottom: -18px;"> Principal</a></div>
-            <div class="psiguiente"><a href="progresion2.php"> Siguiente <img src="images/Siguiente.png" 
+            <div class="psiguiente"><a href="progresion2.php"> Siguiente <img src="images/Siguiente.png" width=47px
                         style="margin-bottom: -18px;"> </a></div>
+        </footer> -->
+
+        <footer class="anteriorsig">
+            <div class="panterior"><a href="index.php"> <img src="images/Anterior.png"> Principal</a></div>
+            <div class="psiguiente"><a href="progresion2.php"> Siguiente <img src="images/Siguiente.png"> </a></div>
         </footer>
     </aside>
 
 
     <section class="textP">
         <center>
-            <div class="responsive">
             <div id="indice1" class="indice">
                 <p>
                     &emsp;&emsp;&emsp;&emsp;&ensp;Índice<br>
@@ -105,9 +116,7 @@
                     <a href="#resumen">Resumen</a><br>
                 </p>
             </div>
-            </div>
         </center>
-        <div class="responsive">
         <div class="conceptosclave">
             <div><img src="images/KCClave.png" width=180px height=auto style="margin-right: 20px;"></div>
             <div class="ceonceptoscla">
@@ -117,9 +126,7 @@
                     Variables. Valores no fijos que cambian según alguna condición.</P>
             </div>
         </div>
-        <div>
         <br>
-        <div class="responsive">
         <h1 id="quees">¿Qué es el lenguaje algebraico?</h1>
         <P>Consiste en transformar o traducir lo que nosotros conocemos como "lenguaje común"
             o "lenguaje normal" a símbolos y letras, a fin de representar cantidades desconocidas
@@ -154,8 +161,7 @@
         <p>Dentro del lenguaje algebraico ya no se emplean tanto las palabras de suma, resta, división o multiplicación,
             en su lugar tenemos
             sinónimos para referirnos a tales operaciones. Véase la siguiente tabla:</p>
-</div>
-        <TABLE>
+        <TABLE id="p1_tabla1">
             <TR>
                 <TH>Suma</TH>
                 <TH>Resta</TH>
@@ -187,7 +193,7 @@
             <TR>
                 <TD>Más grande que</TD>
                 <TD>Perder o pérdida</TD>
-                <TD>Doble/triple/cuádruple/etc</TD>
+                <TD>Doble/triple/<br>cuádruple/etc.</TD>
                 <TD>Razón</TD>
             <TR>
 
@@ -195,7 +201,7 @@
                 <TD></TD>
                 <TD></TD>
                 <TD></TD>
-                <TD>Mitad/tercera/cuarta/etc</TD>
+                <TD>Mitad/tercera/<br>cuarta/etc</TD>
             <TR>
         </TABLE>
         <br>
@@ -223,7 +229,7 @@
         A continuación veremos algunos ejemplos comúnes de expresiones verbales
         y su traducción al lenguaje algebraico.
         </p>
-        <TABLE BORDER="2PX">
+        <TABLE BORDER="2PX" id="p1_tabla2">
 
 
             <TR>
@@ -314,10 +320,10 @@
                 Sara tiene el doble de manzanas que tiene Hansel, Luis tiene la
                 mitad del triple de manzanas que tiene Sara ¿Cuántas manzanas
                 tiene cada uno?<br>
-                <input type="radio" name="p1e1r1" id="p1e1r1a1" value="1">
-                <label for="p1e1r1a1">2x, x, 3x </label>
+                <input  type="radio" name="p1e1r1" id="p1e1r1a1" value="1">
+                <label  for="p1e1r1a1">2x, x, 3x </label>
                 <br>
-                <input type="radio" name="p1e1r1" id="p1e1r1a2" value="2">
+                <input  type="radio" name="p1e1r1" id="p1e1r1a2" value="2">
                 <label for="p1e1r1a2">2y, x, 6x</label>
                 <br>
                 <input type="radio" name="p1e1r1" id="p1e1r1a3" value="3">
@@ -444,7 +450,7 @@
         </form>
         <?php
         if (isset($_POST['p1e1Rev'])) {
-            require ('funcionrevradio.php');
+            require('funcionrevradio.php');
             RevisarRadios(6, 1, 1);
 
         }
@@ -585,7 +591,7 @@
 
             <?php
             if (isset($_POST['p1e2Rev'])) {
-                require ('funcionrevradio.php');
+                require('funcionrevradio.php');
                 RevisarRadios(6, 2, 1);
             }
             ?>
@@ -598,7 +604,7 @@
     </section>
 
     <div id="fot">
-        <?php include ('footer.php'); ?>
+        <?php include('footer.php'); ?>
     </div>
 </body>
 

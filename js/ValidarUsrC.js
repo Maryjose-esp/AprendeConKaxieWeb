@@ -67,10 +67,10 @@ passwordInput.oninput = function() { // función que permite validar la contrase
 function cambioOjoK (eyeicon, password){ //función que permite observar la contraseña, mediante imagenes representativas de un ojo para ser intituivo
     if(password.type == "password"){
         password.type = "text";
-        eyeicon.src= ".././images/open.png";
+        eyeicon.src= "images/open.png";
     } else {
         password.type = "password";
-        eyeicon.src= ".././images/close.png";
+        eyeicon.src= "images/close.png";
     }
     
 }

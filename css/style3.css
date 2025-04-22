@@ -1057,10 +1057,16 @@ input:hover[type="reset"]{
 
 .containerIm{
     display:block;
+    
+    
 }
+
 
 .containerIm img{
     width: 220px;
+    margin: 0;
+    padding: 0;
+
 }
 
 .espacios{

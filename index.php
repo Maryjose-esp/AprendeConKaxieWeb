@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style4.css">
     <!--LIBRERIA ICONOS FOOTER-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="icon" href="images/logo.ico" type="image/x-icon">
@@ -46,12 +47,43 @@
 <body>
 
     <?php require('ifSession.php');
-    if (isset($_GET['param'])) {
+    if (isset($_GET['param']) === true) {
         echo '<dialog class="dialog1" open>';
         echo '<button onClick="this.parentElement.close()"><a href="index.php"><i class="gg-close" style="font-size: 100px;" ></a></i></button>';
         echo '<center><img src="./images/fotoactualizada.png">';
         echo '<p>La nueva imagen de perfil ha sido cargada con éxito.<br> Puedes continuar navegando.';
         echo '</p></center></dialog>';
+    }else if(isset($_GET['indicador'])){
+        echo '<dialog id="dialogno" class="welcomeDialog">
+        <center><img src="images/bienvenidoK.png" width="200px"></center><br>
+        ¡Hola '.$_GET['nombre']. ' ' . $_GET['apellido'] . '! Bienvenid@ a Aprende con Kaxie. Esperamos que tu recorrido y aprendizaje por el sitio sea
+        grato.<br>
+        Te dejamos el manual de usuario para que aprendas sobre el funcionamiento del sitio en general o bien,
+        puedes continuar y explorar por tu propia cuenta.
+
+        ¡Te deseamos que obtengas buenos resultados a lo largo de las progresiones!<br><br>
+        <center>
+
+
+            <button id="manualUsuario" class="WelcomeBtn">
+                <a href="index.php"><i class="fa-solid fa-file-pdf"></i></a>
+            </button>
+
+            <button id="GoToIndex" class="WelcomeBtn">
+                <a href="index.php"><i class="fa-solid fa-play"></i></a>
+
+
+            </button>
+        </center>
+
+    </dialog>
+
+    <script>
+        var dialogo_Actual = document.querySelector("#dialogno");
+        dialogo_Actual.showModal();
+
+      
+    </script>';
     }
     ?>
 

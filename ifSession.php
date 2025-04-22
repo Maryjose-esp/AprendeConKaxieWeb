@@ -10,7 +10,8 @@ if (!isset($_SESSION['Usuario'])) {
 } else {
     include('navbarSS.php');
     $indicador_bd = true;
-    
+
+
 }
 
 
@@ -25,16 +26,19 @@ function DatosPDF()
 
     $sql = "SELECT NOMBRE, APELLIDO FROM usuario WHERE NUSUARIO = ?";
     $resultado = mysqli_prepare($conexion, $sql);
-    $ejecutar = mysqli_stmt_bind_param($resultado, "s", $useractual);
+    $ejecutar = mysqli_stmt_bind_param($resultado, "s", $UserActual_Bool);
     $ejecutar = mysqli_stmt_execute($resultado);
 
-    if($ejecutar){
+    if ($ejecutar) {
         $ejecutar = mysqli_stmt_bind_result($resultado, $nomACT, $apellidoACT);
-            while (mysqli_stmt_fetch($resultado)) {
-                $Nombre = $nomACT;
-                $Apellido = $apellidoACT;
-            }
-            mysqli_stmt_close($resultado);
+        while (mysqli_stmt_fetch($resultado)) {
+            $Nombre = $nomACT;
+            $Apellido = $apellidoACT;
+        }
+        mysqli_stmt_close($resultado);
+        $DatosFinales = "$Nombre $Apellido - $UserActual_Bool";
+        echo $DatosFinales;
+
     }
     // $consulta_estado_Eval = "SELECT * FROM usuario WHERE NUSUARIO = '$UserActual_Bool'";
     // $resultado_consulta_bool = mysqli_query($conexion, $consulta_estado_Eval) or die('nels');
@@ -45,8 +49,30 @@ function DatosPDF()
 
     // }
 
-    $DatosFinales = "$Nombre $Apellido;   $UserActual_Bool";
-    echo $DatosFinales;
+
+}
+
+function DisplayR($NP)
+{
+    require('conexionbd.php');
+    $UserActual_Bool = $_SESSION['Usuario'];
+
+    $sql = "SELECT evaluacion_Estado FROM progresion$NP WHERE nusuario = ?";
+    $resultado = mysqli_prepare($conexion, $sql);
+    $ejecutar = mysqli_stmt_bind_param($resultado, "s", $UserActual_Bool);
+    $ejecutar = mysqli_stmt_execute($resultado);
+
+    if ($ejecutar) {
+        $ejecutar = mysqli_stmt_bind_result($resultado, $boolEstadoA);
+        while (mysqli_stmt_fetch($resultado)) {
+            $auxiliar_Estado = $boolEstadoA;
+        }
+        mysqli_stmt_close($resultado);
+
+        if ($auxiliar_Estado == 0) {
+            echo '<script>const btnRA = document.getElementById("btnRetroAlem");btnRA.style.display = none;</script>';
+        }
+    }
 }
 
 function dialog_abrir($NumeroProgresion)
@@ -59,15 +85,15 @@ function dialog_abrir($NumeroProgresion)
     $ejecutar = mysqli_stmt_bind_param($resultado, "s", $UserActual_Bool);
     $ejecutar = mysqli_stmt_execute($resultado);
 
-    if($ejecutar){
+    if ($ejecutar) {
         $ejecutar = mysqli_stmt_bind_result($resultado, $boolEstadoA);
-            while (mysqli_stmt_fetch($resultado)) {
-                $auxiliar_Estado = $boolEstadoA;
-            }
-            mysqli_stmt_close($resultado);
+        while (mysqli_stmt_fetch($resultado)) {
+            $auxiliar_Estado = $boolEstadoA;
+        }
+        mysqli_stmt_close($resultado);
 
-if ($auxiliar_Estado == 0) {
-        $dialogo = '<dialog class="dialog_aviso_Eval" id = "dialogp' . $NumeroProgresion . '">
+        if ($auxiliar_Estado == 0) {
+            $dialogo = '<dialog class="dialog_aviso_Eval" id = "dialogp' . $NumeroProgresion . '">
         <img src="images/KaxieJusLap.png" width="40%">
         <div>
             <Center>
@@ -84,14 +110,14 @@ if ($auxiliar_Estado == 0) {
         </div>
         </dialog>';
 
-        echo $dialogo;
+            echo $dialogo;
 
-        echo "<script>
+            echo "<script>
              var dialogo_Actual = document.querySelector('#dialogp" . $NumeroProgresion . "');
              dialogo_Actual.showModal();
             </script>";
 
-    }
+        }
 
     }
 
@@ -104,7 +130,7 @@ if ($auxiliar_Estado == 0) {
     // while ($fila = mysqli_fetch_assoc($resultado_consulta_bool)) { //guarda el estado de contestacion de la evaluacion
     //     $auxiliar_Estado = $fila['evaluacion_Estado']; //guarda el estado
     // }
-    
+
 
 }
 

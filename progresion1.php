@@ -12,6 +12,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <link rel="icon" href="images/logo.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script>
+    <script src='js/jquery-3.7.1.js'></script>
+    
     <title>Progresion 1</title>
 </head>
 
@@ -21,9 +25,23 @@
 
     if ($indicador_bd) {
         dialog_abrir('1');
+    }else{
+        echo "<script>
+        document.addEventListener('DOMContentLoaded', () => {
+    let btnPdf = document.getElementById('btnPDF');
+        btnPdf.style.display ='none';
+  });
+       
+    </script>";
     }
 
+
     ?>
+    <script>var IndicadorBDJS = '<?php echo $indicador_bd;?>';</script>
+    <script src="js/script7.js"></script>
+    <script>
+        var DatosFinalesPDF = "<?php DatosPDF();?>";
+    </script>
 
     <script src="js/script11.js"></script>
     <aside class="aside" id="aside1">
@@ -320,10 +338,10 @@
                 Sara tiene el doble de manzanas que tiene Hansel, Luis tiene la
                 mitad del triple de manzanas que tiene Sara ¿Cuántas manzanas
                 tiene cada uno?<br>
-                <input type="radio" name="p1e1r1" id="p1e1r1a1" value="1">
-                <label for="p1e1r1a1">2x, x, 3x </label>
+                <input  type="radio" name="p1e1r1" id="p1e1r1a1" value="1">
+                <label  for="p1e1r1a1">2x, x, 3x </label>
                 <br>
-                <input type="radio" name="p1e1r1" id="p1e1r1a2" value="2">
+                <input  type="radio" name="p1e1r1" id="p1e1r1a2" value="2">
                 <label for="p1e1r1a2">2y, x, 6x</label>
                 <br>
                 <input type="radio" name="p1e1r1" id="p1e1r1a3" value="3">
@@ -403,7 +421,7 @@
                 <input type="radio" name="p1e1r4" id="p1e1r4a2" value="2">
                 <label for="p1e1r4a2">x<sup>2</sup>- (y<sup>2</sup>)<sup>3</sup></label>
                 <br>
-                <input type="radio" name="p1e1r4" id="p1e1r4a2" value="3">
+                <input type="radio" name="p1e1r4" id="p1e1r4a3" value="3">
                 <label for="p1e1r4a3"> x<sup>2</sup>-y<sup>3</sup>(2) </label>
 
             </p>
@@ -445,15 +463,23 @@
                     </math>
                 </label>
             </p><br><br>
-            <input type="submit" value="" class="botonesrevisar" name="p1e1Rev">
-            <input type="reset" value="" class="botonesreintentar">
+            <button type="button" onclick="ColoresRadios(6, 1, 1);"class="buttonsResRev"><img id = "btnSubmit" src="images/Revisar.png" width="140px" alt="" onmouseover="this.src = 'images/RevisarSobre.png'" onmouseout="this.src = 'images/Revisar.png'"></button>
+            <button type = "button" onclick="BorrarRadios(1,1,6);" id = "btnReset" name = "" class="buttonsResRev"><img src = "images/VolverIntentar.png" width="140px" onmouseover="this.src = 'images/VolverIntentarSobre.png'" onmouseout="this.src = 'images/VolverIntentar.png'"></button>
+            <button type="button" class="buttonsResRev" id = "btnPDF" onclick="pdfForRbd(1, 1, 6, DatosFinalesPDF);" ><img src="images/pdfKaxie.png"  id = "btnPDF" width="90px" alt="" onmouseover="this.style.setProperty('-webkit-filter', 'drop-shadow(2px 2px 5px rgba(0, 38, 81, 0.7))'); this.style.setProperty('transform', 'scale(1.08)');" onmouseout="this.style.removeProperty('-webkit-filter'); this.style.removeProperty('transform');"></button>
+           
         </form>
-        <?php
-        if (isset($_POST['p1e1Rev'])) {
-            require('funcionrevradio.php');
-            RevisarRadios(6, 1, 1);
 
-        }
+        <div class="Calificacion" id = "p1e1img"></div>
+        <script>
+            TraerCalificacionPHP(1, 1);
+        </script>
+        
+        <?php
+        // if (isset($_POST['p1e1Rev'])) {
+        //     require('funcionrevradio.php');
+        //     RevisarRadios(6, 1, 1);
+
+        // }
         ?>
 
 
@@ -507,7 +533,10 @@
 
             </div>
         </div>
-        <h1 id="calif"> </h1>
+
+        <div class="Calificacion" id="p1e3img"> 
+
+        </div>
 
         <script src="js/script2.js"> </script>
 
@@ -520,7 +549,7 @@
                 <input type="radio" name="p1e2r1" id="p1e2r1a1" value="1">
                 <label for="p1e2r1a1">V </label>
                 <br>
-                <input type="radio" name="p1e2r2" id="p1e2r1a2" value="2">
+                <input type="radio" name="p1e2r1" id="p1e2r1a2" value="2">
                 <label for="p1e2r1a2">F</label>
                 <br>
                 <br>
@@ -586,17 +615,18 @@
                 <br>
                 <br>
             </p>
-            <input type="submit" value="" class="botonesrevisar" name="p1e2Rev">
-            <input type="reset" value="" class="botonesreintentar">
+            <button type="button" onclick="ColoresRadios(6, 1, 2);" class="buttonsResRev"><img id = "btnSubmit" src="images/Revisar.png" width="140px" alt="" onmouseover="this.src = 'images/RevisarSobre.png'" onmouseout="this.src = 'images/Revisar.png'"></button>
+            <button type = "button" onclick="BorrarRadios(1,2,6);" id = "btnReset" name = "" class="buttonsResRev"><img src = "images/VolverIntentar.png" width="140px" onmouseover="this.src = 'images/VolverIntentarSobre.png'" onmouseout="this.src = 'images/VolverIntentar.png'"></button>
+            <button type="button" class="buttonsResRev" id = "btnPDF" onclick="pdfForRbd(1, 2, 6, DatosFinalesPDF);" ><img src="images/pdfKaxie.png"  id = "btnPDF" width="90px" alt="" onmouseover="this.style.setProperty('-webkit-filter', 'drop-shadow(2px 2px 5px rgba(0, 38, 81, 0.7))'); this.style.setProperty('transform', 'scale(1.08)');" onmouseout="this.style.removeProperty('-webkit-filter'); this.style.removeProperty('transform');"></button>
+           
 
-            <?php
-            if (isset($_POST['p1e2Rev'])) {
-                require('funcionrevradio.php');
-                RevisarRadios(6, 2, 1);
-            }
-            ?>
+            
         </form>
-        <?php ?>
+        <div class="Calificacion" id = "p1e2img"></div>
+        <script>
+            TraerRadios(2, 1);
+            TraerCalificacionPHP(1, 2);
+        </script>
         <br>
         <h1 id="resumen">Resumen</h1><br>
         <center><img src="./images/Progresion1img/resumenp1.png" width="40%"></center>

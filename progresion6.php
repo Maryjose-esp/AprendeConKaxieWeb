@@ -43,10 +43,6 @@
     
     <script>
         var DatosFinalesPDF = "<?php DatosPDF();?>";
-        
-        //definir matriz con arreglos de las respuestas correctas a cada ejercicio
-        
-
     </script>
     
     
@@ -698,6 +694,7 @@
 
         <script>
             TraerDatos(6, arrayp6e1, 1);
+            TraerCalificacionPHP(6, 1);
             // let respuestasp6_1 = [2347, 832, 28380, 232, 1028, -107, -4.245, 75.33, 2.68, 0.361];
             // colores(respuestasp6_1, 6, 1);
         </script>
