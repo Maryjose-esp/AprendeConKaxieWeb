@@ -12,15 +12,15 @@
     </form>
 
     <?php
-   $a = -4.25;
-   $b = -4.245;
-   $épsilon = 0.1;
+//    $a = -4.25;
+//    $b = -4.245;
+//    $épsilon = 0.1;
    
-   if(abs($a-$b) < $épsilon) {
-       echo "true";
-   }else{
-    echo "false";
-   }
+//    if(abs($a-$b) < $épsilon) {
+//        echo "true";
+//    }else{
+//     echo "false";
+//    }
     
 
 ?>

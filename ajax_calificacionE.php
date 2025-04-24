@@ -21,9 +21,17 @@ for ($i = 0; $i < $j; $i++) {
     // echo "yo: $arreglo_misrespuestas[$i] la matriz: $arreglo_matriz[$i]";
     //echo $arreglo_misrespuestas[$i];
     //if(!(($arreglo_misrespuestas[$i]===null))){
-       if (abs($arreglo_misrespuestas[$i] - $arreglo_matriz[$i]) < $epsilon) {
+
+    if(gettype($arreglo_matriz[$i]) == "string"){
+        if($arreglo_misrespuestas[$i] == $arreglo_matriz[$i]){
             $contador++;
         }
+    }else if((gettype($arreglo_matriz[$i]) == "double") || gettype($arreglo_matriz[$i]) == "integer"){
+        if (abs($arreglo_misrespuestas[$i] - $arreglo_matriz[$i]) < $epsilon) {
+            $contador++;
+        }
+    }
+       
     //}else{
         
        //  $arreglo_misrespuestas[$i] = 0;

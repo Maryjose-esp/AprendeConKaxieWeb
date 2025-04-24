@@ -14,9 +14,11 @@
 
     <?php
     echo '<script src="js/question1.js"></script>'; //ACCEDE AL JS CON LAS PREGUNTAS
-    
-
     require('evaluacionplantilla.php'); //INCLUYE LA PLANTILLA DEL DISENO DE LAS EVALUACIONES
+
+    if($indicador_bd){
+        
+    }
     
 
     ?>
@@ -24,7 +26,8 @@
 <script>
         const ProgresionActual = document.getElementById("encabezadoEval");
         ProgresionActual.innerHTML = "Evaluación progresión 1";
-    </script>
+        </script>
+
     
 </body>
 

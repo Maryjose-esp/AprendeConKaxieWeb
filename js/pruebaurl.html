@@ -1,0 +1,43 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="p6e5txt18" id="p6e5txt18" onchange="GOLA()">
+        <option value=0 selected disabled>Respuesta</option>
+        <option value="1"> 1 </option>
+        <option value="2">
+            2 </option>
+        <option value="3"> 3 </option>
+
+        </select>
+    <script>
+
+        function GOLA(){
+            var cod = document.getElementById('p6e5txt18');
+            console.log(cod.value)
+            console.log(cod.tagName)
+
+        }
+        let arraPru = [5/2, "5"];
+        console.log(typeof arraPru[0]);
+        console.log(typeof arraPru[1]);
+        
+        let fracc = "15/20";
+        let numerador = parseInt(fracc.split("/")[0]);
+        let denominador = parseInt(fracc.split("/")[1]);
+        let resultado = numerador / denominador;
+        console.log(numerador);
+        console.log(denominador);
+        console.log(resultado); 
+        //console.log(indicador)
+        //localStorage.setItem("hola", );
+
+    </script>
+</body>
+</html>

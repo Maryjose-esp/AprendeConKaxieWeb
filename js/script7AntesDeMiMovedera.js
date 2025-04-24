@@ -5,18 +5,8 @@ function TraerDatos(ProgresionActual, arrayp17e1, cantidadEjercicios) {
   var auxiliar_from_name = "";
   let contador_ejercicio = 0;
   const epsilont = 0.1;
-  var TypeOfDate = "";
-  var CompararTR = 0;
-  
   for (let j = 1; j <= cantidadEjercicios; j++) {
     // j es en funcion al ejerccio
-
-    if(typeof arrayp17e1[j - 1][0] == "string"){//si es de tipo string lo guarda en la variable
-      TypeOfDate = "s"
-     }else if(typeof arrayp17e1[j - 1][0] == "number"){//si es number lo guarda
-      TypeOfDate = "n";
-     }
-  
 
     while (contador_ejercicio >= 0) {
       // buscara el input text
@@ -26,46 +16,14 @@ function TraerDatos(ProgresionActual, arrayp17e1, cantidadEjercicios) {
       if ($("#" + auxiliar_from_name).length) {
         var savedServer = localStorage.getItem(auxiliar_from_name);
         $("#" + auxiliar_from_name).val(savedServer);
+        const CompararTR = Math.abs(savedServer - arrayp17e1[j - 1][contador_ejercicio] );
 
-        if(TypeOfDate == "n"){
-          var auxindi2 = "n";
-          for(let k = 0; k < savedServer.length; k++){
-            if(savedServer[k] == "/"){
-              auxindi2 = "f";
-              k = savedServer.length + 1;
-            }
-          }
-
-          
-
-          if(auxindi2 == "f"){
-            let numerador = parseFloat(savedServer.split("/")[0]);
-            let denominador = parseFloat(savedServer.split("/")[1]);
-            let resultado = numerador / denominador;
-            CompararTR =  Math.abs(resultado - arrayp17e1[j - 1][contador_ejercicio] );
-            
-          }else if( auxindi2 == "n"){
-            CompararTR = Math.abs(savedServer - arrayp17e1[j - 1][contador_ejercicio] );
-
-
-          }
-
-          if (CompararTR < epsilont) {
+        if (CompararTR < epsilont) {
 
           $("#" + auxiliar_from_name).addClass("RespuestaCorrecta");
         } else {
           $("#" + auxiliar_from_name).addClass("RespuestaIncorrecta");
         }
-        }else if(TypeOfDate == "s"){
-          if(savedServer == arrayp17e1[j - 1][contador_ejercicio]){
-            $("#" + auxiliar_from_name).addClass("RespuestaCorrecta");
-          }else{
-            $("#" + auxiliar_from_name).addClass("RespuestaIncorrecta"); 
-          }
-        }
-        
-
-        
 
         contador_ejercicio++;
       } else {
@@ -183,7 +141,6 @@ function colores(respuestas, numprogresion, numejercicio) {
   let array_reactivosPorEjercicio = [];
   let auxcontadorreac = 0;
   const epsilon = 0.1;
-  var TipoDeDato = "";
   //   let saveButton = document.getElementById(
   //     "P" + numprogresion.toString() + "E" + numejercicio.toString() + "REV"
   //   );
@@ -191,28 +148,15 @@ function colores(respuestas, numprogresion, numejercicio) {
     inputres[i] = document.getElementById("p" +numprogresion.toString() +"e" +numejercicio.toString()+"txt" +(i + 1).toString());
   
   }
-//evaluar si la respuesta debe de ser de tipo number o string para más adelante
-     if(typeof respuestas[numejercicio - 1][0] == "string"){//si es de tipo string lo guarda en la variable
-      TipoDeDato = "s"
-     }else if(typeof respuestas[numejercicio - 1][0] == "number"){//si es number lo guarda
-      TipoDeDato = "n";
-     }
 
   //ver si el elemento que se va a subir existe
   for (var i = 0; i < total; i++) {
     if ($("#" +"p" +numprogresion.toString() +"e" +numejercicio.toString() +"txt" +(i + 1).toString()).length) {
-      
-      console.log(inputres[i]);
-      // if(inputres[i].tagName == "SELECT"){
-
-      // }
+      const auxiliarInput = inputres[i].value;
      // if(auxiliarInput.length == 0 || /^\s+$/.test(auxiliarInput)){
         /*localStorage.setItem( "p" +numprogresion.toString() +"e" +numejercicio.toString() +"txt" +(i + 1).toString(), 0); //valor arbitrario cuando está vacío CHECAR
         auxcontadorreac++;*/
      // }else{
-
-     //se sube al localstorage lo que hay en el input
-     
         localStorage.setItem( "p" +numprogresion.toString() +"e" +numejercicio.toString() +"txt" +(i + 1).toString(),inputres[i].value);
       
        auxcontadorreac++;
@@ -227,87 +171,31 @@ function colores(respuestas, numprogresion, numejercicio) {
  
 
     let savedServer1 = localStorage.getItem(aux);
-    //determinar el tipo de dato al que me enfrento
     /*aqui le movi */
     if(auxiliarInput.length == 0 || /^\s+$/.test(auxiliarInput)){
       array_auxMisRes[i] = 0;
     }else{
-      if(TipoDeDato == "n"){
-        var auxIndi = "n";//por defecto se queda en number
-        for(let k = 0; k < savedServer1.length; k++){
-          if(savedServer1[k] == "/"){
-            auxIndi = "f"; //cambia a fracción
-            k = savedServer1.length+1;//detiene el ciclo for cuando encuentra el slash
-          }
-        }
-
-        if(auxIndi == "f"){
-          let numerador = parseFloat(savedServer1.split("/")[0]);
-            let denominador = parseFloat(savedServer1.split("/")[1]);
-            let resultado = numerador / denominador;
-
-            array_auxMisRes[i] = resultado;
-
-        }else if(auxIndi == "n"){
-          array_auxMisRes[i] = parseFloat(savedServer1);
-        }
-        
-      }else if(TipoDeDato == "s"){
-        array_auxMisRes[i] = savedServer1;
-      }
-      
+      array_auxMisRes[i] = parseFloat(savedServer1);
     }
     /*fin mi movedera */
     // array_auxMisRes[i] = parseFloat(savedServer1);
     //console.log(array_auxMisRes[i]);
     // console.log(array_auxMisRes[i]); //BORRAR
-
     if (savedServer1) {
       //inputres[i].value = savedServer1;//AL INPUT TEXT SE LE DA EL VALOR QUE HAY EN LA VARIABLE
-      if( TipoDeDato == "s"){//si es string únicamente compara
-        if(savedServer1 == respuestas[numejercicio - 1][i]){
-          inputres[i].classList.remove("RespuestaIncorrecta");
-        inputres[i].classList.add("RespuestaCorrecta");
-        }else if((savedServer1 != respuestas[numejercicio - 1][i]) || inputres[i].value == null){
-          inputres[i].classList.remove("RespuestaCorrecta");
-        inputres[i].classList.add("RespuestaIncorrecta");
-        }
-      }else if(TipoDeDato == "n"){//si es number determina si es fracción o no
-        // let auxIndi = "n";//por defecto se queda en number
-        // for(let k = 0; k < savedServer1.length; k++){
-        //   if(savedServer1[k] == "/"){
-        //     auxIndi = "f"; //cambia a fracción
-        //     k = savedServer1.length+1;//detiene el ciclo for cuando encuentra el slash
-        //   }
-        // }
-        let compararEP;
-
-        if(auxIndi == "f"){
-            let numerador = parseFloat(savedServer1.split("/")[0]);
-            let denominador = parseFloat(savedServer1.split("/")[1]);
-            let resultado = numerador / denominador;
-            
-            compararEP = Math.abs(resultado - respuestas[numejercicio - 1][i]);
-        }else if(auxIndi == "n"){
-          compararEP = Math.abs(inputres[i].value - respuestas[numejercicio - 1][i]);
-          if(i == 12){
-            console.log(inputres[i].value + " y " + respuestas[numejercicio - 1][i])
-          }
-        }
-        //console.log(compararEP);
-
-        if (compararEP < epsilon) {
+      const compararEP = Math.abs(inputres[i].value - respuestas[numejercicio - 1][i]);
+      if (compararEP < epsilon) {
         //SI EL VALOR DEL INPUT TEXT ES IGUAL AL DEL ARRAY, ANADE LA CLASE DE CORRECTO
         //alert("algo pasa");
         inputres[i].classList.remove("RespuestaIncorrecta");
         inputres[i].classList.add("RespuestaCorrecta");
-      } else if (inputres[i].value != respuestas[numejercicio - 1][i] || inputres[i].value == null) {
+      } else if (
+        inputres[i].value != respuestas[numejercicio - 1][i] ||
+        inputres[i].value == null
+      ) {
         inputres[i].classList.remove("RespuestaCorrecta");
         inputres[i].classList.add("RespuestaIncorrecta");
       }
-      }
-      
-      
     }
   }
 
@@ -340,7 +228,9 @@ function colores(respuestas, numprogresion, numejercicio) {
 
   function On_success(response) {
     console.log(response);
-    $("#p" + numprogresion.toString() + "e" + numejercicio.toString() + "img").html(response);
+    $(
+      "#p" + numprogresion.toString() + "e" + numejercicio.toString() + "img"
+    ).html(response);
     //$("#show").html(response);
   }
 //}//fin del if
@@ -398,9 +288,6 @@ function eliminartodo(numprogresion, numejercicio, total) {
     }
   }
 }
-
-
-
 
 //AQUÍ
 function TraerCalificacionPHP(NumeroP, NumeroE){

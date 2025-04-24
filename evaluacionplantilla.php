@@ -18,10 +18,12 @@
 
     <?php
     require('ifSession.php');
-    if($indicador_bd){
-
-    }
     ?>
+
+    <script>
+        var IndicadorBDJS = <?php echo $indicador_bd;?>
+    </script>
+
     <main id="main_container_evaluac">
 
         <section>

@@ -23,7 +23,7 @@ const quiz = [
       answer: 0,
     },
     {
-      q: "¿Cuáles son las coordenadas de los puntos marcados en el siguiente plano cartesiano?<br>  F(1, 3), G(-1, 2), H(0, 1), I(-1, 0), J(2, 0)<br>",
+      q: "¿Cuáles son las coordenadas de los puntos marcados en el siguiente plano cartesiano?<br>",
       option: [
         "A(3, 5), B(-1.5, 0), C(1, 2), D(2, -3), E(-6, -2)", 
         "A(-3, -5), B(1.5, 0), C(-1, -2), D(-2, 3), E(6, 2)", 

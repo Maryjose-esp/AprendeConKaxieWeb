@@ -17,4 +17,5 @@ require('conexionbd.php');
     $ejecutar = mysqli_stmt_execute($resultado);
     if($ejecutar){
         mysqli_stmt_close($resultado);
+        mysqli_close($conexion);
     }

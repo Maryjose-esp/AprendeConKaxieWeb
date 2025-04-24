@@ -9,6 +9,8 @@ const resultBox = document.querySelector(".result-box");
 var percentage = 0;
 var indicadorBD = 0;
 
+var IndicadorDisplay =  "";
+
 let questionCounter = 0;
 let currentQuestion;
 let availableQuestions = [];
@@ -16,6 +18,12 @@ let availableOptions = [];
 let correctAnswers = 0;
 let atendidas = 0;
 let numero_de_preguntas = 1;
+
+if(IndicadorBDJS){
+  IndicadorDisplay = DisplayR(numberOfProgresion);
+  console.log(IndicadorDisplay);
+}
+
 //push the questions into availableQuestions array
 function setAvailableQuestions() {
   const totalQuestion = quiz.length;
@@ -189,6 +197,17 @@ function quizOver() {
   //mostrar resultBox
   resultBox.classList.remove("hide");
 
+  //Ocultar/Mostrar botón retroalimentación
+  const btnRETRO = document.getElementById("btnRetroAlem");
+  if(IndicadorDisplay == false){
+    btnRETRO.style.display = "none";
+  }else{
+    btnRETRO.style.display = "inline-block";
+  }
+  
+  
+  
+
   quizResult();
   
 }
@@ -270,24 +289,38 @@ window.onload = function () {
 };
 
 //función para desactivar el botón de retroalimentación en el primer intento
-function DisplayR(NP){
-  var parametros = {
-    numP : NP,
+
+function DisplayR(NumPRO){
+  var AuxiliarBool = false;
+  var parametros2 = {
+    numP : NumPRO.toString(),
   }
 
   $.ajax({
-    data: parametros,
+    data: parametros2,
     url: "FuncionesFueraIS.php",
     type: "POST",
     dataType: "text",
     success: On_success,
-    async: true,
+    async: false,
   });
 
   function On_success(response) {
-    if(response == 0){
-      const btnRETRO = document.getElementById(btnRetroAlem);
-      btnRETRO.style.display = 'none';
+    
+    console.log (response);
+    console.log(typeof response);
+
+    if(response == "0"){
+      AuxiliarBool = false;
+      
+      console.log("fue 0")
+      //btnRETRO.style.display = 'none';
+    }else if(response == "1"){
+      //btnRETRO.style.display = 'inline-block';
+      AuxiliarBool = true;
+      console.log("fue 1")
     }
+    
   }
+  return AuxiliarBool;
 }

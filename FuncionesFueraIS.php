@@ -1,6 +1,7 @@
 <?php
-
+   // echo "entré a php";
     $NP = $_POST['numP'];
+    session_start();
 
     require('conexionbd.php');
     $UserActual_Bool = $_SESSION['Usuario'];
@@ -18,4 +19,6 @@
         mysqli_stmt_close($resultado);
 
         echo $auxiliar_Estado;
+    }else{
+        echo "algo salió mal";
     }

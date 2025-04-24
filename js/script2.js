@@ -53,6 +53,7 @@ function drop(ev){
         } else if (contadorAciert > 8 && contadorAciert <= 10) {
             kaxieimg = "buenacalif.png";
         }
+        
         const actualDoc = document.getElementById('p1e3img');
         const imgResult = document.createElement("img");
         const spanResult = document.createElement("span");

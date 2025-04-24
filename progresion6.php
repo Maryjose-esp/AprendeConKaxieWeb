@@ -35,7 +35,11 @@
     ?>
     <script>
         var IndicadorBDJS = '<?php echo $indicador_bd;?>';
-        var arrayp6e1 = [[2347, 832, 28380, 232, 1028, -107, -4.245, 75.33, 2.68, 0.361], [1, 2, 3]];
+        var arrayp6e1 = [[2347, 832, 28380, 232, 1028, -107, -4.245, 75.33, 2.68, 0.361],
+        [12.6,10874.78,-26,1,0.8,1.5,-7.88,-0.03,2.15,12.03],
+        [-8/3,5/2,49/2,152/81,374/225,-9/49,1/1,-11/29,29/18,1/18,-1/18,-29/18,15/14,-15/14,15/14,27/10,-27/10,163/44,269/60],
+        [24.28,15.37,13.05,11.14,1.16,10.42],
+        ['>','<','>','>','>','=','=','=','>','<','=','=','<','>','<','=','<','<']];
     </script>
     
 
@@ -655,8 +659,6 @@
 
         1. Números racionales - Enteros y naturales<br>
         <form method="post">
-
-
             1023 + 76 -3446 = <input type="text" name="p6e1txt1" id="p6e1txt1" maxlength="10" size="5"><br>
             -67 + 899 = <input type="text" required name="p6e1txt2" id="p6e1txt2" maxlength="10" size="5"><br>
             -100 -347 - (-28839 + 12) = <input type="text" required name="p6e1txt3" id="p6e1txt3" maxlength="10"
@@ -677,50 +679,16 @@
             <!-- <input type="submit" value="" class="botonesrevisar" id="P6E1REV" name="P6E1REV"> -->
             <button type="button" onclick="colores(arrayp6e1, 6, 1);" id="P6E1REV" name="P6E1REV" class="buttonsResRev"><img id = "btnSubmit" src="images/Revisar.png" width="140px" alt="" onmouseover="this.src = 'images/RevisarSobre.png'" onmouseout="this.src = 'images/Revisar.png'"></button>
             <button type = "button" onclick="eliminartodo(6, 1, 10)" id = "btnReset" name = "" class="buttonsResRev"><img src = "images/VolverIntentar.png" width="140px" onmouseover="this.src = 'images/VolverIntentarSobre.png'" onmouseout="this.src = 'images/VolverIntentar.png'"></button>
-
             <button type="button" class="buttonsResRev" id = "btnPDF" onclick="GenerarPDF(6, 1, arrayp6e1, DatosFinalesPDF)"><img src="images/pdfKaxie.png"  id = "btnPDF" width="90px" alt="" onmouseover="this.style.setProperty('-webkit-filter', 'drop-shadow(2px 2px 5px rgba(0, 38, 81, 0.7))'); this.style.setProperty('transform', 'scale(1.08)');" onmouseout="this.style.removeProperty('-webkit-filter'); this.style.removeProperty('transform');"></button>
             <!-- <input type="reset" value="" class="botonesreintentar"></input> -->
 
-        </for>
+        </form>
+
+        <div class="Calificacion" id="p6e1img"></div>
 
         <script>
-
-        </script>
-
-
-        <div class="Calificacion" id="p6e1img">
-
-        </div>
-
-        <script>
-            TraerDatos(6, arrayp6e1, 1);
             TraerCalificacionPHP(6, 1);
-            // let respuestasp6_1 = [2347, 832, 28380, 232, 1028, -107, -4.245, 75.33, 2.68, 0.361];
-            // colores(respuestasp6_1, 6, 1);
         </script>
-
-        <?php
-        // if (isset($_POST['P6E1REV'])) {
-        
-        //     $RespuestasE1_P6 = array(
-        //         2347,
-        //         832,
-        //         28380,
-        //         232,
-        //         1028,
-        //         -107,
-        //         -4.245,
-        //         75.33,
-        //         2.68,
-        //         0.361
-        //     );
-        //     require('funcionrevtxt.php');
-        //     Caso2txt($RespuestasE1_P6, 1, 6, 'decimal');
-        
-
-        // }
-        ?>
-
 
 
         <br><br>
@@ -744,45 +712,22 @@
                 size="5"><br>
             14.7123123123 / 1.22222 = <input type="text" required name="p6e2txt10" id="p6e2txt10" maxlength="10"
                 size="5"><br>
-            <input type="submit" value="" class="botonesrevisar" id="P6E2REV" name="P6E2REV">
-            <input type="reset" value="" class="botonesreintentar">
+            <button type="button" onclick="colores(arrayp6e1, 6, 2);" id="P6E1REV" name="P6E1REV" class="buttonsResRev"><img id = "btnSubmit" src="images/Revisar.png" width="140px" alt="" onmouseover="this.src = 'images/RevisarSobre.png'" onmouseout="this.src = 'images/Revisar.png'"></button>
+            <button type = "button" onclick="eliminartodo(6, 2, 10)" id = "btnReset" name = "" class="buttonsResRev"><img src = "images/VolverIntentar.png" width="140px" onmouseover="this.src = 'images/VolverIntentarSobre.png'" onmouseout="this.src = 'images/VolverIntentar.png'"></button>
+            <button type="button" class="buttonsResRev" id = "btnPDF" onclick="GenerarPDF(6, 2, arrayp6e1, DatosFinalesPDF)"><img src="images/pdfKaxie.png"  id = "btnPDF" width="90px" alt="" onmouseover="this.style.setProperty('-webkit-filter', 'drop-shadow(2px 2px 5px rgba(0, 38, 81, 0.7))'); this.style.setProperty('transform', 'scale(1.08)');" onmouseout="this.style.removeProperty('-webkit-filter'); this.style.removeProperty('transform');"></button>
         </form>
         <br><br>
-        <!-- <script>
-            let respuestasp6_2 = [12.6, 10893.0644, -26, 1, 0.8, 1.5, -7.875, -0.0327, 2.158, 12.065];
-            colores(respuestasp6_2, 6, 2);
-        </script> -->
-
-        <?php
-        if (isset($_POST['P6E2REV'])) {
-
-            $RespuestasE2_P6 = array(
-                12.6,
-                10893.0644,
-                -26,
-                1,
-                0.8,
-                1.5,
-                -7.875,
-                -0.0327,
-                2.158,
-                12.065
-            );
-            require('funcionrevtxt.php');
-            Caso2txt($RespuestasE2_P6, 2, 6, 'decimal');
-
-
-        }
-        ?>
-
+       
+        <div class="Calificacion" id="p6e2img"></div> 
+        <script>
+            TraerCalificacionPHP(6, 2);
+        </script>
 
         <br><br>
 
         3. Números racionales - Fraccionarios representados por fracciones<br>
         <form method="post">
             <div class="p6ejercicio3fracciones">
-
-
                 <math xmlns:mml="http://www.w3.org/1998/Math/MathML"
                     xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math">
                     <mo>-</mo>
@@ -1394,47 +1339,14 @@
                 </math>
                 = <input type="text" required name="p6e3txt19" id="p6e3txt19" maxlength="10" size="5"><br>
             </div>
-            <input type="submit" value="" class="botonesrevisar" id="P6E3REV" name="P6E3REV">
-            <input type="reset" value="" class="botonesreintentar">
+            <button type="button" onclick="colores(arrayp6e1, 6, 3);" id="P6E1REV" name="P6E1REV" class="buttonsResRev"><img id = "btnSubmit" src="images/Revisar.png" width="140px" alt="" onmouseover="this.src = 'images/RevisarSobre.png'" onmouseout="this.src = 'images/Revisar.png'"></button>
+            <button type = "button" onclick="eliminartodo(6, 3, 10)" id = "btnReset" name = "" class="buttonsResRev"><img src = "images/VolverIntentar.png" width="140px" onmouseover="this.src = 'images/VolverIntentarSobre.png'" onmouseout="this.src = 'images/VolverIntentar.png'"></button>
+            <button type="button" class="buttonsResRev" id = "btnPDF" onclick="GenerarPDF(6, 3, arrayp6e1, DatosFinalesPDF)"><img src="images/pdfKaxie.png"  id = "btnPDF" width="90px" alt="" onmouseover="this.style.setProperty('-webkit-filter', 'drop-shadow(2px 2px 5px rgba(0, 38, 81, 0.7))'); this.style.setProperty('transform', 'scale(1.08)');" onmouseout="this.style.removeProperty('-webkit-filter'); this.style.removeProperty('transform');"></button>
         </form>
 
         <br><br>
-        <!-- <script>
-            let respuestasp6_3 = ['-8/3', '5/2', '49/2', '152/81', '374/225', '-9/49', '-1.64', '-11/29', '29/18', '1/18', '-1/18', '-29/18', '15/14', '', '-15/14', '27/10', '-27/10', '489/132', '269/60'];
-            colores(respuestasp6_3, 6, 3);
-        </script> -->
-        <?php
-        if (isset($_POST['P6E3REV'])) {
-
-            $RespuestasE3_P6 = array(
-                '-8/3',
-                '5/2',
-                '49/2',
-                '152/81',
-                '374/225',
-                '-9/49',
-                '-1.64',
-                '-11/29',
-                '29/18',
-                '1/18',
-                '-1/18',
-                '-29/18',
-                '15/14',
-                '',
-                '-15/14',
-                '27/10',
-                '-27/10',
-                '489/132',
-                '269/60'
-            );
-            require('funcionrevtxt.php');
-            Caso2txt($RespuestasE3_P6, 3, 6, 'decimal');
-
-
-        }
-        ?>
-
-
+        <div class="Calificacion" id="p6e3img"></div>
+        <script>TraerCalificacionPHP(6, 3);</script>
 
         <br><br>
 
@@ -1447,39 +1359,12 @@
             Log(5) + 5e - π = <input type="text" required name="p6e4txt4" id="p6e4txt4" maxlength="10" size="5"><br>
             √10 / e = <input type="text" required name="p6e4txt5" id="p6e4txt5" maxlength="10" size="5"><br>
             √93 - ln(12) * -5e = <input type="text" required name="p6e4txt6" id="p6e4txt6" maxlength="10" size="5"><br>
-            <button type="submit" class="botonesrevisar" id="P6E4REV" name="P6E4REV"></button>
-            <input type="reset" value="" class="botonesreintentar">
+            <button type="button" onclick="colores(arrayp6e1, 6, 4);" id="P6E1REV" name="P6E1REV" class="buttonsResRev"><img id = "btnSubmit" src="images/Revisar.png" width="140px" alt="" onmouseover="this.src = 'images/RevisarSobre.png'" onmouseout="this.src = 'images/Revisar.png'"></button>
+            <button type = "button" onclick="eliminartodo(6, 4, 10)" id = "btnReset" name = "" class="buttonsResRev"><img src = "images/VolverIntentar.png" width="140px" onmouseover="this.src = 'images/VolverIntentarSobre.png'" onmouseout="this.src = 'images/VolverIntentar.png'"></button>
+            <button type="button" class="buttonsResRev" id = "btnPDF" onclick="GenerarPDF(6, 4, arrayp6e1, DatosFinalesPDF)"><img src="images/pdfKaxie.png"  id = "btnPDF" width="90px" alt="" onmouseover="this.style.setProperty('-webkit-filter', 'drop-shadow(2px 2px 5px rgba(0, 38, 81, 0.7))'); this.style.setProperty('transform', 'scale(1.08)');" onmouseout="this.style.removeProperty('-webkit-filter'); this.style.removeProperty('transform');"></button>
         </form>
-        <!-- <script>
-            let respuestasp6_4 = [24.288, 15.376, 13.058, 11.147, 1.164, 10.424];
-
-            var obj_p6e4 = [
-                {
-                    reactivo: 'default1',
-                    respuesta: 1,
-                    estado: 'false'
-                }
-            ];
-            colores(respuestasp6_4, 6, 4, obj_p6e4);
-        </script> -->
-
-        <?php
-        if (isset($_POST['P6E4REV'])) {
-
-            $RespuestasE4_P6 = array(
-                24.288,
-                15.376,
-                13.058,
-                11.147,
-                1.164,
-                10.424
-            );
-            require('funcionrevtxt.php');
-            Caso2txt($RespuestasE4_P6, 4, 6, 'p6e4');
-
-
-        }
-        ?>
+        <div class="Calificacion" id="p6e4img"></div>
+        <script>TraerCalificacionPHP(6, 4);</script>
 
 
         <br><br>
@@ -1490,206 +1375,159 @@
         <form method="post">
             125 > <select name="p6e5txt1" id="p6e5txt1">
                 <option value=0 selected disabled>Respuesta</option>
-                <option value=required> > </option>
-                <option value=required>
-                    < </option>
-                <option value=required> = </option>
+                <option value= ">"> > </option>
+                <option value="<"> < </option>
+                <option value= "="> = </option>
 
             </select>100<br>
 
             0.5 <<select name="p6e5txt2" id="p6e5txt2">
                 <option value=0 selected disabled>Respuesta</option>
-                <option value=required> > </option>
-                <option value=required>
-                    < </option>
-                <option value=required> = </option>
+                <option value= ">"> > </option>
+                <option value="<"> < </option>
+                <option value= "="> = </option>
 
                 </select> 0.75<br>
 
                 1000 > <select name="p6e5txt3" id="p6e5txt3">
                     <option value=0 selected disabled>Respuesta</option>
-                    <option value=required> > </option>
-                    <option value=required>
-                        < </option>
-                    <option value=required> = </option>
+                    <option value= ">"> > </option>
+                <option value="<"> < </option>
+                <option value= "="> = </option>
 
                 </select>-1000<br>
 
                 1 ><select name="p6e5txt4" id="p6e5txt4">
                     <option value=0 selected disabled>Respuesta</option>
-                    <option value=required> > </option>
-                    <option value=required>
-                        < </option>
-                    <option value=required> = </option>
+                    <option value= ">"> > </option>
+                <option value="<"> < </option>
+                <option value= "="> = </option>
 
                 </select> 0<br>
 
                 85.5 ><select name="p6e5txt5" id="p6e5txt5">
                     <option value=0 selected disabled>Respuesta</option>
-                    <option value=required> > </option>
-                    <option value=required>
-                        < </option>
-                    <option value=required> = </option>
+                    <option value= ">"> > </option>
+                <option value="<"> < </option>
+                <option value= "="> = </option>
 
                 </select> 85.49<br>
 
                 0.25 =<select name="p6e5txt6" id="p6e5txt6">
                     <option value=0 selected disabled>Respuesta</option>
-                    <option value=required> > </option>
-                    <option value=required>
-                        < </option>
-                    <option value=required> = </option>
+                    <option value= ">"> > </option>
+                <option value="<"> < </option>
+                <option value= "="> = </option>
 
                 </select> 1/4<br>
 
                 1/3 = <select name="p6e5txt7" id="p6e5txt7">
                     <option value=0 selected disabled>Respuesta</option>
-                    <option value=required> > </option>
-                    <option value=required>
-                        < </option>
-                    <option value=required> = </option>
+                    <option value= ">"> > </option>
+                <option value="<"> < </option>
+                <option value= "="> = </option>
 
                 </select>0.3333<br>
 
                 75 =<select name="p6e5txt8" id="p6e5txt8">
                     <option value=0 selected disabled>Respuesta</option>
-                    <option value=required> > </option>
-                    <option value=required>
-                        < </option>
-                    <option value=required> = </option>
+                    <option value= ">"> > </option>
+                <option value="<"> < </option>
+                <option value= "="> = </option>
 
                 </select> (7.5 * 10)<br>
 
                 -6 ><select name="p6e5txt9" id="p6e5txt9">
                     <option value=0 selected disabled>Respuesta</option>
-                    <option value=required> > </option>
-                    <option value=required>
-                        < </option>
-                    <option value=required> = </option>
+                    <option value= ">"> > </option>
+                <option value="<"> < </option>
+                <option value= "="> = </option>
 
                 </select> -7<br>
 
                 -1000 <<select name="p6e5txt10" id="p6e5txt10">
                     <option value=0 selected disabled>Respuesta</option>
-                    <option value=required> > </option>
-                    <option value=required>
-                        < </option>
-                    <option value=required> = </option>
+                    <option value= ">"> > </option>
+                <option value="<"> < </option>
+                <option value= "="> = </option>
 
                     </select> -89<br>
 
                     -4*-3 =<select name="p6e5txt11" id="p6e5txt11">
                         <option value=0 selected disabled>Respuesta</option>
-                        <option value=required> > </option>
-                        <option value=required>
-                            < </option>
-                        <option value=required> = </option>
+                        <option value= ">"> > </option>
+                <option value="<"> < </option>
+                <option value= "="> = </option>
 
                     </select> 12<br>
 
                     √25 = <select name="p6e5txt12" id="p6e5txt12">
                         <option value=0 selected disabled>Respuesta</option>
-                        <option value=required> > </option>
-                        <option value=required>
-                            < </option>
-                        <option value=required> = </option>
+                        <option value= ">"> > </option>
+                <option value="<"> < </option>
+                <option value= "="> = </option>
 
                     </select>2.5*2<br>
 
                     -0.1 <<select name="p6e5txt13" id="p6e5txt13">
                         <option value=0 selected disabled>Respuesta</option>
-                        <option value=required> > </option>
-                        <option value=required>
-                            < </option>
-                        <option value=required> = </option>
+                        <option value= ">"> > </option>
+                <option value="<"> < </option>
+                <option value= "="> = </option>
 
                         </select> 0<br>
 
                         √99 ><select name="p6e5txt14" id="p6e5txt14">
                             <option value=0 selected disabled>Respuesta</option>
-                            <option value=required> > </option>
-                            <option value=required>
-                                < </option>
-                            <option value=required> = </option>
+                            <option value= ">"> > </option>
+                <option value="<"> < </option>
+                <option value= "="> = </option>
 
                         </select> √76<br>
 
                         √19 <<select name="p6e5txt15" id="p6e5txt15">
                             <option value=0 selected disabled>Respuesta</option>
-                            <option value=required> > </option>
-                            <option value=required>
-                                < </option>
-                            <option value=required> = </option>
+                            <option value= ">"> > </option>
+                <option value="<"> < </option>
+                <option value= "="> = </option>
 
                             </select> 9/2<br>
 
                             √609 = <select name="p6e5txt16" id="p6e5txt16">
                                 <option value=0 selected disabled>Respuesta</option>
-                                <option value=required> > </option>
-                                <option value=required>
-                                    < </option>
-                                <option value=required> = </option>
+                                <option value= ">"> > </option>
+                <option value="<"> < </option>
+                <option value= "="> = </option>
 
                             </select>24.6779253585<br>
 
-                            π <<<select name="p6e5txt18" id="p6e5txt18">
+                            π <select name="p6e5txt17" id="p6e5txt17">
                                 <option value=0 selected disabled>Respuesta</option>
-                                <option value=required> > </option>
-                                <option value=required>
-                                    < </option>
-                                <option value=required> = </option>
+                                <option value=">"> > </option>
+                                    <option value="<"> < </option>
+                                    <option value="="> = </option>
 
                                 </select> 3.657<br>
 
-                                e * 2 <<select name="p6e5txt18" id="p6e5txt18">
+                                e * 2 <select name="p6e5txt18" id="p6e5txt18">
                                     <option value=0 selected disabled>Respuesta</option>
                                     <option value=">"> > </option>
-                                    <option value="<">
-                                        < </option>
+                                    <option value="<"> < </option>
                                     <option value="="> = </option>
 
                                     </select> ln(300)<br>
 
 
-                                    <input type="submit" value="" class="botonesrevisar" id="P6E5REV" name="P6E5REV">
-                                    <input type="reset" value="" class="botonesreintentar">
+            <button type="button" onclick="colores(arrayp6e1, 6, 5);" id="P6E1REV" name="P6E1REV" class="buttonsResRev"><img id = "btnSubmit" src="images/Revisar.png" width="140px" alt="" onmouseover="this.src = 'images/RevisarSobre.png'" onmouseout="this.src = 'images/Revisar.png'"></button>
+            <button type = "button" onclick="eliminartodo(6, 5, 10)" id = "btnReset" name = "" class="buttonsResRev"><img src = "images/VolverIntentar.png" width="140px" onmouseover="this.src = 'images/VolverIntentarSobre.png'" onmouseout="this.src = 'images/VolverIntentar.png'"></button>
+            <button type="button" class="buttonsResRev" id = "btnPDF" onclick="GenerarPDF(6, 5, arrayp6e1, DatosFinalesPDF)"><img src="images/pdfKaxie.png"  id = "btnPDF" width="90px" alt="" onmouseover="this.style.setProperty('-webkit-filter', 'drop-shadow(2px 2px 5px rgba(0, 38, 81, 0.7))'); this.style.setProperty('transform', 'scale(1.08)');" onmouseout="this.style.removeProperty('-webkit-filter'); this.style.removeProperty('transform');"></button>
         </form>
 
-
-        <!-- <script>
-            let respuestase5p6 = ['>', '<', '>', '>', '>', '=', '=', '=', '>', '<', '=', '=', '<', '>', '<', '=', '<', '<'];
-            colores(respuestase5p6, 6, 5);
-        </script> -->
-
-        <?php
-        if (isset($_POST['P6E5REV'])) {
-
-            $RespuestasE5_P6 = array(
-                '>',
-                '<',
-                '>',
-                '>',
-                '>',
-                '=',
-                '=',
-                '=',
-                '>',
-                '<',
-                '=',
-                '=',
-                '<',
-                '>',
-                '<',
-                '=',
-                '<',
-                '<'
-            );
-            require('funcionrevtxt.php');
-            Caso2txt($RespuestasE5_P6, 5, 6);
+        <div class="Calificacion" id="p6e5img"></div>
+        <script>TraerCalificacionPHP(6, 5);</script>
 
 
-        }
-        ?>
+       
 
 
         <div>
@@ -1831,6 +1669,9 @@
             <h1 id="Res">Resumen de la progresión</h1>
             <img src="images/Progresion6img/M6.png" width=90%>
         </center>
+        <script>
+            TraerDatos(6, arrayp6e1, 5);
+        </script>
 
     </section>
     <div id="fot">

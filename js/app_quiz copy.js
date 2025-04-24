@@ -117,7 +117,7 @@ function updateAnswerIndicator(markType){
 
 function next(){
     if(questionCounter === quiz.length - 5){
-        quizOver();
+        quizOver(i);
     }else{
         numero_de_preguntas++;
         getNewQuestion();

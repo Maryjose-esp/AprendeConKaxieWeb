@@ -28,8 +28,11 @@
     }else{
         echo "<script>
         document.addEventListener('DOMContentLoaded', () => {
-    let btnPdf = document.getElementById('btnPDF');
+    let btnPdf = document.querySelectorAll('[id = btnPDF]');
+    btnPdf.forEach((btnPdf) => {
         btnPdf.style.display ='none';
+      });
+        
   });
        
     </script>";
@@ -471,7 +474,7 @@
 
         <div class="Calificacion" id = "p1e1img"></div>
         <script>
-            TraerCalificacionPHP(1, 1);
+            if(IndicadorBDJS){TraerCalificacionPHP(1, 1);}
         </script>
         
         <?php
@@ -534,9 +537,13 @@
             </div>
         </div>
 
-        <div class="Calificacion" id="p1e3img"> 
-
-        </div>
+        <div class="Calificacion" id="p1e3img"></div>
+        <script>
+            if(IndicadorBDJS){
+                TraerCalificacionPHP(1, 3);
+            }
+            
+        </script>
 
         <script src="js/script2.js"> </script>
 
@@ -625,7 +632,7 @@
         <div class="Calificacion" id = "p1e2img"></div>
         <script>
             TraerRadios(2, 1);
-            TraerCalificacionPHP(1, 2);
+            if(IndicadorBDJS){TraerCalificacionPHP(1, 2);}
         </script>
         <br>
         <h1 id="resumen">Resumen</h1><br>
