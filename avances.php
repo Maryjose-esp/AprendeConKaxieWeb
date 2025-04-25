@@ -21,14 +21,14 @@
         <img src="images/P1.png" WIDTH=35%> 
         <div class="avance">Tu avance es de 
         <?php    
-        $progresion="p1";
+        $num="1";
             require("avaProgre.php");
         ?>
         % </div>
         <div class="porce" >
             <div class="fill a" style='width: 
             <?php 
-                $progresion="p1";
+                $num="1";
                 require("avaProgre.php");
             ?>%;'></div>
         </div>
@@ -39,13 +39,13 @@
         <img src="images/P2.png" WIDTH=35%> 
         <div class="avance">Tu avance es de 
         <?php    
-        $progresion="p2";
+        $num="2";
             require("avaProgre.php");
         ?>% </div>
         <div class="porce" >
             <div class="fill a" style='width:
             <?php 
-                $progresion="p2";
+                $num="2";
                 require("avaProgre.php");
             ?>%;'></div>
         </div>
@@ -56,13 +56,13 @@
         <img src="images/P3.png" WIDTH=35%> 
         <div class="avance">Tu avance es de 
         <?php    
-        $progresion="p3";
+        $num="3";
             require("avaProgre.php");
         ?>% </div>
         <div class="porce" >
             <div class="fill a" style="width:  
             <?php 
-                $progresion="p3";
+                $num="3";
                 require("avaProgre.php");
             ?>%;"></div>
         </div>
@@ -73,13 +73,13 @@
         <img src="images/P4.png" WIDTH=35%> 
         <div class="avance">Tu avance es de 
         <?php    
-        $progresion="p4";
+        $num="4";
             require("avaProgre.php");
         ?>% </div>
         <div class="porce" >
             <div class="fill a" style="width:  
             <?php 
-                $progresion="p4";
+                $num="4";
                 require("avaProgre.php");
             ?>%;"></div>
         </div>
@@ -90,13 +90,13 @@
         <img src="images/P5.png" WIDTH=35%> 
         <div class="avance">Tu avance es de 
         <?php    
-        $progresion="p5";
+        $num="5";
             require("avaProgre.php");
         ?>% </div>
         <div class="porce" >
             <div class="fill a" style="width:  
             <?php 
-                $progresion="p5";
+                $num="5";
                 require("avaProgre.php");
             ?>%;"></div>
         </div>
@@ -107,13 +107,13 @@
         <img src="images/P6.png" WIDTH=35%> 
         <div class="avance">Tu avance es de 
         <?php    
-        $progresion="p6";
+        $num="6";
             require("avaProgre.php");
         ?>% </div>
         <div class="porce" >
             <div class="fill a" style="width:  
             <?php 
-                $progresion="p6";
+                $num="6";
                 require("avaProgre.php");
             ?>%;"></div>
         </div>
@@ -124,13 +124,13 @@
         <img src="images/P7.png" WIDTH=35%> 
         <div class="avance">Tu avance es de 
         <?php    
-        $progresion="p7";
+        $num="7";
             require("avaProgre.php");
         ?>% </div>
         <div class="porce" >
             <div class="fill a" style="width:  
             <?php 
-                $progresion="p7";
+                $num="7";
                 require("avaProgre.php");
             ?>%;"></div>
         </div>
@@ -141,13 +141,13 @@
         <img src="images/P8.png" WIDTH=35%> 
         <div class="avance">Tu avance es de 
         <?php    
-        $progresion="p8";
+        $num="8";
             require("avaProgre.php");
         ?>% </div>
         <div class="porce" >
             <div class="fill a" style="width:  
             <?php 
-                $progresion="p8";
+                $num="8";
                 require("avaProgre.php");
             ?>%;"></div>
         </div>
@@ -158,13 +158,13 @@
         <img src="images/P9.png" WIDTH=35%> 
         <div class="avance">Tu avance es de 
         <?php    
-        $progresion="p9";
+        $num="9";
             require("avaProgre.php");
         ?>% </div>
         <div class="porce" >
             <div class="fill a" style="width:  
             <?php 
-                $progresion="p9";
+                $num="9";
                 require("avaProgre.php");
             ?>%;"></div>
         </div>
@@ -175,13 +175,13 @@
         <img src="images/P10.png" WIDTH=35%> 
         <div class="avance">Tu avance es de 
         <?php    
-        $progresion="p10";
+        $num="10";
             require("avaProgre.php");
         ?>% </div>
         <div class="porce" >
             <div class="fill a" style="width:  
             <?php 
-                $progresion="p10";
+                $num="10";
                 require("avaProgre.php");
             ?>%;"></div>
         </div>
@@ -192,13 +192,13 @@
         <img src="images/P11.png" WIDTH=35%> 
         <div class="avance">Tu avance es de 
         <?php    
-        $progresion="p11";
+        $num="11";
             require("avaProgre.php");
         ?>% </div>
         <div class="porce" >
             <div class="fill a" style="width:  
             <?php 
-                $progresion="p11";
+                $num="11";
                 require("avaProgre.php");
             ?>%;"></div>
         </div>
@@ -209,13 +209,13 @@
         <img src="images/P12.png" WIDTH=35%> 
         <div class="avance">Tu avance es de 
         <?php    
-        $progresion="p12";
+        $num="12";
             require("avaProgre.php");
         ?>% </div>
         <div class="porce" >
             <div class="fill a" style="width:  
             <?php 
-                $progresion="p12";
+                $num="12";
                 require("avaProgre.php");
             ?>%;"></div>
         </div>
@@ -226,13 +226,13 @@
         <img src="images/P13.png" WIDTH=35%> 
         <div class="avance">Tu avance es de 
         <?php    
-        $progresion="p13";
+        $num="13";
             require("avaProgre.php");
         ?>% </div>
         <div class="porce" >
             <div class="fill a" style="width:  
             <?php 
-                $progresion="p13";
+                $num="13";
                 require("avaProgre.php");
             ?>%;"></div>
         </div>
@@ -243,13 +243,13 @@
         <img src="images/P14.png" WIDTH=35%> 
         <div class="avance">Tu avance es de 
         <?php    
-        $progresion="p14";
+        $num="14";
             require("avaProgre.php");
         ?>% </div>
         <div class="porce" >
             <div class="fill a" style="width:  
             <?php 
-                $progresion="p14";
+                $num="14";
                 require("avaProgre.php");
             ?>%;"></div>
         </div>
