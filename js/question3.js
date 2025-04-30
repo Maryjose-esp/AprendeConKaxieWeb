@@ -47,7 +47,7 @@ const quiz = [
         answer: 0
     },
     {
-        q: 'Selecciona la expresión algebraica que represente la adición de un número y el cociente de un número distinto junto al producto de dos números cualesquiera.',
+        q: 'Selecciona la expresión algebraica que represente la adición de un número al resultado del cociente de un número distinto junto al producto de dos números cualesquiera.',
         option: ['<math style = "font-size: 18px; font-family: arial;"><mn>5 + </mn><mfrac><mn>y</mn><mn>ab</mn></mfrac></math>', '<math style = "font-size: 18px; font-family: arial;"><mfrac><mn>x</mn><mn>y</mn></mfrac> <mn> + ab</mn></math>', '<math style = "font-size: 18px; font-family: arial;"><mfrac><mn>xab</mn><mn>y</mn></mfrac></math>', '<math style = "font-size: 18px; font-family: arial;"><mfrac><mn>x + y</mn><mn>ab</mn></mfrac></math>'],
         answer: 0
     },
@@ -77,4 +77,5 @@ const quiz = [
         answer: 0
     }
 
-] 
+];
+var numberOfProgresion = "3";

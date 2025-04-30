@@ -202,3 +202,41 @@
     font-size: 14px;
 }
 
+#contraSe{
+    width: 80%;
+}
+
+#CONTRASENA{
+    width: 85%;
+}
+
+#elimiContra1{
+    width: 84%;
+}
+#elimiContra2{
+    width: 84%;
+}
+
+@media (max-width: 780px){
+#indice2{
+    width: 520px;
+    height: 1050px;
+    background-image: url("images/KI2.png");
+    background-size: 520px 1050px;
+    background-repeat: no-repeat;
+    padding: 78px 35px;
+    font-size: 15px;
+}
+}
+@media(max-width: 450px){
+#indice2{
+    width: 420px;
+    height: 900px;
+    background-image: url("./../images/KI2.png");
+    background-size: 420px 900px;
+    background-repeat: no-repeat;
+    padding: 78px 35px;
+    padding-top: 130px;
+    font-size: 12px;
+}
+}

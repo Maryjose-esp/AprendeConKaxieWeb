@@ -873,30 +873,30 @@ a{
 }
 
 #aside2{
-    height: 38800px;
+    height: 40300px;
 }
 
 #aside3{
-    height: 5200px;
+    height: 5790px;
 }
 
 #aside4{
     height: 6800px;
 }
 #aside5{
-    height: 6600px;
+    height: 6990px;
 }
 
 #aside10{
-    height: 6100px;
+    height: 6500px;
 }
 
 #aside13{
-    height: 21500px;
+    height: 21300px;
 }
 
 #aside14{
-    height: 19790px;
+    height: 20490px;
 }
 /*574px para que sea alineado como bloque encima del sections*/
 @media (max-width: 574px){

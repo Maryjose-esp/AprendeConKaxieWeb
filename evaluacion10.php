@@ -1,3 +1,8 @@
+<?php
+require ('ifSession.php');
+echo '<script src="js/question10.js"></script>'; //ACCEDE AL JS CON LAS PREGUNTAS
+require('evaluacionplantilla.php'); //INCLUYE LA PLANTILLA DEL DISEÑO DE LAS EVALUACIONES
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,10 +13,10 @@
     <title>Evaluacion Progresion 10</title>
 </head>
 <body>
-    <?php 
-        echo '<script src="js/question10.js"></script>';
-        include('evaluacionplantilla.php');
-
-    ?>
+    
+    <script>
+        const ProgresionActual = document.getElementById("encabezadoEval");
+        ProgresionActual.innerHTML = "Evaluación progresión 10";
+    </script>
 </body>
 </html>

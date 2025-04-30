@@ -77,4 +77,5 @@ const quiz = [
         answer: 0
     }
 
-] 
+];
+var numberOfProgresion = "5";

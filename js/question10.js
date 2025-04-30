@@ -12,8 +12,8 @@ const quiz = [
         answer: 0
     },
     {
-        q: '¿De qué manera se le conoce a la ampliación en la lectura?',
-        option: ['Homotecia', 'Ensanche', 'Agrandamiento', 'Aumento'],
+        q: '¿Qué es una homotecia?',
+        option: ['Ampliación', 'Ensanche', 'Agrandamiento', 'Aumento'],
         answer: 0
     },
     {
@@ -77,4 +77,5 @@ const quiz = [
         answer: 0
     }
 
-] 
+];
+var numberOfProgresion = "10";

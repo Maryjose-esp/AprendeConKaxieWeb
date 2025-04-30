@@ -7,7 +7,7 @@ const quiz = [
 
     },
     {
-        q: '¿Qué representa esta imagen? <br> <center><img src="./../evaluacionesimg/p13/c2p13.jpeg" WIDTH="100%"></center>',
+        q: '¿Qué método de resolución se emplea en la siguiente imagen? <br> <center><img src="./../evaluacionesimg/p13/c2p13.jpeg" WIDTH="50%"></center>',
         option: ['Método de reducción', 'Método de sustitución', 'Método de Pitágoras', 'Método de igualación'],
         answer: 0
     },
@@ -47,7 +47,7 @@ const quiz = [
         answer: 0
     },
     {
-        q: 'Juan Miguel se compró unas palomitas acarameladas, si le dió a su hermana <math style = "font-size: 18px; font-family: arial;"><mfrac><mn>1</mn><mn>3</mn></mfrac></math> de sus palomitas y después se comió una quinta parte de lo que quedaba, quedandole solo 480 gramos, ¿cuántos gramos tenía la bolsa de palomitas?',
+        q: 'Juan Miguel se compró unas palomitas acarameladas, si le dio a su hermana <math style = "font-size: 18px; font-family: arial;"><mfrac><mn>1</mn><mn>3</mn></mfrac></math> de sus palomitas y después se comió una quinta parte de lo que quedaba, quedándole solo 480 gramos, ¿cuántos gramos tenía la bolsa de palomitas?',
         option: ['900 gr', '600 gr', '780 gr', '800gr'],
         answer: 0
     },
@@ -77,4 +77,5 @@ const quiz = [
         answer: 0
     }
 
-] 
+];
+var numberOfProgresion = "13";
