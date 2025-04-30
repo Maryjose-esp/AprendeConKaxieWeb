@@ -4,5 +4,6 @@ $db_nombre="aprendeconkaxiew";
 $db_usuario="root";
 $db_contrasena="";
 $InicioSesion = false;
-$conexion= mysqli_connect($db_host, $db_usuario, $db_contrasena, $db_nombre);
+$conexion = mysqli_connect($db_host, $db_usuario, $db_contrasena, $db_nombre);
+mysqli_set_charset($conexion, "utf8");
 ?>

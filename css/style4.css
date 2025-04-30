@@ -1,4 +1,13 @@
 /*PLANTILLA EVALUACIONES ESTILOS*/
+
+/*13 de abril de 2025 acomodar footer*/
+#evaluacionContainer{
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+}
+
+
 .custom-box{
     max-width: 700px;
     background-color: white;
@@ -235,3 +244,303 @@
 #tamanos_eval{
     width: 100%;
 }
+
+/*16/03/25 MEJORAS ESTETICAS EN LA PROGRESION 12*/
+.funciones_modelo_interactivo{
+    font-size: 40px;
+    background: linear-gradient(#71f5d2, #71c2f5);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(7, 21, 104, 0.5);
+}
+
+.element_funcion_interactivo:hover{
+    transform: scale(1.4);
+    color: #106d54;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8);
+}
+
+.descripcion_funcion_interactiva{
+    display: none;
+    padding: 10px;
+    background-color: #71c2f5;
+    border-color: #004EF5;
+    border-width: 2px;
+    border-style: solid;
+    width:fit-content;
+}
+
+.contenedor_funcion_intro{
+    width: '95%'; 
+    display: flex; 
+    justify-content: space-between;
+}
+
+.contenedor_funcion_intro div{
+    width: 48%;
+    /* background-color: red; */
+}
+
+.progresion12_AcomodarRespuestas{
+    display: flex;
+    justify-content:space-evenly;
+}
+
+.progresion12_AcomodarRespuestas div{
+    width: max-content;
+}
+
+/*3 de abril de 2025 DIALOG*/
+
+
+.dialog_aviso_Eval{
+    padding: 10px;
+    font-family: 'Quicksand';
+    background-color: #011931;
+    color: white;
+    margin: auto;
+    font-size: 20px;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    border-style: none;
+    border-radius: 5px;
+    position: fixed;
+    
+}
+
+
+.dialog_aviso_Eval[open]::backdrop {
+  background: #00000050;
+  backdrop-filter: blur(1px)
+}
+
+.dialog_aviso_Eval #espera_Aviso_dialog{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+.ir_a_evaluacion_dialog{
+    border-radius: 8px;
+    border-style: none;
+    background-color: #71c2f5;
+    color:#011931;
+    padding: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+}
+
+.ir_a_evaluacion_dialog a{
+    color: #011931;
+    font-style: normal;
+}
+
+.ir_a_evaluacion_dialog:hover{
+    transform: scale(1.15);
+    cursor: pointer;
+
+}
+
+
+/*responsive 1140px*/
+
+/* 980px responsive imagen check/
+/*12 de abril de 2025*/
+/* #checkingd{
+    width: 2px;
+}
+
+@media(max-width){
+    #checkingd{
+        width:50px; 
+    height:50px;
+    }
+} */
+
+.dialogos_check{
+    font-family: 'Quicksand';
+    background-color: #011931;
+    color: white;
+    margin: auto;
+    font-size: 20px;
+    width: 30%;
+    place-items: center;
+    border-style: none;
+    border-radius: 5px;
+}
+
+.dialogos_check[open]::backdrop {
+    background: #00306350;
+    backdrop-filter: blur(1px)
+  }
+
+.dialogos_check .ir_a_evaluacion_dialog{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*13 de abril de 2025*/
+
+/*Título para las evaluaciones*/
+#encabezadoEval{
+    animation: slideInLeft .8s ease-in-out;
+    color: rgb(16, 109, 84);
+    text-shadow: 2px 2px 5px rgba(7, 22, 104, 0.3);
+    font-size: 32px;
+}
+
+/*estilo botón descargar pdf*/
+
+
+/*14 de abril de 2025*/
+
+/*botones de revisar y resetear*/
+.buttonsResRev{
+    border: none;
+    background-color: transparent;
+    /* cursor: pointer; */
+    
+}
+ /*15 de abril de 2025*/
+ /*dialog de bienvenida*/
+
+ .welcomeDialog{
+    background: linear-gradient(to left top, rgb(113, 236, 245), rgb(113, 194, 245), rgb(101, 167, 235));
+    font-family: 'Quicksand', sans-serif;
+    color:#011931;
+    font-weight: 600;
+    width: 50%;
+    margin: auto;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 15px;
+ }
+
+ .WelcomeBtn{
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    width: 40px;
+    
+ }
+
+ .WelcomeBtn .fa-play, .fa-file-pdf{
+    color: black;
+    font-size: 25px;
+    
+ }
+
+ .WelcomeBtn:hover{
+    background-color: black;
+    
+ }
+
+.fa-play:hover{
+    color: white; 
+}
+
+.fa-file-pdf:hover{
+ color: white;
+}
+
+.welcomeDialog[open]::backdrop {
+    background: #00306380;
+    backdrop-filter: blur(2px)
+  }
+
+  @media (max-width: 770px){
+    #evaluacionContainer{
+   
+    padding: 0;
+    }
+  }
+  
+
+  /*Revisar radio buttons*/
+
+  .rdbCorrecto{
+    background-color: green;
+    border-radius: 3px;
+    color: lightgreen;
+    padding: 2px;
+  }
+
+
+
+  .rdbIncorrecto{
+    background-color: red;
+    border-radius: 3px;
+    color:lightpink;
+    padding: 2px;
+
+  }
+
+  /*21/04/25*/
+
+  #tamanos_eval2{
+    width: 30%;
+}
+
+.container_ir_evaluacion{
+    Width: 100%;
+    Padding: 8px;
+    Background-color: #65a7eb;
+    Border-radius: 15px;
+    Border-style: none;
+    Font-size:35px;
+    box-shadow: 3px 3px 8px #01193166;
+    }
+
+    .container_ir_evaluacion div{
+        display: flex;
+        width: 100%;
+    }
+    
+    .btngotoEval{
+        font-family: 'Quicksand', sans-serif;
+    Display: inline-block;
+    Font-size: 20px;
+    
+    Padding: 7px;
+    Text-decoration: none;
+    Background-color: #004ef5;
+    Border-radius:3px;
+    Border-style:none;
+    }
+
+    .btngotoEval a{
+        text-decoration: none;
+        Color: white;
+    }
+
+    .btngotoEval:hover{
+        background-color: white;
+        
+    }
+
+    .btngotoEval:hover a{
+        color:#004ef5;
+    }
+
+    /*responsive sección de ir a evaluación*/
+    @media (max-width: 950px){
+        .container_ir_evaluacion{
+            font-size: 25px;
+        }
+        .container_ir_evaluacion div{
+            display: block;
+            text-align: center;
+        }
+
+        .btngotoEval{
+            font-size: 15px;
+        }
+
+        
+    }

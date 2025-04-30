@@ -8,10 +8,10 @@
 </head>
 
 <body>
-    <?php include('ifSession.php'); ?>
+    <?php include('header.php') ?>
 
     <?php
-    
+
     /*Obtener los valores para empezar a preparar la consulta*/
     $NomUser = $_POST['NomUsr'];
     $Contrasena = $_POST['Passw'];
@@ -21,29 +21,6 @@
     // $conexion = mysqli_connect($db_host, $db_usuario, $db_contra, $db_nombre);
     // mysqli_select_db($conexion, $db_nombre) or die('NO SE ENCUENTRA LA BD');
     
-    $select= "SELECT NUSUARIO FROM usuario";
-    $usuariosEx= mysqli_query($conexion, $select);
-    
-    $arreglo= array();
-
-    while ($row = mysqli_fetch_array($usuariosEx)){
-        $arreglo[]=$row['NUSUARIO'];
-    }
-
-    if (in_array ($NomUser,$arreglo)){
-
-        echo '<script>';
-                echo 'document.addEventListener("DOMContentLoaded", function() {';
-                echo '    var dialog = document.getElementById("registro-dialog");';
-                echo '    var closeButton = dialog.querySelector(".d-boton");';
-                echo '    closeButton.addEventListener("click", function() {';
-                echo '        dialog.close();';
-                echo '    });';
-                echo '    dialog.showModal();';
-                echo '});';
-                echo '</script>';
-
-    } else{
     //Sentencia normal SQL - Primero vamos a insertar en la tabla de usuarios
     $comando = "INSERT INTO usuario (NUSUARIO, CONTRASENA, NOMBRE, APELLIDO) VALUES (?,?,?,?)";
 
@@ -61,7 +38,7 @@
     if ($insercion == false) {
         echo "OCURRIO UN ERROR";
     } else {
-        echo "Listo, vete";
+        echo "LIsto, vete";
         mysqli_stmt_close($preparar); //cierra la senntencia preparada que ya fue ejecutada
     
         //Al tener una insercion exitosa, entonces se procede a insertar en las otras tablas
@@ -111,7 +88,7 @@
 
     }
 
-    }
+
 
 
     //fotoperdefa.png

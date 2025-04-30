@@ -14,8 +14,7 @@
 
 <body>
     <?php
-    include('ifSession.php');?>
-    <?php 
+    include('ifSession.php');
     require ('conexionbd.php');
     // $conexion = mysqli_connect($db_host, $db_usuario, $db_contrasena, $db_nombre);
     // mysqli_select_db($conexion, $db_nombre) or die('NO SE ENCUENTRA LA BD');
@@ -26,77 +25,17 @@
     $Contrasena = $_POST['Passw'];
     $Name = $_POST['Nombre'];
     $LastName = $_POST['Apellido'];
+     
+
+    $comando = "INSERT INTO usuario (NUSUARIO, CONTRASENA, NOMBRE, APELLIDO, FOTOPER) VALUES ('$NomUser', '$Contrasena', '$Name', '$LastName', 'fotoperdefa.png')";
     
-    $select= "SELECT NUSUARIO FROM usuario";
-    $usuariosEx= mysqli_query($conexion, $select);
+    $insercion = mysqli_query($conexion, $comando);
     
-    $arreglo= array();
-
-    while ($row = mysqli_fetch_array($usuariosEx)){
-        $arreglo[]=$row['NUSUARIO'];
-    }
-
-    if (in_array ($NomUser,$arreglo)){
-
-        echo '<script>';
-                echo 'document.addEventListener("DOMContentLoaded", function() {';
-                echo '    var dialog = document.getElementById("registro-dialog");';
-                echo '    var closeButton = dialog.querySelector(".d-boton");';
-                echo '    closeButton.addEventListener("click", function() {';
-                echo '        dialog.close();';
-                echo '    });';
-                echo '    dialog.showModal();';
-                echo '});';
-                echo '</script>';
-
-    } else{
-
-    //Sentencia normal SQL - Primero vamos a insertar en la tabla de usuarios
-    $comando = "INSERT INTO usuario (NUSUARIO, CONTRASENA, NOMBRE, APELLIDO) VALUES (?,?,?,?)";
-    
-    //Preparar la consulta
-    $preparar = mysqli_prepare($conexion, $comando);
-
-    //Unir los parametros de la sentencia
-    $insercion = mysqli_stmt_bind_param($preparar, "ssss", $NomUser, $Contrasena, $Name, $LastName);
-
-    //Ejecutar la consulta
-    $insercion = mysqli_stmt_execute($preparar);
-    /*Asociar las variables al resultado de la consulta
-    y evaluar si nuestra ejecucion devolvio un true o false*/
-    
-    if ($insercion == false) {
-        echo "OCURRIO UN ERROR";
-    } else {
-        echo "Listo, vete";
-        mysqli_stmt_close($preparar); //cierra la senntencia preparada que ya fue ejecutada
-    
-        //Al tener una insercion exitosa, entonces se procede a insertar en las otras tablas
-        //Son 14 progresiones, entonces, se inserta en las 14
+    if ($insercion) {
         for ($i = 1; $i <= 14; $i++) {
-
-            $comando = "INSERT INTO progresion$i (nusuario) VALUES (?)";
-            $preparar = mysqli_prepare($conexion, $comando);
-            $insercion = mysqli_stmt_bind_param($preparar, "s", $NomUser);
-            $insercion = mysqli_stmt_execute($preparar);
-            if ($insercion == false) {
-                echo "error en las progresiones";
-            }
-
-            //Insertar en las tablas de evaluaciones
-            if ($i <= 2) {
-                $comando = "INSERT INTO evaluacion_$i (nusuario) VALUES (?)";
-                $preparar = mysqli_prepare($conexion, $comando);
-                $insercion = mysqli_stmt_bind_param($preparar, "s", $NomUser);
-                $insercion = mysqli_stmt_execute($preparar);
-                if ($insercion == false) {
-                    echo "error en las evaluaciones";
-                }
-            }
-
+            $comando2 = "INSERT INTO progresion$i (nusuario) VALUES ('$NomUser')";
+            $insercion = mysqli_query($conexion, $comando2);
         }
-
-        //insertar en la tabla avances
         $comando = "INSERT INTO avances (nusuario) VALUES (?)";
         $preparar = mysqli_prepare($conexion, $comando);
         $insercion = mysqli_stmt_bind_param($preparar, "s", $NomUser);
@@ -104,24 +43,28 @@
         if ($insercion == false) {
             echo "error en la tabla de avances";
         }
-
-        // if (isset($_POST['Mantener'])) {
+        // if(isset($_POST['Mantener'])){
         //     $sessionTime = 365 * 24 * 60 * 60; // 1 año de duración
         //     session_set_cookie_params($sessionTime);
         //     session_start();
         // }
-    
-        session_start();
+            //session_start();
+            
         $_SESSION['Usuario'] = $_POST['NomUsr'];
-        header("location:index.php");
+        
+        session_start();
+        // if(!isset($_SESSION['Usuario'])){
+        //     header("location:index.php");
 
+        // }
+        
+        
 
-    }
-
-    }
-    }
-
-    //fotoperdefa.png
+    } else {
+        header("location:registro.php");
+    }}
+    
+    mysqli_close($conexion);
     ?>
 
 <dialog id="registro-dialog" class="container2">
@@ -135,7 +78,7 @@
             <h3 class="adaptar_noblock">Registrarse</h3><br>
 
             <img src="./images/KaxieCreausr.png" class="imgKaxr">
-            <form name=registro action="" method="POST">
+            <form name=registro action="registrouser.php" method="POST">
 
                 <div id="contin2">
 
