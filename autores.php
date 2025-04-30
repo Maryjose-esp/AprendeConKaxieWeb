@@ -1,4 +1,4 @@
-
+<?php require ('ifSession.php');?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +11,7 @@
     <title>Autores - Aprende Con Kaxie</title>
 </head>
 <body>
-<?php require ('ifSession.php'); ?>
+
  
     <section style="margin-top: 30px;">
 
@@ -36,8 +36,7 @@
             <div class="info" style="color: rgb(177, 252, 193);">
                 La última de las creadoras es Maryjose, quien realizó todos los dibujos de la página
                 creando a la mascota "Kaxie" y los dibujos que representan a las creadoras, además de 
-                realizar los dibujos ella también protegió a Kaxie de ser copiado directamente de la 
-                página.
+                realizar los dibujos, aportó en el código.
             </div>
         </div>
         </div>

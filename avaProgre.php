@@ -1,5 +1,4 @@
-<?php 
-if (isset($_SESSION['Usuario'])) {
+<?php if (isset($_SESSION['Usuario'])) {
     require('conexionbd.php');
     $usuario = $_SESSION['Usuario'];
     $p= "p".$num."avance";
@@ -24,6 +23,4 @@ if (isset($_SESSION['Usuario'])) {
             echo $progre;
         }
     }
-    mysqli_stmt_close($resultado);
-}
-?>
+    mysqli_stmt_close($resultado);}?>

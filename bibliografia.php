@@ -1,4 +1,5 @@
 
+<?php require ('ifSession.php');?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +12,7 @@
     <title>Bibliografía - Aprende Con Kaxie</title>
 </head>
 <body>
-<?php require ('ifSession.php'); ?>
+
  
     <section style="margin-top: 30px;">
     
