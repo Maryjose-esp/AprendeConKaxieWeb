@@ -1,3 +1,4 @@
+<?php require ('ifSession.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,15 +8,42 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style3.css">
     <link rel="stylesheet" href="css/style5.css">
+    <link rel="stylesheet" href="css/style4.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 <link rel="icon" href="./images/logo.ico" type= "image/x-icon">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script>
+<script src="js/jquery-3.7.1.js"></script>
     <title>Progresion 3</title>
 </head>
 <body>
-<?php require ('ifSession.php'); ?>
+
+<?php 
+ if ($indicador_bd) {
+         dialog_abrir('3');
+     }else{
+         echo "<script>
+         document.addEventListener('DOMContentLoaded', () => {
+     let btnPdf = document.querySelectorAll('[id = btnPDF]');
+     btnPdf.forEach((btnPdf) => {
+         btnPdf.style.display ='none';
+       });
+         
+   });
+        
+     </script>";
+     }
+ 
+ 
+     ?>
+     <script>var IndicadorBDJS = '<?php echo $indicador_bd;?>';</script>
+     <script src="js/script7.js"></script>
+     <script>
+         var DatosFinalesPDF = "<?php DatosPDF(); ?>";
+     </script>
  
 <aside class="aside" id="aside3"> 
         <section id="s1">
@@ -31,7 +59,7 @@
                     transliteración entre expresiones del lenguaje natural y expresiones 
                     simbólico del álgebra.</p><br>
 
-                    <img src="./images/progresion3img/P3.png" WIDTH=100%><br><br>
+                    <img src="images/progresion3img/P3.png" WIDTH=100%><br><br>
                 <b><h2>Metas:</h2></b><br>
                 <H3>M2</H3>
                 <P>Analiza los resultados obtenidos al aplicar procedimientos algorítmicos 
@@ -95,26 +123,25 @@
         </div> </center>
             <div class="conceptosclave">
                 <div>
-                    <img src= "./images/KCClave.png" WIDTH="180px" HEIGHT="auto" style="margin-right: 20px;">
+                    <img src= "images/KCClave.png" WIDTH="180px" HEIGHT="auto" style="margin-right: 20px;">
                 </div>
             <div class="conceptoscla">
             <h1 id="cc">Conceptos clave</h1>
-            <P>
-            Lenguaje algebraico. Forma para traducir el lenguaje natural a símbolos y números.<br>
-Lenguaje natural. Cómo nos expresamos los humanos día a día.<br>
-Expresiones simbólico del álgebra. Combinación de números u operaciones y variables.<br>
+            <P><b>Lenguaje algebraico.</b> Forma para traducir el lenguaje natural a símbolos y números.<br>
+<b>Lenguaje natural.</b> Cómo nos expresamos los humanos día a día.<br>
+<b>Expresiones simbólico del álgebra.</b> Combinación de números u operaciones y variables.<br>
             </p>
             </div>
             </div>
             
-<!--ESPACIO PARA EL VIDEO-->
+<!--ESPACIO PARA EL VIDEO>
 
             <div class="videoProgre">
-            <div class="videoEsti"><video src="videos/videoprueba.mp4" controls width="100%"></video></div>
+            <div class="videoEsti"><video src="" controls width="100%"></video></div>
             </div>
             
 
-<!--FIN ESPACIO PARA EL VIDEO-->
+<FIN ESPACIO PARA EL VIDEO-->
             <h1 id="quees">Lenguaje algebraico y natural</h1>
             <P>El lenguaje natural es el cómo nos expresamos día a día como por 
                 ejemplo decir el doble de un número, de forma que en el lenguaje 
@@ -158,7 +185,7 @@ Esto solamente sería una operación sencilla, de igual manera comenzaremos con 
             <br>
             <div class="imgejercicios">
                 <div>
-                    <img id="ejer" src="./images/Ejercicios.png" WIDTH="180px" HEIGHT="auto" style="margin-right: 20px;">
+                    <img id="ejer" src="images/Ejercicios.png" WIDTH="180px" HEIGHT="auto" style="margin-right: 20px;">
                 </div>
                 <div  id="ejercicios">
                     <h1>Ejercicios</h1>
@@ -276,18 +303,30 @@ para otro artículo.<br>
             <INPUT TYPE="radio" name="p3e1r10" id="p3e1r10a2" value="1"> <label for="p3e1r10a2"> -745000  </label><BR><br> <!--Correcto-->
             <INPUT TYPE="radio" name="p3e1r10" id="p3e1r10a3" value="3"> <label for="p3e1r10a3"> 750000 </label><BR><br><br>
 
-            <input type="submit" value="" class="botonesrevisar" name="p3e1Rev">
-            <input type="reset" value="" class="botonesreintentar">
+            <button type="button" onclick="ColoresRadios(10, 3, 1);"class="buttonsResRev"><img id = "btnSubmit" src="images/Revisar.png" width="140px" alt="" onmouseover="this.src = 'images/RevisarSobre.png'" onmouseout="this.src = 'images/Revisar.png'"></button>
+            <button type = "button" onclick="BorrarRadios(3,1,10);" id = "btnReset" name = "" class="buttonsResRev"><img src = "images/VolverIntentar.png" width="140px" onmouseover="this.src = 'images/VolverIntentarSobre.png'" onmouseout="this.src = 'images/VolverIntentar.png'"></button>
+            <button type="button" class="buttonsResRev" id = "btnPDF" onclick="pdfForRbd(3, 1, 10, DatosFinalesPDF);" ><img src="images/pdfKaxie.png"  id = "btnPDF" width="90px" alt="" onmouseover="this.style.setProperty('-webkit-filter', 'drop-shadow(2px 2px 5px rgba(0, 38, 81, 0.7))'); this.style.setProperty('transform', 'scale(1.08)');" onmouseout="this.style.removeProperty('-webkit-filter'); this.style.removeProperty('transform');"></button>
             </FORM>
-        <?php
-        if (isset($_POST['p3e1Rev'])) {
-            require('funcionrevradio.php');
-            RevisarRadios(10, 1, 3);
-               
-        }
-        ?>
+
+            <div class="Calificacion" id = "p3e1img"></div>
+            <script>
+                TraerRadios(1,3);
+                if(IndicadorBDJS){TraerCalificacionPHP(3,1)}
+            </script>
             <br><br>
-            <CENTER><img id="resu" src="./images/progresion3img/Progre3.png" WIDTH="100%"></CENTER>
+            <CENTER><img id="resu" src="images/progresion3img/Progre3.png" WIDTH="100%"></CENTER>
+
+            <div class = "container_ir_evaluacion">
+            <div>
+                <img src = "images/KaxieArcoiris.png" width = "200px"><br>
+                <p>¿Listo para la prueba final? ¡Recuerda tomar tu tiempo para contestar cada enunciado! Esta vez serán tomados en cuenta para comparar tu progreso.</p>
+            </div>
+            <center>
+                <button type = "button" class="btngotoEval">
+                    <a href = "evaluacion3.php"> Ir a la evaluación</a><br>
+                </button>
+            </center>
+        </div>
         </section>
 
         <div id="fot">

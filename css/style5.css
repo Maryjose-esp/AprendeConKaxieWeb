@@ -7,6 +7,7 @@
     margin-right: auto;
     text-align: center;
     font-size: 50px;
+    color:black;
 }
 
 /*AVANCE*/
@@ -42,6 +43,37 @@
     }
 }
 /*AUTORES*/
+.auto2{
+    width: 100%;
+    height: 100%;
+    /*background-color: rgb(69, 171, 73);*/
+    opacity: 70%;
+    border-radius: 10%;
+    border: 10px dashed #1e7272;
+    clip-path: circle(40% at top right);
+    transition-property: clip-path;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    transition-delay: linear;
+    display: flex;
+}
+.mena{
+    display: flex;
+    position: static;
+    float: left;
+    right: 10%;
+    height: 400px;
+}
+
+.info{
+    margin-top: auto;
+    margin-bottom: auto;
+    float: left;
+    display: flex;
+    padding: 10px;
+    font-size: 35px;
+    width: 100%;
+}
 @media (max-width: 560px){
     .container3{
         display: flex;
@@ -138,7 +170,30 @@
         font-size: 30px;
     }
 }
-
+.bibli{
+    width: 70%;
+    min-width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+    padding: 3%;
+    text-align: justify;
+    border-radius: 15%; 
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter:blur(2px);
+    box-shadow: 0 0 25px rgba(0, 0, 0, .3);
+    border: 15px double #0c0e7e;
+}
+.textbibli{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.LinkBibli{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
 
 /*PROGRE 13 FRACC*/
 @media (max-width: 860px){
@@ -240,3 +295,38 @@
     font-size: 12px;
 }
 }
+
+
+/*4 Y 5*/
+
+.nota {
+    background-color: #65ebd8; /* Color de fondo */
+    border: 2px solid #ffffff77;
+    padding: 50px; 
+    width: 80%; /* Ancho */
+    height: auto ;
+    max-width: 100%; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 50px; 
+  }
+  
+  .nota p {
+    margin: 0; 
+    font-size: 16px; 
+    line-height: 1.5; 
+    color: #333; 
+  }
+  .nota ul {
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; 
+  }
+  
+  .nota ul ul {
+    list-style-type: none; 
+    margin-left: 20px; 
+  }
+  
+  .nota li {
+    margin-bottom: 5px; 
+  }

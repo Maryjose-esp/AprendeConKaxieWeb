@@ -1,3 +1,4 @@
+<?php require ('ifSession.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,17 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style3.css">
+    <link rel="stylesheet" href="css/style4.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <link rel= "icon" href="./images/logo.ico" type="image/x-icon">
     <script src="js/script7.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script>
+<script src="js/jquery-3.7.1.js"></script>
+
     <title> Progresion 5 </title>
 </head>
 <body>
+
 <?php
-    require ('ifSession.php');
+if ($indicador_bd) {
+        dialog_abrir('5');
+    }else{
+        echo "<script>
+        document.addEventListener('DOMContentLoaded', () => {
+    let btnPdf = document.querySelectorAll('[id = btnPDF]');
+    btnPdf.forEach((btnPdf) => {
+        btnPdf.style.display ='none';
+      });
+        
+  });
+       
+    </script>";
+    }
+
+
     ?>
+    <script>
+        var IndicadorBDJS = '<?php echo $indicador_bd;?>';
+        var arrayp5e1 = [[6, 12, 5, 6, 12],
+        [9, 20, 2, 2, 6, 240, 80, 80, 54, 8, 18, 12],
+        [24, 143, 300, 144, 12],
+        [24, 180, 150, 96, 66, 144, 24, 150, 96, 66, 540, 60]];
+    </script>
+
+    <script src="js/script7.js"></script>
+
+    <script>
+        var DatosFinalesPDF = "<?php DatosPDF(); ?>";
+    </script>
     
     <aside class="aside" id="aside5"> 
     <section id="s1">
@@ -33,22 +69,36 @@
                 <img  class ="kaxi5" src="./images/P5.png"  id="KaxieP5" WIDTH=100%> 
                 </div>
                 <b><h3> Metas </h3></b><br>
-                <H3>M4</H3>
-                <P> Argumenta a favor o en contra de afirmaciones acerca de situaciones, fenómenos o problemas propios de 
-                    la matemática, de las ciencias o de su contexto.
+                <H3>M1</H3>
+                <P>  Ejecuta cálculos y algoritmos para
+                    resolver problemas matemáticos, de
+                    las ciencias y de su entorno.
+                </P>
+                <H3>M3</H3>
+                <P> Comprueba los procedimientos usados en la resolución de problemas
+                    utilizando diversos métodos, empleando recursos tecnológicos o la
+                    interacción con sus pares.
+                </P>
+                <H3>M3</H3>
+                <P> Aplica procedimientos, técnicas y
+                    lenguaje matemático para la solución
+                    de problemas propios del
+                    Pensamiento Matemático, de Áreas
+                    de Conocimiento, Recursos Sociocognitivos, Recursos
+                    Socioemocionales y de su entorno.
                 </P>
                 <b><h3> Categorías </h3></b><br>
-                <H3>C2</H3>
-                <P>Procesos de intuición y razonamiento</P>
+                <H3>C1</H3>
+                <P>Procedural.</P>
                 <H3>C3</H3>
-                <P>Solución de problemas y modelación</P>
+                <P>Solución de problemas y modelación.
+                </P>
                 <b><h3> Subcategorías </h3></b><br>
                 <H3>S1</H3>
-                <P>Capacidad para observar y conjeturar.</P>
-                <H3>S2</H3>
-                <P> Pensamiento intuitivo.</P>
+                <P>Elementos aritmético-algebraicos</P>
                 <H3>S3</H3>
-                <P> Pensamiento formal</P>
+                <P> Estrategias heurísticas y ejecución de
+                procedimientos no rutinarios.</P>
                 <!-- <div class="bodfals">
                     <div class="skill">
                         <div class="outer">
@@ -75,7 +125,7 @@
                     
                 </div> -->
                 <script src="js/script4.js"></script>
-                <center><p> Este es tu porcentaje de avance en la progresión </p></center>
+                <!-- <center><p> Este es tu porcentaje de avance en la progresión </p></center> -->
             </section>
             <footer class="anteriorsig">
                 <div class="panterior"><a href ="progresion4.php"><img src="./images/Anterior.png" width=47px style="margin-bottom: -18px;">Anterior</a></div>
@@ -101,11 +151,19 @@
                 </div>
             <div class= "ceonceptoscla">
                 <h1 id="cc5">Conceptos clave</h1>
-                <P>Máximo común divisor. El factor más grande que comparten todos los números. </P>
-                <P>Mínimo común múltiplo. El número más pequeño de los múltiplos comunes. </P>
-                <P>Divisor. Es el valor que divide al número en partes exactas, es decir, que el resto sea cero.</P> 
+                <P><b>Máximo común divisor.</b> El factor más grande que comparten todos los números. </P>
+                <P><b>Mínimo común múltiplo.</b> El número más pequeño de los múltiplos comunes. </P>
+                <P><b>Divisor.</b> Es el valor que divide al número en partes exactas, es decir, que el resto sea cero.</P> 
             </div>
         </div>
+<!--ESPACIO PARA EL VIDEO>
+
+            <div class="videoProgre">
+            <div class="videoEsti"><video src="" controls width="100%"></video></div>
+            </div>
+            
+
+<FIN ESPACIO PARA EL VIDEO-->
             <br>
         <h1 id="max5">Máximo común divisor (M.C.D.)</h1>
         <P>El máximo común divisor es el número mayor que divide exactamente a dos  o más números, sin dejar resto.
@@ -149,34 +207,40 @@
             </div>
         </div>
         <div>
-        <input type="submit" value="" class="botonesrevisar" name="P5E1REV" id="P5E1REV">
-        <input type="reset" value="" class="botonesreintentar" onclick="eliminartodo()">
+        <button type="button" onclick="colores(arrayp5e1, 5, 1);" id="P5E1REV" name="P5E1REV" class="buttonsResRev"><img id = "btnSubmit" src="images/Revisar.png" width="140px" alt="" onmouseover="this.src = 'images/RevisarSobre.png'" onmouseout="this.src = 'images/Revisar.png'"></button>
+        <button type = "button" onclick="eliminartodo(5, 1, 5)" id = "btnReset" name = "" class="buttonsResRev"><img src = "images/VolverIntentar.png" width="140px" onmouseover="this.src = 'images/VolverIntentarSobre.png'" onmouseout="this.src = 'images/VolverIntentar.png'"></button>
+        <button type="button" class="buttonsResRev" id = "btnPDF" onclick="GenerarPDF(5, 1, arrayp5e1, DatosFinalesPDF)"><img src="images/pdfKaxie.png"  id = "btnPDF" width="90px" alt="" onmouseover="this.style.setProperty('-webkit-filter', 'drop-shadow(2px 2px 5px rgba(0, 38, 81, 0.7))'); this.style.setProperty('transform', 'scale(1.08)');" onmouseout="this.style.removeProperty('-webkit-filter'); this.style.removeProperty('transform');"></button>
         </div>
         </form>
-            <script>
+        <div class="Calificacion" id="p5e1img"></div>
+
+        <script>
+            TraerCalificacionPHP(5, 1);
+        </script>
+            <!-- <script>
                 let respuestas1 = [ 6,
                     12,
                     5,
                     6,
                     12,];
                 colores(respuestas1, 5, 1);
-            </script>
-        <?php
-            if (isset($_POST['P5E1REV'])) {
+            </script-->
+        <!--?php
+            // if (isset($_POST['P5E1REV'])) {
 
-                $RespuestasE1 = array(
-                    6,
-                    12,
-                    5,
-                    6,
-                    12,
-                );
-                require ('funcionrevtxt.php');
-                Caso2txt($RespuestasE1, 1, 5, 'decimal');
+            //     $RespuestasE1 = array(
+            //         6,
+            //         12,
+            //         5,
+            //         6,
+            //         12,
+            //     );
+            //     require ('funcionrevtxt.php');
+            //     Caso2txt($RespuestasE1, 1, 5, 'decimal');
 
 
-            }
-            ?>
+            // }
+            ?-->
         
         <br>
         <h3><center>Conociendo lo anterior ahora si podemos resolver los siguientes problemas:<center></h3>
@@ -199,11 +263,18 @@
         <label for="p5e2txt12">12.- Marcela tiene 108 pelotas y quiere ponerlos en bolsas con la misma cantidad de pelotas. Si tienes una bolsa con 9 pelotas. ¿Cuántas bolsas necesita Marcela?<br>Respuesta: </label><INPUT TYPE ="TEXT" size=6 maxlength="4" NAME="p5e2txt12" id="p5e2txt12"><BR><br>
         </div></div>
         <div>
-        <input type="submit" value="" class="botonesrevisar" name="P5E2REV" id="P5E2REV">
-        <input type="reset" value="" class="botonesreintentar" onclick="eliminartodo()">
+        <button type="button" onclick="colores(arrayp5e1, 5, 2);" id="P5E2REV" name="P5E2REV" class="buttonsResRev"><img id = "btnSubmit" src="images/Revisar.png" width="140px" alt="" onmouseover="this.src = 'images/RevisarSobre.png'" onmouseout="this.src = 'images/Revisar.png'"></button>
+        <button type = "button" onclick="eliminartodo(5, 2, 5)" id = "btnReset" name = "" class="buttonsResRev"><img src = "images/VolverIntentar.png" width="140px" onmouseover="this.src = 'images/VolverIntentarSobre.png'" onmouseout="this.src = 'images/VolverIntentar.png'"></button>
+        <button type="button" class="buttonsResRev" id = "btnPDF" onclick="GenerarPDF(5, 2, arrayp5e1, DatosFinalesPDF)"><img src="images/pdfKaxie.png"  id = "btnPDF" width="90px" alt="" onmouseover="this.style.setProperty('-webkit-filter', 'drop-shadow(2px 2px 5px rgba(0, 38, 81, 0.7))'); this.style.setProperty('transform', 'scale(1.08)');" onmouseout="this.style.removeProperty('-webkit-filter'); this.style.removeProperty('transform');"></button>
         </div>
         </form>
-            <script>
+
+        <div class="Calificacion" id="p5e2img"></div>
+
+        <script>
+            TraerCalificacionPHP(5, 2);
+        </script>
+            <!--script>
                 let respuestas2 = [  9,
                     20,
                     2,
@@ -217,31 +288,31 @@
                     18,
                     12,];
                 colores(respuestas2, 5, 2);
-            </script>
-        <?php
-            if (isset($_POST['P5E2REV'])) {
+            </script-->
+        <!--?php
+            // if (isset($_POST['P5E2REV'])) {
 
-                $RespuestasE2 = array(
-                    9,
-                    20,
-                    2,
-                    2,
-                    6,
-                    240,
-                    80,
-                    80,
-                    54,
-                    8,
-                    18,
-                    12,
+            //     $RespuestasE2 = array(
+            //         9,
+            //         20,
+            //         2,
+            //         2,
+            //         6,
+            //         240,
+            //         80,
+            //         80,
+            //         54,
+            //         8,
+            //         18,
+            //         12,
 
-                );
-                require ('funcionrevtxt.php');
-                Caso2txt($RespuestasE2, 2, 5, 'decimal');
+            //     );
+            //     require ('funcionrevtxt.php');
+            //     Caso2txt($RespuestasE2, 2, 5, 'decimal');
 
 
-            }
-            ?>
+            // }
+            ?-->
 
 
         <br><br>
@@ -275,19 +346,27 @@
         </div>
 
         <div>
-        <input type="submit" value="" class="botonesrevisar" name="P5E3REV" id="P5E3REV">
-        <input type="reset" value="" class="botonesreintentar" onclick="eliminartodo()">
+        <button type="button" onclick="colores(arrayp5e1, 5, 3);" id="P5E3REV" name="P5E3REV" class="buttonsResRev"><img id = "btnSubmit" src="images/Revisar.png" width="140px" alt="" onmouseover="this.src = 'images/RevisarSobre.png'" onmouseout="this.src = 'images/Revisar.png'"></button>
+        <button type = "button" onclick="eliminartodo(5, 3, 5)" id = "btnReset" name = "" class="buttonsResRev"><img src = "images/VolverIntentar.png" width="140px" onmouseover="this.src = 'images/VolverIntentarSobre.png'" onmouseout="this.src = 'images/VolverIntentar.png'"></button>
+        <button type="button" class="buttonsResRev" id = "btnPDF" onclick="GenerarPDF(5, 3, arrayp5e1, DatosFinalesPDF)"><img src="images/pdfKaxie.png"  id = "btnPDF" width="90px" alt="" onmouseover="this.style.setProperty('-webkit-filter', 'drop-shadow(2px 2px 5px rgba(0, 38, 81, 0.7))'); this.style.setProperty('transform', 'scale(1.08)');" onmouseout="this.style.removeProperty('-webkit-filter'); this.style.removeProperty('transform');"></button>
         </div>
         </form>
+
+        <div class="Calificacion" id="p5e3img"></div>
+
         <script>
+            TraerCalificacionPHP(5, 3);
+        </script>
+
+        <!--script>
                 let respuestas3 = [  24,
                    143,
                    300,
                    144,
                    12,];
                 colores(respuestas3, 5, 3);
-            </script>
-        <?php
+            </script-->
+        <!--?php
             if (isset($_POST['P5E3REV'])) {
 
                 $RespuestasE3 = array(
@@ -302,7 +381,7 @@
 
 
             }
-            ?>
+            ?-->
 
         <br>
         <br><br>
@@ -329,12 +408,18 @@
     </div>
     
         <div>
-        <input type="submit" value="" class="botonesrevisar" name="P5E4REV" id="P5E4REV">
-        <input type="reset" value="" class="botonesreintentar" onclick="eliminartodo()">
+        <button type="button" onclick="colores(arrayp5e1, 5, 4);" id="P5E4REV" name="P5E4REV" class="buttonsResRev"><img id = "btnSubmit" src="images/Revisar.png" width="140px" alt="" onmouseover="this.src = 'images/RevisarSobre.png'" onmouseout="this.src = 'images/Revisar.png'"></button>
+        <button type = "button" onclick="eliminartodo(5, 4, 12)" id = "btnReset" name = "" class="buttonsResRev"><img src = "images/VolverIntentar.png" width="140px" onmouseover="this.src = 'images/VolverIntentarSobre.png'" onmouseout="this.src = 'images/VolverIntentar.png'"></button>
+        <button type="button" class="buttonsResRev" id = "btnPDF" onclick="GenerarPDF(5, 4, arrayp5e1, DatosFinalesPDF)"><img src="images/pdfKaxie.png"  id = "btnPDF" width="90px" alt="" onmouseover="this.style.setProperty('-webkit-filter', 'drop-shadow(2px 2px 5px rgba(0, 38, 81, 0.7))'); this.style.setProperty('transform', 'scale(1.08)');" onmouseout="this.style.removeProperty('-webkit-filter'); this.style.removeProperty('transform');"></button>
         </div>
         </form>
 
+        <div class="Calificacion" id="p5e4img"></div>
+
         <script>
+            TraerCalificacionPHP(5, 4);
+        </script>
+        <!--script>
                 let respuestas4 = [  24,
                    180,
                    150,
@@ -348,8 +433,8 @@
                    540,
                    60,];
                 colores(respuestas4, 5, 4);
-            </script>
-        <?php
+            </script-->
+        <!--?php
             if (isset($_POST['P5E4REV'])) {
 
                 $RespuestasE4 = array(
@@ -372,7 +457,7 @@
 
 
             }
-            ?>
+            ?-->
 
         <center>
        
@@ -380,7 +465,20 @@
         <img src="./images/Progresion5img/M5.png" WIDTH=100%>  
         </center>
 
-        
+        <script>
+            TraerDatos(5, arrayp5e1, 4);
+        </script>
+         <div class = "container_ir_evaluacion">
+            <div>
+                <img src = "images/KaxieArcoiris.png" width = "200px"><br>
+                <p>¿Listo para la prueba final? ¡Recuerda tomar tu tiempo para contestar cada enunciado! Esta vez serán tomados en cuenta para comparar tu progreso.</p>
+            </div>
+            <center>
+                <button type = "button" class="btngotoEval">
+                    <a href = "evaluacion5.php"> Ir a la evaluación</a><br>
+                </button>
+            </center>
+        </div>
     </section>
     <div id="fot">
             <?php include('footer.php');?>

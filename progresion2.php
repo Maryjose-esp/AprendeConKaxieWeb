@@ -1,3 +1,4 @@
+<?php require ('ifSession.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,16 +8,42 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style3.css">
     <link rel="stylesheet" href="css/style5.css">
+    <link rel="stylesheet" href="css/style4.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-<link rel="icon" href="./images/logo.ico" type= "image/x-icon"> 
+<link rel="icon" href="./images/logo.ico" type= "image/x-icon">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script>
+<script src="js/jquery-3.7.1.js"></script>
     <title>Progresion 2</title>
 </head>
 <body>
-<?php require ('ifSession.php'); ?>
- 
+
+<?php 
+if ($indicador_bd) {
+        dialog_abrir('2');
+    }else{
+        echo "<script>
+        document.addEventListener('DOMContentLoaded', () => {
+    let btnPdf = document.querySelectorAll('[id = btnPDF]');
+    btnPdf.forEach((btnPdf) => {
+        btnPdf.style.display ='none';
+      });
+        
+  });
+       
+    </script>";
+    }
+
+
+    ?>
+    <script>var IndicadorBDJS = '<?php echo $indicador_bd;?>';</script>
+    <script src="js/script7.js"></script>
+    <script>
+        var DatosFinalesPDF = "<?php DatosPDF(); ?>";
+    </script>
     <aside class="aside" id="aside2"> 
     <section id="s1">
         Pro
@@ -35,7 +62,7 @@
                 <b><h3>Metas:</h3></b><br>
                 <H3>M1</H3>
                 <P>Ejecuta cálculos y algoritmos para resolver problemas matemáticos, 
-                    de las ciencias y de su entorno</P><BR>
+                    de las ciencias y de su entorno.</P><BR>
                 <H3>M2</H3>
                 <P>Socializa con sus pares sus conjeturas, descubrimientos o procesos en la 
                     solución de un problema tanto teórico como de su entorno.</P> <BR>
@@ -111,25 +138,25 @@
                 </div>
             <div class="conceptoscla">
             <h1>Conceptos clave</h1>
-            <P>Expresión simplificada. Expresión reducida de forma que se mantiene simple.</p>
-            <P>Expresión desarrollada de un número. Manera de mostrar un número por medio de sumas o multiplicaciones.</p>
-            <P> Expresión factorizada. Encontrar los números que multiplicados den esa cantidad.</p>
-            <P>Productos notables. expresiones algebraicas que se obtienen de un producto el cual 
+            <P><b>Expresión simplificada.</b> Expresión reducida de forma que se mantiene simple.</p>
+            <P><b>Expresión desarrollada de un número.</b> Manera de mostrar un número por medio de sumas o multiplicaciones.</p>
+            <P><b>Expresión factorizada.</b> Encontrar los números que multiplicados den esa cantidad.</p>
+            <P><b>Productos notables.</b> Expresiones algebraicas que se obtienen de un producto el cual 
                 conocemos ya que sigue reglas fijas y  su resultado puede obtenerse por seguir la regla.</p>
-            <p>Valor posicional. Es el valor que toma un dígito dependiendo su lugar en el número. </p>
-            <p>MCM. Mínimo Común Múltiplo.</p>
+            <p><b>Valor posicional.</b> Es el valor que toma un dígito dependiendo su lugar en el número. </p>
+            <p><b>MCM.</b> Mínimo Común Múltiplo.</p>
             <br>
             </div>
             </div>
 
-<!--ESPACIO PARA EL VIDEO-->
+<!--ESPACIO PARA EL VIDEO>
 
             <div class="videoProgre">
             <div class="videoEsti"><video src="" controls width="100%"></video></div>
             </div>
             
 
-<!--FIN ESPACIO PARA EL VIDEO-->
+<FIN ESPACIO PARA EL VIDEO-->
             <p>La sintaxis, dentro del área de matemáticas, es un conjunto de reglas para obtener 
                 una correcta formación de números siendo fundamental para la comprensión de los 
                 problemas presentados, buscando a la vez, la expresión que nos será de utilidad.</p><br>
@@ -141,7 +168,7 @@
             <P>Con expresión simplificada damos a entender que queremos reducir lo máximo posible 
                 una ecuación. <br>
 Es algo simple que como recordarás, se ha enseñado desde álgebra en secundaria.<br><br>
-<br><h3 id="Sum">Suma y resta</h3>
+<br><h2 id="Sum">Suma y resta</h2><BR>
 Para recordar, empezaremos a simplificar operaciones de suma y resta con variables.<br>
 Tendremos como ejemplo 12y + 14y<br>
 Cuando ambos números cuentan con la misma literal solamente será cuestión de sumar sus coeficientes:<br>
@@ -178,7 +205,7 @@ su signo, sumamos coeficientes:<br><br>
 -9-11= -20<br><br>
 Ahora que contamos con el valor de la suma le añadiremos la literal, obteniendo -20x como resultado.<br><br>
 
-<h3 id="Mul">Multiplicación</h3><br>
+<h2 id="Mul">Multiplicación</h2><br>
 Seguimos con la multiplicación y la división.<br>
 En este caso sí podremos dividir o multiplicar las variables que contengan literales diferentes, 
 para este ejemplo utilizaremos 8a*5b<br>
@@ -234,7 +261,7 @@ Ya que contamos con ambos resultados la respuesta es:<br>
 
 
 
-<h3 id="Div">División</h3><br>
+<h2 id="Div">División</h2><br>
 Aunque las multiplicaciones pueden lograrse con distintas literales las divisiones no son ese caso, 
 solamente se pueden lograr cuando las literales son iguales, pero sí se pueden realizar con diferente 
 exponente.<br><br>
@@ -283,7 +310,7 @@ En el caso de las “y”, ambas tienen como exponente el 1, por tal motivo se e
 El resultado es:<br> <p class=”italic”>10x<sup>6</sup></p><br>
 
 
-<h3 id="PD">Propiedad distributiva</h3><br>
+<h2 id="PD">Propiedad distributiva</h2><br>
 La propiedad distributiva es aquella que nos enseña que al estar un coeficiente fuera de un paréntesis 
 (el cual tiene dentro literales y algún otro coeficiente), este multiplicará a todo lo que esté dentro de, por ejemplo:<br>
 <p class="italic">36(x-3+y)</p>
@@ -336,7 +363,7 @@ Dándonos por resultado la expresión:<br>
            
             
             <FORM METHOD="POST">
-            <h3>Simplifica las siguientes expresiones:</h3><br>
+            <h2>Simplifica las siguientes expresiones:</h2><br>
             <b>1.- </b><math class="tamfrac"><mfrac><mn>-3x(5x-23)+x²</mn>
             <mn>2x</mn></mfrac></math><br><br>
             <INPUT TYPE="radio" name="p2e1r1" id="p2e1r1a1" value="1"> <label for="p2e1r1a1">-7x+36</label> <BR><br>
@@ -366,16 +393,18 @@ Dándonos por resultado la expresión:<br>
             <mn>4a</mn></mfrac></math></label><BR><br>
             <INPUT TYPE="radio" name="p2e1r5" id="p2e1r5a3" value="3"> <label for="p2e1r5a3"> <math class="tamfrac"><mfrac><mn>12b²-5</mn>
             <mn>4a</mn></mfrac></math></label><BR>
-            <input type="submit" value="" class="botonesrevisar" name="p2e1Rev">
-            <input type="reset" value="" class="botonesreintentar">
+
+            <button type="button" onclick="ColoresRadios(5, 2, 1);"class="buttonsResRev"><img id = "btnSubmit" src="images/Revisar.png" width="140px" alt="" onmouseover="this.src = 'images/RevisarSobre.png'" onmouseout="this.src = 'images/Revisar.png'"></button>
+            <button type = "button" onclick="BorrarRadios(2,1,5);" id = "btnReset" name = "" class="buttonsResRev"><img src = "images/VolverIntentar.png" width="140px" onmouseover="this.src = 'images/VolverIntentarSobre.png'" onmouseout="this.src = 'images/VolverIntentar.png'"></button>
+            <button type="button" class="buttonsResRev" id = "btnPDF" onclick="pdfForRbd(2, 1, 5, DatosFinalesPDF);" ><img src="images/pdfKaxie.png"  id = "btnPDF" width="90px" alt="" onmouseover="this.style.setProperty('-webkit-filter', 'drop-shadow(2px 2px 5px rgba(0, 38, 81, 0.7))'); this.style.setProperty('transform', 'scale(1.08)');" onmouseout="this.style.removeProperty('-webkit-filter'); this.style.removeProperty('transform');"></button>
             </FORM>
-            <?php
-                if (isset($_POST['p2e1Rev'])) {
-                    require('funcionrevradio.php');
-                    RevisarRadios(5, 1, 2);
-               
-                }
-            ?>
+
+            <div class="Calificacion" id = "p2e1img"></div>
+            <script>
+                if(IndicadorBDJS){TraerCalificacionPHP(2,1);}
+            </script>
+            
+            
             <br>
             <br>
             <h1 id="ED">Expresión desarrollada de un número</h1>
@@ -438,19 +467,19 @@ Ahora todos estos valores se sumarán, obteniendo la expresión desarrollada de 
 Veremos cómo obtener el número a partir de una expresión desarrollada por medio de multiplicación.
 Es sencillo y podemos comenzar realizando las operaciones y después sumarlas para obtener el número.<br><br>
 7*1000<br>
-<img src="./images/progresion2img/Eje3.png" WIDTH="30%"><BR><BR>
+<img src="images/progresion2img/Eje3.png" WIDTH="30%"><BR><BR>
 5*100<br>
-<img src="./images/progresion2img/Eje3-2.png" WIDTH="30%"><BR><BR>
+<img src="images/progresion2img/Eje3-2.png" WIDTH="30%"><BR><BR>
 3*10<br>
-<img src="./images/progresion2img/Eje3-3.png" WIDTH="30%"><BR><BR>
+<img src="images/progresion2img/Eje3-3.png" WIDTH="30%"><BR><BR>
 9*1<br>
-<img src="./images/progresion2img/Eje3-4.png" WIDTH="30%"><BR><BR>
+<img src="images/progresion2img/Eje3-4.png" WIDTH="30%"><BR><BR>
 
 En este caso sería 7539.<br><br>
 
 <big><b>Dos decenas de millar + una centena + ocho unidades</big> </b><br><br>
 Esta vez pasaremos de una expresión desarrollada escrita al número, para esto nos ayudaremos de la tabla anterior.<br>
-<center><img src="./images/progresion2img/ExpliDes.png" WIDTH="50%"></center><br>
+<center><img src="images/progresion2img/ExpliDes.png" WIDTH="50%"></center><br>
 Ahora que podemos observar la imagen podemos ver en que posición se encuentra “dos decenas de millar”.<br><br>
 Observamos en la parte de millar y buscamos las decenas, se encuentra en la quinta posición, por ende sería 20 000.<br><br>
 
@@ -473,7 +502,7 @@ Al sumar estos números dará 20 108.<br>
         </div>
 
             <FORM METHOD="POST">
-            <h3>Desarrolla las siguientes expresiones:</h3><br>
+            <h2>Desarrolla las siguientes expresiones:</h2><br>
             <b>1.- 3423 </b><br><br>
             <INPUT TYPE="radio" name="p2e2r1" id="p2e2r1a1" value="1"> <label for="p2e2r1a1"> Tres unidades de millar + 4 centenas + 2 décimas + 3 unidades.</label> <BR><br>
             <INPUT TYPE="radio" name="p2e2r1" id="p2e2r1a2" value="2"> <label for="p2e2r1a2"> Tres unidades de millar + 423 centenas. </label><BR><br>
@@ -498,16 +527,16 @@ Al sumar estos números dará 20 108.<br>
             <INPUT TYPE="radio" name="p2e2r5" id="p2e2r5a1" value="2"> <label for="p2e2r5a1"> 1 + 800 + 70 + 6000000 + 300 + 9000 </label> <BR><br>
             <INPUT TYPE="radio" name="p2e2r5" id="p2e2r5a2" value="1"> <label for="p2e2r5a2"> 1 + 800 + 70 + 60000 + 3000 + 90000 </label><BR><br>
             <INPUT TYPE="radio" name="p2e2r5" id="p2e2r5a3" value="3"> <label for="p2e2r5a3"> 69000 + 30000 + 70 + 10 </label><BR><br><br>
-            <input type="submit" value="" class="botonesrevisar" name="p2e2Rev">
-            <input type="reset" value="" class="botonesreintentar">
+            
+            <button type="button" onclick="ColoresRadios(5, 2, 2);"class="buttonsResRev"><img id = "btnSubmit" src="images/Revisar.png" width="140px" alt="" onmouseover="this.src = 'images/RevisarSobre.png'" onmouseout="this.src = 'images/Revisar.png'"></button>
+            <button type = "button" onclick="BorrarRadios(2,2,5);" id = "btnReset" name = "" class="buttonsResRev"><img src = "images/VolverIntentar.png" width="140px" onmouseover="this.src = 'images/VolverIntentarSobre.png'" onmouseout="this.src = 'images/VolverIntentar.png'"></button>
+            <button type="button" class="buttonsResRev" id = "btnPDF" onclick="pdfForRbd(2, 2, 5, DatosFinalesPDF);" ><img src="images/pdfKaxie.png"  id = "btnPDF" width="90px" alt="" onmouseover="this.style.setProperty('-webkit-filter', 'drop-shadow(2px 2px 5px rgba(0, 38, 81, 0.7))'); this.style.setProperty('transform', 'scale(1.08)');" onmouseout="this.style.removeProperty('-webkit-filter'); this.style.removeProperty('transform');"></button>
             </FORM>
-            <?php
-                if (isset($_POST['p2e2Rev'])) {
-                    require('funcionrevradio.php');
-                    RevisarRadios(5, 2, 2);
-               
-                }
-            ?>
+            
+            <div class="Calificacion" id = "p2e2img"></div>
+            <script>
+                if(IndicadorBDJS){TraerCalificacionPHP(2,2);}
+            </script>
             <br>
 
             <h1 id="ProdN">Productos notables</h1>
@@ -516,7 +545,7 @@ Al sumar estos números dará 20 108.<br>
                 por ello no se necesita realizar la operación. Las operaciones son sencillas de recordar, 
                 por ello no necesitamos realizar la multiplicación.<br><br>
             </p>
-            <h3 id="CB">El cuadrado de un binomio</h3>
+            <h2 id="CB">El cuadrado de un binomio</h2>
             <p>Un binomio es una expresión algebraica formada por 2 términos, los cuales puede tener signo igual o diferente.<br>
 Cuando elevamos al cuadrado el binomio x+y equivale a multiplicar este binomio por sí mismo.<br><br>
 <p class="italic">(x+y)²<br>
@@ -538,7 +567,7 @@ Dando como resultado: <p class="italic">9x² + 12x + 4</p><br>
             </p>
             <br>
 
-            <h3 id="PBC">Producto de dos binomios conjugados</h3>
+            <h2 id="PBC">Producto de dos binomios conjugados</h2>
             <p> Los binomios conjugados tienen un término común que se identica por llevar el mismo signo, 
                 mientras que los otros términos que llevan signos contrarios se les conoce como términos simétricos.<br><br>
                 <div class=P2Term><center>Términos comunes&emsp;<b>Términos semejantes</b><br>
@@ -547,12 +576,14 @@ El producto de 2 binomios conjugados es igual al cuadrado del término común me
 Al tener en cuenta la regla podemos aplicarla con el binomio: (4x²+3y)(4x²-3y)<br>
 La regla nos dice que primero se tiene el cuadrado del término común:<br>
 <p class="italic">(4x²)²= 16x⁴</p><br>
-Después ocupamos la resta del cuadrado del término simétrico:<br>
-<p class="italic">(3y)(-3y)= -9y</p><br>
+Después ocupamos la resta del cuadrado del término semejante:<br>
+<p class="italic">(3y)(-3y)= -9y²</p><br>
+Se tiene como resultado:<br>
+<p class="italic">16x⁴-9y²</p><br>
             </p>
             <br>
 
-            <h3 id="BTC">Producto de dos binomios con término común</h3>
+            <h2 id="BTC">Producto de dos binomios con término común</h2>
             <p> Los binomios de la forma (x+a)(x+b) en donde “x” es el término común y “a ” y “b” 
                 son los  términos no comunes se les conoce como productos de binomios con un término común.<br><br>
 La regla dice que éste es el cuadrado del término común, más o menos el producto de la suma o resta de los términos 
@@ -569,7 +600,7 @@ Y así confirmamos que lo que nos dice la regla es correcto.<br>
             </p>
             <br>
 
-            <h3 id="TCP">Trinomio cuadrado perfecto (FORMA x²+bx=ca)</h3>
+            <h2 id="TCP">Trinomio cuadrado perfecto (FORMA x²+bx=ca)</h2>
             <p>Recordemos que el cuadrado de un binomio es igual al cuadrado del primer término, 
                 más/menos el doble producto del primer término por el segundo, más el cuadrado del segundo.<br><br>
 Al producto que se obtiene al elevar un binomio al cuadrado se le conoce como trinomio cuadrado perfecto, 
@@ -592,7 +623,7 @@ x² + 12x + 36= 8 + 36</p><br>
             </p>
             <br>
 
-            <h3 id="CasEsp">Caso especial multiplicación de trinomios (a+b+c)(a+b-c)</h3>
+            <h2 id="CasEsp">Caso especial multiplicación de trinomios (a+b+c)(a+b-c)</h2>
             <p>En este tipo de casos hay una regla especial, la cual dice:<br><br>
 El producto de dos trinomios con dos términos positivos iguales, y un tercer término cuyo 
 signo es diferente en cada trinomio, es el cuadrado del primer término, más 2 veces el producto 
@@ -616,7 +647,7 @@ Confirmando el resultado que obtuvimos.<br><br>
             </p>
             <br>
 
-            <h3 id="CubSum">Cubo de la suma de dos cantidades</h3>
+            <h2 id="CubSum">Cubo de la suma de dos cantidades</h2>
             <p>La regla en esta ocasión nos dice que el cubo de la suma de dos cantidades es 
                 igual al cubo de la primera cantidad, más 3 seguido del cuadrado del primero 
                 por el segundo, más 3 seguido del primero por el cuadrado del segundo, más 
@@ -630,7 +661,7 @@ Comprobamos que cumple con la regla.<br><br>
 </p>
             <br>
 
-            <h3 id="CubRes">Cubo de la resta de dos cantidades</h3>
+            <h2 id="CubRes">Cubo de la resta de dos cantidades</h2>
             <p>Aplicaremos casi lo mismo que lo anterior, solamente cambiarán algunos signos:<br>
             <p class="italic">(a-b)² (a-b)= (a² - 2ab + b²)(a-b)=<br>
 a³- a²b - 2a²b + 2ab² + ab² - b³=<br>
@@ -641,8 +672,8 @@ triple del primero por el cuadrado del segundo, menos el cubo del segundo térmi
 que tenemos el resultado correcto.<br><br>
 </p><br>
 
-<h3>Ejemplos</h3>
-<h3>Problemas de productos notables</h3>
+<h2>Ejemplos</h2>
+<h2>Problemas de productos notables</h2>
 
             <br>
 
@@ -655,8 +686,8 @@ que tenemos el resultado correcto.<br><br>
             </div>
         </div>
             <FORM METHOD="POST">
-            <h3>Resuelve los siguientes productos notables:</h3><br>
-            <h3>Trinomio cuadrado perfecto (FORMA x²+bx=ca)</h3><br>
+            <h2>Resuelve los siguientes productos notables:</h2><br>
+            <h2>Trinomio cuadrado perfecto (FORMA x²+bx=ca)</h2><br>
             <b>1.- y<sup>2</sup>+20y=16 </b><br><br>
             <INPUT TYPE="radio" name="p2e3r1" id="p2e3r1a1" value="3"> <label for="p2e3r1a1">y<sup>2</sup>+20x+100= 16+100</label> <BR><br>
             <INPUT TYPE="radio" name="p2e3r1" id="p2e3r1a2" value="2"> <label for="p2e3r1a2">y<sup>2</sup>20x+10= 16+10 </label><BR><br>
@@ -697,16 +728,16 @@ que tenemos el resultado correcto.<br><br>
             <INPUT TYPE="radio" name="p2e3r7" id="p2e3r7a1" value="1"> <label for="p2e3r7a1">9a<sup>2</sup>+39ab+42b<sup>2</sup></label> <BR><br>
             <INPUT TYPE="radio" name="p2e3r7" id="p2e3r7a2" value="2"> <label for="p2e3r7a2">9a+39ab<sup>2</sup>+42b</label><BR><br>
             <INPUT TYPE="radio" name="p2e3r7" id="p2e3r7a3" value="3"> <label for="p2e3r7a3">9a+39ab+42b</label><BR><br><br>
-            <input type="submit" value="" class="botonesrevisar" name="p2e3Rev">
-            <input type="reset" value="" class="botonesreintentar">
+            
+            <button type="button" onclick="ColoresRadios(7, 2, 3);"class="buttonsResRev"><img id = "btnSubmit" src="images/Revisar.png" width="140px" alt="" onmouseover="this.src = 'images/RevisarSobre.png'" onmouseout="this.src = 'images/Revisar.png'"></button>
+            <button type = "button" onclick="BorrarRadios(2,3,7);" id = "btnReset" name = "" class="buttonsResRev"><img src = "images/VolverIntentar.png" width="140px" onmouseover="this.src = 'images/VolverIntentarSobre.png'" onmouseout="this.src = 'images/VolverIntentar.png'"></button>
+            <button type="button" class="buttonsResRev" id = "btnPDF" onclick="pdfForRbd(2, 3, 7, DatosFinalesPDF);" ><img src="images/pdfKaxie.png"  id = "btnPDF" width="90px" alt="" onmouseover="this.style.setProperty('-webkit-filter', 'drop-shadow(2px 2px 5px rgba(0, 38, 81, 0.7))'); this.style.setProperty('transform', 'scale(1.08)');" onmouseout="this.style.removeProperty('-webkit-filter'); this.style.removeProperty('transform');"></button>
             </FORM>
-            <?php
-                if (isset($_POST['p2e3Rev'])) {
-                    require('funcionrevradio.php');
-                    RevisarRadios(7, 3, 2);
-               
-                }
-            ?>
+            
+            <div class="Calificacion" id = "p2e3img"></div>
+            <script>
+                if(IndicadorBDJS){TraerCalificacionPHP(2,3);}
+            </script>
 
             <br>
             <h1 id="Facto">Expresión factorizada</h1>
@@ -726,7 +757,7 @@ te enseñaremos algunos de los más utilizados.<br>
 
            
             <br>
-            <h3 id="FNP">Factorización en números primos</h3>
+            <h2 id="FNP">Factorización en números primos</h2>
             <P>Este tipo de factorización solamente la podemos utilizar cuando tenemos una expresión numérica.<br><br>
             Recordando que el M.C.M. es mínimo común múltiplo que tienen dos o más números.<br><br>
             <div class=P2Term>Para esta factorización utilizamos la forma para sacar el M.C.D.(mínimo común divisor), la cantidad a 
@@ -771,8 +802,9 @@ A continuación se factoriza el número original con los números primos:<br>
             </div>
         </div>
             <FORM METHOD="POST">
-            <h3>Resuelve por factorización:</h3><br>
-            <h3>De números primos</h3><br>
+
+            <h2>Resuelve por factorización:</h2><br>
+            <h2>De números primos</h2><br>
             <b>1.- 3480 </b><br><br>
             <INPUT TYPE="radio" name="p2e7r1" id="p2e7r1a1" value="3"><label for="p2e7r1a1"> 2<sup>3</sup>*15*29 </label><BR><br>
             <INPUT TYPE="radio" name="p2e7r1" id="p2e7r1a2" value="2"><label for="p2e7r1a2"> 2*3<sup>3</sup>*5*29 </label><BR><br>
@@ -797,22 +829,22 @@ A continuación se factoriza el número original con los números primos:<br>
             <INPUT TYPE="radio" name="p2e7r5" id="p2e7r5a1" value="2"><label for="p2e7r5a1"> 2*7*11<sup>2</sup> </label><BR><br>
             <INPUT TYPE="radio" name="p2e7r5" id="p2e7r5a2" value="1"><label for="p2e7r5a2"> 2*7<sup>2</sup>*11*13 </label><BR><br>
             <INPUT TYPE="radio" name="p2e7r5" id="p2e7r5a3" value="3"><label for="p2e7r5a3"> 7<sup>2</sup>*11*19 </label><BR><br>
-            <input type="submit" value="" class="botonesrevisar" name="p2e7Rev">
-            <input type="reset" value="" class="botonesreintentar">
+           
+            <button type="button" onclick="ColoresRadios(5, 2, 7);"class="buttonsResRev"><img id = "btnSubmit" src="images/Revisar.png" width="140px" alt="" onmouseover="this.src = 'images/RevisarSobre.png'" onmouseout="this.src = 'images/Revisar.png'"></button>
+            <button type = "button" onclick="BorrarRadios(2,7,5);" id = "btnReset" name = "" class="buttonsResRev"><img src = "images/VolverIntentar.png" width="140px" onmouseover="this.src = 'images/VolverIntentarSobre.png'" onmouseout="this.src = 'images/VolverIntentar.png'"></button>
+            <button type="button" class="buttonsResRev" id = "btnPDF" onclick="pdfForRbd(2, 7, 5, DatosFinalesPDF);" ><img src="images/pdfKaxie.png"  id = "btnPDF" width="90px" alt="" onmouseover="this.style.setProperty('-webkit-filter', 'drop-shadow(2px 2px 5px rgba(0, 38, 81, 0.7))'); this.style.setProperty('transform', 'scale(1.08)');" onmouseout="this.style.removeProperty('-webkit-filter'); this.style.removeProperty('transform');"></button>
             </FORM>
-            <?php
-                if (isset($_POST['p2e7Rev'])) {
-                    require('funcionrevradio.php');
-                    RevisarRadios(5, 7, 2);
-               
-                }
-            ?>
+            
+            <div class="Calificacion" id = "p2e7img"></div>
+            <script>
+                if(IndicadorBDJS){TraerCalificacionPHP(2,7);}
+            </script>
 
 
 
 
             <br>
-            <h3 id="FC">Factor común</h3>
+            <h2 id="FC">Factor común</h2>
             <P><div class=P2Term>Este tipo de factorización normalmente se utiliza con los polinomios de dos o más 
                 términos que comparten al menos un factor o variable en los coeficientes.</div><br><br>
 Para factorizar la expresión primero se debe determinar el coeficiente común, usaremos como ejemplo la expresión 
@@ -883,7 +915,7 @@ x<sup>2</sup> (11x<sup>3</sup> + 10y)<br><br>
             </div>
         </div>
             <FORM METHOD="POST">
-            <h3>Resuelve por factorización de factor común</h3><br>
+            <h2>Resuelve por factorización de factor común</h2><br>
             <b>1.- 42xy – 30y </b><br><br>
             <INPUT TYPE="radio" name="p2e8r1" id="p2e8r1a1" value="2"><label for="p2e8r1a1"> 7y(5x - 6) </label><BR><br>
             <INPUT TYPE="radio" name="p2e8r1" id="p2e8r1a2" value="1"><label for="p2e8r1a2"> 6y(7x - 5)  </label><BR><br>
@@ -908,22 +940,22 @@ x<sup>2</sup> (11x<sup>3</sup> + 10y)<br><br>
             <INPUT TYPE="radio" name="p2e8r5" id="p2e8r5a1" value="1"><label for="p2e8r5a1"> x (2 + 3yz) </label><BR><br>
             <INPUT TYPE="radio" name="p2e8r5" id="p2e8r5a2" value="2"><label for="p2e8r5a2"> x (3 + 2yz) </label><BR><br>
             <INPUT TYPE="radio" name="p2e8r5" id="p2e8r5a3" value="3"><label for="p2e8r5a3"> 2x (1 + 3yz) </label><BR><br>
-            <input type="submit" value="" class="botonesrevisar" name="p2e8Rev">
-            <input type="reset" value="" class="botonesreintentar">
+            
+            <button type="button" onclick="ColoresRadios(5, 2, 8);"class="buttonsResRev"><img id = "btnSubmit" src="images/Revisar.png" width="140px" alt="" onmouseover="this.src = 'images/RevisarSobre.png'" onmouseout="this.src = 'images/Revisar.png'"></button>
+            <button type = "button" onclick="BorrarRadios(2,8,5);" id = "btnReset" name = "" class="buttonsResRev"><img src = "images/VolverIntentar.png" width="140px" onmouseover="this.src = 'images/VolverIntentarSobre.png'" onmouseout="this.src = 'images/VolverIntentar.png'"></button>
+            <button type="button" class="buttonsResRev" id = "btnPDF" onclick="pdfForRbd(2, 8, 5, DatosFinalesPDF);" ><img src="images/pdfKaxie.png"  id = "btnPDF" width="90px" alt="" onmouseover="this.style.setProperty('-webkit-filter', 'drop-shadow(2px 2px 5px rgba(0, 38, 81, 0.7))'); this.style.setProperty('transform', 'scale(1.08)');" onmouseout="this.style.removeProperty('-webkit-filter'); this.style.removeProperty('transform');"></button>
             </FORM>
-            <?php
-                if (isset($_POST['p2e8Rev'])) {
-                    require('funcionrevradio.php');
-                    RevisarRadios(5, 8, 2);
-               
-                }
-            ?>
+            
+            <div class="Calificacion" id = "p2e8img"></div>
+            <script>
+                if(IndicadorBDJS){TraerCalificacionPHP(2,8);}
+            </script>
 
 
 
 
             <br>
-            <h3 id="FacTri">Factorización de un trinomio de la forma (ax² ± bx + c)</h3>
+            <h2 id="FacTri">Factorización de un trinomio de la forma (ax² ± bx + c)</h2>
             
             <P><div class=P2Term> Este tipo de factorización solo se utiliza cuando tenemos 
                 trinomio en su forma ax² ± bx + c.<br><br>
@@ -982,8 +1014,8 @@ Notaremos que no se le puede sacar mitad ahora, pero sí tercera, así que harem
 Ahora que quedó como división entre 1 tendremos la respuesta con una multiplicación de binomios.<br>
 (x+1)(6x+4)
 <br><br>
-<h3>Mas ejemplos:</h3><BR>
-<h3>2.- 2x²+5x-5</h3><BR>
+<h2>Mas ejemplos:</h2><BR>
+<h2>2.- 2x²+5x-5</h2><BR>
 Siguiendo los pasos anteriores se multiplicarán los factores por el número de la literal elevada 
 al cuadrado y se dividirán por el mismo, el número actual de este es 2, dado esta situación se 
 multiplicará cada factor por 2, y se dividirá por el mismo.<br><br>
@@ -1032,7 +1064,7 @@ Comenzamos sacando mitad del segundo paréntesis y del 2.<br>
 Ahora que quedó como división entre 1 tendremos la respuesta con una multiplicación de binomios.<br>
 (2x+5)(x-1)<br><br>
 
-<h3>3.- 5x²+12x+4</h3><BR>
+<h2>3.- 5x²+12x+4</h2><BR>
 Para iniciar se multiplicarán los factores por el número de la literal elevada al cuadrado y se 
 dividirán por el mismo, el número actual de este es 5, dado esta situación se multiplicará cada 
 factor por 5, y se dividirá por el mismo.<br><br>
@@ -1112,18 +1144,17 @@ Ahora que quedó como división entre 1 tendremos la respuesta con una multiplic
             <INPUT TYPE="radio" name="p2e4r5" id="p2e4r5a2" value="1"> <label for="p2e4r5a2"> (x+1)(2x-1) </label><BR><br>
             <INPUT TYPE="radio" name="p2e4r5" id="p2e4r5a3" value="2"> <label for="p2e4r5a3"> (x+1)(x+2)  </label><BR><br>
 
-            <input type="submit" value="" class="botonesrevisar" name="p2e4Rev">
-            <input type="reset" value="" class="botonesreintentar">
+            <button type="button" onclick="ColoresRadios(5, 2, 4);"class="buttonsResRev"><img id = "btnSubmit" src="images/Revisar.png" width="140px" alt="" onmouseover="this.src = 'images/RevisarSobre.png'" onmouseout="this.src = 'images/Revisar.png'"></button>
+            <button type = "button" onclick="BorrarRadios(2,4,5);" id = "btnReset" name = "" class="buttonsResRev"><img src = "images/VolverIntentar.png" width="140px" onmouseover="this.src = 'images/VolverIntentarSobre.png'" onmouseout="this.src = 'images/VolverIntentar.png'"></button>
+            <button type="button" class="buttonsResRev" id = "btnPDF" onclick="pdfForRbd(2, 4, 5, DatosFinalesPDF);" ><img src="images/pdfKaxie.png"  id = "btnPDF" width="90px" alt="" onmouseover="this.style.setProperty('-webkit-filter', 'drop-shadow(2px 2px 5px rgba(0, 38, 81, 0.7))'); this.style.setProperty('transform', 'scale(1.08)');" onmouseout="this.style.removeProperty('-webkit-filter'); this.style.removeProperty('transform');"></button>
             </FORM>
-            <?php
-                if (isset($_POST['p2e4Rev'])) {
-                    require('funcionrevradio.php');
-                    RevisarRadios(5, 4, 2);
-               
-                }
-            ?>
+            
+            <div class="Calificacion" id = "p2e4img"></div>
+            <script>
+                if(IndicadorBDJS){TraerCalificacionPHP(2,4);}
+            </script>
 
-<h3 id="FacTCP">Factorización de un trinomio cuadrado perfecto (ax² ± bx + c)</h3><br>
+<h2 id="FacTCP">Factorización de un trinomio cuadrado perfecto (ax² ± bx + c)</h2><br>
 <P><div class=P2Term> Este tipo de factorización se utiliza cuando tenemos un trinomio cuadrado en su forma ax² ± bx + c, 
 mientras se cumpla que ax² y c tienen raíces cuadradas exactas, las cuales al multiplicarse entre 
 ellos y por 2, dan como resultado el término medio.</div></p>
@@ -1139,8 +1170,8 @@ El signo del segundo término de la expresión determinará el signo que tendrá
 el binomio. La factorización del término 16x² - 48x + 36 daría como resultado:<br>
 (4x-6)²<br><br>
 
-<h3>Ejemplos:</h3>
-<h3>1.- 81x² + 108xy +36y²</h3>
+<h2>Ejemplos:</h2><br>
+<h2>1.- 81x² + 108xy +36y²</h2>
 Primero calcularemos las raíces cuadradas del primer y tercer término, confirmando que al primer 
 término se le puede sacar raíz cuadrada y al tercero igual.<br>
 √81x²= 9x<br>
@@ -1152,7 +1183,7 @@ El signo del segundo término del trinomio dirá qué signo tendrá el segundo t
 siendo el resultado de 81x² + 108xy +36y²:<br>
 (9x+6y)²<br><br>
 
-<h3>2.- 4x² + 12x + 9</h3>
+<h2>2.- 4x² + 12x + 9</h2>
 Seguiremos los mismos pasos anteriores, primero calcularemos las raíces cuadradas del primer y 
 tercer término, confirmando que al primer término se le puede sacar raíz cuadrada y al tercero igual.<br>
 √4x²= 2x<br>
@@ -1164,7 +1195,7 @@ El signo del segundo término del trinomio dirá qué signo tendrá el segundo t
 observamos que es positivo, así que ese será, obtendremos el resultado de 4x² + 12x + 9:<br>
 (2x+3)²<br><br>
 
-<h3>3.- 16a⁴ - 40a²b² + 25b⁴</h3>
+<h2>3.- 16a⁴ - 40a²b² + 25b⁴</h2>
 Como hemos hecho primero sacamos la raíz cuadrada del primer y último término.<br>
 √16a⁴= 4a²<br>
 √25b⁴= 5b²<br><br>
@@ -1211,20 +1242,19 @@ signo que llevará el segundo término dle binomio:<br>
             <INPUT TYPE="radio" name="p2e5r5" id="p2e5r5a2" value="2"> <label for="p2e5r5a2"> (4x-7y)² </label><BR><br>
             <INPUT TYPE="radio" name="p2e5r5" id="p2e5r5a3" value="1"> <label for="p2e5r5a3"> (7x-4y)² </label><BR><br>
 
-            <input type="submit" value="" class="botonesrevisar" name="p2e5Rev">
-            <input type="reset" value="" class="botonesreintentar">
+            <button type="button" onclick="ColoresRadios(5, 2, 5);"class="buttonsResRev"><img id = "btnSubmit" src="images/Revisar.png" width="140px" alt="" onmouseover="this.src = 'images/RevisarSobre.png'" onmouseout="this.src = 'images/Revisar.png'"></button>
+            <button type = "button" onclick="BorrarRadios(2,5,5);" id = "btnReset" name = "" class="buttonsResRev"><img src = "images/VolverIntentar.png" width="140px" onmouseover="this.src = 'images/VolverIntentarSobre.png'" onmouseout="this.src = 'images/VolverIntentar.png'"></button>
+            <button type="button" class="buttonsResRev" id = "btnPDF" onclick="pdfForRbd(2, 5, 5, DatosFinalesPDF);" ><img src="images/pdfKaxie.png"  id = "btnPDF" width="90px" alt="" onmouseover="this.style.setProperty('-webkit-filter', 'drop-shadow(2px 2px 5px rgba(0, 38, 81, 0.7))'); this.style.setProperty('transform', 'scale(1.08)');" onmouseout="this.style.removeProperty('-webkit-filter'); this.style.removeProperty('transform');"></button>
             </FORM>
-            <?php
-                if (isset($_POST['p2e5Rev'])) {
-                    require('funcionrevradio.php');
-                    RevisarRadios(5, 5, 2);
-               
-                }
-            ?>
+            
+            <div class="Calificacion" id = "p2e5img"></div>
+            <script>
+                if(IndicadorBDJS){TraerCalificacionPHP(2,5);}
+            </script>
 
 
 
-        <h3 id="FB">Factorización de binomios</h3><br>
+        <h2 id="FB">Factorización de binomios</h2><br>
 
         <P><div class=P2Term> Se utiliza cuando tenemos expresiones como:<br>
 x²-y² diferencia de cuadrados <br>
@@ -1232,11 +1262,11 @@ x³-y³ diferencia de cubos<br>
 x³+y³ suma de dos cubos <br>
 Dependiendo el caso es cómo se realizará la factorización.</div></p><br><br>
 
-<P><div class=P2Term><h3>x²-y²</h3>
+<P><div class=P2Term><h2>x²-y²</h2><br>
 Simplemente se obtiene la raíz cuadrada de cada término.<br>
 x²-y² = (x+y)(x-y)<br><br></div></p>
 
-<h3>1.- Ejemplo</h3>
+<h2>1.- Ejemplo</h2><br>
 16x²-36y² <br><br>
 Primero sacaremos las raíces cuadradas de cada término del binomio:<br>
 √16x²= 4x<br>
@@ -1244,7 +1274,7 @@ Primero sacaremos las raíces cuadradas de cada término del binomio:<br>
 Ahora pondremos ambos términos como suma y resta respectivamente en dos paréntesis: <br>
 (4x+6y)(4x-6y)<br><br>
 
-<h3>2.- Otro ejemplo</h3>
+<h2>2.- Otro ejemplo</h2><br>
 9x²-25y²<br><br>
 Sacaremos las raíces cuadradas de cada elemento:<br>
 √9x²= 3x<br>
@@ -1253,7 +1283,7 @@ Ahora que las tenemos vamos a ponerlas con diferente signo entre dos paréntesis
 el resultado:<br>
 (3x+5y)(3x-5y)<br><br>
 
-<h3>3.- El último ejemplo</h3>
+<h2>3.- El último ejemplo</h2><br>
 <b>64x²-49y²</b><br><br>
 Sacaremos las raíces cuadradas de cada elemento:<br>
 √64x²= 8x<br>
@@ -1268,10 +1298,10 @@ el resultado:<br>
 
 
 
-<P><div class=P2Term><h3>x³-y³</h3>
+<P><div class=P2Term><h2>x³-y³</h2><br>
 La forma sería: <br>
 x³-y³= (x-y)(x²+xy+y²)</div></p>
-<h3>1.- Usemos de ejemplo 125x³-27</h3>
+<h2>1.- Usemos de ejemplo 125x³-27</h2><br>
 Se obtiene la raíz cúbica de cada uno de los términos:<br>
 √³125x³= 5x<br>
 √³27= 3<br><br>
@@ -1282,7 +1312,7 @@ Reemplazamos valores con la anterior expresión mostrada:<br>
 (5x-3)(25x²+15x+9)<br>
 Y así obtenemos la expresión factorizada.<br><br>
 
-<h3> 2.- Usemos de ejemplo 8x³-512y³</h3>
+<h2> 2.- Usemos de ejemplo 8x³-512y³</h2><br>
 Se obtiene la raíz cúbica de cada uno de los términos:<br>
 √³8x³= 2x<br>
 √³27y³= 8y<br><br>
@@ -1293,7 +1323,7 @@ Reemplazamos valores con la anterior expresión mostrada:<br>
 (2x-8y)(4x²+16xy+64y²)<br>
 Y así obtenemos la expresión factorizada.<br><br>
 
-<h3> 3.- Usemos de ejemplo 343y³-64</h3>
+<h2> 3.- Usemos de ejemplo 343y³-64</h2><br>
 Se obtiene la raíz cúbica de cada uno de los términos:<br>
 √³343x³= 7y<br>
 √³64= 4<br><br>
@@ -1340,23 +1370,23 @@ Y así obtenemos la expresión factorizada.<br><br>
             <INPUT TYPE="radio" name="p2e6r5" id="p2e6r5a2" value="2"> <label for="p2e6r5a2"> (7z+6)(49z²+42z-36) </label><BR><br>
             <INPUT TYPE="radio" name="p2e6r5" id="p2e6r5a3" value="3"> <label for="p2e6r5a3"> (6z-7)(49z²+42z+36) </label><BR><br>
 
-            <input type="submit" value="" class="botonesrevisar" name="p2e6Rev">
-            <input type="reset" value="" class="botonesreintentar">
+            <button type="button" onclick="ColoresRadios(5, 2, 6);"class="buttonsResRev"><img id = "btnSubmit" src="images/Revisar.png" width="140px" alt="" onmouseover="this.src = 'images/RevisarSobre.png'" onmouseout="this.src = 'images/Revisar.png'"></button>
+            <button type = "button" onclick="BorrarRadios(2,6,5);" id = "btnReset" name = "" class="buttonsResRev"><img src = "images/VolverIntentar.png" width="140px" onmouseover="this.src = 'images/VolverIntentarSobre.png'" onmouseout="this.src = 'images/VolverIntentar.png'"></button>
+            <button type="button" class="buttonsResRev" id = "btnPDF" onclick="pdfForRbd(2, 6, 5, DatosFinalesPDF);" ><img src="images/pdfKaxie.png"  id = "btnPDF" width="90px" alt="" onmouseover="this.style.setProperty('-webkit-filter', 'drop-shadow(2px 2px 5px rgba(0, 38, 81, 0.7))'); this.style.setProperty('transform', 'scale(1.08)');" onmouseout="this.style.removeProperty('-webkit-filter'); this.style.removeProperty('transform');"></button>
             </FORM>
-            <?php
-                if (isset($_POST['p2e6Rev'])) {
-                    require('funcionrevradio.php');
-                    RevisarRadios(5, 6, 2);
-                }
-            ?>
+            
+            <div class="Calificacion" id = "p2e6img"></div>
+            <script>
+                if(IndicadorBDJS){TraerCalificacionPHP(2,6);}
+            </script>
 
 
 
 
-<P><div class=P2Term><h3><center>x³+y³</center></h3>
+<P><div class=P2Term><h2><center>x³+y³</center></h2><br>
 Repetimos el mismo proceso que el anterior, solamente cambiando algunos signos, de esta manera:<br>
 x³+y³= (x+y)(x²-xy+y²)</div></p><br>
-<h3>1.- Usemos de ejemplo uno de los anteriores 125x³+27</h3>
+<h2>1.- Usemos de ejemplo uno de los anteriores 125x³+27</h2><br>
 De esta manera se observará que lo único que cambia son los signos.<br><br>
 Se obtiene la raíz cúbica de cada uno de los términos:<br>
 √³125x³= 5x<br>
@@ -1404,17 +1434,24 @@ Y así obtenemos la expresión factorizada, mientras demostramos que lo único d
             <INPUT TYPE="radio" name="p2e9r5" id="p2e9r5a2" value="2"> <label for="p2e9r5a2"> (7z-6)(49z²-42z+36) </label><BR><br>
             <INPUT TYPE="radio" name="p2e9r5" id="p2e9r5a3" value="3"> <label for="p2e9r5a3"> (7z-6)(49z²+42z-36) </label><BR><br>
 
-            <input type="submit" value="" class="botonesrevisar" name="p2e9Rev">
-            <input type="reset" value="" class="botonesreintentar">
+            <button type="button" onclick="ColoresRadios(5, 2, 9);"class="buttonsResRev"><img id = "btnSubmit" src="images/Revisar.png" width="140px" alt="" onmouseover="this.src = 'images/RevisarSobre.png'" onmouseout="this.src = 'images/Revisar.png'"></button>
+            <button type = "button" onclick="BorrarRadios(2,9,5);" id = "btnReset" name = "" class="buttonsResRev"><img src = "images/VolverIntentar.png" width="140px" onmouseover="this.src = 'images/VolverIntentarSobre.png'" onmouseout="this.src = 'images/VolverIntentar.png'"></button>
+            <button type="button" class="buttonsResRev" id = "btnPDF" onclick="pdfForRbd(2, 9, 5, DatosFinalesPDF);" ><img src="images/pdfKaxie.png"  id = "btnPDF" width="90px" alt="" onmouseover="this.style.setProperty('-webkit-filter', 'drop-shadow(2px 2px 5px rgba(0, 38, 81, 0.7))'); this.style.setProperty('transform', 'scale(1.08)');" onmouseout="this.style.removeProperty('-webkit-filter'); this.style.removeProperty('transform');"></button>
+        
             </FORM>
+            <div class="Calificacion" id = "p2e9img"></div>
+            <script>
+                TraerRadios(9,2);
+                if(IndicadorBDJS){TraerCalificacionPHP(2,9)}
+            </script>
             <?php
-                if (isset($_POST['p2e9Rev'])) {
-                    require('funcionrevradio.php');
-                    RevisarRadios(5, 9, 2);
-                }
+                // if (isset($_POST['p2e9Rev'])) {
+                //     require('funcionrevradio.php');
+                //     RevisarRadios(5, 9, 2);
+                // }
             ?>
 
-Ejercicios:
+Resumen:
 
 
 
@@ -1428,6 +1465,18 @@ Ejercicios:
 
 
             <CENTER><img id="resu" src="./images/progresion2img/Progre2.png" WIDTH="100%"></CENTER>
+
+            <div class = "container_ir_evaluacion">
+            <div>
+                <img src = "images/KaxieArcoiris.png" width = "200px"><br>
+                <p>¿Listo para la prueba final? ¡Recuerda tomar tu tiempo para contestar cada enunciado! Esta vez serán tomados en cuenta para comparar tu progreso.</p>
+            </div>
+            <center>
+                <button type = "button" class="btngotoEval">
+                    <a href = "evaluacion2.php"> Ir a la evaluación</a><br>
+                </button>
+            </center>
+        </div>
         </section>
         
         <div id="fot">

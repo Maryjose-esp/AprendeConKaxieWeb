@@ -6,16 +6,48 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style3.css">
+    <link rel="stylesheet" href="css/style4.css">
     <script src="js/script7.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 <link rel="icon" href="./images/logo.ico" type= "image/x-icon">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script>
+<script src="js/jquery-3.7.1.js"></script>
     <title>Progresion 14</title>
 </head>
 <body>
-<?php require ('ifSession.php'); ?>
+<?php require ('ifSession.php');  
+ 
+ if ($indicador_bd) {
+         dialog_abrir('14');
+     }else{
+         echo "<script>
+         document.addEventListener('DOMContentLoaded', () => {
+     let btnPdf = document.querySelectorAll('[id = btnPDF]');
+     btnPdf.forEach((btnPdf) => {
+         btnPdf.style.display ='none';
+       });
+         
+   });
+        
+     </script>";
+     }
+ 
+ 
+     ?>
+     <script>var IndicadorBDJS = '<?php echo $indicador_bd;?>';
+        var arrayp14e1 = [[],[2,2,-12,-5,10,-15,-1,-12,11,-14,-4,0,9,1,-3,7],
+        [3,1,10.5,43,2,3,8,1.2,-3.3,7,5,-2,2,0,3,1.5],
+        [10,2,16,10,13,-8,4,-19,-129,-12,3,-21,-576,-85,21,-31]];
+    </script>
+    </script>
+     <script src="js/script7.js"></script>
+     <script>
+         var DatosFinalesPDF = "<?php DatosPDF(); ?>";
+     </script>
  
 
 <aside class="aside" id="aside14"> 
@@ -129,11 +161,19 @@
                 </div>
             <div class="conceptoscla">
             <h1>Conceptos clave</h1>
-                <P>Desigualdad. Ausencia de similitudes.</p>
-                <p>Sistemas de ecuaciones. Conjuntos de ecuaciones con mismas incógnitas.</p>
+                <P><b>Desigualdad.</b> Ausencia de similitudes.</p>
+                <p><b>Sistemas de ecuaciones.</b> Conjuntos de ecuaciones con mismas incógnitas.</p>
             </div>
             </div>
-            <h1 id="ine"> INECUACIONES </h1>
+<!--ESPACIO PARA EL VIDEO>
+
+            <div class="videoProgre">
+            <div class="videoEsti"><video src="" controls width="100%"></video></div>
+            </div>
+            
+
+<FIN ESPACIO PARA EL VIDEO-->
+            <h1 id="ine"> INECUACIONES </h1><br>
             <P>Al hablar de inecuaciones nos referimos <b>una diferencia</b>, puesto que cuentan con 
                 una comparación, no como en las ecuaciones donde se cuenta con un signo de igualación, 
                 entre las inecuaciones se encuentran varios ejemplos: <br><br>
@@ -435,16 +475,16 @@ a “x”, veremos cómo afecta a “y” y qué valor tendrá en base a “x”
             <INPUT TYPE="radio" name="p14e1r4" id="p14e1r4a1" value="2"> <label for="p14e1r4a1">Superior</label> <BR><br>
             <INPUT TYPE="radio" name="p14e1r4" id="p14e1r4a2" value="1"> <label for="p14e1r4a2">Inferior</label> <BR><br>
 
-            <input type="submit" value="" class="botonesrevisar" name="p14e1Rev">
-            <input type="reset" value="" class="botonesreintentar" onclick="eliminartodo()">
+            <button type="button" onclick="ColoresRadios(4, 14, 1);"class="buttonsResRev"><img id = "btnSubmit" src="images/Revisar.png" width="140px" alt="" onmouseover="this.src = 'images/RevisarSobre.png'" onmouseout="this.src = 'images/Revisar.png'"></button>
+            <button type = "button" onclick="BorrarRadios(14,1,4);" id = "btnReset" name = "" class="buttonsResRev"><img src = "images/VolverIntentar.png" width="140px" onmouseover="this.src = 'images/VolverIntentarSobre.png'" onmouseout="this.src = 'images/VolverIntentar.png'"></button>
+            <button type="button" class="buttonsResRev" id = "btnPDF" onclick="pdfForRbd(14, 1, 4, DatosFinalesPDF);" ><img src="images/pdfKaxie.png"  id = "btnPDF" width="90px" alt="" onmouseover="this.style.setProperty('-webkit-filter', 'drop-shadow(2px 2px 5px rgba(0, 38, 81, 0.7))'); this.style.setProperty('transform', 'scale(1.08)');" onmouseout="this.style.removeProperty('-webkit-filter'); this.style.removeProperty('transform');"></button>
             </FORM>
-            <?php
-                if (isset($_POST['p14e1Rev'])) {
-                    require('funcionrevradio.php');
-                    RevisarRadios(4, 1, 14);
-               
-                }
-            ?>
+
+            <div class="Calificacion" id = "p14e1img"></div>
+            <script>
+                TraerRadios(1,14);
+                if(IndicadorBDJS){TraerCalificacionPHP(14,1);}
+            </script>
 
 
             Recordemos que una ecuación es aquella que contiene un signo 
@@ -639,12 +679,19 @@ Comprobamos que el resultado es correcto.<br><br>
             x <input type="text" name="p14e2txt15" id="p14e2txt15"><br>
             y <input type="text" name="p14e2txt16" id="p14e2txt16"><br><br><br>
 
-            <input type="submit" value="" class="botonesrevisar" name="P14e2Rev" id="P14e2Rev">
-            <input type="reset" value="" class="botonesreintentar" onclick="eliminartodo()">
-            </FORM>
-            
+            <button type="button" onclick="colores(arrayp14e1, 14, 2);" id="P14E2REV" name="P14E2REV" class="buttonsResRev"><img id = "btnSubmit" src="images/Revisar.png" width="140px" alt="" onmouseover="this.src = 'images/RevisarSobre.png'" onmouseout="this.src = 'images/Revisar.png'"></button>
+        <button type = "button" onclick="eliminartodo(14, 2, 16)" id = "btnReset" name = "" class="buttonsResRev"><img src = "images/VolverIntentar.png" width="140px" onmouseover="this.src = 'images/VolverIntentarSobre.png'" onmouseout="this.src = 'images/VolverIntentar.png'"></button>
+        <button type="button" class="buttonsResRev" id = "btnPDF" onclick="GenerarPDF(14, 2, arrayp14e1, DatosFinalesPDF)"><img src="images/pdfKaxie.png"  id = "btnPDF" width="90px" alt="" onmouseover="this.style.setProperty('-webkit-filter', 'drop-shadow(2px 2px 5px rgba(0, 38, 81, 0.7))'); this.style.setProperty('transform', 'scale(1.08)');" onmouseout="this.style.removeProperty('-webkit-filter'); this.style.removeProperty('transform');"></button>
+        </div>
+    </FORM>
 
-            <script>
+        <div class="Calificacion" id="p14e2img"></div>
+
+        <script>
+            TraerCalificacionPHP(14, 2);
+        </script>
+
+            <!--script>
                 let respuestas = [2,
                     2,
                     -12,
@@ -662,9 +709,9 @@ Comprobamos que el resultado es correcto.<br><br>
                     -3,
                     7];
                 colores(respuestas, 14, 2);
-            </script>
+            </script-->
 
-<?php
+<!--?php
             if (isset($_POST['P14E2REV'])) {
 
                 $RespuestasE2 = array(
@@ -690,7 +737,7 @@ Comprobamos que el resultado es correcto.<br><br>
 
 
             }
-            ?>
+            ?-->
 
             <br>
             <h1 id="MR">MÉTODO DE REDUCCIÓN </h1>
@@ -863,12 +910,21 @@ Al obtener ambos valores los confirmaremos al resolver ambas ecuaciones:<br>
             <p><b>8.- -9x-6y=-36 <br> -4x+24y=24 </b></p><br>
             x <input type="text" name="p14e3txt15" id="p14e3txt15"><br>
             y <input type="text" name="p14e3txt16" id="p14e3txt16"><br><br>
-            <input type="submit" value="" class="botonesrevisar" name="P14E3REV" id="P14E3REV">
-            <input type="reset" value="" class="botonesreintentar" onclick="eliminartodo()">
-            </FORM>
+
+            <button type="button" onclick="colores(arrayp14e1, 14, 3);" id="P14E3REV" name="P14E3REV" class="buttonsResRev"><img id = "btnSubmit" src="images/Revisar.png" width="140px" alt="" onmouseover="this.src = 'images/RevisarSobre.png'" onmouseout="this.src = 'images/Revisar.png'"></button>
+        <button type = "button" onclick="eliminartodo(14, 3, 16)" id = "btnReset" name = "" class="buttonsResRev"><img src = "images/VolverIntentar.png" width="140px" onmouseover="this.src = 'images/VolverIntentarSobre.png'" onmouseout="this.src = 'images/VolverIntentar.png'"></button>
+        <button type="button" class="buttonsResRev" id = "btnPDF" onclick="GenerarPDF(14, 3, arrayp14e1, DatosFinalesPDF)"><img src="images/pdfKaxie.png"  id = "btnPDF" width="90px" alt="" onmouseover="this.style.setProperty('-webkit-filter', 'drop-shadow(2px 2px 5px rgba(0, 38, 81, 0.7))'); this.style.setProperty('transform', 'scale(1.08)');" onmouseout="this.style.removeProperty('-webkit-filter'); this.style.removeProperty('transform');"></button>
+        </div>
+    </FORM>
+
+        <div class="Calificacion" id="p14e3img"></div>
+
+        <script>
+            TraerCalificacionPHP(14, 3);
+        </script>
             
 
-            <script>
+            <!--script>
                 let respuestas1 = 
                     [3,
                     1,
@@ -887,9 +943,9 @@ Al obtener ambos valores los confirmaremos al resolver ambas ecuaciones:<br>
                     3,
                     1.5];
                 colores(respuestas1, 14, 3);
-            </script>
+            </script-->
 
-<?php
+<!--?php
             if (isset($_POST['P14E3REV'])) {
 
                 $RespuestasE3 = array(
@@ -915,7 +971,7 @@ Al obtener ambos valores los confirmaremos al resolver ambas ecuaciones:<br>
 
 
             }
-            ?>
+            ?-->
 
 
 
@@ -1083,11 +1139,19 @@ Los resultados son correctos.<br>
             x <input type="text" name="p14e4txt15" id="p14e4txt15"><br>
             y <input type="text" name="p14e4txt16" id="p14e4txt16"><br><br>
 
-            <input type="submit" value="" class="botonesrevisar" name="P14E4REV" id="P14E4REV">
-            <input type="reset" value="" class="botonesreintentar" onclick="eliminartodo()">
-            </FORM>
+            <button type="button" onclick="colores(arrayp14e1, 14, 4);" id="P14E4REV" name="P14E4REV" class="buttonsResRev"><img id = "btnSubmit" src="images/Revisar.png" width="140px" alt="" onmouseover="this.src = 'images/RevisarSobre.png'" onmouseout="this.src = 'images/Revisar.png'"></button>
+            <button type = "button" onclick="eliminartodo(14, 4, 16)" id = "btnReset" name = "" class="buttonsResRev"><img src = "images/VolverIntentar.png" width="140px" onmouseover="this.src = 'images/VolverIntentarSobre.png'" onmouseout="this.src = 'images/VolverIntentar.png'"></button>
+            <button type="button" class="buttonsResRev" id = "btnPDF" onclick="GenerarPDF(14, 4, arrayp14e1, DatosFinalesPDF)"><img src="images/pdfKaxie.png"  id = "btnPDF" width="90px" alt="" onmouseover="this.style.setProperty('-webkit-filter', 'drop-shadow(2px 2px 5px rgba(0, 38, 81, 0.7))'); this.style.setProperty('transform', 'scale(1.08)');" onmouseout="this.style.removeProperty('-webkit-filter'); this.style.removeProperty('transform');"></button>
+           
+        </FORM>
 
-            <script>
+        <div class="Calificacion" id="p14e4img"></div>
+
+        <script>
+            TraerCalificacionPHP(14, 4);
+        </script>
+
+            <!--script>
                 let respuestas2 = 
                     [10,
                     2,
@@ -1106,9 +1170,9 @@ Los resultados son correctos.<br>
                     21,
                     -31];
                 colores(respuestas2, 14, 4);
-            </script>
+            </script-->
 
-<?php
+<!--?php
             if (isset($_POST['P14E4REV'])) {
 
                 $RespuestasE4 = array(
@@ -1134,9 +1198,26 @@ Los resultados son correctos.<br>
 
 
             }
-            ?>
+            ?-->
             <BR><BR>
             <CENTER><img id="resu" src="./images/progresion14img/Progre14.png" WIDTH="100%"></CENTER>
+            
+            
+            <div class = "container_ir_evaluacion">
+            <div>
+                <img src = "images/KaxieArcoiris.png" width = "200px"><br>
+                <p>¿Listo para la prueba final? ¡Recuerda tomar tu tiempo para contestar cada enunciado! Esta vez serán tomados en cuenta para comparar tu progreso.</p>
+            </div>
+            <center>
+                <button type = "button" class="btngotoEval">
+                    <a href = "evaluacion14.php"> Ir a la evaluación</a><br>
+                </button>
+            </center>
+        </div>
+            <script>
+            TraerDatos(14, arrayp14e1, 4);
+        </script>
+        
         </section>
 
         <div id="fot">

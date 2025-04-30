@@ -6,18 +6,53 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style3.css">
     <link rel="stylesheet" href="css/style5.css">
+    <link rel="stylesheet" href="css/style4.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <link rel= "icon" href="images/logo.ico" type="image/x-icon">
     <script src="js/script7.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script>
+<script src="js/jquery-3.7.1.js"></script>
     <title> Progresion 13 </title>
 </head>
 <body>
 <?php
-    require ('ifSession.php');
+    require ('ifSession.php'); 
+ 
+    if ($indicador_bd) {
+            dialog_abrir('13');
+        }else{
+            echo "<script>
+            document.addEventListener('DOMContentLoaded', () => {
+        let btnPdf = document.querySelectorAll('[id = btnPDF]');
+        btnPdf.forEach((btnPdf) => {
+            btnPdf.style.display ='none';
+          });
+            
+      });
+           
+        </script>";
+        }
     
-    ?>
+    
+        ?>
+        <script>var IndicadorBDJS = '<?php echo $indicador_bd;?>';
+           var arrayp13e1 = [['12u-13','3u^2+7u+2','10u+26','8z-3','124t3'],
+           [4,-7,5,-8,6,5,-24,9,-5,8],
+           [0.25,1.5],
+           [0.25,1.3,-0.5,7],
+           [5,2,2,1,2,2,2,1,2,2,3,1,5,6,2,2,3,1,2,1],
+           [6,6,2,5,3,3,3,2,3,2,5,1],
+           [24,11,6,5,15,20,180]];
+       </script>
+       </script>
+        <script src="js/script7.js"></script>
+        <script>
+            var DatosFinalesPDF = "<?php DatosPDF(); ?>";
+        </script>
+    
     
     <aside class="aside" id="aside13"> 
     <section id="s1">
@@ -28,7 +63,7 @@
         </section>
         <br>
             <Section class="sectionAs">
-                <P>Resuelve problematicas provenientes de las áreas del conocimiento que involucren la resolución de 
+                <P>Resuelve problemáticas provenientes de las áreas del conocimiento que involucren la resolución de 
                     sistemas de ecuaciones lineales y considera una interpretación geométrica de estos sistemas.
                 </p>
                 <div class="div1">
@@ -36,30 +71,23 @@
                 </div>
                 <b><h3> Metas </h3></b><br>
                 <H3>M2</H3>
-                <P>Analizar los resultados obtenidos al aplicar procedimientos algoritmicos propios del Pensamiento 
-                    Matemático en la resolución de problematicas teóricas y su contexto.
+                <P>Aplica procedimientos, técnicas y lenguaje matemático
+                    para la solución de problemas propios del Pensamiento
+                    Matemático, de Áreas de Conocimiento, Recursos
+                    Sociocognitivos, Recursos Socioemocionales y de su entorno.
                 </P>
-                <H3>M3</H3>
-                <P>Comprueba los procedimientos usados en la resolución de problemas utilizando diversos métodos, 
-                    empleando recursos tecnológicos o la interacción con sus pares.
-                </P>
-                <H3>M3</H3>
-                <P>Aplica procedimientos, técnicas y lenguaje matemático para la solución de problemas propios del 
-                    Pensamiento Matemático, de Áreas de Conocimiento, Recursos Sociocognitivos, Recursos Socioemocionales 
-                    y de su entorno.
+                
                 </P>
                 <b><h3> Categorías </h3></b><br>
                 <H3>C1</H3>
-                <P>Procedural
-                <H3>C3</H3>
-                <P>Solución de problemas y modelación
+                <P> Solución de problemas y modelación.
+                </P>
                 <b><h3> Subcategorías </h3></b><br>
                 <H3>S1</H3>
-                <P>Elementos aritmético-algebraicos.</P>
-                <H3>S4</H3>
-                <P> Manejo de datos e incertidumbre.</P>
-                <H3>S1</H3>
-                <P> Uso de modelos.</P>
+                <P>Uso de modelos.</P>
+                <H3>S3</H3>
+                <P> Estrategias heurísticas y ejecución de
+                procedimientos no rutinarios.</P>
                 <!-- <div class="bodfals">
                     <div class="skill">
                         <div class="outer">
@@ -116,14 +144,22 @@
                 </div>
             <div class= "ceonceptoscla">
                 <h1 id="cc13">Conceptos clave</h1>
-                <P>Sistema de ecuaciones lineales. Es un sistema de ecuaciones en donde cada ecuación es de primer grado, 
+                <P><b>Sistema de ecuaciones lineales.</b> Es un sistema de ecuaciones en donde cada ecuación es de primer grado, 
                     definidas sobre un cuerpo.  2x+3y=5 es una ecuación lineal en forma estándar. </P>
-                <P>Interpretación geométrica. La representación geométrica de un objeto matemático. Por ejemplo, la ecuación y=2x+3 
+                <P><b>Interpretación geométrica.</b> La representación geométrica de un objeto matemático. Por ejemplo, la ecuación y=2x+3 
                     es la interpretación abstracta de una recta. La recta, en este caso, es la interpretación geométrica.</P>
             </div>
         </div>
             <br>
-    <form><br>
+    <br>
+<!--ESPACIO PARA EL VIDEO>
+
+            <div class="videoProgre">
+            <div class="videoEsti"><video src="" controls width="100%"></video></div>
+            </div>
+            
+
+<FIN ESPACIO PARA EL VIDEO-->
         <h1>Propiedades de la igualdad</h1><br>
         Las propiedades de igualdad son reglas matemáticas que se aplican a las expresiones 
         y ecuaciones para manipularlas de manera que se mantenga la igualdad entre ellas.
@@ -279,12 +315,19 @@
         r = 2t + 3
         <br>
         p = <INPUT TYPE ="TEXT" size=6 maxlength="11" NAME="p13e1txt5" id="p13e1txt5"><br>  <br> 
-        <div>
-        <input type="submit" value="" class="botonesrevisar" name="P13E1REV" id="P13E1REV">
-        <input type="reset" value="" class="botonesreintentar" onclick="eliminartodo()">
-        </div>
+        
+        <button type="button" onclick="colores(arrayp13e1, 13, 1);" id="P13E1REV" name="P13E1REV" class="buttonsResRev"><img id = "btnSubmit" src="images/Revisar.png" width="140px" alt="" onmouseover="this.src = 'images/RevisarSobre.png'" onmouseout="this.src = 'images/Revisar.png'"></button>
+        <button type = "button" onclick="eliminartodo(13, 1, 5)" id = "btnReset" name = "" class="buttonsResRev"><img src = "images/VolverIntentar.png" width="140px" onmouseover="this.src = 'images/VolverIntentarSobre.png'" onmouseout="this.src = 'images/VolverIntentar.png'"></button>
+        <button type="button" class="buttonsResRev" id = "btnPDF" onclick="GenerarPDF(13, 1, arrayp13e1, DatosFinalesPDF)"><img src="images/pdfKaxie.png"  id = "btnPDF" width="90px" alt="" onmouseover="this.style.setProperty('-webkit-filter', 'drop-shadow(2px 2px 5px rgba(0, 38, 81, 0.7))'); this.style.setProperty('transform', 'scale(1.08)');" onmouseout="this.style.removeProperty('-webkit-filter'); this.style.removeProperty('transform');"></button>
+           
         </form>
-            <script>
+
+        <div class="Calificacion" id="p13e1img"></div>
+
+        <script>
+            TraerCalificacionPHP(13, 1);
+        </script>
+            <!--script>
                 let respuestas1 = [ '12u-13',
                 '3u^2+7u+2',
                 '10u+26',
@@ -293,8 +336,8 @@
 
                 ];
                 colores(respuestas1, 13, 1);
-            </script>
-        <?php
+            </script-->
+        <!--?php
             if (isset($_POST['P13E1REV'])) {
 
                 $RespuestasE1 = array(
@@ -309,7 +352,7 @@
 
 
             }
-            ?>
+            ?-->
         <br><br>
         <h3 id="ejeline">A continuación te mostrare un ejemplo de ecuaciones lineales con paréntesis.</h3>
 
@@ -483,13 +526,18 @@
         + 3 = 7  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; <b>x= </b><INPUT TYPE ="TEXT" size=7 maxlength="13" NAME="p13e2txt10" id="p13e2txt10"><BR><br>
         <br>
         <br>
-        <div>
-        <input type="submit" value="" class="botonesrevisar" name="P13E2REV" id="P13E2REV">
-        <input type="reset" value="" class="botonesreintentar" onclick="eliminartodo()">
-        </div>
+        <button type="button" onclick="colores(arrayp13e1, 13, 2);" id="P13E2REV" name="P13E2REV" class="buttonsResRev"><img id = "btnSubmit" src="images/Revisar.png" width="140px" alt="" onmouseover="this.src = 'images/RevisarSobre.png'" onmouseout="this.src = 'images/Revisar.png'"></button>
+        <button type = "button" onclick="eliminartodo(13, 2, 10)" id = "btnReset" name = "" class="buttonsResRev"><img src = "images/VolverIntentar.png" width="140px" onmouseover="this.src = 'images/VolverIntentarSobre.png'" onmouseout="this.src = 'images/VolverIntentar.png'"></button>
+        <button type="button" class="buttonsResRev" id = "btnPDF" onclick="GenerarPDF(13, 2, arrayp13e1, DatosFinalesPDF)"><img src="images/pdfKaxie.png"  id = "btnPDF" width="90px" alt="" onmouseover="this.style.setProperty('-webkit-filter', 'drop-shadow(2px 2px 5px rgba(0, 38, 81, 0.7))'); this.style.setProperty('transform', 'scale(1.08)');" onmouseout="this.style.removeProperty('-webkit-filter'); this.style.removeProperty('transform');"></button>
+           
         </form>
 
+        <div class="Calificacion" id="p13e2img"></div>
+
         <script>
+            TraerCalificacionPHP(13, 2);
+        </script>
+        <!--script>
                 let respuestas2 = [ 4,
                     -7,
                     5,
@@ -502,8 +550,8 @@
                     8
                 ];
                 colores(respuestas2, 13, 2);
-            </script>
-        <?php
+            </script-->
+        <!--?php
             if (isset($_POST['P13E2REV'])) {
 
                 $RespuestasE2 = array(
@@ -523,7 +571,7 @@
 
 
             }
-            ?>
+            ?-->
        <br><br><br>
        <h3>Ecuaciones con coeficiente fraccionario</h3>
        <br>
@@ -576,18 +624,25 @@
     ¿Cuánto vale y?  <INPUT TYPE ="TEXT" size=6 maxlength="4" NAME="p13e3txt2" id="p13e3txt2"><BR><br>
     <br><br>
     <div>
-        <input type="submit" value="" class="botonesrevisar" name="P13E3REV" id="P13E3REV">
-        <input type="reset" value="" class="botonesreintentar" onclick="eliminartodo()">
+    <button type="button" onclick="colores(arrayp13e1, 13, 3);" id="P13E2REV" name="P13E2REV" class="buttonsResRev"><img id = "btnSubmit" src="images/Revisar.png" width="140px" alt="" onmouseover="this.src = 'images/RevisarSobre.png'" onmouseout="this.src = 'images/Revisar.png'"></button>
+    <button type = "button" onclick="eliminartodo(13, 3, 2)" id = "btnReset" name = "" class="buttonsResRev"><img src = "images/VolverIntentar.png" width="140px" onmouseover="this.src = 'images/VolverIntentarSobre.png'" onmouseout="this.src = 'images/VolverIntentar.png'"></button>
+    <button type="button" class="buttonsResRev" id = "btnPDF" onclick="GenerarPDF(13, 3, arrayp13e1, DatosFinalesPDF)"><img src="images/pdfKaxie.png"  id = "btnPDF" width="90px" alt="" onmouseover="this.style.setProperty('-webkit-filter', 'drop-shadow(2px 2px 5px rgba(0, 38, 81, 0.7))'); this.style.setProperty('transform', 'scale(1.08)');" onmouseout="this.style.removeProperty('-webkit-filter'); this.style.removeProperty('transform');"></button>
+           
         </div>
         </form>
 
+        <div class="Calificacion" id="p13e3img"></div>
+
         <script>
+            TraerCalificacionPHP(13, 3);
+        </script>
+        <!--script>
                 let respuestas3 = [0.25,
                     1.5
                 ];
                 colores(respuestas3, 13, 3);
-            </script>
-        <?php
+            </script-->
+        <!--?php
             if (isset($_POST['P13E3REV'])) {
 
                 $RespuestasE3 = array(
@@ -600,7 +655,7 @@
 
 
             }
-            ?>
+            ?-->
     <div class="nota2">
         <center>
         Estas tienen 2 casos de ecuaciones fraccionarias cuando en el denominador se tiene un monomio y cuando se tiene un binomio
@@ -662,21 +717,27 @@
         <math class="tamfrac"><mrow><mfrac><mn>2</mn><mrow><mi>y</mi><mo>-</mo><mn>3</mn></mrow></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>
         &nbsp; &nbsp; &nbsp; &nbsp;
         <INPUT TYPE ="TEXT" size=6 maxlength="4" NAME="p13e4txt4" id="p13e4txt4"><BR><br>
-        <div>
-        <input type="submit" value="" class="botonesrevisar" name="P13E4REV" id="P13E4REV">
-        <input type="reset" value="" class="botonesreintentar" onclick="eliminartodo()">
-        </div>
+        
+        <button type="button" onclick="colores(arrayp13e1, 13, 4);" id="P13E4REV" name="P13E4REV" class="buttonsResRev"><img id = "btnSubmit" src="images/Revisar.png" width="140px" alt="" onmouseover="this.src = 'images/RevisarSobre.png'" onmouseout="this.src = 'images/Revisar.png'"></button>
+        <button type = "button" onclick="eliminartodo(13, 4, 4)" id = "btnReset" name = "" class="buttonsResRev"><img src = "images/VolverIntentar.png" width="140px" onmouseover="this.src = 'images/VolverIntentarSobre.png'" onmouseout="this.src = 'images/VolverIntentar.png'"></button>
+        <button type="button" class="buttonsResRev" id = "btnPDF" onclick="GenerarPDF(13, 4, arrayp13e1, DatosFinalesPDF)"><img src="images/pdfKaxie.png"  id = "btnPDF" width="90px" alt="" onmouseover="this.style.setProperty('-webkit-filter', 'drop-shadow(2px 2px 5px rgba(0, 38, 81, 0.7))'); this.style.setProperty('transform', 'scale(1.08)');" onmouseout="this.style.removeProperty('-webkit-filter'); this.style.removeProperty('transform');"></button>
+          
         </form>
 
+        <div class="Calificacion" id="p13e4img"></div>
+
         <script>
+            TraerCalificacionPHP(13, 4);
+        </script>
+        <!--script>
                 let respuestas4 = [ 0.25,
                     1.3,
-                    -0.5,
+                    -0.5, 
                     7
                 ];
                 colores(respuestas4, 13, 4);
-            </script>
-        <?php
+            </script-->
+        <!--?php
             if (isset($_POST['P13E4REV'])) {
 
                 $RespuestasE4 = array(
@@ -691,7 +752,7 @@
 
 
             }
-            ?>
+            ?-->
 
         <br><br><br>
         <h3>Ahora te pondre ejemplos del sistema de 2*2.</h3>
@@ -870,13 +931,19 @@
         <br><br><br>
         <br>
         <br>
-        <div>
-        <input type="submit" value="" class="botonesrevisar" name="P13E5REV" id="P13E5REV">
-        <input type="reset" value="" class="botonesreintentar" onclick="eliminartodo()">
-        </div>
+
+        <button type="button" onclick="colores(arrayp13e1, 13, 5);" id="P13E5REV" name="P13E5REV" class="buttonsResRev"><img id = "btnSubmit" src="images/Revisar.png" width="140px" alt="" onmouseover="this.src = 'images/RevisarSobre.png'" onmouseout="this.src = 'images/Revisar.png'"></button>
+        <button type = "button" onclick="eliminartodo(13, 5, 20)" id = "btnReset" name = "" class="buttonsResRev"><img src = "images/VolverIntentar.png" width="140px" onmouseover="this.src = 'images/VolverIntentarSobre.png'" onmouseout="this.src = 'images/VolverIntentar.png'"></button>
+        <button type="button" class="buttonsResRev" id = "btnPDF" onclick="GenerarPDF(13, 5, arrayp13e1, DatosFinalesPDF)"><img src="images/pdfKaxie.png"  id = "btnPDF" width="90px" alt="" onmouseover="this.style.setProperty('-webkit-filter', 'drop-shadow(2px 2px 5px rgba(0, 38, 81, 0.7))'); this.style.setProperty('transform', 'scale(1.08)');" onmouseout="this.style.removeProperty('-webkit-filter'); this.style.removeProperty('transform');"></button>
+          
         </form>
 
+        <div class="Calificacion" id="p13e5img"></div>
+
         <script>
+            TraerCalificacionPHP(13, 5);
+        </script>
+        <!--script>
                 let respuestas5 = [ 5,
                 2,
                 2,
@@ -899,8 +966,8 @@
                 1
                 ];
                 colores(respuestas5, 13, 5);
-            </script>
-        <?php
+            </script-->
+        <!--?php
             if (isset($_POST['P13E5REV'])) {
 
                 $RespuestasE5 = array(
@@ -931,7 +998,7 @@
 
 
             }
-            ?>
+            ?-->
 
 
 
@@ -1207,13 +1274,19 @@
         <br><br>
         <br>
         <br>
-        <div>
-        <input type="submit" value="" class="botonesrevisar" name="P13E6REV" id="P13E6REV">
-        <input type="reset" value="" class="botonesreintentar" onclick="eliminartodo()">
-        </div>
+
+        <button type="button" onclick="colores(arrayp13e1, 13, 6);" id="P13E6REV" name="P13E6REV" class="buttonsResRev"><img id = "btnSubmit" src="images/Revisar.png" width="140px" alt="" onmouseover="this.src = 'images/RevisarSobre.png'" onmouseout="this.src = 'images/Revisar.png'"></button>
+        <button type = "button" onclick="eliminartodo(13, 6, 12)" id = "btnReset" name = "" class="buttonsResRev"><img src = "images/VolverIntentar.png" width="140px" onmouseover="this.src = 'images/VolverIntentarSobre.png'" onmouseout="this.src = 'images/VolverIntentar.png'"></button>
+        <button type="button" class="buttonsResRev" id = "btnPDF" onclick="GenerarPDF(13, 6, arrayp13e1, DatosFinalesPDF)"><img src="images/pdfKaxie.png"  id = "btnPDF" width="90px" alt="" onmouseover="this.style.setProperty('-webkit-filter', 'drop-shadow(2px 2px 5px rgba(0, 38, 81, 0.7))'); this.style.setProperty('transform', 'scale(1.08)');" onmouseout="this.style.removeProperty('-webkit-filter'); this.style.removeProperty('transform');"></button>
+          
         </form>
 
+        <div class="Calificacion" id="p13e6img"></div>
+
         <script>
+            TraerCalificacionPHP(13, 6);
+        </script>
+        <!--script>
                 let respuestas6 = [ 6,
                 6,
                 2,
@@ -1225,12 +1298,12 @@
                 3,
                 2,
                 5,
-                1
+                1 
 
                 ];
                 colores(respuestas6, 13, 6);
-            </script>
-        <?php
+            </script-->
+        <!--?php
             if (isset($_POST['P13E6REV'])) {
 
                 $RespuestasE6 = array(
@@ -1252,7 +1325,7 @@
 
 
             }
-            ?>
+            ?-->
         <h2>Resuelve cada uno de estos problemas planteando la ecuación correspondiente y resolviéndola paso a paso.</h2>
         <br>
         <form method="post">
@@ -1278,24 +1351,30 @@
             5. Un estudiante leyó (2/3) de un libro y luego leyó (1/4) del resto. Si le faltan 45 páginas por leer, ¿cuántas páginas tiene el libro?
             <br><INPUT TYPE ="TEXT" size=6 maxlength="4" NAME="p13e7txt7" id="p13e7txt7">&nbsp;páginas
             </p>
-            <div>
-        <input type="submit" value="" class="botonesrevisar" name="P13E7REV" id="P13E7REV">
-        <input type="reset" value="" class="botonesreintentar" onclick="eliminartodo()">
-        </div>
+
+            <button type="button" onclick="colores(arrayp13e1, 13, 7);" id="P13E7REV" name="P13E7REV" class="buttonsResRev"><img id = "btnSubmit" src="images/Revisar.png" width="140px" alt="" onmouseover="this.src = 'images/RevisarSobre.png'" onmouseout="this.src = 'images/Revisar.png'"></button>
+            <button type = "button" onclick="eliminartodo(13, 7, 7)" id = "btnReset" name = "" class="buttonsResRev"><img src = "images/VolverIntentar.png" width="140px" onmouseover="this.src = 'images/VolverIntentarSobre.png'" onmouseout="this.src = 'images/VolverIntentar.png'"></button>
+            <button type="button" class="buttonsResRev" id = "btnPDF" onclick="GenerarPDF(13, 7, arrayp13e1, DatosFinalesPDF)"><img src="images/pdfKaxie.png"  id = "btnPDF" width="90px" alt="" onmouseover="this.style.setProperty('-webkit-filter', 'drop-shadow(2px 2px 5px rgba(0, 38, 81, 0.7))'); this.style.setProperty('transform', 'scale(1.08)');" onmouseout="this.style.removeProperty('-webkit-filter'); this.style.removeProperty('transform');"></button>
+          
         </form>
 
+        <div class="Calificacion" id="p13e7img"></div>
+
         <script>
+            TraerCalificacionPHP(13, 7);
+        </script>
+        <!--script>
                 let respuestas7 = [24,
                 11,
                 6,
                 5,
                 15,
                 20,
-                180
+                180 
                 ];
                 colores(respuestas7, 13, 7);
-            </script>
-        <?php
+            </script-->
+        <!--?php
             if (isset($_POST['P13E7REV'])) {
 
                 $RespuestasE7 = array(
@@ -1313,14 +1392,27 @@
 
 
             }
-            ?>
+            ?-->
         <center>
         <br>
         <h1 id="Res">  Resumen de la progresión</h1>
         <img src="./images/Progresion13img/M13.png" WIDTH=100%>  
         </center>
 
-
+        <div class = "container_ir_evaluacion">
+            <div>
+                <img src = "images/KaxieArcoiris.png" width = "200px"><br>
+                <p>¿Listo para la prueba final? ¡Recuerda tomar tu tiempo para contestar cada enunciado! Esta vez serán tomados en cuenta para comparar tu progreso.</p>
+            </div>
+            <center>
+                <button type = "button" class="btngotoEval">
+                    <a href = "evaluacion13.php"> Ir a la evaluación</a><br>
+                </button>
+            </center>
+        </div>
+            <script>
+            TraerDatos(13, arrayp13e1, 7);
+        </script>
 
     </section>
     <div id="fot">

@@ -1,3 +1,4 @@
+<?php require ('ifSession.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,17 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style3.css">
+    <link rel="stylesheet" href="css/style4.css">
+    <link rel="stylesheet" href="css/style5.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <link rel= "icon" href="images/logo.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script>
+<script src="js/jquery-3.7.1.js"></script>
+
     <title> Progresion 4 </title>
 </head>
 <body>
-<?php
-    require ('ifSession.php');
-?>
+
+<?php 
+    if ($indicador_bd) {
+            dialog_abrir('4');
+        }else{
+            echo "<script>
+            document.addEventListener('DOMContentLoaded', () => {
+        let btnPdf = document.querySelectorAll('[id = btnPDF]');
+        btnPdf.forEach((btnPdf) => {
+            btnPdf.style.display ='none';
+          });
+            
+      });
+           
+        </script>";
+        }
+    
+    
+        ?>
+        <script>var IndicadorBDJS = '<?php echo $indicador_bd;?>';</script>
+        <script src="js/script7.js"></script>
+        <script>
+            var DatosFinalesPDF = "<?php DatosPDF(); ?>";
+        </script>
     
     <aside class="aside" id="aside4"> 
     <section id="s1">
@@ -35,30 +63,30 @@
                 </div>
                 <b><h3> Metas </h3></b><br>
                 <H3>M2</H3>
-                <P>Analizar los resultados obtenidos al aplicar procedimientos algoritmicos propios del Pensamiento 
-                    Matemático en la resolución de problematicas teóricas y su contexto.
+                <P>Desarrolla la percepción y la intuición para generar conjeturas ante situaciones 
+                    que requieren explicación o interpretación.
                 </P>
-                <H3>M3</H3>
-                <P>Comprueba los procedimientos usados en la resolución de problemas utilizando diversos métodos, 
-                    empleando recursos tecnológicos o la interacción con sus pares.
-                </P>
-                <H3>M3</H3>
-                <P>Aplica procedimientos, técnicas y lenguaje matemático para la solución de problemas propios del 
-                    Pensamiento Matemático, de Áreas de Conocimiento, <br>Recursos Sociocognitivos, Recursos Socioemocionales 
-                    y de su entorno.
+                <H3>M2</H3>
+                <P>Socializa con sus pares sus conjeturas, descubrimientos o procesos 
+                    en la solución de un problema tanto teórico como de su entorno.
                 </P>
                 <b><h3> Categorías </h3></b><br>
-                <H3>C1</H3>
-                <P>Procedural
-                <H3>C3</H3>
-                <P>Solución de problemas y modelación
+                <H3>C2</H3>
+                <P>Procesos de intuición y razonamiento.
+                <H3>C4</H3>
+                <P>Interacción y lenguaje matemático.
                 <b><h3> Subcategorías </h3></b><br>
                 <H3>S1</H3>
-                <P>Elementos aritmético-algebraicos.</P>
-                <H3>S4</H3>
-                <P> Manejo de datos e incertidumbre.</P>
-                <H3>S1</H3>
-                <P> Uso de modelos.</P>
+                <P>Capacidad para observar y conjeturar.</P>
+                <H3>S2</H3>
+                <P> Pensamiento intuitivo.</P>
+                <H3>S3</H3>
+                <P> Pensamiento formal.</P>
+                <H3>S2</H3>
+                <P>Negociación de significados.</P>
+                <H3>S3</H3>
+                <P>Ambiente matemático de comunicación.</P>
+
                
             </section>
             <footer class="anteriorsig">
@@ -87,13 +115,22 @@
                 </div>
             <div class= "ceonceptoscla">
                 <h1 id="cc4">Conceptos clave</h1>
-                <P>Números enteros. Conjunto numérico que contiene a la totalidad de los números naturales, a sus inversos negativos y al cero.</P>
-                <P>Divisibilidad.  Propiedad de los números enteros (números sin decimales) de dividirse por otro número entero y que su resultado sea a su vez un número entero.</P>
-                <P>Números primos. Son aquellos que solo son divisibles entre ellos mismos y el 1.</P> 
-                <P>Conjunto númerico. Agrupaciones que guardan una serie de propiedades estructurales para cada conjunto. </P> 
-                <P>Lenguaje algebraico. forma de las matemáticas que escribimos con letras, números, potencias y signos.</P>  
+                <P><b>Números enteros.</b> Conjunto numérico que contiene a la totalidad de los números naturales, a sus inversos negativos y al cero.</P>
+                <P><b>Divisibilidad.</b>  Propiedad de los números enteros (números sin decimales) de dividirse por otro número entero y que su resultado sea a su vez un número entero.</P>
+                <P><b>Números primos.</b> Son aquellos que solo son divisibles entre ellos mismos y el 1.</P> 
+                <P><b>Conjunto numérico.</b> Agrupaciones que guardan una serie de propiedades estructurales para cada conjunto. </P> 
+                <P><b>Lenguaje algebraico.</b> Forma de las matemáticas que escribimos con letras, números, potencias y signos.</P>  
             </div>
         </div>
+
+<!--ESPACIO PARA EL VIDEO>
+
+            <div class="videoProgre">
+            <div class="videoEsti"><video src="" controls width="100%"></video></div>
+            </div>
+            
+
+<FIN ESPACIO PARA EL VIDEO-->
         <br>
         <h1 id="quees4">¿Qué es la divisibilidad?</h1>
         <P>La divisibilidad en matemáticas se refiere a la propiedad de los números enteros (números sin decimales) de ser divididos por otro número entero, 
@@ -137,7 +174,7 @@
                 </ul>
             </li>
         </ul>
-        <p><br>Para saber si un número es divisible por 10 o pr 5, tampoco necesitamos hacer la dvisión. </P>
+        <p><br>Para saber si un número es divisible por 10 o por 5, tampoco necesitamos hacer la dvisión. </P>
         <ul>
             <li>Un número es divisible por 5 si termina en 0 o en 5.
                 <ul>
@@ -207,7 +244,7 @@
                 </ul>
             </li>
         </ul>
-
+        <br><br>
         </div>
         <br><br>
         </center>
@@ -341,18 +378,17 @@
         <input type="radio" name="p4e1r22" id=p4e1r22a2 value=1> <label for="p4e1r22a2">no</label>
         <br>
         <br>
-        <button type="submit" value="" class="botonesrevisar" name="p4e1rev" id="p4e1rev"></button>
-        <input type="reset" value="" class="botonesreintentar" onclick="eliminartodo()">
-           
+        <button type="button" onclick="ColoresRadios(22, 4, 1);"class="buttonsResRev"><img id = "btnSubmit" src="images/Revisar.png" width="140px" alt="" onmouseover="this.src = 'images/RevisarSobre.png'" onmouseout="this.src = 'images/Revisar.png'"></button>
+            <button type = "button" onclick="BorrarRadios(4,1,22);" id = "btnReset" name = "" class="buttonsResRev"><img src = "images/VolverIntentar.png" width="140px" onmouseover="this.src = 'images/VolverIntentarSobre.png'" onmouseout="this.src = 'images/VolverIntentar.png'"></button>
+            <button type="button" class="buttonsResRev" id = "btnPDF" onclick="pdfForRbd(4, 1, 22, DatosFinalesPDF);" ><img src="images/pdfKaxie.png"  id = "btnPDF" width="90px" alt="" onmouseover="this.style.setProperty('-webkit-filter', 'drop-shadow(2px 2px 5px rgba(0, 38, 81, 0.7))'); this.style.setProperty('transform', 'scale(1.08)');" onmouseout="this.style.removeProperty('-webkit-filter'); this.style.removeProperty('transform');"></button>
     </form>
+
+            <div class="Calificacion" id = "p4e1img"></div>
+            <script>
+                if(IndicadorBDJS){TraerCalificacionPHP(4,1);}
+            </script>
 </div>  
-                <?php
-                if (isset($_POST['p4e1rev'])) {
-                    require ('funcionrevradio.php');
-                    RevisarRadios(22, 1, 4);//cantidad de reactivos, número de ejercicio y número de progresión
-                    //se les debe de dar un value a los radios respuestas correctas value de 1
-                }
-                ?>
+                
             <br><br>
             <div>
 <h1>Arrastra y suelta las etiquetas en el lugar correcto:</h1>
@@ -429,14 +465,14 @@
 <div class= "columne42">
 
     <!-- Pregunta 1 es ejercicio 2 por que el drag and drop no cuenta-->
-  <h3>2x + 4 = 6 + 3x</h3>
-  <input type="radio" name="p4e3r1" id="p4e2r1a1"  value="2"><label for="p4e2r1a1">1</label><br>
+  <h3>2x + 4 = 6 + 3x</h3><br>
+  <input type="radio" name="p4e2r1" id="p4e2r1a1"  value="2"><label for="p4e2r1a1">1</label><br>
   <input type="radio" name="p4e2r1" id="p4e3r1a2" value="3"><label for="p4e3r1a2">5</label><br>
   <input type="radio" name="p4e2r1" id="p4e3r1a3" value="4"><label for="p4e3r1a3">10</label><br>
   <input type="radio" name="p4e2r1" id="p4e3r1a4" value="1"><label for="p4e3r1a4">no es divisible</label><br><!--si-->
 <br>
 <!-- Pregunta 2 -->
-  <h3>4x - 5 = 2 - x</h3>
+  <h3>4x - 5 = 2 - x</h3><br>
   <input type="radio" name="p4e2r2" id="p4e2r2a1" value="2"><label for="p4e2r2a1">1</label><br>
   <input type="radio" name="p4e2r2" id="p4e2r2a2" value="1"><label for="p4e2r2a2">no es divisible</label><br><!--si-->
   <input type="radio" name="p4e2r2" id="p4e2r2a3" value="3"><label for="p4e2r2a3">2</label><br>
@@ -444,7 +480,7 @@
   <br>
 
 <!-- Pregunta 3 -->
-  <h3>3x - 8 = 4x + 2</h3>
+  <h3>3x - 8 = 4x + 2</h3><br>
   <input type="radio" name="p4e2r3" id="p4e2r3a1" value="2"><label for="p4e2r3a1">1</label><br>
   <input type="radio" name="p4e2r3" id="p4e2r3a2" value="3"><label for="p4e2r3a2">2</label><br>
   <input type="radio" name="p4e2r3" id="p4e2r3a3" value="1"><label for="p4e2r3a3">no es divisible</label><br><!--si-->
@@ -452,7 +488,7 @@
   <br>
 
 <!-- Pregunta 4 -->
-  <h3>5x + 10 = 3 - 2x</h3>
+  <h3>5x + 10 = 3 - 2x</h3><br>
   <input type="radio" name="p4e2r4" id="p4e2r4a1" value="2"><label for="p4e2r4a1">no es divisible</label><br>
   <input type="radio" name="p4e2r4" id="p4e2r4a2" value="3"><label for="p4e2r4a2">1</label><br>
   <input type="radio" name="p4e2r4" id="p4e2r4a3" value="4"><label for="p4e2r4a3">3</label><br>
@@ -461,7 +497,7 @@
 
 
 <!-- Pregunta 5 -->
-  <h3>2x - 3 = 7 - 4x</h3>
+  <h3>2x - 3 = 7 - 4x</h3><br>
   <input type="radio" name="p4e2r5" id="p4e2r5a1" value="2"><label for="p4e2r5a1">1</label><br>
   <input type="radio" name="p4e2r5" id="p4e2r5a2" value="1"><label for="p4e2r5a2">no es divisible</label><br><!--si-->
   <input type="radio" name="p4e2r5" id="p4e2r5a3" value="3"><label for="p4e2r5a3">2</label><br>
@@ -470,7 +506,7 @@
 
 
 <!-- Pregunta 6 -->
-  <h3>6x + 2 = 8 - 2x</h3>
+  <h3>6x + 2 = 8 - 2x</h3><br>
   <input type="radio" name="p4e2r6" id="p4e2r6a1" value="2"><label for="p4e2r6a1">1</label><br>
   <input type="radio" name="p4e2r6" id="p4e2r6a2" value="3"><label for="p4e2r6a2">2</label><br>
   <input type="radio" name="p4e2r6" id="p4e2r6a3" value="1"><label for="p4e2r6a3">no es divisible</label><br><!--si-->
@@ -479,7 +515,7 @@
 
 
 <!-- Pregunta 7 -->
-  <h3>x + 5 = 2x - 3</h3>
+  <h3>x + 5 = 2x - 3</h3><br>
   <input type="radio" name="p4e2r7" id="p4e2r7a1" value="1"><label for="p4e2r7a1">1</label><br><!--si-->
   <input type="radio" name="p4e2r7" id="p4e2r7a2" value="2"><label for="p4e2r7a2">no es divisible</label><br>
   <input type="radio" name="p4e2r7" id="p4e2r7a3" value="3"><label for="p4e2r7a3">2</label><br>
@@ -487,7 +523,7 @@
   <br>
 
 <!-- Pregunta 8 -->
-  <h3>4x - 7 = 2x + 9</h3>
+  <h3>4x - 7 = 2x + 9</h3><br>
   <input type="radio" name="p4e2r8" id="p4e2r8a1" value="2"><label for="p4e2r8a1">1</label><br>
   <input type="radio" name="p4e2r8" id="p4e2r8a2" value="1"><label for="p4e2r8a2">4</label><br><!--si-->
   <input type="radio" name="p4e2r8" id="p4e2r8a3" value="3"><label for="p4e2r8a3">no es divisible</label><br>
@@ -495,7 +531,7 @@
   <br>
 
 <!-- Pregunta 9 -->
-  <h3>3x + 6 = 9 - x</h3>
+  <h3>3x + 6 = 9 - x</h3><br>
   <input type="radio" name="p4e2r9" id="p4e2r9a1" value="1"><label for="p4e2r9a1">no es divisible</label><br><!--si-->
   <input type="radio" name="p4e2r9" id="p4e2r9a2" value="2"><label for="p4e2r9a2">1</label><br>
   <input type="radio" name="p4e2r9" id="p4e2r9a3" value="3"><label for="p4e2r9a3">2</label><br>
@@ -503,7 +539,7 @@
   <br>
 
     <!-- Pregunta 10 -->
-  <h3>4x - 2 = 2x + 2</h3>
+  <h3>4x - 2 = 2x + 2</h3><br>
   <input type="radio" name="p4e2r10" id="p4e2r10a1" value="2"><label for="p4e2r10a1">1</label><br>
   <input type="radio" name="p4e2r10" id="p4e2r10a2" value="3"><label for="p4e2r10a2">no es divisible</label><br>
   <input type="radio" name="p4e2r10" id="p4e2r10a3" value="1"><label for="p4e2r10a3">2</label><br><!--si-->
@@ -511,17 +547,17 @@
   <br>
 
 </div>
-<button type="submit" value="" class="botonesrevisar" name="p4e2rev" id="p4e2rev"></button>
-<input type="reset" value="" class="botonesreintentar" onclick="eliminartodo()">
+    <button type="button" onclick="ColoresRadios(10, 4, 2);"class="buttonsResRev"><img id = "btnSubmit" src="images/Revisar.png" width="140px" alt="" onmouseover="this.src = 'images/RevisarSobre.png'" onmouseout="this.src = 'images/Revisar.png'"></button>
+            <button type = "button" onclick="BorrarRadios(4,2,5);" id = "btnReset" name = "" class="buttonsResRev"><img src = "images/VolverIntentar.png" width="140px" onmouseover="this.src = 'images/VolverIntentarSobre.png'" onmouseout="this.src = 'images/VolverIntentar.png'"></button>
+            <button type="button" class="buttonsResRev" id = "btnPDF" onclick="pdfForRbd(4, 2, 10, DatosFinalesPDF);" ><img src="images/pdfKaxie.png"  id = "btnPDF" width="90px" alt="" onmouseover="this.style.setProperty('-webkit-filter', 'drop-shadow(2px 2px 5px rgba(0, 38, 81, 0.7))'); this.style.setProperty('transform', 'scale(1.08)');" onmouseout="this.style.removeProperty('-webkit-filter'); this.style.removeProperty('transform');"></button>
+    </form>
 
- </form> 
- <?php
-                if (isset($_POST['p4e2rev'])) {
-                    require ('funcionrevradio.php');
-                    RevisarRadios(10, 2, 4);//cantidad de reactivos, número de ejercicio y número de progresión
-                    //se les debe de dar un value a los radios respuestas correctas value de 1
-                }
-                ?>
+            <div class="Calificacion" id = "p4e2img"></div>
+            <script>
+                TraerRadios(2,4);
+                if(IndicadorBDJS){TraerCalificacionPHP(4,2);}
+            </script>
+
             
             <br><br>
 
@@ -531,6 +567,18 @@
 <h1 id="Res">Resumen de la progresión</h1>
  <img src="./images/Progresion4img/M4.png" WIDTH=100%>  
 </center>
+
+<div class = "container_ir_evaluacion">
+            <div>
+                <img src = "images/KaxieArcoiris.png" width = "200px"><br>
+                <p>¿Listo para la prueba final? ¡Recuerda tomar tu tiempo para contestar cada enunciado! Esta vez serán tomados en cuenta para comparar tu progreso.</p>
+            </div>
+            <center>
+                <button type = "button" class="btngotoEval">
+                    <a href = "evaluacion4.php"> Ir a la evaluación</a><br>
+                </button>
+            </center>
+        </div>
 </section>
 <div id="fot">
 <?php 
