@@ -169,7 +169,7 @@
                     <p class="new">¿Ya tienes una cuenta? <a href="sesion.php">Da click aqui para iniciar sesion</a>
                     </p><br><br>
                     <input type="submit" id="registra" name="iniciaS" value="Registrarse" class="btn" disabled=true>
-                    <script src="js/ValidarUsrC.js"></script>
+                    
                 </div>
 
 
@@ -178,6 +178,7 @@
 
 
             </form>
+            <script src="js/ValidarUsrC.js"></script>
             <div>
 
     </section>

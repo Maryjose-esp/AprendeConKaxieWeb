@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style3.css">
     <link rel="stylesheet" href="css/style4.css">
+    <link rel="stylesheet" href="css/style5.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,10 +37,7 @@
      ?>
 
      <script>var IndicadorBDJS = '<?php echo $indicador_bd;?>';
-        var arrayp5e1 = [[],
-        [],
-        [],
-        []];
+        var arrayp10e1 = [[],[15,5.66,1.43,10.31]];
     </script>
     </script>
      <script src="js/script7.js"></script>
@@ -260,12 +258,16 @@ Bueno, al momento de girar el lado MN y hacer la homotecia, obtenemos la línea 
             <p><h1>Criterios de semejanza:</h1></p>
             <div class=lados10 id="quees">
                 Fórmulas para la semejanza entre triángulos:<br>
-                <center><math style = "font-size: 30px; font-family: arial;"><mfrac><mn>a</mn><mn>a'</mn></mfrac></math>=
-                <math style = "font-size: 30px; font-family: arial;"><mfrac><mn>b</mn><mn>b'</mn></mfrac></math>=
-                <math style = "font-size: 30px; font-family: arial;"><mfrac><mn>c</mn><mn>c'</mn></mfrac></math></center>
-                a= Un lado del triángulo
-                a'= Ángulo correspondiente al lado nombrado
-
+                <center><img src="images/progresion10img/formula.png" WIDTH=80%><center><br>
+                <center><math style = "font-size: 30px; font-family: arial;"><mfrac><mn>A'B'</mn><mn>AB</mn></mfrac></math>=
+                <math style = "font-size: 30px; font-family: arial;"><mfrac><mn>A'C'</mn><mn>AE</mn></mfrac></math>=
+                <math style = "font-size: 30px; font-family: arial;"><mfrac><mn>B'C'</mn><mn>BE</mn></mfrac></math></center><br>
+                Igualdades entre segmentos de los triángulos.
+            </div>
+            <br>
+            <div class="lados10" id="quees">
+                Para calcular la homotecia (la ampliación en una semejanza), se realiza al dividir
+                el valor del lado similar mayor con el lado menor similar.
             </div>
             <p><b>Criterio AA.</b><br>
             Si dos de sus ángulos son iguales.<br>
@@ -293,17 +295,53 @@ Bueno, al momento de girar el lado MN y hacer la homotecia, obtenemos la línea 
 
         <h2> Semejanza </h2><br>
         Como se mencionó la semejanza es la igualdad entre ángulos, no entre lados. 
-        Por ejemplo, para hacer una figura semejante a este triángulo, se pueden 
-        utilizar los criterios de semejanza mostrados anteriormente
+        Por ejemplo, para hacer una figura semejante a un triángulo, se pueden 
+        utilizar los criterios de semejanza mostrados anteriormente para obtener
+         el valor de algún dato faltante, los ángulos siempre serán iguales.
 
-        <h2> Congruencia </h2><br>
+         <div class="imgejercicios">
+                <div>
+                    <img  id="ejer" src="images/Ejercicios.png" WIDTH="180px" HEIGHT="auto" style="margin-right: 20px;">
+                </div>
+                <div id="ejercicios">
+                    <h1>Ejercicio</h1>
+                </div>
+            </div>
 
 
+        <FORM METHOD="POST">
+        <h2>Encuentra el valor de los segmentos de los triángulos.<h2><br><br>
 
+        <p><b>¿Cuánto vale BE?</p></b><br>
+        <img src="images/progresion10img/1Ejercicio2.png" WIDTH="50%"><br>
+        BE: <input type="text" name="p10e2txt1" id="p10e2txt1"><br><br>
 
+        <p><b>Basandose en lso siguientes triángulos.<br>¿Cuál es el valor del lado AE?</p></b><br>
+        <img src="images/progresion10img/2Ejercicio2.png" WIDTH="50%"><br>
+        AE: <input type="text" name="p10e2txt2" id="p10e2txt2"><br><br>
+
+        <p><b>¿Cuál es el valor de su homotecia?</p></b><br>
+        <img src="images/progresion10img/3Ejercicio2.png" WIDTH="50%"><br>
+        Homotecia de: <input type="text" name="p10e2txt3" id="p10e2txt3"><br><br>
+
+        <p><b>¿Cuánto vale A'B'?</p></b><br>
+        <img src="images/progresion10img/4Ejercicio2.png" WIDTH="50%"><br>
+        A'B': <input type="text" name="p10e2txt4" id="p10e2txt4"><br><br>
+
+        <button type="button" onclick="colores(arrayp10e1, 10, 2);" id="P14E2REV" name="P14E2REV" class="buttonsResRev"><img id = "btnSubmit" src="images/Revisar.png" width="140px" alt="" onmouseover="this.src = 'images/RevisarSobre.png'" onmouseout="this.src = 'images/Revisar.png'"></button>
+        <button type = "button" onclick="eliminartodo(10, 2, 4)" id = "btnReset" name = "" class="buttonsResRev"><img src = "images/VolverIntentar.png" width="140px" onmouseover="this.src = 'images/VolverIntentarSobre.png'" onmouseout="this.src = 'images/VolverIntentar.png'"></button>
+        <button type="button" class="buttonsResRev" id = "btnPDF" onclick="GenerarPDF(10, 2, arrayp10e1, DatosFinalesPDF)"><img src="images/pdfKaxie.png"  id = "btnPDF" width="90px" alt="" onmouseover="this.style.setProperty('-webkit-filter', 'drop-shadow(2px 2px 5px rgba(0, 38, 81, 0.7))'); this.style.setProperty('transform', 'scale(1.08)');" onmouseout="this.style.removeProperty('-webkit-filter'); this.style.removeProperty('transform');"></button>
+        
+    </FORM>
+
+    <div class="Calificacion" id="p10e2img"></div>
+
+        <script>
+            TraerCalificacionPHP(10, 2);
+        </script>
 
             <CENTER><img id="resu" src="images/progresion10img/Progre10.png" WIDTH="100%"></CENTER>
-
+<br> 
             <div class = "container_ir_evaluacion">
             <div>
                 <img src = "images/KaxieArcoiris.png" width = "200px"><br>

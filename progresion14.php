@@ -1,3 +1,4 @@
+<?php require ('ifSession.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style3.css">
     <link rel="stylesheet" href="css/style4.css">
-    <script src="js/script7.js"></script>
+    
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,9 +20,7 @@
     <title>Progresion 14</title>
 </head>
 <body>
-<?php require ('ifSession.php');  
- 
- if ($indicador_bd) {
+<?php if ($indicador_bd) {
          dialog_abrir('14');
      }else{
          echo "<script>
@@ -33,16 +32,11 @@
          
    });
         
-     </script>";
-     }
- 
- 
-     ?>
-     <script>var IndicadorBDJS = '<?php echo $indicador_bd;?>';
+     </script>";}?>
+     <script> var IndicadorBDJS = '<?php echo $indicador_bd;?>';
         var arrayp14e1 = [[],[2,2,-12,-5,10,-15,-1,-12,11,-14,-4,0,9,1,-3,7],
         [3,1,10.5,43,2,3,8,1.2,-3.3,7,5,-2,2,0,3,1.5],
         [10,2,16,10,13,-8,4,-19,-129,-12,3,-21,-576,-85,21,-31]];
-    </script>
     </script>
      <script src="js/script7.js"></script>
      <script>

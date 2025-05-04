@@ -1,3 +1,4 @@
+<?php require ('ifSession.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,17 +12,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <link rel= "icon" href="images/logo.ico" type="image/x-icon">
-    <script src="js/script7.js"></script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script>
 <script src="js/jquery-3.7.1.js"></script>
     <title> Progresion 13 </title>
 </head>
 <body>
-<?php
-    require ('ifSession.php'); 
- 
-    if ($indicador_bd) {
+<?php if ($indicador_bd) {
             dialog_abrir('13');
         }else{
             echo "<script>
@@ -34,10 +32,7 @@
       });
            
         </script>";
-        }
-    
-    
-        ?>
+        }?>
         <script>var IndicadorBDJS = '<?php echo $indicador_bd;?>';
            var arrayp13e1 = [['12u-13','3u^2+7u+2','10u+26','8z-3','124t3'],
            [4,-7,5,-8,6,5,-24,9,-5,8],
@@ -46,7 +41,7 @@
            [5,2,2,1,2,2,2,1,2,2,3,1,5,6,2,2,3,1,2,1],
            [6,6,2,5,3,3,3,2,3,2,5,1],
            [24,11,6,5,15,20,180]];
-       </script>
+       
        </script>
         <script src="js/script7.js"></script>
         <script>

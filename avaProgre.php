@@ -20,7 +20,13 @@
     } else {
         $ok=mysqli_stmt_bind_result($resultado,$progre);
         while (mysqli_stmt_fetch($resultado)){
+            if($calif){
             echo $progre;
+            } else {
+                echo ($progre*10);
+            }
         }
     }
-    mysqli_stmt_close($resultado);}?>
+mysqli_stmt_close($resultado);} else {
+echo "0.00";
+}?>

@@ -719,7 +719,7 @@ body::-webkit-scrollbar-button:vertical:decrement{
     width: 50%;
     border-radius: 5px;
     margin-bottom: 100;
-    margin-left: 43%;
+    margin-left: auto;
     box-shadow: 5px -10px 12px 3px rgba(0, 0, 0, .3) inset;
     padding: 8px;
 }
