@@ -1,77 +1,58 @@
 const passwordInput = document.getElementById("Passw"); //el input de la contraseña
 const Validar = document.getElementById("ValCon"); //label para colocar el texto correspondiente a la validación de la contraseña
 const btnRegistro = document.getElementById("registra"); //botón de registro del formulario 
-
 const Nombre = document.getElementById("Nombre"); //input del nombre
 const PermitirNom = document.getElementById("ValNom"); //label para el mensaje de no valido del campo
-
 const Apellido = document.getElementById("Apellido"); //input del apellido del usr
 const PermitirApe = document.getElementById("ValApe"); //label correspondiente al mensaje de no valido en caso de serlo
-
 //variables para saber el estado actual del campo llenado
 var ApeVali = false ;
 var NomVali = false ;
 var ContraVali = false;
-
 function ActualizarBoton () {
-    btnRegistro.disabled = !(ApeVali && NomVali && ContraVali); // desactiva el botón si alguna validación es falsa
-}
-
+    btnRegistro.disabled = !(ApeVali && NomVali && ContraVali);} // desactiva el botón si alguna validación es falsa
 Apellido.oninput = function(){
     const valiApe = /^[a-zA-ZÀ-ÿñÑ\s]+$/; // expresión regular para solo aceptar letras y acentos, así como la ñ
-
     if(Apellido.value.match(valiApe)){ //si el valor dentro del input cumple con los criterios de la expresión, entonces el botón podrá activarse
         PermitirApe.innerHTML = "";
         btnRegistro.disabled=false;
         ApeVali = true ;
-    } else {
+    } else {//si no cumple la condición de los criterios entonces pondrá que el apellido no es valido, pues contiene un número o caracter especial
         PermitirApe.innerHTML = "Apellido no valido";
         btnRegistro.disabled=true;
         ApeVali = false ;
     }
-    ActualizarBoton(); //actualiza el estado del botón
-}
-
+    ActualizarBoton();} //actualiza el estado del botón
 Nombre.oninput = function() { //función que valida si el nombre es correcto
     const valiNom = /^[a-zA-ZÀ-ÿñÑ\s]+$/; //expresión regular para solo admitir letras, acentos y ñ y espacios
-
     if(Nombre.value.match(valiNom)){
         PermitirNom.innerHTML = "";
         btnRegistro.disabled=false; //permite que el botón se active
         NomVali = true ; // variable para permitir activar el botón
-    } else {
+    } else { //no se cumple la condición entonces desactiva el botón y coloca el texto que informa que el nombre no es valido
         PermitirNom.innerHTML = "Nombre no valido";
         btnRegistro.disabled=true;
         NomVali = false ;
     }
-    ActualizarBoton();
-}
-
+    ActualizarBoton();}
 passwordInput.oninput = function() { // función que permite validar la contraseña, de ser así, permite que el usuario utilice el botón
     const decimal = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&{}+'¿¡\\~|°¬´´¨""#//()=``.:,;ñ])[A-Za-z\d\\@$!%*?&{}+'¿¡~|°¬´´¨""#//()=``.:,;ñ]{8,15}$/;
 //expresión regular que permite, letras (mayúsculas o mínusculas), números y carácteres especiales, si no coloca alguna entonces la contraseña no es valida
-    if(passwordInput.value.match(decimal)){
+    if(passwordInput.value.match(decimal)){//si se cumplen los criterios entonces pondrá como valida la contraseña y activará el botón para registrarse
         Validar.innerHTML = "Contraseña valida.";
         btnRegistro.disabled=false;
         ContraVali = true ;
-    } else {
+    } else { //en caso contrario informará que la contraseña es invalida y entonces desactivará el botón
         Validar.innerHTML = "Contraseña invalida, se requiere una mayúscula, un signo especial, un número además de tener entre 8 y 15 carácteres.";
         btnRegistro.disabled=true;
         ContraVali = false;
     }
-    ActualizarBoton();
-};
-
-
-
+    ActualizarBoton();}
 function cambioOjoK (eyeicon, password){ //función que permite observar la contraseña, mediante imagenes representativas de un ojo para ser intituivo
-    if(password.type == "password"){
+    if(password.type == "password"){//si el input es de tipo contraseña se cambiará el valor a tipo texto y si no es así, lo hara de manera viceversa
         password.type = "text";
         eyeicon.src= ".././images/open.png";
     } else {
         password.type = "password";
         eyeicon.src= ".././images/close.png";
-    }
-    
-}
-
+    } }
